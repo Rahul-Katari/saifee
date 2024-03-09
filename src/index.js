@@ -58,10 +58,10 @@ root.render(
   // Inside your component where you wrap your routes with BrowserRouter
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     {/* Your routes here */}
-    <React.StrictMode>
-      {/* <App /> */}
-      <RouterProvider router={appRouter} />
-    </React.StrictMode>
+    {/* <React.StrictMode> */}
+    {/* <App /> */}
+    <RouterProvider router={appRouter} />
+    {/* </React.StrictMode> */}
   </BrowserRouter>
 );
 
