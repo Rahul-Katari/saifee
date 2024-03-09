@@ -58,7 +58,25 @@ root.render(
   // Inside your component where you wrap your routes with BrowserRouter
   <React.StrictMode>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <App />
+      <Routes>
+        {/* Main App route */}
+        <Route
+          path="/"
+          element={<App />}
+          // Specify the error route element
+          fallback={<Error />}
+        >
+          {/* Nested routes for App */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/excellence" element={<Excellence />} />
+          <Route path="/bestdoctors" element={<BestDoctors />} />
+          <Route path="/facilities" element={<Facilities />} />
+        </Route>
+        {/* Additional top-level routes */}
+        <Route path="/about" element={<About />} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
