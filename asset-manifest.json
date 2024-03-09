@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/saifee/static/css/main.7a228d80.css",
+    "main.js": "/saifee/static/js/main.39db90b0.js",
+    "static/media/our-doctors-banner.png": "/saifee/static/media/our-doctors-banner.d675293f2e9923e4772a.png",
+    "static/media/about-banner.png": "/saifee/static/media/about-banner.f8f84d071fbc2d40c09f.png",
+    "static/media/facilities.png": "/saifee/static/media/facilities.59cffb7df669c6c3ea8a.png",
+    "static/media/contact.png": "/saifee/static/media/contact.d4c3e5612d2f0a4f8258.png",
+    "static/media/appointments.png": "/saifee/static/media/appointments.5b46df11a455bbb47d57.png",
+    "static/media/laboratory-tests.png": "/saifee/static/media/laboratory-tests.e14345f7fd328a3cc6bc.png",
+    "static/media/comm-to-cure.png": "/saifee/static/media/comm-to-cure.5bc19d5988aeafefd8f6.png",
+    "static/media/excellence-banner.png": "/saifee/static/media/excellence-banner.2d98c1c6b253824e3418.png",
+    "static/media/our-doctors.png": "/saifee/static/media/our-doctors.cee99453f4fd30872564.png",
+    "static/media/Poppins-Thin.ttf": "/saifee/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf",
+    "static/media/Poppins-ExtraLight.ttf": "/saifee/static/media/Poppins-ExtraLight.333cb30c20e31999802a.ttf",
+    "static/media/doctor-cartoon.png": "/saifee/static/media/doctor-cartoon.6dbc6bc52bb06a58793f.png",
+    "static/media/Poppins-Light.ttf": "/saifee/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
+    "static/media/IMG-20240229-WA0003.jpg": "/saifee/static/media/IMG-20240229-WA0003.23b6123b8f49f6d72b85.jpg",
+    "static/media/Poppins-Regular.ttf": "/saifee/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/Poppins-Medium.ttf": "/saifee/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "static/media/Poppins-SemiBold.ttf": "/saifee/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
+    "static/media/Poppins-Bold.ttf": "/saifee/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/Poppins-ExtraBold.ttf": "/saifee/static/media/Poppins-ExtraBold.01849ee091e1762a5dd5.ttf",
+    "static/media/Poppins-Black.ttf": "/saifee/static/media/Poppins-Black.d8b850b920a5ef49d752.ttf",
+    "static/media/footer-logo.png": "/saifee/static/media/footer-logo.cef0eb37fc92d6d6ba25.png",
+    "static/media/find-your-doctors.png": "/saifee/static/media/find-your-doctors.a1ed604a9af96d09b31c.png",
+    "static/media/logo.png": "/saifee/static/media/logo.03c4b46caf99ed5ac20a.png",
+    "static/media/book-lab-test.png": "/saifee/static/media/book-lab-test.55e428b012611078ac39.png",
+    "static/media/book-doctor-appointment.png": "/saifee/static/media/book-doctor-appointment.b1177502e48ed9ab527f.png",
+    "index.html": "/saifee/index.html",
+    "main.7a228d80.css.map": "/saifee/static/css/main.7a228d80.css.map",
+    "main.39db90b0.js.map": "/saifee/static/js/main.39db90b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a228d80.css",
+    "static/js/main.39db90b0.js"
+  ]
+}
