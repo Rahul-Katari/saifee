@@ -1,0 +1,37 @@
+/* overriding react tabs scrollable css  */
+.rts___btn {
+    border-radius: 5px !important;
+    background-color: rgba(230, 230, 230, 0.6) !important;
+    border: 0px !important;
+}
+
+.rts___tab {
+    padding: 10px 15px !important;
+}
+
+.rts___tab___selected,
+.rts___nav___btn:hover {
+    background: linear-gradient(180deg, #07869B 0%, #0361AD 100%) !important;
+}
+
+.rts___nav___btn {
+    padding: 5px;
+    background: none !important;
+}
+
+.rts___nav___btn___container {
+    padding: 20px;
+}
+
+/* facilities css goes here  */
+
+.facilities-main-div .rts___tab___selected,
+.rts___nav___btn:hover {
+    background: linear-gradient(180deg, #245272 0%, #147887 100%) !important;
+}
+
+.facilities-main-div .rts___btn {
+    border-radius: 5px !important;
+    background-color: transparent !important;
+    border: 1px solid #000 !important;
+}
