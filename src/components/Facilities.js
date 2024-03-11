@@ -13,20 +13,20 @@ const Facilities = () => {
       <div>
         <img src={banner} className="w-full" />
       </div>
-      <div className="max-w-7xl m-auto mt-12 m-4">
+      <div className="max-w-7xl md:m-auto md:mt-12 m-4">
         <Tabs
           className="flex justify-center"
           activeTab={activeTab}
           onTabClick={onTabClick}
           hideNavBtnsOnMobile={false}
         >
-          <Tab className="rounded flex items-center gap-x-4 text-xl font-medium">
+          <Tab className="rounded flex items-center gap-x-4 md:text-xl font-medium">
             <div>Facilities & Services</div>
           </Tab>
-          <Tab className="rounded flex items-center gap-x-4 text-xl font-medium">
+          <Tab className="rounded flex items-center gap-x-4 md:text-xl font-medium">
             Diagnostic & Therapeutic
           </Tab>
-          <Tab className="rounded flex items-center gap-x-4 text-xl font-medium">
+          <Tab className="rounded flex items-center gap-x-4 md:text-xl font-medium">
             Pharmacy
           </Tab>
         </Tabs>

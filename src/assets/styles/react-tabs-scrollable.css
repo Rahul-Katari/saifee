@@ -35,3 +35,18 @@
     background-color: transparent !important;
     border: 1px solid #000 !important;
 }
+
+/* CSS for mobile devices only */
+@media only screen and (max-width: 767px) {
+    .rts___btn {
+        font-size: 14px !important;
+    }
+
+    .rts___tab {
+        padding: 0px 10px !important;
+    }
+
+    .rts___nav___btn___container {
+        padding: 10px;
+    }
+}

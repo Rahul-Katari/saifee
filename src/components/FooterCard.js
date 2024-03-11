@@ -15,9 +15,11 @@ const FooterCard = ({
       <div className="bg-footer-highlight inline-block rounded-full p-2 text-white">
         <img src={iconSrc} className="h-7 w-7 m-1" />
       </div>
-      <div className="font-medium text-2xl my-4">{title}</div>
+      <div className="font-medium md:text-2xl text-xl my-4">{title}</div>
       <p className="mt-2 text-gray-500">{description1}</p>
-      <p className="mt-2 text-gray-500">{description2}</p>
+      <p className={`${description3 ? "mt-2 text-gray-500" : "text-gray-500"}`}>
+        {description2}
+      </p>
       {description3 ? <p className="mt-2 text-gray-500">{description3}</p> : ""}
       {description4 ? <p className="mt-2 text-gray-500">{description4}</p> : ""}
       {timing1 ? (

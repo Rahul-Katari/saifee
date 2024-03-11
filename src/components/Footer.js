@@ -51,7 +51,13 @@ const Footer = () => {
       <div className="bg-stone-100">
         <img src={appointments} alt="Appointments" className="w-full" />
         <div className="container footer max-w-7xl p-5">
-          <img src={footerLogo} alt="logo" className="m-auto my-5" />
+          <div>
+            <img
+              src={footerLogo}
+              alt="logo"
+              className="m-auto my-5 w-24 md:w-auto"
+            />
+          </div>
           <div className="justify-center md:flex items-center border py-3 border-cyan-500 border-x-0">
             <div className="font-semibold text-nav-highlight md:text-3xl text-xl">
               Quick Links :
@@ -62,7 +68,9 @@ const Footer = () => {
               space={"4"}
             />
           </div>
-          <h1 className="uppercase text-center text-4xl mt-5">Reach Us</h1>
+          <h1 className="uppercase text-center md:text-4xl text-3xl mt-5">
+            Reach Us
+          </h1>
           <div className="lg:grid-cols-3 sm:grid-cols-2 grid">
             {cards.map((card, index) => (
               <FooterCard
@@ -105,7 +113,7 @@ const Footer = () => {
               info@drmanasaendocrine.com
             </a>
           </div>
-          <div className="text-center mt-5">
+          <div className="text-center md:mt-5">
             C {new Date().getFullYear()} Hospital all rights reserved
           </div>
         </div>
