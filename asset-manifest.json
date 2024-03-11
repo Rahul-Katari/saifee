@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/saifee/static/css/main.5e527f14.css",
-    "main.js": "/saifee/static/js/main.b981e9dc.js",
+    "main.js": "/saifee/static/js/main.bf93b0c3.js",
     "static/media/our-doctors-banner.png": "/saifee/static/media/our-doctors-banner.d675293f2e9923e4772a.png",
     "static/media/about-banner.png": "/saifee/static/media/about-banner.f8f84d071fbc2d40c09f.png",
     "static/media/facilities.png": "/saifee/static/media/facilities.59cffb7df669c6c3ea8a.png",
@@ -30,10 +30,10 @@
     "static/media/book-doctor-appointment.png": "/saifee/static/media/book-doctor-appointment.b1177502e48ed9ab527f.png",
     "index.html": "/saifee/index.html",
     "main.5e527f14.css.map": "/saifee/static/css/main.5e527f14.css.map",
-    "main.b981e9dc.js.map": "/saifee/static/js/main.b981e9dc.js.map"
+    "main.bf93b0c3.js.map": "/saifee/static/js/main.bf93b0c3.js.map"
   },
   "entrypoints": [
     "static/css/main.5e527f14.css",
-    "static/js/main.b981e9dc.js"
+    "static/js/main.bf93b0c3.js"
   ]
 }
