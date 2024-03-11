@@ -16,7 +16,7 @@ const Welcome = ({ img, title }) => {
               <p className="mt-2 text-4xl tracking-tight text-theme sm:text-6xl">
                 {title}
               </p>
-              <p className="mt-6 text-lg text-gray-600">
+              <p className="mt-6  text-gray-600">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -28,7 +28,7 @@ const Welcome = ({ img, title }) => {
                 desktop publishing software like Aldus PageMaker including
                 versions of Lorem Ipsum.
               </p>
-              <p className="my-4 text-lg text-gray-600">
+              <p className="my-4  text-gray-600">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -36,7 +36,7 @@ const Welcome = ({ img, title }) => {
                 survived not only five centuries, but also the leap into
                 electronic typesetting,
               </p>
-              <p className="text-lg text-gray-600">
+              <p className=" text-gray-600">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley

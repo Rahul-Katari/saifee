@@ -118,18 +118,20 @@ const Home = () => {
                   </p>
                   <div>
                     <p>M.D., D.M.(Gold Medalist)</p>
-                    <p className="text-red-600 text-2xl font-semibold">
+                    <p className="text-red-600 md:text-2xl text-xl font-semibold">
                       Diabetes, Thyroid & Endocrine Centre
                     </p>
                   </div>
-                  <p className="mt-6 text-lg leading-8 text-gray-600">
+                  <p className="mt-6 text-sm md:text-base leading-8 text-gray-600">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Maiores impedit perferendis suscipit eaque, iste dolor
                     cupiditate blanditiis ratione.
                   </p>
                   <div className="text-blue-900">
-                    <p className="text-2xl underline">Specialities</p>
-                    <div className="grid md:grid-cols-2 text-xl list-disc">
+                    <p className="md:text-2xl text-xl underline">
+                      Specialities
+                    </p>
+                    <div className="grid md:grid-cols-2 md:text-xl list-disc">
                       <ul className="list-disc list-disc-default">
                         <li>Thyroid Treatments - Hypothyroidism</li>
                         <li>Diabetes - Type 1 Diabetes, Type 2 Diabetes</li>

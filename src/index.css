@@ -1,6 +1,8 @@
 @import url('./assets/styles/fonts.css');
 @import url('./assets/styles/react-tabs-scrollable.css');
-@import url('./assets//styles//tailwind.css');
+@import url('./assets/styles/tailwind.css');
+
+@import url('./assets/styles/responsive.css');
 
 body {
   margin: 0;
