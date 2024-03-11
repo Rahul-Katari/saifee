@@ -10,6 +10,8 @@ import doctorFemale from "../assets/images/footer/doctor-female.png";
 import location from "../assets/images/footer/location.png";
 import CallUs from "./CallUs";
 
+import { useLocation } from "react-router-dom";
+
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
@@ -45,11 +47,17 @@ const cards = [
 ];
 
 const Footer = () => {
+  const location = useLocation();
+  const currentUrl = location.pathname;
   return (
     <div>
-      <CallUs />
+      {currentUrl !== "/" ? <CallUs /> : ""}
       <div className="bg-stone-100">
-        <img src={appointments} alt="Appointments" className="w-full" />
+        {currentUrl !== "/" ? (
+          <img src={appointments} alt="Appointments" className="w-full" />
+        ) : (
+          ""
+        )}
         <div className="container footer max-w-7xl p-5">
           <div>
             <img
