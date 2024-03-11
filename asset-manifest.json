@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/saifee/static/css/main.4497a961.css",
-    "main.js": "/saifee/static/js/main.81a909ec.js",
+    "main.css": "/saifee/static/css/main.5e527f14.css",
+    "main.js": "/saifee/static/js/main.b981e9dc.js",
     "static/media/our-doctors-banner.png": "/saifee/static/media/our-doctors-banner.d675293f2e9923e4772a.png",
     "static/media/about-banner.png": "/saifee/static/media/about-banner.f8f84d071fbc2d40c09f.png",
     "static/media/facilities.png": "/saifee/static/media/facilities.59cffb7df669c6c3ea8a.png",
@@ -9,8 +9,9 @@
     "static/media/appointments.png": "/saifee/static/media/appointments.5b46df11a455bbb47d57.png",
     "static/media/laboratory-tests.png": "/saifee/static/media/laboratory-tests.e14345f7fd328a3cc6bc.png",
     "static/media/comm-to-cure.png": "/saifee/static/media/comm-to-cure.5bc19d5988aeafefd8f6.png",
+    "static/media/doctors.png": "/saifee/static/media/doctors.1541fab462149bc2aace.png",
+    "static/media/doctor-manasa.png": "/saifee/static/media/doctor-manasa.8b60cd4fd5a5ade7a0b7.png",
     "static/media/excellence-banner.png": "/saifee/static/media/excellence-banner.2d98c1c6b253824e3418.png",
-    "static/media/our-doctors.png": "/saifee/static/media/our-doctors.cee99453f4fd30872564.png",
     "static/media/Poppins-Thin.ttf": "/saifee/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf",
     "static/media/Poppins-ExtraLight.ttf": "/saifee/static/media/Poppins-ExtraLight.333cb30c20e31999802a.ttf",
     "static/media/doctor-cartoon.png": "/saifee/static/media/doctor-cartoon.6dbc6bc52bb06a58793f.png",
@@ -28,11 +29,11 @@
     "static/media/book-lab-test.png": "/saifee/static/media/book-lab-test.55e428b012611078ac39.png",
     "static/media/book-doctor-appointment.png": "/saifee/static/media/book-doctor-appointment.b1177502e48ed9ab527f.png",
     "index.html": "/saifee/index.html",
-    "main.4497a961.css.map": "/saifee/static/css/main.4497a961.css.map",
-    "main.81a909ec.js.map": "/saifee/static/js/main.81a909ec.js.map"
+    "main.5e527f14.css.map": "/saifee/static/css/main.5e527f14.css.map",
+    "main.b981e9dc.js.map": "/saifee/static/js/main.b981e9dc.js.map"
   },
   "entrypoints": [
-    "static/css/main.4497a961.css",
-    "static/js/main.81a909ec.js"
+    "static/css/main.5e527f14.css",
+    "static/js/main.b981e9dc.js"
   ]
 }
