@@ -25,7 +25,7 @@ const Navbar = () => {
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto md:py-4 pt-4 sm:px-6 lg:px-8">
+          <div className="mx-auto md:py-4 py-2 sm:px-6 lg:px-8">
             <div className="relative flex md:h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -41,17 +41,17 @@ const Navbar = () => {
               </div>
               <div className="flex flex-1 items-center justify-around sm:justify-between items-center">
                 <div className="flex items-center">
-                  <div className="flex flex-shrink-0 items-center">
+                  <div className="flex flex-shrink-0 items-center w-16 md:w-24">
                     <Link to={"/"}>
                       <img
-                        className="md:w-auto w-16"
+                        className="w-100 h-100"
                         src={logo}
                         alt="Your Company"
                       />
                     </Link>
                   </div>
                   <div className="hidden sm:ml-6 sm:block">
-                    <div className="flex space-x-4">
+                    <div className="flex">
                       {navigation.map((item) => (
                         <Link
                           key={item.name}
@@ -61,7 +61,7 @@ const Navbar = () => {
                               (item.href !== "/" && item.href === pathname)
                               ? "text-nav-highlight underline"
                               : "hover:text-nav-highlight hover:underline",
-                            "rounded-md px-3 py-2 text-lg font-medium"
+                            "rounded-md px-3 py-2  font-medium"
                           )}
                           aria-current={item.current ? "page" : undefined}
                         >
@@ -72,14 +72,14 @@ const Navbar = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div>
+                  <div className="me-3 w-12 md:w-16">
                     <img src={navHelp} alt="help" />
                   </div>
                   <div>
-                    <div>24x7 Help line</div>
+                    <p className="text-sm">24x7 Help line</p>
                     <a
                       href="tel:+91 73400 40097"
-                      className="md:text-xl font-semibold text-cyan-900"
+                      className="font-semibold text-cyan-900 text-sm"
                     >
                       +91 73400 40097
                     </a>

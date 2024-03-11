@@ -67,16 +67,16 @@ const Footer = () => {
             />
           </div>
           <div className="justify-center md:flex items-center border py-3 border-cyan-500 border-x-0">
-            <div className="font-semibold text-nav-highlight md:text-3xl text-xl">
+            <div className="text-nav-highlight  text-xl">
               Quick Links :
             </div>
             <PageLinks
               links={quickLinks}
-              size={window.innerWidth <= 768 ? "lg" : "2xl"}
+              size={window.innerWidth <= 768 ? "xl" : "xl"}
               space={"4"}
             />
           </div>
-          <h1 className="uppercase text-center md:text-4xl text-3xl mt-5">
+          <h1 className="uppercase text-center text-2xl mt-5">
             Reach Us
           </h1>
           <div className="lg:grid-cols-3 sm:grid-cols-2 grid">

@@ -16,7 +16,7 @@ const icons = [
 
 const SocialIcons = ({ space }) => {
   return (
-    <div className={`flex space-x-${space}`}>
+    <div className={`flex space-x-2`}>
       {icons.map((icon, index) => (
         <a
           key={index}

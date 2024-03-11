@@ -36,7 +36,7 @@ const specialitiesData = [
   {
     imgSrc: spec2,
     text1: "Diabetes",
-    text2: "1 Diabetes / 2 Diabetes",
+    text2: "Diabetes - 1 & 2",
   },
   { imgSrc: spec3, text1: "Menopause" },
   { imgSrc: spec4, text1: "Pituitary Disorders" },
@@ -77,7 +77,7 @@ const Home = () => {
         {/* specialities start  */}
         <section>
           <div className="max-w-7xl m-auto">
-            <h3 className="uppercase text-4xl my-5 text-center text-theme font-semibold">
+            <h3 className="uppercase text-2xl md:text-3xl my-5 text-center text-theme">
               specialities
             </h3>
             <div className="grid grid-cols-2 lg:grid-cols-4 lg:gap-20 gap-5 mx-4">
@@ -92,7 +92,7 @@ const Home = () => {
                 );
               })}
             </div>
-            <div className="md:text-end text-center my-5 mx-4">
+            <div className="md:text-end text-center mt-12 mx-4">
               <a className="bg-theme px-10 py-2 text-white rounded-lg" href="#">
                 View More
               </a>
@@ -117,7 +117,7 @@ const Home = () => {
                   alt="Product screenshot"
                   className="lg:col-span-2 rounded-lg"
                 />
-                <div className="lg:pr-8 lg:pt-4 lg:col-span-3">
+                <div className="max-sm:mt-4 lg:pr-8 lg:pt-4 lg:col-span-3">
                   <div className="">
                     <h2 className="text-base font-semibold leading-7 text-grey text-xl">
                       Know About
@@ -127,20 +127,20 @@ const Home = () => {
                     </p>
                     <div>
                       <p>M.D., D.M.(Gold Medalist)</p>
-                      <p className="text-red-600 md:text-2xl text-xl font-semibold">
+                      <p className="text-red-600  text-xl">
                         Diabetes, Thyroid & Endocrine Centre
                       </p>
                     </div>
-                    <p className="md:mt-6 mt-2 md:leading-8 text-gray-600">
+                    <p className="my-4 text-gray-600">
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Maiores impedit perferendis suscipit eaque, iste dolor
                       cupiditate blanditiis ratione.
                     </p>
                     <div className="text-blue-900">
-                      <p className="md:text-2xl text-xl underline">
+                      <p className="text-xl underline">
                         Specialities
                       </p>
-                      <div className="grid md:grid-cols-2 md:text-xl list-disc">
+                      <div className="grid md:grid-cols-2  list-disc">
                         <ul className="list-disc list-disc-default max-sm:mb-0">
                           <li>Thyroid Treatments - Hypothyroidism</li>
                           <li>Diabetes - Type 1 Diabetes, Type 2 Diabetes</li>
@@ -172,7 +172,7 @@ const Home = () => {
         {/* committed to cure 2 starts  */}
         <section>
           <div className="lg:px-16">
-            <h2 className="text-theme md:text-4xl text-2xl text-center uppercase md:my-5">
+            <h2 className="text-theme text-xl md:text-3xl text-center uppercase md:my-5">
               Committed to cure
             </h2>
             <CommittedCureTabs />
@@ -182,7 +182,7 @@ const Home = () => {
         {/* Health talks section starts */}
         <section>
           <div>
-            <h2 className="text-theme md:text-4xl text-3xl text-center uppercase md:mb-10 mb-3">
+            <h2 className="text-theme text-3xl text-center uppercase md:mb-10 mb-3">
               health talks
             </h2>
             <div className="md:grid md:grid-cols-12 md:mx-0">

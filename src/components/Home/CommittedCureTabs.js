@@ -29,17 +29,17 @@ const CommittedCureTabs = () => {
         {...props}
       >
         {activeTab === idx && (
-          <div className="mx-4">
-            Tab screen {idx}
-            <div className="grid grid-cols-5">
+          <div className="m-4">
+            {/* Tab screen {idx} */}
+            <div className="grid grid-cols-5 items-center">
               <div className="md:col-span-2 col-span-5">
                 <img src={labTests} className="rounded-xl" />
               </div>
               <div className="md:col-span-3 md:px-10 mt-4 col-span-5">
-                <h1 className="text-blue-700 text-2xl font-semibold">
+                <h1 className="text-blue-700 text-xl font-semibold">
                   Laboratory Tests
                 </h1>
-                <p className="my-3 font-medium">
+                <p className="my-3">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -51,7 +51,7 @@ const CommittedCureTabs = () => {
                   and more recently with desktop publishing software like Aldus
                   PageMaker including versions of Lorem Ipsum.
                 </p>
-                <p className="font-medium">
+                <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -75,7 +75,7 @@ const CommittedCureTabs = () => {
       >
         {/* generating an array to loop through it  */}
         {TabNames.map((item, index) => (
-          <Tab className="rounded flex items-center gap-x-4 text-xl" key={item}>
+          <Tab className="rounded flex items-center gap-x-4 text-sm" key={item}>
             <LaboratorySvg color={activeTab == index ? "White" : "#434343"} />
             {item}
           </Tab>

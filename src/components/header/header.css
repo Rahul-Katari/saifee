@@ -1,7 +1,7 @@
 @media only screen and (min-width: 768px) {
     .footer .top-banner-links:not(:last-child):after {
         background-color: var(--nav-highlight-color);
-        bottom: 7px;
+        /* bottom: 7px; */
         height: 18px;
     }
 
