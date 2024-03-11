@@ -11,7 +11,7 @@ const FooterCard = ({
   timing2,
 }) => {
   return (
-    <div className="p-8 text-center">
+    <div className="md:p-8 p-4 text-center">
       <div className="bg-footer-highlight inline-block rounded-full p-2 text-white">
         <img src={iconSrc} className="h-7 w-7 m-1" />
       </div>

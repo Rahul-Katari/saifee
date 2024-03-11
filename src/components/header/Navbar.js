@@ -25,8 +25,8 @@ const Navbar = () => {
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto py-4 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
+          <div className="mx-auto md:py-4 pt-4 sm:px-6 lg:px-8">
+            <div className="relative flex md:h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -39,10 +39,16 @@ const Navbar = () => {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:justify-between items-center">
+              <div className="flex flex-1 items-center justify-around sm:justify-between items-center">
                 <div className="flex items-center">
                   <div className="flex flex-shrink-0 items-center">
-                    <img className="w-auto" src={logo} alt="Your Company" />
+                    <Link to={"/"}>
+                      <img
+                        className="md:w-auto w-16"
+                        src={logo}
+                        alt="Your Company"
+                      />
+                    </Link>
                   </div>
                   <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-4">
@@ -73,7 +79,7 @@ const Navbar = () => {
                     <div>24x7 Help line</div>
                     <a
                       href="tel:+91 73400 40097"
-                      className="text-xl font-semibold text-cyan-900"
+                      className="md:text-xl font-semibold text-cyan-900"
                     >
                       +91 73400 40097
                     </a>

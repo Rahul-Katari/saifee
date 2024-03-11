@@ -52,7 +52,7 @@ const Footer = () => {
         <img src={appointments} alt="Appointments" className="w-full" />
         <div className="container footer max-w-7xl p-5">
           <img src={footerLogo} alt="logo" className="m-auto my-5" />
-          <div className="justify-center flex items-center border py-3 border-cyan-500 border-x-0">
+          <div className="justify-center md:flex items-center border py-3 border-cyan-500 border-x-0">
             <div className="font-semibold text-nav-highlight md:text-3xl text-xl">
               Quick Links :
             </div>
@@ -78,15 +78,15 @@ const Footer = () => {
               />
             ))}
           </div>
-          <div className="flex-col flex md:flex-row justify-around pb-5 gap-4 md:gap-0 text-xl">
-            <div className="btn-primary px-8">
+          <div className="flex-col flex md:flex-row justify-around pb-5 gap-4 md:gap-0 md:text-xl">
+            <div className="btn-primary px-8 justify-center">
               <SocialIcons space={4} />
             </div>
             <div className="telephone-footer-link">
               <a
                 target="_blank"
                 href="tel:+91 73400 40097"
-                className="btn-primary px-8"
+                className="btn-primary px-8 justify-center"
               >
                 <div className="pe-5">
                   <IconPhoneFilled />

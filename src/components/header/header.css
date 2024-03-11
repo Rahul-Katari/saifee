@@ -1,17 +1,22 @@
-.top-banner-links:not(:last-child):after {
-    content: '';
-    display: block;
-    height: 12px;
-    width: 3px;
-    background-color: #fff;
-    position: absolute;
-    right: -9px;
-    bottom: 5px;
+@media only screen and (min-width: 768px) {
+    .footer .top-banner-links:not(:last-child):after {
+        background-color: var(--nav-highlight-color);
+        bottom: 7px;
+        height: 18px;
+    }
+
+    .top-banner-links:not(:last-child):after {
+        content: '';
+        display: block;
+        height: 12px;
+        width: 3px;
+        background-color: #fff;
+        position: absolute;
+        right: -9px;
+        bottom: 5px;
+    }
 }
 
-.footer .top-banner-links:not(:last-child):after {
-    background-color: var(--nav-highlight-color);
-}
 
 .top-banner {
     background: linear-gradient(48deg, #ffffff 20%, #158D9F 59%, #2696A7 100%);

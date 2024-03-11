@@ -50,7 +50,7 @@ const Home = () => {
   return (
     <>
       <div>
-        <div className="my-5 pb-5">
+        <div className="md:my-5 pb-5">
           <img src={banner} />
         </div>
         <div className="max-w-7xl m-auto my-5 pb-5">
