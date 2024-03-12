@@ -63,20 +63,20 @@ const Footer = () => {
             <img
               src={footerLogo}
               alt="logo"
-              className="m-auto my-5 w-24 md:w-auto"
+              className="m-auto my-5 w-24 h-24 md:w-auto"
             />
           </div>
           <div className="justify-center md:flex items-center border py-3 border-cyan-500 border-x-0">
-            <div className="text-nav-highlight  text-xl">
+            <div className="text-nav-highlight  text-base">
               Quick Links :
             </div>
             <PageLinks
               links={quickLinks}
-              size={window.innerWidth <= 768 ? "xl" : "xl"}
+              size={window.innerWidth <= 768 ? "base" : "base"}
               space={"4"}
             />
           </div>
-          <h1 className="uppercase text-center text-2xl mt-5">
+          <h1 className="uppercase text-center text-xl mt-5">
             Reach Us
           </h1>
           <div className="lg:grid-cols-3 sm:grid-cols-2 grid">
@@ -102,7 +102,7 @@ const Footer = () => {
               <a
                 target="_blank"
                 href="tel:+91 73400 40097"
-                className="btn-primary px-8 justify-center"
+                className="btn-primary px-8 justify-center text-base"
               >
                 <div className="pe-5">
                   <IconPhoneFilled />
@@ -113,7 +113,7 @@ const Footer = () => {
             <a
               target="_blank"
               href="mailto:info@drmanasaendocrine.com"
-              className="btn-primary"
+              className="btn-primary text-base"
             >
               <div className="pe-5">
                 <IconMailFilled />

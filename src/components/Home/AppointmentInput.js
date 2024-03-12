@@ -3,7 +3,7 @@ const AppointmentInput = ({ placeholder }) => {
     <div>
       <input
         placeholder={placeholder}
-        className="p-2 px-5 rounded-full w-full"
+        className="p-2 px-5 rounded-full w-full text-sm"
       />
     </div>
   );

@@ -180,7 +180,7 @@ const Home = () => {
         </section>
         {/* committed to cure 2 ends  */}
         {/* Health talks section starts */}
-        <section>
+        <section className="hidden">
           <div>
             <h2 className="text-theme text-3xl text-center uppercase md:mb-10 mb-3">
               health talks
@@ -241,8 +241,8 @@ const Home = () => {
             </div>
             <div className="bg-gradient-to-b from-theme to-[#035DAF] md:p-10 p-4 col-span-3">
               <div className="text-white">
-                <h1 className="uppercase text-4xl">schedule an appointment</h1>
-                <p>
+                <h1 className="uppercase text-2xl md:text-3xl">schedule an appointment</h1>
+                <p className="text-sm">
                   To reach out to our mm Hospital Team, please fill in the below
                   form. Our team members will revert back to you shortly.
                 </p>
@@ -257,7 +257,7 @@ const Home = () => {
                   <AppointmentInput placeholder={"Select Date"} />
                   <textarea
                     placeholder="Type Message"
-                    className="rounded-xl p-2 py-5 md:col-span-2"
+                    className="rounded-xl p-2 py-5 md:col-span-2 text-sm"
                   ></textarea>
                 </div>
                 <button className="rounded-full p-2 px-10 mt-4 bg-white ms-auto">
