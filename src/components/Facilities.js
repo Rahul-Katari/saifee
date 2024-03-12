@@ -20,13 +20,13 @@ const Facilities = () => {
           onTabClick={onTabClick}
           hideNavBtnsOnMobile={false}
         >
-          <Tab className="rounded flex items-center gap-x-4 md:text-xl font-medium">
+          <Tab className="rounded flex items-center gap-x-4 text-sm">
             <div>Facilities & Services</div>
           </Tab>
-          <Tab className="rounded flex items-center gap-x-4 md:text-xl font-medium">
+          <Tab className="rounded flex items-center gap-x-4 text-sm">
             Diagnostic & Therapeutic
           </Tab>
-          <Tab className="rounded flex items-center gap-x-4 md:text-xl font-medium">
+          <Tab className="rounded flex items-center gap-x-4 text-sm">
             Pharmacy
           </Tab>
         </Tabs>
@@ -34,7 +34,7 @@ const Facilities = () => {
           {activeTab === 0 && (
             <div>
               <div className="my-5">
-                <h2 className="text-theme font-medium">Out Patient Services</h2>
+                <h2 className="text-theme font-medium text-2xl pb-4">Out Patient Services</h2>
                 <p>
                   TK Hospitals’ outpatient department provides OPD services
                   across almost all specialties. Experienced team of expert
@@ -56,7 +56,7 @@ const Facilities = () => {
                 <h3 className="text-theme text-2xl font-semibold my-5">
                   Day-care
                 </h3>
-                <h4 className="text-theme font-medium">Day Care Units</h4>
+                <h4 className="text-theme font-medium pb-2">Day Care Units</h4>
                 <p>
                   TK Hospitals offers day care surgeries across these
                   specialties: cardiology, neurology, ophthalmology, ENT,
@@ -71,7 +71,7 @@ const Facilities = () => {
                   minor surgical procedures, radiation treatments, etc.
                 </p>
 
-                <h4 className="text-theme font-medium mt-5">Dialysis Centre</h4>
+                <h4 className="text-theme font-medium mt-5 pb-2">Dialysis Centre</h4>
                 <p>
                   TK Hospitals has the best Dialysis Centre in Hyderabad,
                   Telangana. The state-of-the-art dialysis centre provides a
@@ -94,7 +94,7 @@ const Facilities = () => {
                   children.
                 </p>
 
-                <h1 className="text-theme font-medium mt-5">
+                <h1 className="text-theme font-medium mt-5 pb-2">
                   Health Check-ups
                 </h1>
                 <ul className="list-disc-default mt-0">
@@ -128,10 +128,10 @@ const Facilities = () => {
                 </p>
 
                 <div>
-                  <h2 className="text-theme text-2xl font-semibold my-5">
+                  <h2 className="text-theme text-2xl font-medium my-5">
                     Critical Care Services
                   </h2>
-                  <h4 className="text-theme font-medium">
+                  <h4 className="text-theme font-medium pb-2">
                     Intensive critical care services for faster recovery
                   </h4>
                   <p>
