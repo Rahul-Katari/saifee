@@ -36,6 +36,24 @@
     border: 1px solid #000 !important;
 }
 
+.doctor-details .rts___tabs,
+.excellence-details .rts___tabs {
+    flex-direction: column;
+}
+
+.doctor-details .rts___tabs .rts___btn,
+.excellence-details .rts___tabs .rts___btn {
+    border-radius: 0px !important;
+}
+
+.doctor-details .rts___tab.rts___btn.rts___tab___selected,
+.doctor-details .rts___btn:hover .excellence-details .rts___tab.rts___btn.rts___tab___selected,
+.excellence-details .rts___btn:hover {
+    background: linear-gradient(270deg, #00637B 0%, #00A0C6 100%) !important;
+    color: #fff;
+    border-radius: 0px 15px 15px 0px !important;
+}
+
 /* CSS for mobile devices only */
 @media only screen and (max-width: 767px) {
     .rts___btn {

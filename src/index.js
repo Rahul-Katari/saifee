@@ -17,6 +17,11 @@ import Contact from "./components/Contact";
 import Excellence from "./components/Excellence";
 import BestDoctors from "./components/BestDoctors";
 import Facilities from "./components/Facilities";
+import ExcellenceDetails from "./components/ExcellenceDetails";
+import DoctorDetails from "./components/DotorDetail";
+import Blogs from "./components/Blogs";
+import Careers from "./components/Careers";
+import PatientsVisitors from "./components/PatientsVisitors";
 
 const appRouter = createBrowserRouter([
   {
@@ -75,6 +80,11 @@ root.render(
           <Route path="/excellence" element={<Excellence />} />
           <Route path="/bestdoctors" element={<BestDoctors />} />
           <Route path="/facilities" element={<Facilities />} />
+          <Route path="/excellenceDetails" element={<ExcellenceDetails />} />
+          <Route path="/doctorDetails" element={<DoctorDetails />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/patientsVisitors" element={<PatientsVisitors />} />
         </Route>
         {/* Additional top-level routes */}
         <Route path="/about" element={<About />} />

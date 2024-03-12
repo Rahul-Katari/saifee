@@ -1,13 +1,15 @@
+import ImageSlider from "./ImageSlider";
+import cure from "../assets/images/home/comm-to-cure.png";
+
 const Welcome = ({ img, title }) => {
+  const images = [{ src: cure }, { src: cure }, { src: cure }];
   return (
     <div className="overflow-hidden bg-stone-100">
       <section className="lg:px-8 px-4">
         <div className="mx-auto md:grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5 items-center">
-          <img
-            src={img}
-            alt="Product screenshot"
-            className="lg:col-span-2 pb-4 md:pb-0  md:ps-8 rounded-lg"
-          />
+          <div className="lg:col-span-2 pb-4 md:pb-0  md:ps-8 welcome-image-slider max-w-[470px]">
+            <ImageSlider slidesToShow={1} images={images} />
+          </div>
           <div className="lg:pr-8 lg:col-span-3">
             <div>
               <h2 className="text-base font-medium leading-7 text-grey text-xl">

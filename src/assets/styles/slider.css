@@ -1,0 +1,131 @@
+.slick-prev:before,
+.slick-next:before {
+    content: '';
+}
+
+@media only screen and (max-width: 767px) {
+    .testimonial {
+        .slick-next {
+            right: unset;
+            left: 130px;
+            bottom: 10px;
+        }
+
+        .slick-prev {
+            left: 100px;
+        }
+
+        .slick-prev,
+        .slick-next {
+            display: none !important;
+            color: transparent;
+            background: transparent;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            z-index: 1;
+            bottom: 10px;
+            top: unset;
+        }
+    }
+
+}
+
+.testimonial {
+    @media screen and (min-width: 768px) {
+
+        .slick-list {
+            margin-left: 400px;
+        }
+    }
+
+
+    .slick-next {
+        right: unset;
+        left: 130px;
+        bottom: 50px;
+    }
+
+    .slick-prev {
+        left: 100px;
+    }
+
+    .slick-prev,
+    .slick-next {
+        color: #808080;
+        background: transparent;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        z-index: 1;
+        bottom: 10px;
+        top: unset;
+    }
+
+    .slick-prev:hover,
+    .slick-prev:focus,
+    .slick-next:hover,
+    .slick-next:focus {
+        color: #3E66DF;
+        outline: none;
+        background: unset;
+    }
+}
+
+.home-main-banner {
+    .slick-next {
+        right: unset;
+        left: 70px;
+        bottom: 50px;
+    }
+
+    .slick-prev {
+        left: 20px;
+    }
+
+    .slick-prev,
+    .slick-next {
+        color: #000;
+        background: #96E5EF;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        z-index: 1;
+        bottom: 10px;
+        top: unset;
+    }
+
+    .slick-prev:hover,
+    .slick-prev:focus,
+    .slick-next:hover,
+    .slick-next:focus {
+        color: #000;
+        outline: none;
+        background: #96e5efc9;
+    }
+}
+
+/* .welcome-image-slider { */
+.slick-dots li.slick-active button:before {
+    color: #29367D;
+}
+
+.slick-dots li button:before {
+    color: #29367D;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+}
+
+.slick-dots li {
+    margin: 0px;
+}
+
+/* } */
+
+.blogs {
+    .slick-arrow {
+        display: none !important;
+    }
+}

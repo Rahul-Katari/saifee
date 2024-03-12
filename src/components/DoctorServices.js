@@ -1,6 +1,4 @@
 import SpecialitiesCard from "./Home/SpecialitiesCard";
-import banner from "../assets/images/excellence-banner.png";
-import DoctorServices from "./DoctorServices";
 
 // context for endocrinology folder
 const endocrinolgyContext = require.context(
@@ -15,7 +13,7 @@ const generalsurgeryContext = require.context(
   /\.(png|jpe?g|svg)$/
 );
 
-const Excellence = () => {
+const DoctorServices = ({ speciality }) => {
   // importing all images of endocrinology
   const endocrinolgyData = endocrinolgyContext.keys().map((imagePath) => {
     const imageName = imagePath.replace("./", "");
@@ -36,23 +34,18 @@ const Excellence = () => {
       text2: text2 ? text2.split(".")[0] : "",
     };
   });
+  const spec = speciality === "endo" ? endocrinolgyData : generalsurgeryData;
   return (
-    <div>
-      <div>
-        <img src={banner} className="w-full" />
-      </div>
-      <div className="max-w-7xl m-auto">
-        <h1 className="uppercase text-theme text-3xl font-medium my-12 text-center">
-          endocrinology
-        </h1>
-        <DoctorServices speciality={"endo"} />
-        <h1 className="uppercase text-theme text-3xl font-medium my-12 text-center">
-          general Surgery
-        </h1>
-        <DoctorServices speciality={""} />
-      </div>
+    <div className="grid grid-cols-2 lg:grid-cols-4 lg:gap-20 gap-5 mx-4">
+      {spec.map((spec, index) => (
+        <SpecialitiesCard
+          imgSrc={spec.imgSrc}
+          key={index}
+          text1={spec.text1}
+          text2={spec.text2}
+        />
+      ))}
     </div>
   );
 };
-
-export default Excellence;
+export default DoctorServices;

@@ -1,5 +1,9 @@
 import BannerCard from "./BannerCard";
 import Logo from "../../assets/images/logo.png";
+import medicalExperts from "../../assets/images/home/medical-experts.png";
+import blogsBg from "../../assets/images/home/blogs-bg.png";
+import testBg1 from "../../assets/images/home/testi-bg.png";
+import testBg2 from "../../assets/images/home/test-bg-quote.png";
 
 import card1 from "../../assets/images/home/book-doctor-appointment.png";
 import card2 from "../../assets/images/home/find-your-doctors.png";
@@ -17,12 +21,21 @@ import spec7 from "../../assets/images/specialities/endocrinology/Endocrine-Canc
 import spec8 from "../../assets/images/specialities/endocrinology/Endocrine Related-Heart Conditions.png";
 
 import SpecialitiesCard from "./SpecialitiesCard";
-import banner from "../../assets/images/home/banners/IMG-20240229-WA0003.jpg";
 import cure from "../../assets/images/home/comm-to-cure.png";
 import appointments from "../../assets/images/footer/appointments.png";
 import CommittedCureTabs from "./CommittedCureTabs";
 import AppointmentInput from "./AppointmentInput";
 import Welcome from "../Welcome";
+import AppointmentSchedule from "../AppointmentSchedule";
+import SimpleSlider from "../HomeBannerSlider";
+import HomeBannerSlider from "../HomeBannerSlider";
+
+import blog1 from "../../assets/images/home/blog1.png";
+import blog2 from "../../assets/images/home/blog2.png";
+import blog3 from "../../assets/images/home/blog3.png";
+import ImageSlider from "../ImageSlider";
+import CenterSlider from "../CenterSlider";
+import SwipeToSlide from "../SwipeToSlide";
 
 const bannerCardsData = [
   { imgSrc: card1, title1: "Book Doctor", title2: "Appointment" },
@@ -45,13 +58,18 @@ const specialitiesData = [
   { imgSrc: spec7, text1: "Endocrine Cancers" },
   { imgSrc: spec8, text1: "Endocrine-Related", text2: "Heart Conditions" },
 ];
+const blogs = [
+  { src: blog1, text: "Top medical equipments" },
+  { src: blog2, text: "Know the new techniques of endocrinology" },
+  { src: blog3, text: "5 ways to improve user retention for your startup" },
+];
 
 const Home = () => {
   return (
     <>
       <div>
-        <div>
-          <img src={banner} />
+        <div className="home-main-banner">
+          <HomeBannerSlider />
         </div>
         <section>
           <div className="max-w-7xl m-auto">
@@ -137,9 +155,7 @@ const Home = () => {
                       cupiditate blanditiis ratione.
                     </p>
                     <div className="text-blue-900">
-                      <p className="text-xl underline">
-                        Specialities
-                      </p>
+                      <p className="text-xl underline">Specialities</p>
                       <div className="grid md:grid-cols-2  list-disc">
                         <ul className="list-disc list-disc-default max-sm:mb-0">
                           <li>Thyroid Treatments - Hypothyroidism</li>
@@ -180,14 +196,14 @@ const Home = () => {
         </section>
         {/* committed to cure 2 ends  */}
         {/* Health talks section starts */}
-        <section className="hidden">
-          <div>
+        <section>
+          <div className="bg-banner md:p-16 max-sm:py-16">
             <h2 className="text-theme text-3xl text-center uppercase md:mb-10 mb-3">
               health talks
             </h2>
             <div className="md:grid md:grid-cols-12 md:mx-0">
               <div className="col-span-3 md:pe-6 md:ps-10 mx-4 md:mx-0">
-                <img src={Logo} className="m-auto" />
+                <img src={Logo} className="m-auto w-24" />
                 <h3 className="md:text-3xl text-2xl font-semibold py-3">
                   Connect with Manasa Mynepally
                 </h3>
@@ -197,7 +213,7 @@ const Home = () => {
                   feugiat elit.c.
                 </p>
               </div>
-              <div className="col-span-5">
+              <div className="col-span-6">
                 <iframe
                   height="515"
                   src="https://www.youtube.com/embed/iSXL58MPPQc?si=WZA9y5_5GxtJImtO"
@@ -208,8 +224,8 @@ const Home = () => {
                   className="w-full"
                 ></iframe>
               </div>
-              <div className="col-span-4 md:ps-10 max-sm:pt-5">
-                <div className="flex text-white gap-6 justify-center">
+              <div className="col-span-3 md:ps-10 max-sm:pt-5">
+                <div className="flex text-white gap-6 justify-center md:justify-between">
                   <button className="w-24 py-1 bg-gradient-to-b from-theme to-[#0361AD] rounded-xl ">
                     All
                   </button>
@@ -220,53 +236,71 @@ const Home = () => {
                     Latest
                   </button>
                 </div>
+                <div className="flex items-center pt-8 max-sm:justify-center">
+                  <img src={medicalExperts} className="h-16" />
+                  <p className="text-[#222F66] ps-4">The Medical Experts</p>
+                </div>
+                <div className="flex items-center pt-4 max-sm:justify-center">
+                  <img src={medicalExperts} className="h-16" />
+                  <p className="text-[#222F66] ps-4">The Medical Experts</p>
+                </div>
+                <div className="flex items-center pt-4 max-sm:justify-center">
+                  <img src={medicalExperts} className="h-16" />
+                  <p className="text-[#222F66] ps-4">The Medical Experts</p>
+                </div>
+                <div className="flex items-center pt-4 max-sm:justify-center">
+                  <img src={medicalExperts} className="h-16" />
+                  <p className="text-[#222F66] ps-4">The Medical Experts</p>
+                </div>
               </div>
             </div>
           </div>
         </section>
         {/* Health talks section ends */}
-        {/* schedule an appointment starts  */}
+        {/* testimonials section  */}
         <section>
-          <div className="md:grid md:grid-cols-7 gap-y-2">
-            <div className="flex items-center justify-center col-span-4">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243646.90509385153!2d78.24323015659058!3d17.412608643969392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1709380150248!5m2!1sen!2sin"
-                height="450"
-                style={{ border: "0" }}
-                allowfullscreen
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                className="md:w-4/5 w-full"
-              ></iframe>
-            </div>
-            <div className="bg-gradient-to-b from-theme to-[#035DAF] md:p-10 p-4 col-span-3">
-              <div className="text-white">
-                <h1 className="uppercase text-2xl md:text-3xl">schedule an appointment</h1>
-                <p className="text-sm">
-                  To reach out to our mm Hospital Team, please fill in the below
-                  form. Our team members will revert back to you shortly.
-                </p>
+          <div className="testimonial">
+            <h3 className="text-theme d:text-4xl text-2xl text-center uppercase md:mb-24 mb-8">
+              what our patients say
+            </h3>
+            <div
+              className="bg-right bg-contain bg-no-repeat md:h-[600px] h-[400px] flex flex-col justify-center relative"
+              style={{
+                backgroundImage: `url(${testBg1})`,
+              }}
+            >
+              <div className="absolute top-0 left-[20%] max-sm:hidden md:d-block">
+                <img src={testBg2} className="w-6/12" />
               </div>
-              <form>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-                  <AppointmentInput placeholder={"First Name"} />
-                  <AppointmentInput placeholder={"Last Name"} />
-                  <AppointmentInput placeholder={"Email Id"} />
-                  <AppointmentInput placeholder={"Phone No."} />
-                  <AppointmentInput placeholder={"Select Service"} />
-                  <AppointmentInput placeholder={"Select Date"} />
-                  <textarea
-                    placeholder="Type Message"
-                    className="rounded-xl p-2 py-5 md:col-span-2 text-sm"
-                  ></textarea>
-                </div>
-                <button className="rounded-full p-2 px-10 mt-4 bg-white ms-auto">
-                  Submit
-                </button>
-              </form>
+              <div className="absolute left-[8%] md:bottom-[35%] bottom-[10%] font-medium">
+                Client <br></br> Testimonials
+              </div>
+              <SwipeToSlide />
             </div>
           </div>
         </section>
+        {/* blogs section  */}
+        <div
+          className="blogs bg-cover bg-center bg-no-repeat md:h-[600px] h-[450px] flex flex-col justify-center"
+          style={{
+            backgroundImage: `url(${blogsBg})`,
+          }}
+        >
+          <div>
+            <h3 className="text-theme md:text-4xl text-2xl text-center uppercase md:mb-24 mb-8">
+              Blogs
+            </h3>
+            <div className="md:grid grid-cols-10 justify-end items-center">
+              <div className="col-span-4"></div>
+              <div className="col-span-6 ">
+                <CenterSlider slides={blogs} />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* blogs section  */}
+        {/* schedule an appointment starts  */}
+        <AppointmentSchedule />
         {/* schedule an appointment ends */}
       </div>
     </>

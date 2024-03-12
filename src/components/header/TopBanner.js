@@ -2,9 +2,9 @@ import SocialIcons from "./SocialIcons";
 import PageLinks from "./PageLinks";
 
 const topLinks = [
-  { name: "Blogs", href: "#" },
-  { name: "Patients & Visitors", href: "#" },
-  { name: "Careers", href: "#" },
+  { name: "Blogs", href: "/blogs" },
+  { name: "Patients & Visitors", href: "/patientsVisitors" },
+  { name: "Careers", href: "/careers" },
   { name: "News & Media", href: "#" },
 ];
 const TopBanner = () => {
