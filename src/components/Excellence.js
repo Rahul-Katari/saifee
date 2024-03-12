@@ -41,7 +41,7 @@ const Excellence = () => {
         <img src={banner} className="w-full" />
       </div>
       <div className="max-w-7xl m-auto">
-        <h1 className="uppercase text-theme text-4xl font-medium my-12 text-center">
+        <h1 className="uppercase text-theme text-3xl font-medium my-12 text-center">
           endocrinology
         </h1>
         <div className="grid grid-cols-2 lg:grid-cols-4 lg:gap-20 gap-5 mx-4">
@@ -54,7 +54,7 @@ const Excellence = () => {
             />
           ))}
         </div>
-        <h1 className="uppercase text-theme text-4xl font-medium my-12 text-center">
+        <h1 className="uppercase text-theme text-3xl font-medium my-12 text-center">
           general Surgery
         </h1>
         <div className="grid grid-cols-2 lg:grid-cols-4 lg:gap-20 gap-5 mx-4">

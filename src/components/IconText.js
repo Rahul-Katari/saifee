@@ -5,7 +5,7 @@ const IconText = ({ iconText, iconSrc, text1, text2 }) => {
         {iconText ? (
           <h3 className="text-highlight text-4xl font-bold">{iconText}</h3>
         ) : (
-          <img src={iconSrc} alt="locate Clinic" />
+          <img src={iconSrc} className="w-10 h-10 object-contain" alt="locate Clinic" />
         )}
       </div>
       <p>{text1}</p>

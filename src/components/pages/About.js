@@ -29,7 +29,7 @@ const About = () => {
       <div>
         <img src={aboutBanner} className="w-full" />
         <section>
-          <div className="card grid grid-cols-3 items-center md:justify-around font-semibold text-center gap-y-8 max-w-7xl m-auto">
+          <div className="card shadow-xl grid grid-cols-3 items-center md:justify-around font-semibold text-center gap-y-8 max-w-7xl m-auto">
             {iconsbanner.map((icon, index) => {
               return (
                 <IconText
@@ -48,7 +48,7 @@ const About = () => {
           <div className="bg-banner md:flex gap-20 p-10 my-10 md:px-52">
             <div>
               <div>
-                <img src={vision} className="p-5" />
+                <img src={vision} className="p-5 w-24 h-24 object-contain" />
               </div>
               <h3 className="text-theme text-3xl font-medium">Our Vision</h3>
               <p className="py-3">
@@ -60,7 +60,7 @@ const About = () => {
             </div>
             <div>
               <div>
-                <img src={mission} className="p-5" />
+                <img src={mission} className="p-5 w-24 h-24 object-contain" />
               </div>
               <h3 className="text-theme text-3xl font-medium">Our Mission</h3>
               <p className="py-3">
