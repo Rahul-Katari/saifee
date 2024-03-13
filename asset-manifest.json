@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/saifee/static/css/main.423b321d.css",
-    "main.js": "/saifee/static/js/main.82e64c41.js",
+    "main.css": "/saifee/static/css/main.27f16aa9.css",
+    "main.js": "/saifee/static/js/main.6e75d628.js",
     "static/media/testi-bg.png": "/saifee/static/media/testi-bg.cfd3d4030abcead18264.png",
     "static/media/patients-visitors.png": "/saifee/static/media/patients-visitors.1084651ba2616ee44640.png",
     "static/media/careers.png": "/saifee/static/media/careers.617b32dff4df93956e89.png",
     "static/media/our-doctors-banner.png": "/saifee/static/media/our-doctors-banner.d675293f2e9923e4772a.png",
     "static/media/blogs-bg.png": "/saifee/static/media/blogs-bg.341e015b117ccf39a3c5.png",
+    "static/media/topicOfBlog.png": "/saifee/static/media/topicOfBlog.bb5dd1e2d416c768042c.png",
     "static/media/about-banner.png": "/saifee/static/media/about-banner.f8f84d071fbc2d40c09f.png",
     "static/media/facilities.png": "/saifee/static/media/facilities.59cffb7df669c6c3ea8a.png",
     "static/media/contact.png": "/saifee/static/media/contact.d4c3e5612d2f0a4f8258.png",
@@ -18,6 +19,7 @@
     "static/media/doctors.png": "/saifee/static/media/doctors.1541fab462149bc2aace.png",
     "static/media/doctor-manasa.png": "/saifee/static/media/doctor-manasa.8b60cd4fd5a5ade7a0b7.png",
     "static/media/blog3.png": "/saifee/static/media/blog3.0cb799422fb14ead6138.png",
+    "static/media/job.png": "/saifee/static/media/job.f5c542f7d84d7005ebb5.png",
     "static/media/excellence-banner.png": "/saifee/static/media/excellence-banner.2d98c1c6b253824e3418.png",
     "static/media/blog2.png": "/saifee/static/media/blog2.141b3258ef722f3ca397.png",
     "static/media/latest-blogs.png": "/saifee/static/media/latest-blogs.91a2a3fc08b62fe4db75.png",
@@ -45,11 +47,11 @@
     "static/media/slick.ttf": "/saifee/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/saifee/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/saifee/index.html",
-    "main.423b321d.css.map": "/saifee/static/css/main.423b321d.css.map",
-    "main.82e64c41.js.map": "/saifee/static/js/main.82e64c41.js.map"
+    "main.27f16aa9.css.map": "/saifee/static/css/main.27f16aa9.css.map",
+    "main.6e75d628.js.map": "/saifee/static/js/main.6e75d628.js.map"
   },
   "entrypoints": [
-    "static/css/main.423b321d.css",
-    "static/js/main.82e64c41.js"
+    "static/css/main.27f16aa9.css",
+    "static/js/main.6e75d628.js"
   ]
 }
