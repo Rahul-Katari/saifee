@@ -13,7 +13,7 @@ const Facilities = () => {
       <div>
         <img src={banner} className="w-full" />
       </div>
-      <div className="max-w-7xl md:m-auto md:mt-12 m-4">
+      <div className="max-w-7xl md:m-auto md:mt-10 m-4">
         <Tabs
           className="flex justify-center"
           activeTab={activeTab}
@@ -34,7 +34,9 @@ const Facilities = () => {
           {activeTab === 0 && (
             <div>
               <div className="my-5">
-                <h2 className="text-theme font-medium text-2xl pb-4">Out Patient Services</h2>
+                <h2 className="text-theme font-medium text-xl pb-4">
+                  Out Patient Services
+                </h2>
                 <p>
                   TK Hospitals’ outpatient department provides OPD services
                   across almost all specialties. Experienced team of expert
@@ -71,7 +73,9 @@ const Facilities = () => {
                   minor surgical procedures, radiation treatments, etc.
                 </p>
 
-                <h4 className="text-theme font-medium mt-5 pb-2">Dialysis Centre</h4>
+                <h4 className="text-theme font-medium mt-5 pb-2">
+                  Dialysis Centre
+                </h4>
                 <p>
                   TK Hospitals has the best Dialysis Centre in Hyderabad,
                   Telangana. The state-of-the-art dialysis centre provides a

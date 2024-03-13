@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../assets/styles/slider.css";
 
-function CenterSlider({ slides }) {
+function BlogsSlider({ slides }) {
   const [oldSlide, setOldSlide] = useState(0);
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeSlide2, setActiveSlide2] = useState(0);
@@ -13,6 +13,9 @@ function CenterSlider({ slides }) {
   const settings = {
     // className: "center",
     // centerMode: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
     dots: true,
     infinite: true,
     slidesToShow: 3,
@@ -71,4 +74,4 @@ function CenterSlider({ slides }) {
   );
 }
 
-export default CenterSlider;
+export default BlogsSlider;

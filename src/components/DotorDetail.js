@@ -1,26 +1,9 @@
 import React from "react";
 import { Tab, TabScreen, Tabs } from "react-tabs-scrollable";
 import banner from "../assets/images/banners/excellence-details-banner.png";
-import SpecialitiesCard from "./Home/SpecialitiesCard";
-
-// context for endocrinology folder
-const endocrinolgyContext = require.context(
-  "../assets/images/specialities/endocrinology",
-  false,
-  /\.(png|jpe?g|svg)$/
-);
+import DoctorServices from "./DoctorServices";
 
 const DoctorDetails = () => {
-  // importing all images of endocrinology
-  const endocrinolgyData = endocrinolgyContext.keys().map((imagePath) => {
-    const imageName = imagePath.replace("./", "");
-    const [text1, text2] = imageName.split("-");
-    return {
-      imgSrc: endocrinolgyContext(imagePath),
-      text1: text1.split(".")[0],
-      text2: text2 ? text2.split(".")[0] : "",
-    };
-  });
   const Qualification = () => {
     return (
       <section>
@@ -90,16 +73,7 @@ const DoctorDetails = () => {
     <section>
       <div>
         <h3 className="text-theme text-4xl font-semibold uppercase">service</h3>
-        <div className="grid grid-cols-2 lg:grid-cols-4 lg:gap-20 gap-5 mx-4">
-          {endocrinolgyData.map((spec, index) => (
-            <SpecialitiesCard
-              imgSrc={spec.imgSrc}
-              key={index}
-              text1={spec.text1}
-              text2={spec.text2}
-            />
-          ))}
-        </div>
+        <DoctorServices speciality={"endo"} />
       </div>
     </section>;
   };

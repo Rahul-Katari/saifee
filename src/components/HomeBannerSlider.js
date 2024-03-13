@@ -36,12 +36,22 @@ function SamplePrevArrow(props) {
 
 export default function HomeBannerSlider() {
   var settings = {
+    autoplay: true,
+    autoplaySpeed: 3000,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 768, // Adjust the breakpoint as needed
+        settings: {
+          arrows: false, // Hide arrows on screens smaller than 768px
+        },
+      },
+    ],
   };
   return (
     <Slider {...settings}>

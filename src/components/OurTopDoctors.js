@@ -1,5 +1,7 @@
 import doctor from "../assets/images/about/doctors.png";
 import doctorManasa from "../assets/images/about/doctor-manasa.png";
+import { Link } from "react-router-dom";
+import MoreBtn from "./MoreBtn";
 
 const OurTopDoctors = () => {
   return (
@@ -30,22 +32,20 @@ const OurTopDoctors = () => {
                     Endocrinologist & Diabetologist
                   </p>
                   <div className="flex justify-end">
-                    <a className="btn-primary">View More</a>
+                    <MoreBtn btnText={"View More"} href={"/doctorDetails"} />
                   </div>
                 </div>
               </div>
               <div className="shadow-2xl p-5 rounded-xl flex flex-col bg-white">
                 <img src={doctor} />
                 <div>
-                  <h3 className="text-2xl font-bold mt-4">
-                    DR. G UDAY KIRAN
-                  </h3>
+                  <h3 className="text-2xl font-bold mt-4">DR. G UDAY KIRAN</h3>
                   <p className="my-4 ">
                     MS, FMAS, MAGES, EFIAGES, FALS (ROBOTIC) General and
                     Laparoscopic Surgeon
                   </p>
                   <div className="flex justify-end">
-                    <a className="btn-primary">View More</a>
+                    <MoreBtn btnText={"View More"} href={"/doctorDetails"} />
                   </div>
                 </div>
               </div>

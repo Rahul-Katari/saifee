@@ -36,7 +36,7 @@ const DoctorServices = ({ speciality }) => {
   });
   const spec = speciality === "endo" ? endocrinolgyData : generalsurgeryData;
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 lg:gap-20 gap-5 mx-4">
+    <div className="grid grid-cols-3 lg:grid-cols-5 lg:gap-10 gap-5 mx-4">
       {spec.map((spec, index) => (
         <SpecialitiesCard
           imgSrc={spec.imgSrc}

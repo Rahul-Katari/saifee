@@ -44,3 +44,35 @@ code {
   margin-inline-end: 0px;
   padding-inline-start: 40px;
 }
+
+.welcome::before {
+  content: "";
+  display: block;
+  width: 50px;
+  /* Adjust the width as needed */
+  height: 3px;
+  /* Adjust the height as needed */
+  background-color:
+    #035CAF;
+  /* Change color as desired */
+  margin-right: 60px;
+  /* Space between the border and the element */
+}
+
+.highlight-border::after {
+  content: "";
+  display: block;
+  width: 10%;
+  /* Full width of the element */
+  height: 2px;
+  /* Adjust the height as needed */
+  background-color: var(--nav-highlight-color);
+  /* Red underline color */
+  margin: auto;
+  margin-top: 5px;
+  /* Space between the border and the element */
+}
+
+.highlight-border-left::after {
+  margin: 5px 0px;
+}

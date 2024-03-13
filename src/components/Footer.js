@@ -11,6 +11,7 @@ import location from "../assets/images/footer/location.png";
 import CallUs from "./CallUs";
 
 import { useLocation } from "react-router-dom";
+import NewAppointments from "./NewAppointments";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -52,13 +53,10 @@ const Footer = () => {
   return (
     <div>
       {currentUrl !== "/" ? <CallUs /> : ""}
-      <div className="bg-stone-100">
-        {currentUrl !== "/" ? (
-          <img src={appointments} alt="Appointments" className="w-full" />
-        ) : (
-          ""
-        )}
-        <div className="container footer max-w-7xl p-5">
+      <div className="bg-stone-100 container">
+        {currentUrl !== "/" ? <NewAppointments /> : ""}
+
+        <div className=" footer max-w-7xl p-5 m-auto">
           <div>
             <img
               src={footerLogo}
@@ -67,18 +65,14 @@ const Footer = () => {
             />
           </div>
           <div className="justify-center md:flex items-center border py-3 border-cyan-500 border-x-0">
-            <div className="text-nav-highlight  text-base">
-              Quick Links :
-            </div>
+            <div className="text-nav-highlight  text-base">Quick Links :</div>
             <PageLinks
               links={quickLinks}
               size={window.innerWidth <= 768 ? "base" : "base"}
               space={"4"}
             />
           </div>
-          <h1 className="uppercase text-center text-xl mt-5">
-            Reach Us
-          </h1>
+          <h1 className="uppercase text-center text-xl mt-5">Reach Us</h1>
           <div className="lg:grid-cols-3 sm:grid-cols-2 grid">
             {cards.map((card, index) => (
               <FooterCard

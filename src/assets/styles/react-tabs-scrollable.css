@@ -25,15 +25,22 @@
 
 /* facilities css goes here  */
 
-.facilities-main-div .rts___tab___selected,
-.rts___nav___btn:hover {
-    background: linear-gradient(180deg, #245272 0%, #147887 100%) !important;
-}
+.facilities-main-div {
 
-.facilities-main-div .rts___btn {
-    border-radius: 5px !important;
-    background-color: transparent !important;
-    border: 1px solid #000 !important;
+    .rts___tab___selected,
+    .rts___nav___btn:hover {
+        background: linear-gradient(180deg, #245272 0%, #147887 100%) !important;
+    }
+
+    .rts___btn {
+        border-radius: 5px !important;
+        background-color: transparent !important;
+        border: 1px solid #000 !important;
+    }
+
+    .rts___tabs___container {
+        justify-content: center;
+    }
 }
 
 .doctor-details .rts___tabs,
@@ -52,6 +59,34 @@
     background: linear-gradient(270deg, #00637B 0%, #00A0C6 100%) !important;
     color: #fff;
     border-radius: 0px 15px 15px 0px !important;
+}
+
+.patients-visitors {
+    .rts___tabs {
+        padding: 0px;
+        width: 100%;
+    }
+
+    .rts___tab {
+        margin: 0px;
+        flex: 1;
+        padding: 20px !important;
+    }
+
+    .rts___btn {
+        border-radius: 0px !important;
+        color: #fff;
+    }
+
+    .rts___btn:nth-child(even) {
+        background: var(--theme) !important;
+
+    }
+
+    .rts___btn:nth-child(odd) {
+        background: var(--highlight) !important;
+
+    }
 }
 
 /* CSS for mobile devices only */

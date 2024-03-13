@@ -30,8 +30,10 @@ function SamplePrevArrow(props) {
   );
 }
 
-function SwipeToSlide() {
+function TestimonialSlide() {
   const settings = {
+    autoplay: true,
+    autoplaySpeed: 3000,
     className: "center",
     infinite: true,
     centerPadding: "60px",
@@ -65,4 +67,4 @@ function SwipeToSlide() {
   );
 }
 
-export default SwipeToSlide;
+export default TestimonialSlide;

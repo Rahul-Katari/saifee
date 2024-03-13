@@ -34,8 +34,11 @@ import blog1 from "../../assets/images/home/blog1.png";
 import blog2 from "../../assets/images/home/blog2.png";
 import blog3 from "../../assets/images/home/blog3.png";
 import ImageSlider from "../ImageSlider";
-import CenterSlider from "../CenterSlider";
-import SwipeToSlide from "../SwipeToSlide";
+import CenterSlider from "../BlogsSlider";
+import SwipeToSlide from "../TestimonialSlide";
+import TestimonialSlide from "../TestimonialSlide";
+import BlogsSlider from "../BlogsSlider";
+import MoreBtn from "../MoreBtn";
 
 const bannerCardsData = [
   { imgSrc: card1, title1: "Book Doctor", title2: "Appointment" },
@@ -73,7 +76,7 @@ const Home = () => {
         </div>
         <section>
           <div className="max-w-7xl m-auto">
-            <div className="flex justify-around grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-2 md:gap-8 gap-y-8 gap-x-4 mx-4">
+            <div className="flex justify-around grid lg:grid-cols-5 grid-cols-3 md:gap-8 gap-y-8 gap-x-4 mx-4">
               {bannerCardsData.map((card, index) => {
                 return (
                   <BannerCard
@@ -95,10 +98,10 @@ const Home = () => {
         {/* specialities start  */}
         <section>
           <div className="max-w-7xl m-auto">
-            <h3 className="uppercase text-2xl md:text-3xl my-5 text-center text-theme">
+            <h3 className="uppercase text-2xl md:text-3xl my-5 text-center text-theme highlight-border">
               specialities
             </h3>
-            <div className="grid grid-cols-2 lg:grid-cols-4 lg:gap-20 gap-5 mx-4">
+            <div className="grid grid-cols-3 lg:grid-cols-5 lg:gap-14 max-sm:gap-3 mx-4">
               {specialitiesData.map((spec, index) => {
                 return (
                   <SpecialitiesCard
@@ -111,9 +114,7 @@ const Home = () => {
               })}
             </div>
             <div className="md:text-end text-center mt-12 mx-4">
-              <a className="bg-theme px-10 py-2 text-white rounded-lg" href="#">
-                View More
-              </a>
+              <MoreBtn btnText={"View More"} href={"/excellence"} />
             </div>
           </div>
         </section>
@@ -137,14 +138,14 @@ const Home = () => {
                 />
                 <div className="max-sm:mt-4 lg:pr-8 lg:pt-4 lg:col-span-3">
                   <div className="">
-                    <h2 className="text-base font-semibold leading-7 text-grey text-xl">
+                    <h2 className="text-base font-medium leading-7 text-content text-xl">
                       Know About
                     </h2>
-                    <p className="md:my-3 mt-2 md:text-4xl text-2xl font-normal tracking-tight text-theme sm:text-6xl">
+                    <p className="md:my-3 mt-2 md:text-4xl text-2xl font-normal tracking-tight text-[#025CAF] sm:text-6xl">
                       Dr. Manasa Mynepally
                     </p>
                     <div>
-                      <p>M.D., D.M.(Gold Medalist)</p>
+                      <p className="font-medium">M.D., D.M.(Gold Medalist)</p>
                       <p className="text-red-600  text-xl">
                         Diabetes, Thyroid & Endocrine Centre
                       </p>
@@ -181,6 +182,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+              <MoreBtn btnText={"Read More"} href={"/doctorDetails"} />
             </div>
           </div>
         </section>
@@ -188,7 +190,7 @@ const Home = () => {
         {/* committed to cure 2 starts  */}
         <section>
           <div className="lg:px-16">
-            <h2 className="text-theme text-xl md:text-3xl text-center uppercase md:my-5">
+            <h2 className="text-theme text-xl md:text-3xl text-center uppercase md:my-5 highlight-border">
               Committed to cure
             </h2>
             <CommittedCureTabs />
@@ -198,7 +200,7 @@ const Home = () => {
         {/* Health talks section starts */}
         <section>
           <div className="bg-banner md:p-16 max-sm:py-16">
-            <h2 className="text-theme text-3xl text-center uppercase md:mb-10 mb-3">
+            <h2 className="text-theme text-3xl text-center uppercase md:mb-10 mb-3 highlight-border">
               health talks
             </h2>
             <div className="md:grid md:grid-cols-12 md:mx-0">
@@ -260,22 +262,22 @@ const Home = () => {
         {/* testimonials section  */}
         <section>
           <div className="testimonial">
-            <h3 className="text-theme d:text-4xl text-2xl text-center uppercase md:mb-24 mb-8">
+            <h3 className="text-theme md:text-4xl text-2xl text-center uppercase mb-8 highlight-border">
               what our patients say
             </h3>
             <div
-              className="bg-right bg-contain bg-no-repeat md:h-[600px] h-[400px] flex flex-col justify-center relative"
+              className="bg-right bg-contain bg-no-repeat md:h-[500px] h-[400px] flex flex-col justify-center relative"
               style={{
                 backgroundImage: `url(${testBg1})`,
               }}
             >
               <div className="absolute top-0 left-[20%] max-sm:hidden md:d-block">
-                <img src={testBg2} className="w-6/12" />
+                <img src={testBg2} className="w-5/12" />
               </div>
               <div className="absolute left-[8%] md:bottom-[35%] bottom-[10%] font-medium">
                 Client <br></br> Testimonials
               </div>
-              <SwipeToSlide />
+              <TestimonialSlide />
             </div>
           </div>
         </section>
@@ -287,13 +289,13 @@ const Home = () => {
           }}
         >
           <div>
-            <h3 className="text-theme md:text-4xl text-2xl text-center uppercase md:mb-24 mb-8">
+            <h3 className="text-theme md:text-4xl text-2xl text-center uppercase md:mb-24 mb-8 highlight-border">
               Blogs
             </h3>
             <div className="md:grid grid-cols-10 justify-end items-center">
               <div className="col-span-4"></div>
               <div className="col-span-6 ">
-                <CenterSlider slides={blogs} />
+                <BlogsSlider slides={blogs} />
               </div>
             </div>
           </div>

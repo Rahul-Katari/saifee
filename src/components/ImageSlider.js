@@ -3,8 +3,10 @@ import Slider from "react-slick";
 
 function ImageSlider({ slidesToShow, images }) {
   const settings = {
+    autoplay: true,
+    autoplaySpeed: 3000,
     className: "slider variable-width",
-    // centerMode: true,
+    arrows: false,
     dots: true,
     infinite: true,
     speed: 500,

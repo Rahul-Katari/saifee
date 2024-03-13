@@ -1,8 +1,7 @@
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useRef, useEffect } from "react";
+import { Disclosure } from "@headlessui/react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import navHelp from "../../assets/images/home/nav-help.png";
 
 const navigation = [
@@ -20,7 +19,29 @@ function classNames(...classes) {
 
 const Navbar = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
+  const disclosureRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        disclosureRef.current &&
+        !disclosureRef.current.contains(event.target)
+      ) {
+        disclosureRef.current.click();
+      }
+    };
+
+    document.body.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.body.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+  const handleLinkClick = () => {
+    disclosureRef.current?.click();
+  };
+
   return (
     <Disclosure as="nav" className="">
       {({ open }) => (
@@ -29,7 +50,10 @@ const Navbar = () => {
             <div className="relative flex md:h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button
+                  className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  ref={disclosureRef}
+                >
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -41,21 +65,13 @@ const Navbar = () => {
               </div>
               <div className="flex flex-1 items-center justify-around sm:justify-between items-center">
                 <div className="flex items-center">
-                  <div className="flex flex-shrink-0 items-center w-16 md:w-24">
-                    <Link to={"/"}>
-                      <img
-                        className="w-100 h-100"
-                        src={logo}
-                        alt="Your Company"
-                      />
-                    </Link>
-                  </div>
-                  <div className="hidden sm:ml-6 sm:block">
+                  <div className="hidden sm:block ms-[130px]">
                     <div className="flex">
                       {navigation.map((item) => (
                         <Link
                           key={item.name}
                           to={item.href}
+                          onClick={handleLinkClick}
                           className={classNames(
                             (item.href === "/" && pathname === "/") ||
                               (item.href !== "/" && item.href === pathname)
@@ -89,24 +105,37 @@ const Navbar = () => {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? "text-red-600 underline"
-                      : "hover:text-red-600 hover:underline",
-                    "block rounded-md px-3 py-2 text-base font-medium"
-                  )}
-                  aria-current={item.current ? "page" : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
+          {/* Off-canvas mobile menu */}
+          <Disclosure.Panel
+            className={`sm:hidden top-[70px] fixed inset-0 bg-white z-40 w-64 sm:w-80 transform transition-transform ease-in-out shadow-r-3xl ${
+              open ? "translate-x-0" : "-translate-x-full"
+            }`}
+          >
+            <div
+              className="h-full flex flex-col justify-between"
+              ref={disclosureRef}
+            >
+              <div>
+                <div className="space-y-1 px-2 pb-3 pt-2">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      onClick={handleLinkClick}
+                      className={classNames(
+                        item.current
+                          ? "text-red-600 underline"
+                          : "hover:text-red-600 hover:underline",
+                        "block rounded-md px-3 py-2 text-base font-medium"
+                      )}
+                      aria-current={item.current ? "page" : undefined}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              {/* Additional content */}
             </div>
           </Disclosure.Panel>
         </>
