@@ -1,28 +1,31 @@
 {
   "files": {
-    "main.css": "/saifee/static/css/main.27f16aa9.css",
-    "main.js": "/saifee/static/js/main.6e75d628.js",
+    "main.css": "/saifee/static/css/main.3988176e.css",
+    "main.js": "/saifee/static/js/main.83ab53a9.js",
     "static/media/testi-bg.png": "/saifee/static/media/testi-bg.cfd3d4030abcead18264.png",
     "static/media/patients-visitors.png": "/saifee/static/media/patients-visitors.1084651ba2616ee44640.png",
+    "static/media/footer-bg.png": "/saifee/static/media/footer-bg.c8336e3a59aa492a2df1.png",
+    "static/media/landing.png": "/saifee/static/media/landing.b2a5dd6a033b407bb7ed.png",
     "static/media/careers.png": "/saifee/static/media/careers.617b32dff4df93956e89.png",
+    "static/media/why-choose-us.png": "/saifee/static/media/why-choose-us.1e46c7494efd7da866e8.png",
     "static/media/our-doctors-banner.png": "/saifee/static/media/our-doctors-banner.d675293f2e9923e4772a.png",
     "static/media/blogs-bg.png": "/saifee/static/media/blogs-bg.341e015b117ccf39a3c5.png",
-    "static/media/topicOfBlog.png": "/saifee/static/media/topicOfBlog.bb5dd1e2d416c768042c.png",
     "static/media/about-banner.png": "/saifee/static/media/about-banner.f8f84d071fbc2d40c09f.png",
     "static/media/facilities.png": "/saifee/static/media/facilities.59cffb7df669c6c3ea8a.png",
+    "static/media/hexagon.png": "/saifee/static/media/hexagon.8b916aedddca66b50ba5.png",
     "static/media/contact.png": "/saifee/static/media/contact.d4c3e5612d2f0a4f8258.png",
-    "static/media/blog1.png": "/saifee/static/media/blog1.714c56189db7ca4edf28.png",
+    "static/media/blog1.png": "/saifee/static/media/blog1.3ed04ad6e61876aee491.png",
     "static/media/excellence-details-banner.png": "/saifee/static/media/excellence-details-banner.da90af1e3b1bf28d9a31.png",
     "static/media/appointments.png": "/saifee/static/media/appointments.5b46df11a455bbb47d57.png",
     "static/media/laboratory-tests.png": "/saifee/static/media/laboratory-tests.e14345f7fd328a3cc6bc.png",
     "static/media/comm-to-cure.png": "/saifee/static/media/comm-to-cure.5bc19d5988aeafefd8f6.png",
+    "static/media/general-surgeon.png": "/saifee/static/media/general-surgeon.9e812dde21ad53297659.png",
     "static/media/doctors.png": "/saifee/static/media/doctors.1541fab462149bc2aace.png",
     "static/media/doctor-manasa.png": "/saifee/static/media/doctor-manasa.8b60cd4fd5a5ade7a0b7.png",
-    "static/media/blog3.png": "/saifee/static/media/blog3.0cb799422fb14ead6138.png",
+    "static/media/blog3.png": "/saifee/static/media/blog3.af8ec083d359719f0bbe.png",
     "static/media/job.png": "/saifee/static/media/job.f5c542f7d84d7005ebb5.png",
     "static/media/excellence-banner.png": "/saifee/static/media/excellence-banner.2d98c1c6b253824e3418.png",
-    "static/media/blog2.png": "/saifee/static/media/blog2.141b3258ef722f3ca397.png",
-    "static/media/latest-blogs.png": "/saifee/static/media/latest-blogs.91a2a3fc08b62fe4db75.png",
+    "static/media/blog2.png": "/saifee/static/media/blog2.fb9db3011ff7015b47f7.png",
     "static/media/Poppins-Thin.ttf": "/saifee/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf",
     "static/media/Poppins-ExtraLight.ttf": "/saifee/static/media/Poppins-ExtraLight.333cb30c20e31999802a.ttf",
     "static/media/doctor-cartoon.png": "/saifee/static/media/doctor-cartoon.6dbc6bc52bb06a58793f.png",
@@ -47,11 +50,11 @@
     "static/media/slick.ttf": "/saifee/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/saifee/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/saifee/index.html",
-    "main.27f16aa9.css.map": "/saifee/static/css/main.27f16aa9.css.map",
-    "main.6e75d628.js.map": "/saifee/static/js/main.6e75d628.js.map"
+    "main.3988176e.css.map": "/saifee/static/css/main.3988176e.css.map",
+    "main.83ab53a9.js.map": "/saifee/static/js/main.83ab53a9.js.map"
   },
   "entrypoints": [
-    "static/css/main.27f16aa9.css",
-    "static/js/main.6e75d628.js"
+    "static/css/main.3988176e.css",
+    "static/js/main.83ab53a9.js"
   ]
 }
