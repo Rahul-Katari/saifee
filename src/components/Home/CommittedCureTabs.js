@@ -3,7 +3,7 @@ import { Tabs, Tab } from "react-tabs-scrollable";
 import "react-tabs-scrollable/dist/rts.css";
 import LaboratorySvg from "./LaboratorySvg";
 import labTests from "../../assets/images/home/laboratory-tests.png";
-import MoreBtn from "../MoreBtn";
+import MoreBtn from "../common/MoreBtn";
 
 const TabNames = [
   "Laboratory Tests",
@@ -60,7 +60,7 @@ const CommittedCureTabs = () => {
                   specimen book. It has survived not only five centuries, but
                   also the leap into electronic typesetting,
                 </p>
-                <MoreBtn btnText={"Read More"} href={"/"} />
+                <MoreBtn btnText={"Read More"} href={"/"} align={"end"} />
               </div>
             </div>
           </div>

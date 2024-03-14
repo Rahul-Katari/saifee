@@ -1,4 +1,4 @@
-import SpecialitiesCard from "./Home/SpecialitiesCard";
+import SpecialitiesCard from "./home/SpecialitiesCard";
 
 // context for endocrinology folder
 const endocrinolgyContext = require.context(
@@ -36,7 +36,7 @@ const DoctorServices = ({ speciality }) => {
   });
   const spec = speciality === "endo" ? endocrinolgyData : generalsurgeryData;
   return (
-    <div className="grid grid-cols-3 lg:grid-cols-5 lg:gap-10 gap-5 mx-4">
+    <div className="grid grid-cols-3 lg:grid-cols-5 lg:gap-10 gap-5 max-sm:mx-4">
       {spec.map((spec, index) => (
         <SpecialitiesCard
           imgSrc={spec.imgSrc}

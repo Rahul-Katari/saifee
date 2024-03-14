@@ -1,7 +1,7 @@
-import AppointmentSchedule from "./AppointmentSchedule";
-import banner from "../assets/images/banners/careers.png";
-import MoreBtn from "./MoreBtn";
-import CareerCard from "./CareerCard";
+import AppointmentSchedule from "../AppointmentSchedule";
+import banner from "../../assets/images/banners/careers.png";
+import MoreBtn from "../common/MoreBtn";
+import CareerCard from "../CareerCard";
 
 const Careers = () => {
   return (

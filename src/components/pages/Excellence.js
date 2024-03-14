@@ -1,16 +1,15 @@
-import SpecialitiesCard from "./Home/SpecialitiesCard";
-import banner from "../assets/images/excellence-banner.png";
-import DoctorServices from "./DoctorServices";
+import banner from "../../assets/images/excellence-banner.png";
+import DoctorServices from "../DoctorServices";
 
 // context for endocrinology folder
 const endocrinolgyContext = require.context(
-  "../assets/images/specialities/endocrinology",
+  "../../assets/images/specialities/endocrinology",
   false,
   /\.(png|jpe?g|svg)$/
 );
 // context for generalsurgery folder
 const generalsurgeryContext = require.context(
-  "../assets/images/specialities/general-surgery",
+  "../../assets/images/specialities/general-surgery",
   false,
   /\.(png|jpe?g|svg)$/
 );

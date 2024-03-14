@@ -1,6 +1,6 @@
-import appointments from "../assets/images/footer/appointments.png";
-import clock from "../assets/images/clock-icon.png";
-import location from "../assets/images/location-icon.png";
+import appointments from "../../assets/images/footer/appointments.png";
+import clock from "../../assets/images/clock-icon.png";
+import location from "../../assets/images/location-icon.png";
 
 const NewAppointments = () => {
   return (

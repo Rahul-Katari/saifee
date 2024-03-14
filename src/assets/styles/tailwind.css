@@ -12,7 +12,11 @@
     }
 
     .btn-primary {
-        @apply rounded-full bg-gradient-to-b from-[#245272] to-[#147887] hover:bg-sky-700 text-white p-2 px-4 flex items-center;
+        @apply rounded-full bg-gradient-to-b from-[#245272] to-[#147887] text-white p-2 px-4 flex items-center;
+    }
+
+    .btn-theme {
+        @apply rounded-lg text-white p-2 px-4 bg-gradient-to-r from-[#07869B] to-[#0361AD];
     }
 
     /* ... */

@@ -1,6 +1,7 @@
 import React from "react";
-import MoreBtn from "./MoreBtn";
+import MoreBtn from "./common/MoreBtn";
 import jobCard from "../assets/images/job.png";
+import CareerForm from "./pages/CareerForm";
 
 const CareerCard = () => {
   return (
@@ -34,9 +35,7 @@ const CareerCard = () => {
           <li>Staying updated with the latest marketing trends</li>
         </ul>
       </div>
-      <div className="flex justify-end">
-        <MoreBtn btnText={"Apply now"} href={"/"} />
-      </div>
+      <CareerForm />
     </div>
   );
 };

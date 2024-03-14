@@ -1,11 +1,10 @@
-import banner from "../assets/images/banners/excellence-details-banner.png";
-import BreadCrumb from "./BreadCrumb";
-import latestBlog from "../assets/images/latest-blogs.png";
-import topicOfBlog from "../assets/images/topicOfBlog.png";
-import calender from "../assets/images/calender-blog.png";
-import profile from "../assets/images/profile.png";
-import { CalendarIcon } from "@heroicons/react/24/outline";
-const Blogs = () => {
+import banner from "../../assets/images/banners/excellence-details-banner.png";
+import BreadCrumb from "../common/BreadCrumb";
+import latestBlog from "../../assets/images/latest-blogs.png";
+import topicOfBlog from "../../assets/images/topicOfBlog.png";
+import calender from "../../assets/images/calender-blog.png";
+import profile from "../../assets/images/profile.png";
+const BlogsDetail = () => {
   const breadCrumb = [
     { href: "/", title: "home" },
     { href: "/blogs", title: "blog" },
@@ -250,4 +249,4 @@ const Blogs = () => {
     </div>
   );
 };
-export default Blogs;
+export default BlogsDetail;

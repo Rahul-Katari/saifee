@@ -1,7 +1,7 @@
 import React from "react";
 import { Tabs, Tab, TabScreen } from "react-tabs-scrollable";
 import "react-tabs-scrollable/dist/rts.css";
-import banner from "../assets/images/banners/facilities.png";
+import banner from "../../assets/images/banners/facilities.png";
 
 const Facilities = () => {
   const [activeTab, setActiveTab] = React.useState(0);

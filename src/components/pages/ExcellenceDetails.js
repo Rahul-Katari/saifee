@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom";
-import banner from "../assets/images/banners/excellence-details-banner.png";
-import Accordion from "./Accordian";
+import banner from "../../assets/images/banners/excellence-details-banner.png";
 import { Tab, TabScreen, Tabs } from "react-tabs-scrollable";
 import React from "react";
-import BreadCrumb from "./BreadCrumb";
+import BreadCrumb from "../common/BreadCrumb";
 
 const accordianContent1 = [
   { icon: "", tab: "Thyroid Treatments" },

@@ -1,4 +1,4 @@
-import BreadCrumb from "./BreadCrumb";
+import BreadCrumb from "../common/BreadCrumb";
 
 const Videos = () => {
   const breadCrumb = [

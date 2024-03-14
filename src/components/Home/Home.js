@@ -24,7 +24,6 @@ import SpecialitiesCard from "./SpecialitiesCard";
 import cure from "../../assets/images/home/comm-to-cure.png";
 import appointments from "../../assets/images/footer/appointments.png";
 import CommittedCureTabs from "./CommittedCureTabs";
-import AppointmentInput from "./AppointmentInput";
 import Welcome from "../Welcome";
 import AppointmentSchedule from "../AppointmentSchedule";
 import SimpleSlider from "../HomeBannerSlider";
@@ -33,12 +32,10 @@ import HomeBannerSlider from "../HomeBannerSlider";
 import blog1 from "../../assets/images/home/blog1.png";
 import blog2 from "../../assets/images/home/blog2.png";
 import blog3 from "../../assets/images/home/blog3.png";
-import ImageSlider from "../ImageSlider";
-import CenterSlider from "../BlogsSlider";
-import SwipeToSlide from "../TestimonialSlide";
 import TestimonialSlide from "../TestimonialSlide";
-import BlogsSlider from "../BlogsSlider";
-import MoreBtn from "../MoreBtn";
+import BlogsSlider from "../BlogsSliderHome";
+import MoreBtn from "../common/MoreBtn";
+import KnowMore from "./KnowMore";
 
 const bannerCardsData = [
   { imgSrc: card1, title1: "Book Doctor", title2: "Appointment" },
@@ -113,9 +110,12 @@ const Home = () => {
                 );
               })}
             </div>
-            <div className="md:text-end text-center mt-12 mx-4">
-              <MoreBtn btnText={"View More"} href={"/excellence"} />
-            </div>
+            <MoreBtn
+              btnText={"View More"}
+              href={"/excellence"}
+              btn={"theme"}
+              align={"end"}
+            />
           </div>
         </section>
         {/* specialities end  */}
@@ -127,65 +127,7 @@ const Home = () => {
         </section>
         {/* new patients appointments banner end */}
         {/* know about section starts  */}
-        <section>
-          <div className="overflow-hidden md:ps-8">
-            <div className="px-6 lg:px-8">
-              <div className="mx-auto md:grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-                <img
-                  src={cure}
-                  alt="Product screenshot"
-                  className="lg:col-span-2 rounded-lg"
-                />
-                <div className="max-sm:mt-4 lg:pr-8 lg:pt-4 lg:col-span-3">
-                  <div className="">
-                    <h2 className="text-base font-medium leading-7 text-content text-xl">
-                      Know About
-                    </h2>
-                    <p className="md:my-3 mt-2 md:text-4xl text-2xl font-normal tracking-tight text-[#025CAF] sm:text-6xl">
-                      Dr. Manasa Mynepally
-                    </p>
-                    <div>
-                      <p className="font-medium">M.D., D.M.(Gold Medalist)</p>
-                      <p className="text-red-600  text-xl">
-                        Diabetes, Thyroid & Endocrine Centre
-                      </p>
-                    </div>
-                    <p className="my-4 text-gray-600">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Maiores impedit perferendis suscipit eaque, iste dolor
-                      cupiditate blanditiis ratione.
-                    </p>
-                    <div className="text-blue-900">
-                      <p className="text-xl underline">Specialities</p>
-                      <div className="grid md:grid-cols-2  list-disc">
-                        <ul className="list-disc list-disc-default max-sm:mb-0">
-                          <li>Thyroid Treatments - Hypothyroidism</li>
-                          <li>Diabetes - Type 1 Diabetes, Type 2 Diabetes</li>
-                          <li>Menopause</li>
-                          <li>Pituitary Disorders</li>
-                          <li>Osteoporosis</li>
-                          <li>Adrenal Conditions - Done</li>
-                          <li>Endocrine Cancers</li>
-                        </ul>
-                        <ul className="list-disc list-disc-default max-sm:mt-0">
-                          <li>Endocrine-Related Heart Conditions</li>
-                          <li>Hormone Disorders</li>
-                          <li>Short Stature</li>
-                          <li>Growth Hormone Deficiency</li>
-                          <li>PCOS</li>
-                          <li>Fertility Disorders</li>
-                          <li>Obesity</li>
-                          <li>Nutrition</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <MoreBtn btnText={"Read More"} href={"/doctorDetails"} />
-            </div>
-          </div>
-        </section>
+        <KnowMore />
         {/* know about section ends  */}
         {/* committed to cure 2 starts  */}
         <section>

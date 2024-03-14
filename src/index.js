@@ -11,17 +11,18 @@ import {
   Routes,
 } from "react-router-dom";
 import About from "./components/pages/About";
-import Error from "./components/Error";
-import Home from "./components/Home/Home";
-import Contact from "./components/Contact";
-import Excellence from "./components/Excellence";
-import BestDoctors from "./components/BestDoctors";
-import Facilities from "./components/Facilities";
-import ExcellenceDetails from "./components/ExcellenceDetails";
-import DoctorDetails from "./components/DotorDetail";
-import Blogs from "./components/Blogs";
-import Careers from "./components/Careers";
-import PatientsVisitors from "./components/PatientsVisitors";
+import Error from "./components/pages/Error";
+import Home from "./components/home/Home";
+import Contact from "./components/pages/Contact";
+import Excellence from "./components/pages/Excellence";
+import BestDoctors from "./components/pages/BestDoctors";
+import Facilities from "./components/pages/Facilities";
+import ExcellenceDetails from "./components/pages/ExcellenceDetails";
+import DoctorDetails from "./components/pages/DoctorDetail";
+import Blogs from "./components/pages/Blogs";
+import Careers from "./components/pages/Careers";
+import PatientsVisitors from "./components/pages/PatientsVisitors";
+import Landing from "./components/pages/Landing";
 
 const appRouter = createBrowserRouter([
   {
@@ -85,6 +86,7 @@ root.render(
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/patientsVisitors" element={<PatientsVisitors />} />
+          <Route path="/landing" element={<Landing />} />
         </Route>
         {/* Additional top-level routes */}
         <Route path="/about" element={<About />} />

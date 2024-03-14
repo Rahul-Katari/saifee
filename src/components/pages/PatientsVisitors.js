@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../assets/images/banners/patients-visitors.png";
+import banner from "../../assets/images/banners/patients-visitors.png";
 import { Tabs, Tab, TabScreen } from "react-tabs-scrollable";
 import "react-tabs-scrollable/dist/rts.css";
 const PatientsVisitors = () => {
