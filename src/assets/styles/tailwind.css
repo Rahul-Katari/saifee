@@ -1,6 +1,6 @@
-@tailwind base;
+/* @tailwind base; */
 @tailwind components;
-@tailwind utilities;
+/* @tailwind utilities; */
 
 @layer components {
     .card {
@@ -17,6 +17,10 @@
 
     .btn-theme {
         @apply rounded-lg text-white p-2 px-4 bg-gradient-to-r from-[#07869B] to-[#0361AD];
+    }
+
+    p {
+        @apply text-sm
     }
 
     /* ... */

@@ -26,7 +26,7 @@ const Topscroll = () => {
     <div className="flex">
       {visible ? (
         <a
-          className="rounded-full fixed bottom-16 right-10 top_scroll btn-theme text-white p-3"
+          className="rounded-full fixed bottom-16 right-10 top_scroll btn-theme text-white p-3 animate-bounce"
           onClick={scrollToTop}
         >
           <IconArrowUp size={32} />

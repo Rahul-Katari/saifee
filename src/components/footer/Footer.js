@@ -80,7 +80,15 @@ const Footer = () => {
                 space={"4"}
               />
             </div>
-            <h1 className="uppercase text-center text-xl mt-5">Reach Us</h1>
+            <div className="flex justify-center items-center mt-5">
+              <div className="flex items-center">
+                <div class="border-b-2 border-dashed pr-4 w-[150px] border-highlight"></div>
+              </div>
+              <h1 className="uppercase text-center text-2xl px-8">Reach Us</h1>
+              <div className="flex items-center">
+                <div class="border-b-2 border-dashed pr-4 w-[150px] border-highlight"></div>
+              </div>
+            </div>
             <div className="lg:grid-cols-3 sm:grid-cols-2 grid">
               {cards.map((card, index) => (
                 <FooterCard
@@ -93,12 +101,16 @@ const Footer = () => {
                   description4={card.description4}
                   timing1={card.timing1}
                   timing2={card.timing2}
+                  index={index}
                 />
               ))}
             </div>
             <div className="flex-col flex md:flex-row justify-around pb-5 gap-4 md:gap-0 md:text-xl">
               <div className="btn-primary px-8 justify-center">
                 <SocialIcons space={4} />
+              </div>
+              <div className="flex items-center">
+                <div class="border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
               </div>
               <div className="telephone-footer-link">
                 <a
@@ -111,6 +123,9 @@ const Footer = () => {
                   </div>
                   +91 73400 40097
                 </a>
+              </div>
+              <div className="flex items-center">
+                <div class="border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
               </div>
               <a
                 target="_blank"

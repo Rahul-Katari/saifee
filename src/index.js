@@ -23,6 +23,7 @@ import Blogs from "./components/pages/Blogs";
 import Careers from "./components/pages/Careers";
 import PatientsVisitors from "./components/pages/PatientsVisitors";
 import Landing from "./components/pages/Landing";
+import BlogsDetail from "./components/pages/BlogsDetail";
 
 const appRouter = createBrowserRouter([
   {
@@ -84,6 +85,7 @@ root.render(
           <Route path="/excellenceDetails" element={<ExcellenceDetails />} />
           <Route path="/doctorDetails" element={<DoctorDetails />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogsDetail" element={<BlogsDetail />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/patientsVisitors" element={<PatientsVisitors />} />
           <Route path="/landing" element={<Landing />} />

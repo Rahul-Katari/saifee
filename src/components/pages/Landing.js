@@ -14,6 +14,7 @@ import scarless from "../../assets/images/landing/guarantee/scarless-proc.png";
 import quick from "../../assets/images/landing/guarantee/quick.png";
 import care from "../../assets/images/landing/guarantee/affordable.png";
 import SpecialitiesCard from "../home/SpecialitiesCard";
+import NeedHelp from "../banners/NeedHelp";
 const guarantee = [
   { imgSrc: advProc, text: "Advanced Procedure" },
   { imgSrc: shorterStay, text: "Shorter Hospital Stay" },
@@ -274,6 +275,7 @@ const Landing = () => {
           <BlogsSliderDetail />
         </div>
       </section>
+      <NeedHelp />
     </div>
   );
 };

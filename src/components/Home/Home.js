@@ -1,6 +1,5 @@
 import BannerCard from "./BannerCard";
 import Logo from "../../assets/images/logo.png";
-import medicalExperts from "../../assets/images/home/medical-experts.png";
 import blogsBg from "../../assets/images/home/blogs-bg.png";
 import testBg1 from "../../assets/images/home/testi-bg.png";
 import testBg2 from "../../assets/images/home/test-bg-quote.png";
@@ -22,11 +21,9 @@ import spec8 from "../../assets/images/specialities/endocrinology/Endocrine Rela
 
 import SpecialitiesCard from "./SpecialitiesCard";
 import cure from "../../assets/images/home/comm-to-cure.png";
-import appointments from "../../assets/images/footer/appointments.png";
 import CommittedCureTabs from "./CommittedCureTabs";
 import Welcome from "../Welcome";
 import AppointmentSchedule from "../AppointmentSchedule";
-import SimpleSlider from "../HomeBannerSlider";
 import HomeBannerSlider from "../HomeBannerSlider";
 
 import blog1 from "../../assets/images/home/blog1.png";
@@ -36,6 +33,8 @@ import TestimonialSlide from "../TestimonialSlide";
 import BlogsSlider from "../BlogsSliderHome";
 import MoreBtn from "../common/MoreBtn";
 import KnowMore from "./KnowMore";
+import NewAppointments from "../banners/NewAppointments";
+import HealthTalksTabs from "./HeathTalksTabs";
 
 const bannerCardsData = [
   { imgSrc: card1, title1: "Book Doctor", title2: "Appointment" },
@@ -122,7 +121,7 @@ const Home = () => {
         {/* new patients appointments banner start */}
         <section>
           <div>
-            <img src={appointments} alt="Appointments" className="w-full" />
+            <NewAppointments />
           </div>
         </section>
         {/* new patients appointments banner end */}
@@ -169,33 +168,7 @@ const Home = () => {
                 ></iframe>
               </div>
               <div className="col-span-3 md:ps-10 max-sm:pt-5">
-                <div className="flex text-white gap-6 justify-center md:justify-between">
-                  <button className="w-24 py-1 bg-gradient-to-b from-theme to-[#0361AD] rounded-xl ">
-                    All
-                  </button>
-                  <button className="w-24 py-1 bg-gradient-to-b from-theme to-[#0361AD] rounded-xl ">
-                    Featured
-                  </button>
-                  <button className="w-24 py-1 bg-gradient-to-b from-theme to-[#0361AD] rounded-xl ">
-                    Latest
-                  </button>
-                </div>
-                <div className="flex items-center pt-8 max-sm:justify-center">
-                  <img src={medicalExperts} className="h-16" />
-                  <p className="text-[#222F66] ps-4">The Medical Experts</p>
-                </div>
-                <div className="flex items-center pt-4 max-sm:justify-center">
-                  <img src={medicalExperts} className="h-16" />
-                  <p className="text-[#222F66] ps-4">The Medical Experts</p>
-                </div>
-                <div className="flex items-center pt-4 max-sm:justify-center">
-                  <img src={medicalExperts} className="h-16" />
-                  <p className="text-[#222F66] ps-4">The Medical Experts</p>
-                </div>
-                <div className="flex items-center pt-4 max-sm:justify-center">
-                  <img src={medicalExperts} className="h-16" />
-                  <p className="text-[#222F66] ps-4">The Medical Experts</p>
-                </div>
+                <HealthTalksTabs />
               </div>
             </div>
           </div>
