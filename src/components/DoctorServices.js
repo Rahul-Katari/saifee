@@ -1,4 +1,4 @@
-import SpecialitiesCard from "./home/SpecialitiesCard";
+import SpecialitiesCard from "./Home/SpecialitiesCard";
 
 // context for endocrinology folder
 const endocrinolgyContext = require.context(

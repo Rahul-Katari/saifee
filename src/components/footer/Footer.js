@@ -56,9 +56,9 @@ const Footer = () => {
   return (
     <div>
       <Topscroll />
-      {currentUrl !== "/" ? <CallUs /> : ""}
+      {(currentUrl !== "/" && !currentUrl.includes("landing") && !currentUrl.includes("Detail")) && <CallUs />}
       <div className="container">
-        {currentUrl !== "/" ? <NewAppointments /> : ""}
+      {(currentUrl !== "/" && !currentUrl.includes("landing") && !currentUrl.includes("Detail")) && <NewAppointments />}
 
         <div
           className="bg-contain"
@@ -82,11 +82,11 @@ const Footer = () => {
             </div>
             <div className="flex justify-center items-center mt-5">
               <div className="flex items-center">
-                <div class="border-b-2 border-dashed pr-4 w-[150px] border-highlight"></div>
+                <div class="border-b-2 border-dashed pr-4 md:w-[150px] border-highlight"></div>
               </div>
               <h1 className="uppercase text-center text-2xl px-8">Reach Us</h1>
               <div className="flex items-center">
-                <div class="border-b-2 border-dashed pr-4 w-[150px] border-highlight"></div>
+                <div class="border-b-2 border-dashed pr-4 md:w-[150px] border-highlight"></div>
               </div>
             </div>
             <div className="lg:grid-cols-3 sm:grid-cols-2 grid">
@@ -110,7 +110,7 @@ const Footer = () => {
                 <SocialIcons space={4} />
               </div>
               <div className="flex items-center">
-                <div class="border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
+                <div class="md:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
               </div>
               <div className="telephone-footer-link">
                 <a
@@ -125,7 +125,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center">
-                <div class="border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
+                <div class="md:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
               </div>
               <a
                 target="_blank"

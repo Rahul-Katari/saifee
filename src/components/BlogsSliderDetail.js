@@ -4,6 +4,8 @@ import BlogCardInDetails from "./BlogCardInDetails";
 import blog1 from "../assets/images/blog1.png";
 import blog2 from "../assets/images/blog2.png";
 import blog3 from "../assets/images/blog3.png";
+import PatientTestimonialsCard from "./PatientTestimonialsCard";
+import NewsYoutubeCard from "./NewsYoutubeCard";
 
 const blogs = [
   { imgSrc: blog1 },
@@ -13,8 +15,24 @@ const blogs = [
   { imgSrc: blog2 },
   { imgSrc: blog3 },
 ];
+const testimonials = [
+  {imgSrc:''},
+  {imgSrc:''},
+  {imgSrc:''},
+  {imgSrc:''},
+  {imgSrc:''},
+  {imgSrc:''},
+]
+const videos = [
+  {imgSrc:''},
+  {imgSrc:''},
+  {imgSrc:''},
+  {imgSrc:''},
+  {imgSrc:''},
+  {imgSrc:''},
+]
 
-function BlogsSliderDetail() {
+function BlogsSliderDetail({card}) {
   const settings = {
     dots: false,
     infinite: true,
@@ -54,13 +72,46 @@ function BlogsSliderDetail() {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {blogs.map((blog, index) => {
+
+        {card === "blog" && blogs.map((blog, index) => {
           return (
             <div key={index}>
               <BlogCardInDetails imgSrc={blog.imgSrc} />
             </div>
           );
         })}
+        {card === "testimonial" && testimonials.map((test, index) => {
+          return (
+            <div key={index}>
+              <PatientTestimonialsCard imgSrc={test.imgSrc} />
+            </div>
+          );
+        })}
+        {card === "videos" && videos.map((test, index) => {
+          return (
+            <div key={index}>
+              <NewsYoutubeCard imgSrc={test.imgSrc} />
+            </div>
+          );
+        })}
+        {/* {(card === "testimonial") ? <div>
+          <div>
+              <PatientTestimonialsCard />
+              </div>
+              <div>
+              <PatientTestimonialsCard />
+              </div>
+              <div>
+              <PatientTestimonialsCard />
+              </div>
+              <div>
+              <PatientTestimonialsCard />
+              </div>
+              <div>
+              <PatientTestimonialsCard />
+              </div>
+            </div> : ''} */}
+        
       </Slider>
     </div>
   );

@@ -3,6 +3,7 @@ import Slider from "react-slick";
 
 import testCard from "../assets/images/home/testimonial-card.png";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+import TestimonialCardHome from "./Home/TestimonialCardHome";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -32,7 +33,7 @@ function SamplePrevArrow(props) {
 
 function TestimonialSlide() {
   const settings = {
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
     className: "center",
     infinite: true,
@@ -50,17 +51,21 @@ function TestimonialSlide() {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        <div>
-          <img src={testCard} />
-        </div>
-        <div>
-          <img src={testCard} />
-        </div>
-        <div>
-          <img src={testCard} />
-        </div>
-        <div>
-          <img src={testCard} />
+      <div>
+          <TestimonialCardHome/>
+          </div>
+          <div>
+          <TestimonialCardHome/>
+        </div><div>
+          <TestimonialCardHome/>
+          </div>
+          <div>
+          <TestimonialCardHome/>
+        </div><div>
+          <TestimonialCardHome/>
+          </div>
+          <div>
+          <TestimonialCardHome/>
         </div>
       </Slider>
     </div>

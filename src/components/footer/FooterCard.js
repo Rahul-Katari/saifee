@@ -14,7 +14,7 @@ const FooterCard = ({
   return (
     <div
       className={`md:px-8 px-4 my-4 md:my-8 text-center ${
-        index < 2 ? "border-r-2 border-[#99999999] border-dashed" : ""
+        index < 2 ? "md:border-r-2 border-[#99999999] border-dashed" : ""
       }`}
     >
       <div className="bg-footer-highlight inline-block rounded-full p-2 text-white">

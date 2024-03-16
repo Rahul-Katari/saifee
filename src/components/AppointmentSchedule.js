@@ -1,4 +1,4 @@
-import AppointmentInput from "./home/AppointmentInput";
+import AppointmentInput from "./Home/AppointmentInput";
 
 const AppointmentSchedule = () => {
   return (

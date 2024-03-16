@@ -5,6 +5,7 @@ import DoctorServices from "../DoctorServices";
 import NewAppointments from "../banners/NewAppointments";
 import Heading from "../common/Heading";
 import { useEffect, useRef, useState } from "react";
+import NeedHelp from "../banners/NeedHelp";
 
 const DoctorDetails = () => {
   const Qualification = () => {
@@ -292,7 +293,7 @@ const DoctorDetails = () => {
           <div className="bg-banner py-12">
             <div className="max-w-6xl ms-auto md:me-24 max-sm:mx-4">
               <Heading text={"Patient Testimonials"} />
-              <BlogsSliderDetail />
+              <BlogsSliderDetail card="testimonial" />
             </div>
           </div>
         </section>
@@ -303,7 +304,7 @@ const DoctorDetails = () => {
           <section>
             <div className="detailPage-Blogs-Slider">
               <Heading text={"Blogs"} />
-              <BlogsSliderDetail />
+              <BlogsSliderDetail card="blog" />
             </div>
           </section>
         </div>
@@ -315,11 +316,12 @@ const DoctorDetails = () => {
                 Get to know the information regarding our healthcare aspects to
                 be able to get to better informed decisions. ..
               </p>
-              <BlogsSliderDetail />
+              <BlogsSliderDetail card="videos" />
             </div>
           </section>
         </div>
       </div>
+      <NeedHelp/>
     </div>
   );
 };

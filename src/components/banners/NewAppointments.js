@@ -5,11 +5,11 @@ import location from "../../assets/images/location-icon.png";
 const NewAppointments = () => {
   return (
     <div
-      className="md:grid grid-cols-10 justify-end bg-center bg-cover bg-no-repeat"
+      className="md:grid grid-cols-12 justify-end bg-center bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${appointments})` }}
     >
       <div className="col-span-4"></div>
-      <div className="flex flex-col justify-center md:p-10 p-4 max-sm:py-10 col-span-6">
+      <div className="flex flex-col justify-center md:p-10 p-4 max-sm:py-10 col-span-8">
         <h1 className="md:text-3xl text-xl mb-2 text-nav-highlight">
           New Patient Appointments
         </h1>

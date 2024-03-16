@@ -3,7 +3,7 @@ import banner from "../../assets/images/banners/landing.png";
 import best from "../../assets/images/landing/general-surgeon.png";
 import areas from "../../assets/images/landing/hexagon.png";
 import NewAppointments from "../banners/NewAppointments";
-import KnowMore from "../home/KnowMore";
+import KnowMore from "../Home/KnowMore";
 import whyChoose from "../../assets/images/landing/why-choose-us.png";
 import DoctorServices from "../DoctorServices";
 import BlogsSliderDetail from "../BlogsSliderDetail";
@@ -13,7 +13,7 @@ import shorterStay from "../../assets/images/landing/guarantee/stay.png";
 import scarless from "../../assets/images/landing/guarantee/scarless-proc.png";
 import quick from "../../assets/images/landing/guarantee/quick.png";
 import care from "../../assets/images/landing/guarantee/affordable.png";
-import SpecialitiesCard from "../home/SpecialitiesCard";
+import SpecialitiesCard from "../Home/SpecialitiesCard";
 import NeedHelp from "../banners/NeedHelp";
 const guarantee = [
   { imgSrc: advProc, text: "Advanced Procedure" },
@@ -254,7 +254,7 @@ const Landing = () => {
         <div className="bg-banner py-12">
           <div className="max-w-6xl m-auto max-sm:mx-4">
             <Heading text={"Patient Testimonials"} />
-            <BlogsSliderDetail />
+            <BlogsSliderDetail card={"testimonial"} />
           </div>
         </div>
       </section>
@@ -262,7 +262,7 @@ const Landing = () => {
       <section>
         <div className="detailPage-Blogs-Slider max-w-6xl max-sm:mx-4 m-auto">
           <Heading text={"Blogs"} />
-          <BlogsSliderDetail />
+          <BlogsSliderDetail card={"blog"} />
         </div>
       </section>
       <section>
@@ -272,7 +272,7 @@ const Landing = () => {
             Get to know the information regarding our healthcare aspects to be
             able to get to better informed decisions. ..
           </p>
-          <BlogsSliderDetail />
+          <BlogsSliderDetail card={"videos"} />
         </div>
       </section>
       <NeedHelp />
