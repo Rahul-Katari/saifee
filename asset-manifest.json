@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/saifee/static/css/main.f4e1a337.css",
-    "main.js": "/saifee/static/js/main.a4ed098a.js",
+    "main.css": "/saifee/static/css/main.5d5f7c8a.css",
+    "main.js": "/saifee/static/js/main.2f32aab9.js",
     "static/media/testi-bg.png": "/saifee/static/media/testi-bg.cfd3d4030abcead18264.png",
     "static/media/patients-visitors.png": "/saifee/static/media/patients-visitors.1084651ba2616ee44640.png",
     "static/media/footer-bg.png": "/saifee/static/media/footer-bg.c8336e3a59aa492a2df1.png",
@@ -49,16 +49,17 @@
     "static/media/nav-help.png": "/saifee/static/media/nav-help.ad8a0d77489953c97152.png",
     "static/media/book-lab-test.png": "/saifee/static/media/book-lab-test.55e428b012611078ac39.png",
     "static/media/book-doctor-appointment.png": "/saifee/static/media/book-doctor-appointment.b1177502e48ed9ab527f.png",
+    "static/media/profile.png": "/saifee/static/media/profile.50e4fcbccf3092cdf6df.png",
     "static/media/slick.svg": "/saifee/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/saifee/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/saifee/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/saifee/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/saifee/index.html",
-    "main.f4e1a337.css.map": "/saifee/static/css/main.f4e1a337.css.map",
-    "main.a4ed098a.js.map": "/saifee/static/js/main.a4ed098a.js.map"
+    "main.5d5f7c8a.css.map": "/saifee/static/css/main.5d5f7c8a.css.map",
+    "main.2f32aab9.js.map": "/saifee/static/js/main.2f32aab9.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4e1a337.css",
-    "static/js/main.a4ed098a.js"
+    "static/css/main.5d5f7c8a.css",
+    "static/js/main.2f32aab9.js"
   ]
 }
