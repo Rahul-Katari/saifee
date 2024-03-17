@@ -83,13 +83,13 @@ root.render(
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/excellence" element={<Excellence />} />
-          <Route path="/bestdoctors" element={<BestDoctors />} />
+          <Route path="/bestDoctors" element={<BestDoctors />} />
           <Route path="/facilities" element={<Facilities />} />
           <Route
             path="/excellenceDetails/:id"
             element={<ExcellenceDetails />}
           />
-          <Route path="/doctorDetails" element={<DoctorDetails />} />
+          <Route path="/bestDoctorsDetails" element={<DoctorDetails />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogsDetail" element={<BlogsDetail />} />
           <Route path="/careers" element={<Careers />} />

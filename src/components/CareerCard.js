@@ -6,7 +6,7 @@ import CareerForm from "./pages/CareerForm";
 const CareerCard = () => {
   return (
     <div className="rounded overflow-hidden shadow-3xl p-6 mb-6 max-sm:text-sm">
-      <div className="flex">
+      <div className="md:flex">
         <img className="w-2/5" src={jobCard} alt="Job Image" />
         <div className="md:px-6 ms-4 py-4">
           <div className=" mb-2 ">
@@ -16,13 +16,10 @@ const CareerCard = () => {
           <p>Location: Hyderabad</p>
         </div>
       </div>
-      <div className="md:px-6 pt-4 pb-2">
-        <p className="font-medium">Job Description</p>
-        <ul className="list-disc-default">
-          <li>
-            {" "}
-            Creating marketing strategies to achieve organisational goals
-          </li>
+      <div className="md:px-6 md:pt-4 pb-2">
+        <h3 className="font-medium">Job Description</h3>
+        <ul className="list-disc-default ps-4 text-sm">
+          <li>Creating marketing strategies to achieve organisational goals</li>
           <li>Implementing marketing campaigns from ideation to execution</li>
           <li>Managing the marketing budget</li>
           <li>

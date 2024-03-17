@@ -1,9 +1,9 @@
 import BreadCrumb from "../common/BreadCrumb";
-import banner from "../../assets/images/banners/book-appointment.png"
+import banner from "../../assets/images/banners/book-appointment.png";
 import { useState } from "react";
 
 const BookApppointments = () => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -18,9 +18,9 @@ const BookApppointments = () => {
         <img src={banner} />
       </div>
       <BreadCrumb linkData={breadCrumb} />
-      <div className="max-w-7xl m-auto">
-        <div className="p-8 py-24 bg-banner">
-          <form className="grid grid-cols-2 gap-4">
+      <div className=" bg-banner">
+        <div className="p-8 py-24 max-w-7xl m-auto">
+          <form className="md:grid grid-cols-2 gap-4">
             <div className="mb-4">
               <label className="mb-2 block">Selected Package*</label>
               <select
@@ -102,21 +102,20 @@ const BookApppointments = () => {
                 className="w-full p-2 border rounded"
               />
             </div>
-
-<div className="flex justify-end">
-            <button
-              className="btn-primary text-white px-14 py-2 rounded hover:bg-blue-600"
-            >
-              Submit
-            </button>
-            </div>
-            <div>
-            <button
-              type="reset"
-              className="border border-black text-gray-700 ml-2 px-14 py-2 text-xs rounded hover:bg-gray-400"
-            >
-              Reset
-            </button>
+            <div className="max-sm:flex ">
+              <div className="flex justify-end">
+                <button className="btn-primary text-white px-14 py-2 rounded hover:bg-blue-600">
+                  Submit
+                </button>
+              </div>
+              <div>
+                <button
+                  type="reset"
+                  className="border border-black text-gray-700 ml-2 px-14 py-2 text-xs rounded hover:bg-gray-400"
+                >
+                  Reset
+                </button>
+              </div>
             </div>
           </form>
         </div>

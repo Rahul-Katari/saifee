@@ -45,7 +45,7 @@ import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 import React, { useState } from "react";
 
 const Accordion = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);

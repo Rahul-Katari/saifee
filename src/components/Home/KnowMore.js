@@ -62,7 +62,7 @@ const KnowMore = ({ doctor, imgSrc }) => {
         <MoreBtn
           btn={"theme"}
           btnText={"Read More"}
-          href={"/doctorDetails"}
+          href={"/bestDoctorsDetails"}
           align={"end"}
         />
       </div>

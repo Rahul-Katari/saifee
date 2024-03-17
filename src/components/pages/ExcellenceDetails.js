@@ -220,8 +220,8 @@ const ExcellenceDetails = () => {
       <BreadCrumb linkData={breadCrumb} />
       <section>
         {/* Your existing JSX */}
-        <div className="grid grid-cols-8 max-w-7xl m-auto">
-          <div className="col-span-2">
+        <div className="md:grid grid-cols-8 max-w-7xl m-auto max-sm:m-4">
+          <div className="col-span-2 max-sm:hidden">
             <div>
               <Accordion title="Endocrinology">
                 <Tabs
@@ -264,7 +264,7 @@ const ExcellenceDetails = () => {
           {activeData === "endo"
             ? endoData.map((tab, index) => (
                 <TabScreen
-                  className="ps-12 col-span-6"
+                  className="md:ps-12 col-span-6"
                   key={index}
                   activeTab={activeTab}
                   index={index}
@@ -274,7 +274,7 @@ const ExcellenceDetails = () => {
               ))
             : generalData.map((tab, index) => (
                 <TabScreen
-                  className="ps-12 col-span-6"
+                  className="md:ps-12 col-span-6"
                   key={index}
                   activeTab={activeTab}
                   index={index}

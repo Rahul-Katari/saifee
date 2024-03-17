@@ -31,18 +31,32 @@ const OurTopDoctors = () => {
                     M.D,D.M ENDOCRINOLOGY (Gold Medalist) Consultant
                     Endocrinologist & Diabetologist
                   </p>
-                  <MoreBtn btn="theme" btnText={"View More"} href={"/doctorDetails"} />
+                  <MoreBtn
+                    align={"end"}
+                    btn={"primary"}
+                    btnText={"View More"}
+                    href={"/bestDoctorsDetails"}
+                    round={"full"}
+                  />
                 </div>
               </div>
               <div className="shadow-2xl p-5 rounded-xl flex flex-col bg-white">
                 <img src={doctor} className="md:h-[300px]" />
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold mt-4">DR. G UDAY KIRAN</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mt-4">
+                    DR. G UDAY KIRAN
+                  </h3>
                   <p className="my-4 ">
                     MS, FMAS, MAGES, EFIAGES, FALS (ROBOTIC) General and
                     Laparoscopic Surgeon
                   </p>
-                  <MoreBtn btn={"theme"} btnText={"View More"} href={"/doctorDetails"} />
+                  <MoreBtn
+                    align={"end"}
+                    btn={"primary"}
+                    btnText={"View More"}
+                    href={"/bestDoctorsDetails"}
+                    round={"full"}
+                  />
                 </div>
               </div>
             </div>

@@ -8,7 +8,7 @@ const BlogsDetail = () => {
   const breadCrumb = [
     { href: "/", title: "home" },
     { href: "/blogs", title: "blog" },
-    { href: "/doctorDetails", title: " Dr. Manasa Mynepally" },
+    { href: "/bestDoctorsDetails", title: " Dr. Manasa Mynepally" },
     { href: "", title: "Topic Of Blog" },
   ];
   return (
@@ -21,11 +21,11 @@ const BlogsDetail = () => {
         <h2 className="text-theme text-3xl">Blogs</h2>
       </section> */}
       <section>
-        <div className="max-w-7xl m-auto ">
+        <div className="max-w-7xl m-auto max-sm:m-4">
           <h2 className="text-theme text-2xl font-semibold highlight-border highlight-border-left">
             Topic Of Blog
           </h2>
-          <div className="grid grid-cols-6 gap-6">
+          <div className="md:grid grid-cols-6 gap-6">
             <div className="col-span-4">
               <div className="flex items-center space-x-8 mb-6">
                 <div className="flex items-center space-x-4">
@@ -174,7 +174,7 @@ const BlogsDetail = () => {
                 <p>*BMI = Weight in KG/(Height in meters)2</p>
               </div>
             </div>
-            <div className="col-span-2">
+            <div className="col-span-2 max-sm:mt-5">
               <div className="shadow-3xl rounded-lg p-4">
                 <h2 className="text-theme text-2xl font-semibold highlight-border highlight-border-left">
                   Latest Blogs

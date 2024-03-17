@@ -12,7 +12,7 @@ const Blogs = () => {
   const breadCrumb = [
     { href: "/", title: "home" },
     { href: "/blogs", title: "blog" },
-    { href: "/doctorDetails", title: " Dr. Manasa Mynepally" },
+    { href: "/bestDoctorsDetails", title: " Dr. Manasa Mynepally" },
   ];
   return (
     <div>
@@ -21,7 +21,7 @@ const Blogs = () => {
       </div>
       <BreadCrumb linkData={breadCrumb} />
       <section>
-        <div className="max-w-7xl m-auto ">
+        <div className="max-w-7xl m-auto max-sm:m-4">
           <h2 className="text-theme text-2xl font-semibold highlight-border highlight-border-left">
             Blogs
           </h2>
@@ -37,7 +37,7 @@ const Blogs = () => {
             </Tabs>
             <TabScreen>
               {activeTab === 0 && (
-                <div className="grid grid-cols-4 gap-6">
+                <div className="grid md:grid-cols-4 grid-cols-1 gap-6">
                   {[...Array(20).keys()].map((item) => (
                     <BlogListCard key={item} />
                   ))}

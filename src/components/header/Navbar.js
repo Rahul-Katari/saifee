@@ -5,12 +5,31 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import navHelp from "../../assets/images/home/nav-help.png";
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
-  { name: "About Us", href: "/about", current: false },
-  { name: "Center Of Excellence", href: "/excellence", current: false },
-  { name: "Consult Our Best Doctors", href: "/bestdoctors", current: false },
-  { name: "Facilities", href: "/facilities", current: false },
-  { name: "Contact Us", href: "/contact", current: false },
+  { name: "Home", href: "/", current: true, desktopNav: true },
+  { name: "About Us", href: "/about", current: false, desktopNav: true },
+  {
+    name: "Center Of Excellence",
+    href: "/excellence",
+    current: false,
+    desktopNav: true,
+  },
+  {
+    name: "Consult Our Best Doctors",
+    href: "/bestDoctors",
+    current: false,
+    desktopNav: true,
+  },
+  { name: "Facilities", href: "/facilities", current: false, desktopNav: true },
+  { name: "Contact Us", href: "/contact", current: false, desktopNav: true },
+  { name: "Blogs", href: "/blogs", current: false, desktopNav: false },
+  {
+    name: "Patients & Visitors",
+    href: "/patientsVisitors",
+    current: false,
+    desktopNav: false,
+  },
+  { name: "Careers", href: "/careers", current: false, desktopNav: false },
+  { name: "News & Media", href: "/videos", current: false, desktopNav: false },
 ];
 
 function classNames(...classes) {
@@ -21,22 +40,22 @@ const Navbar = () => {
   const { pathname } = useLocation();
   const disclosureRef = useRef(null);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        disclosureRef.current &&
-        !disclosureRef.current.contains(event.target)
-      ) {
-        disclosureRef.current.click();
-      }
-    };
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (
+  //       disclosureRef.current &&
+  //       !disclosureRef.current.contains(event.target)
+  //     ) {
+  //       disclosureRef.current.click();
+  //     }
+  //   };
 
-    document.body.addEventListener("click", handleClickOutside);
+  //   document.body.addEventListener("click", handleClickOutside);
 
-    return () => {
-      document.body.removeEventListener("click", handleClickOutside);
-    };
-  }, []);
+  //   return () => {
+  //     document.body.removeEventListener("click", handleClickOutside);
+  //   };
+  // }, []);
 
   const handleLinkClick = () => {
     disclosureRef.current?.click();
@@ -67,23 +86,30 @@ const Navbar = () => {
                 <div className="flex items-center">
                   <div className="hidden sm:block ms-[130px]">
                     <div className="flex">
-                      {navigation.map((item) => (
-                        <Link
-                          key={item.name}
-                          to={item.href}
-                          onClick={handleLinkClick}
-                          className={classNames(
-                            (item.href === "/" && pathname === "/") ||
-                              (item.href !== "/" && item.href === pathname)
-                              ? "text-nav-highlight underline"
-                              : "hover:text-nav-highlight hover:underline",
-                            "rounded-md px-3 py-2  font-medium"
-                          )}
-                          aria-current={item.current ? "page" : undefined}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                      {navigation.map((item) => {
+                        return (
+                          item.desktopNav && (
+                            <Link
+                              key={item.name}
+                              to={item.href}
+                              onClick={handleLinkClick}
+                              className={classNames(
+                                (item.href === "/" && pathname === "/") ||
+                                  (item.href !== "/" &&
+                                    item.href === pathname) ||
+                                  (pathname.includes(item.href) &&
+                                    item.href !== "/")
+                                  ? "text-nav-highlight underline"
+                                  : "hover:text-nav-highlight hover:underline",
+                                "rounded-md px-3 py-2  font-medium"
+                              )}
+                              aria-current={item.current ? "page" : undefined}
+                            >
+                              {item.name}
+                            </Link>
+                          )
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -123,10 +149,12 @@ const Navbar = () => {
                       to={item.href}
                       onClick={handleLinkClick}
                       className={classNames(
-                        item.current
-                          ? "text-red-600 underline"
-                          : "hover:text-red-600 hover:underline",
-                        "block rounded-md px-3 py-2 text-base font-medium"
+                        (item.href === "/" && pathname === "/") ||
+                          (item.href !== "/" && item.href === pathname) ||
+                          (pathname.includes(item.href) && item.href !== "/")
+                          ? "text-nav-highlight underline"
+                          : "hover:text-nav-highlight hover:underline",
+                        "rounded-md px-3 py-2  font-medium block"
                       )}
                       aria-current={item.current ? "page" : undefined}
                     >
