@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/saifee/static/css/main.5d5f7c8a.css",
-    "main.js": "/saifee/static/js/main.2f32aab9.js",
+    "main.css": "/saifee/static/css/main.686df360.css",
+    "main.js": "/saifee/static/js/main.4b21f27a.js",
     "static/media/testi-bg.png": "/saifee/static/media/testi-bg.cfd3d4030abcead18264.png",
+    "static/media/book-appointment.png": "/saifee/static/media/book-appointment.eeaeb4d5baac487ae506.png",
     "static/media/patients-visitors.png": "/saifee/static/media/patients-visitors.1084651ba2616ee44640.png",
     "static/media/footer-bg.png": "/saifee/static/media/footer-bg.c8336e3a59aa492a2df1.png",
     "static/media/landing.png": "/saifee/static/media/landing.b2a5dd6a033b407bb7ed.png",
@@ -55,11 +56,11 @@
     "static/media/slick.ttf": "/saifee/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/saifee/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/saifee/index.html",
-    "main.5d5f7c8a.css.map": "/saifee/static/css/main.5d5f7c8a.css.map",
-    "main.2f32aab9.js.map": "/saifee/static/js/main.2f32aab9.js.map"
+    "main.686df360.css.map": "/saifee/static/css/main.686df360.css.map",
+    "main.4b21f27a.js.map": "/saifee/static/js/main.4b21f27a.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d5f7c8a.css",
-    "static/js/main.2f32aab9.js"
+    "static/css/main.686df360.css",
+    "static/js/main.4b21f27a.js"
   ]
 }
