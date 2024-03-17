@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/saifee/static/css/main.b85c83f6.css",
-    "main.js": "/saifee/static/js/main.866a721e.js",
+    "main.js": "/saifee/static/js/main.5b11d5f0.js",
     "static/media/testi-bg.png": "/saifee/static/media/testi-bg.cfd3d4030abcead18264.png",
     "static/media/checkup-packages.png": "/saifee/static/media/checkup-packages.839ed3f21a21b668c229.png",
     "static/media/book-appointment.png": "/saifee/static/media/book-appointment.eeaeb4d5baac487ae506.png",
@@ -62,10 +62,10 @@
     "static/media/slick.woff": "/saifee/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/saifee/index.html",
     "main.b85c83f6.css.map": "/saifee/static/css/main.b85c83f6.css.map",
-    "main.866a721e.js.map": "/saifee/static/js/main.866a721e.js.map"
+    "main.5b11d5f0.js.map": "/saifee/static/js/main.5b11d5f0.js.map"
   },
   "entrypoints": [
     "static/css/main.b85c83f6.css",
-    "static/js/main.866a721e.js"
+    "static/js/main.5b11d5f0.js"
   ]
 }
