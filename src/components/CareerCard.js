@@ -5,18 +5,18 @@ import CareerForm from "./pages/CareerForm";
 
 const CareerCard = () => {
   return (
-    <div className="rounded overflow-hidden shadow-3xl p-6 mb-6">
+    <div className="rounded overflow-hidden shadow-3xl p-6 mb-6 max-sm:text-sm">
       <div className="flex">
         <img className="w-2/5" src={jobCard} alt="Job Image" />
-        <div className="px-6 py-4">
-          <div className=" mb-2">
+        <div className="md:px-6 ms-4 py-4">
+          <div className=" mb-2 ">
             Job Title: Medical Gastroenterology Consultant
           </div>
           <p>Department: Marketing</p>
           <p>Location: Hyderabad</p>
         </div>
       </div>
-      <div className="px-6 pt-4 pb-2">
+      <div className="md:px-6 pt-4 pb-2">
         <p className="font-medium">Job Description</p>
         <ul className="list-disc-default">
           <li>

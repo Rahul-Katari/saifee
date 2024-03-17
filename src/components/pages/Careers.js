@@ -10,7 +10,7 @@ const Careers = () => {
         <img src={banner} alt="banner" />
       </div>
       <section>
-        <div className="max-w-7xl m-auto">
+        <div className="max-w-7xl m-auto max-sm:m-4">
           <h2 className="text-theme font-medium text-xl pb-4 highlight-border highlight-border-left">
             Career
           </h2>
@@ -21,7 +21,7 @@ const Careers = () => {
             <CareerCard />
           </div>
           <div className="flex justify-end">
-            <MoreBtn btnText={"View More"} href={"/"} />
+            <MoreBtn btn="theme" btnText={"View More"} href={"/"} />
           </div>
         </div>
       </section>

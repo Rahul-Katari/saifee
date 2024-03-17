@@ -14,7 +14,7 @@ const CareerForm = () => {
 
   return (
     <div className="flex justify-end">
-      <button onClick={openModal} className="btn-primary px-24">
+      <button onClick={openModal} className="btn-primary px-4 text-sm">
         Apply Now
       </button>
 
@@ -34,20 +34,20 @@ const CareerForm = () => {
               className="hidden sm:inline-block sm:align-middle sm:h-screen"
               aria-hidden="true"
             >
-              ​
+
             </span>
             <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle max-w-lg w-full">
               {/* Close button */}
               <div className="flex justify-end">
-              <button
-                onClick={closeModal}
-                type="button"
-              >
-                <IconX
-                  className="bg-highlight text-white p-2 rounded-lg"
-                  size={48}
-                />
-              </button>
+                <button
+                  onClick={closeModal}
+                  type="button"
+                >
+                  <IconX
+                    className="bg-highlight text-white p-2 rounded-lg"
+                    size={48}
+                  />
+                </button>
               </div>
               <h3 className="text-center text-theme text-xl font-semibold">Career Form</h3>
               {/* Form fields */}

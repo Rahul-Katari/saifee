@@ -12,7 +12,7 @@ const BlogListCard = () => {
         className="w-full h-auto rounded-t-lg"
       />
       <div className="flex justify-between mt-4">
-        <h1 className="font-bold ">The Medical Experts Carefully...</h1>
+        <h1 className="font-medium  text-sm">The Medical Experts Carefully...</h1>
         <div>
           <Link
             to={"/blogsDetail"}
