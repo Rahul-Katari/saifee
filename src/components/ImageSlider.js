@@ -16,12 +16,12 @@ function ImageSlider({ slidesToShow, images }) {
     nextArrow: null,
   };
   return (
-    <div className="slider-container">
+    <div className="slider-container ">
       <Slider {...settings}>
         {images.map((img, index) => {
           return (
             <div key={index}>
-              <img src={img.src} />
+              <img className=" max-sm:h-[200px]" src={img.src} />
             </div>
           );
         })}

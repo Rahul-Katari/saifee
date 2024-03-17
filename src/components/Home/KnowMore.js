@@ -17,8 +17,8 @@ const KnowMore = ({ doctor, imgSrc }) => {
                 {doctor}
               </p>
               <div>
-                <p className="font-medium">M.D., D.M.(Gold Medalist)</p>
-                <p className="text-red-600  text-xl">
+                <p className="font-medium py-1">M.D., D.M.(Gold Medalist)</p>
+                <p className="text-red-600 text-base md:text-xl">
                   Diabetes, Thyroid & Endocrine Centre
                 </p>
               </div>

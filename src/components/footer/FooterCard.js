@@ -13,19 +13,17 @@ const FooterCard = ({
 }) => {
   return (
     <div
-      className={`md:px-8 px-4 my-4 md:my-8 text-center ${
-        index < 2 ? "md:border-r-2 border-[#99999999] border-dashed" : ""
-      }`}
+      className={`md:px-8 px-4 my-4 md:my-8 text-center ${index < 2 ? "md:border-r-2 border-[#99999999] border-dashed" : ""
+        }`}
     >
       <div className="bg-footer-highlight inline-block rounded-full p-2 text-white">
         <img src={iconSrc} className="h-7 w-7 m-1" />
       </div>
-      <div className="font-medium  text-base my-4">{title}</div>
+      <div className="font-medium  text-base my-4 highlight-border">{title}</div>
       <p className="mt-2 text-gray-500 text-sm">{description1}</p>
       <p
-        className={`${
-          description3 ? "mt-2 text-gray-500 text-sm" : "text-gray-500 text-sm"
-        }`}
+        className={`${description3 ? "mt-2 text-gray-500 text-sm" : "text-gray-500 text-sm"
+          }`}
       >
         {description2}
       </p>

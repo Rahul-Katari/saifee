@@ -19,12 +19,12 @@ const NewAppointments = () => {
           industry.
         </p>
         <div className="flex max-sm:flex-col justify-between md:items-center items-start gap-5 md:me-12">
-          <Link to={"/bookAppointment"} className="text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-theme-gradient me-6">
+          <Link to={"/bookAppointment"} className="text-sm text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-theme-gradient me-6">
             Get An Appointment
           </Link>
           <div className="flex items-center justify-center">
             <div className=" me-6">
-              <img src={clock} className="w-[37px]" />
+              <img src={clock} className="w-[25px]" />
             </div>
             <span className="text-sm">
               Monday - Friday
@@ -33,8 +33,8 @@ const NewAppointments = () => {
             </span>
           </div>
           <div className="flex items-center justify-center">
-            <div className="w-[37px] me-6">
-              <img src={location} className="w-[23px] h-[33px]" />
+            <div className="w-[37px] me-4 md:me-6">
+              <img src={location} className="w-[24px] h-[28px]" />
             </div>
             <span className="text-sm">
               101, Sri Sampada Arcade,1, Khajaguda – <br></br> Nanakramguda Rd,

@@ -15,9 +15,8 @@ import card5 from "../../assets/images/home/book-lab-test.png";
 const bannerCardsData = [
   { imgSrc: card1, title1: "Book Doctor", title2: "Appointment" },
   { imgSrc: card2, title1: "Find Your", title2: "Doctors" },
-  { imgSrc: card3, title1: "Health", title2: "Package" },
+  { imgSrc: card5, title1: "Health", title2: "Package" },
   { imgSrc: card4, title1: "Online", title2: "Consultancy" },
-  { imgSrc: card5, title1: "Book Lab", title2: "Test" },
 ];
 
 const BannerCardsSliderHome = () => {
@@ -49,8 +48,8 @@ const BannerCardsSliderHome = () => {
         breakpoint: 480,
         settings: {
           infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
     ],

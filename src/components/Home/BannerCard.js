@@ -6,7 +6,7 @@ const BannerCard = ({ imgSrc, title1, title2 }) => {
           <h3 className=" font-medium">{title1}</h3>
           <h3 className=" font-medium">{title2}</h3>
         </div>
-        <div className=" w-28 min-h-[112px] max-sm:w-24 max-sm:h-24 flex justify-center m-auto">
+        <div className=" w-28 min-h-[80px] max-sm:w-24 max-sm:h-16 flex justify-center m-auto">
           <img
             src={imgSrc}
             alt="Card Image"

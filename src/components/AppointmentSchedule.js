@@ -2,7 +2,7 @@ import AppointmentInput from "./home/AppointmentInput";
 
 const AppointmentSchedule = () => {
   return (
-    <div>
+    <div >
       <div className="md:grid md:grid-cols-7 gap-y-2">
         <div className="flex items-center justify-center col-span-4">
           <iframe
@@ -19,7 +19,7 @@ const AppointmentSchedule = () => {
             <h1 className="uppercase text-2xl md:text-3xl">
               schedule an appointment
             </h1>
-            <p className="text-sm">
+            <p className="text-xs">
               To reach out to our mm Hospital Team, please fill in the below
               form. Our team members will revert back to you shortly.
             </p>

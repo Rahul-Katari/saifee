@@ -88,7 +88,7 @@ const Home = () => {
             <h3 className="uppercase text-2xl my-5 text-center text-theme highlight-border">
               specialities
             </h3>
-            <div className="grid grid-cols-3 lg:grid-cols-5 lg:gap-14 max-sm:gap-3 mx-4">
+            <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-14 max-sm:gap-3 mx-4 mb-4">
               {specialitiesData.map((spec, index) => {
                 return (
                   <SpecialitiesCard
@@ -135,34 +135,26 @@ const Home = () => {
         {/* committed to cure 2 ends  */}
         {/* Health talks section starts */}
         <section>
-          <div className="bg-banner md:p-16 max-sm:py-16">
+          <div className="bg-banner md:p-16 max-sm:py-8">
             <h2 className="text-theme text-2xl text-center uppercase md:mb-10 mb-3 highlight-border">
               health talks
             </h2>
             <div className="md:grid md:grid-cols-12 md:mx-0">
               <div className="col-span-3 md:pe-6 md:ps-10 mx-4 md:mx-0">
                 <img src={Logo} className="m-auto w-24" />
-                <h3 className="text-2xl font-semibold py-3">
+                <h3 className="md:text-2xl text-xl font-semibold py-3">
                   Connect with Manasa Mynepally
                 </h3>
-                <p>
+                <p className="mb-2">
                   Lorem ipsum dolor sit amet, consect etur adipiscing elit.
                   Fusce enim fames quam pellentesque interdum purus senectus
                   feugiat elit.c.
                 </p>
               </div>
-              <div className="col-span-6">
-                <iframe
-                  height="515"
-                  src="https://www.youtube.com/embed/iSXL58MPPQc?si=WZA9y5_5GxtJImtO"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  className="w-full"
-                ></iframe>
+              <div className="col-span-6 m-4 mb-0">
+                <iframe className="w-full max-sm:h-[200px]" height="400" src="https://www.youtube.com/embed/LzpCldPiT0c?si=HfrHjmyU-hGkDdoH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
-              <div className="col-span-3 md:ps-10 max-sm:pt-5">
+              <div className="col-span-3 md:ps-10">
                 <HealthTalksTabs />
               </div>
             </div>
@@ -170,13 +162,13 @@ const Home = () => {
         </section>
         {/* Health talks section ends */}
         {/* testimonials section  */}
-        <section>
+        <section className="max-sm:mb-0">
           <div className="testimonial">
-            <h3 className="text-theme text-2xl text-center uppercase mb-8 highlight-border">
+            <h3 className="text-theme text-2xl text-center uppercase md:mb-8 highlight-border">
               what our patients say
             </h3>
             <div
-              className="bg-right bg-contain bg-no-repeat md:h-[500px] h-[400px] flex flex-col justify-center relative"
+              className="bg-right bg-contain bg-no-repeat h-[400px] flex flex-col justify-center relative"
               style={{
                 backgroundImage: `url(${testBg1})`,
               }}
@@ -193,13 +185,13 @@ const Home = () => {
         </section>
         {/* blogs section  */}
         <div
-          className="blogs bg-cover bg-center bg-no-repeat md:h-[600px] h-[450px] flex flex-col justify-center"
+          className="pb-4 blogs bg-cover bg-center bg-no-repeat md:h-[500px]  h-[380px] flex flex-col justify-center"
           style={{
             backgroundImage: `url(${blogsBg})`,
           }}
         >
           <div>
-            <h3 className="text-theme text-2xl text-center uppercase md:mb-24 mb-8 highlight-border">
+            <h3 className="text-theme text-2xl text-center uppercase md:mb-10 mb-8 highlight-border">
               Blogs
             </h3>
             <div className="md:grid grid-cols-10 justify-end items-center">

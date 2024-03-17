@@ -15,27 +15,27 @@ const HealthTalksTabs = () => {
         onTabClick={onTabClick}
         hideNavBtnsOnMobile={false}
       >
-        <Tab>All</Tab>
-        <Tab>Featured</Tab>
-        <Tab>Latest</Tab>
+        <Tab className="text-sm px-0">All</Tab>
+        <Tab className="text-sm">Featured</Tab>
+        <Tab className="text-sm">Latest</Tab>
       </Tabs>
 
       <TabScreen>
         {activeTab === 0 && (
-          <div>
-            <div className="flex items-center pt-8 max-sm:justify-center">
+          <div className="max-sm:m-4 mt-0">
+            <div className="flex items-center ">
               <img src={medicalExperts} className="h-16" />
               <p className="text-[#222F66] ps-4">The Medical Experts</p>
             </div>
-            <div className="flex items-center pt-4 max-sm:justify-center">
+            <div className="flex items-center pt-4 ">
               <img src={medicalExperts} className="h-16" />
               <p className="text-[#222F66] ps-4">The Medical Experts</p>
             </div>
-            <div className="flex items-center pt-4 max-sm:justify-center">
+            <div className="flex items-center pt-4 ">
               <img src={medicalExperts} className="h-16" />
               <p className="text-[#222F66] ps-4">The Medical Experts</p>
             </div>
-            <div className="flex items-center pt-4 max-sm:justify-center">
+            <div className="flex items-center pt-4 ">
               <img src={medicalExperts} className="h-16" />
               <p className="text-[#222F66] ps-4">The Medical Experts</p>
             </div>

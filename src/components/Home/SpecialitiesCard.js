@@ -5,7 +5,7 @@ const SpecialitiesCard = ({ id, imgSrc, text1, text2 }) => {
     <>
       <Link
         to={`/excellenceDetails/${id}`}
-        className="rounded-lg shadow-3xl text-center md:p-3 p-2 md:py-6 relative specialities-card"
+        className="rounded-lg shadow-3xl text-center md:p-3 p-2 py-4 md:py-6 relative specialities-card"
       >
         <img
           src={imgSrc}

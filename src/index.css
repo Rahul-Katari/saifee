@@ -56,20 +56,20 @@ code {
   background-color:
     #035CAF;
   /* Change color as desired */
-  margin-right: 45px;
+  margin-right: 16px;
   /* Space between the border and the element */
 }
 
 .know-about-line::after {
   content: "";
   display: block;
-  width: 200px;
+  width: 100px;
   /* Adjust the width as needed */
   height: 2px;
   /* Adjust the height as needed */
   background-color: var(--nav-highlight-color);
   /* Change color as desired */
-  margin-left: 35px;
+  margin-left: 16px;
 }
 
 .highlight-border::after {

@@ -33,11 +33,11 @@ const CommittedCureTabs = () => {
           <div className="m-4">
             {/* Tab screen {idx} */}
             <div className="grid grid-cols-5 items-center">
-              <div className="md:col-span-2 col-span-5">
-                <img src={labTests} className="rounded-xl" />
+              <div className="md:col-span-2 col-span-5 flex items-center justify-center">
+                <img src={labTests} className="rounded-xl max-sm:h-[200px]" />
               </div>
               <div className="md:col-span-3 md:px-10 mt-4 col-span-5">
-                <h1 className="text-blue-700 text-xl font-semibold">
+                <h1 className="text-theme text-xl font-medium">
                   Laboratory Tests
                 </h1>
                 <p className="my-3">

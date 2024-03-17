@@ -9,12 +9,11 @@ function BlogsSlider({ slides }) {
   const [oldSlide, setOldSlide] = useState(0);
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeSlide2, setActiveSlide2] = useState(0);
-  console.log(activeSlide);
   const settings = {
     // className: "center",
     // centerMode: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 3500,
     arrows: false,
     dots: true,
     infinite: true,
@@ -61,9 +60,9 @@ function BlogsSlider({ slides }) {
             <div key={index} className="">
               <img
                 src={slide.src}
-                className="h-208px rounded-t-[25px] bg-white m-auto w-[280px]"
+                className="h-200px rounded-t-[25px] bg-white m-auto w-[250px]"
               />
-              <div className="text-center uppercase w-[280px] h-[68px] bg-white m-auto rounded-b-[25px] p-3">
+              <div className=" text-sm text-center uppercase w-[250px] h-[60px] bg-white m-auto rounded-b-[25px] p-3">
                 {slide.text}
               </div>
             </div>
