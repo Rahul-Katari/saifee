@@ -20,11 +20,11 @@ const OurTopDoctors = () => {
             </p>
           </div>
           <div className="absolute md:top-[180px] top-[210px] md:mx-16 mx-6">
-            <div className="grid md:grid-cols-2 gap-20">
+            <div className="grid md:grid-cols-2 gap-10">
               <div className="shadow-2xl p-5 rounded-xl flex flex-col bg-white ">
                 <img src={doctorManasa} className="md:h-[300px]" />
                 <div>
-                  <h3 className="text-2xl font-semibold mt-4">
+                  <h3 className="md:text-2xl text-xl font-semibold mt-4">
                     Dr. Manasa Mynepally
                   </h3>
                   <p className="my-4">
@@ -37,7 +37,7 @@ const OurTopDoctors = () => {
               <div className="shadow-2xl p-5 rounded-xl flex flex-col bg-white">
                 <img src={doctor} className="md:h-[300px]" />
                 <div>
-                  <h3 className="text-2xl font-bold mt-4">DR. G UDAY KIRAN</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mt-4">DR. G UDAY KIRAN</h3>
                   <p className="my-4 ">
                     MS, FMAS, MAGES, EFIAGES, FALS (ROBOTIC) General and
                     Laparoscopic Surgeon
