@@ -3,7 +3,7 @@ import banner from "../../assets/images/banners/landing.png";
 import best from "../../assets/images/landing/general-surgeon.png";
 import areas from "../../assets/images/landing/hexagon.png";
 import NewAppointments from "../banners/NewAppointments";
-import KnowMore from "../Home/KnowMore";
+import KnowMore from "../home/KnowMore";
 import whyChoose from "../../assets/images/landing/why-choose-us.png";
 import DoctorServices from "../DoctorServices";
 import BlogsSliderDetail from "../BlogsSliderDetail";
@@ -13,7 +13,7 @@ import shorterStay from "../../assets/images/landing/guarantee/stay.png";
 import scarless from "../../assets/images/landing/guarantee/scarless-proc.png";
 import quick from "../../assets/images/landing/guarantee/quick.png";
 import care from "../../assets/images/landing/guarantee/affordable.png";
-import SpecialitiesCard from "../Home/SpecialitiesCard";
+import SpecialitiesCard from "../home/SpecialitiesCard";
 import NeedHelp from "../banners/NeedHelp";
 const guarantee = [
   { imgSrc: advProc, text: "Advanced Procedure" },

@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 const SidebarButtons = () => {
   return (
     <div>
-      <div className="fixed right-0 top-1/2 transform -translate-y-1/2 space-y-2 z-[1] text-xs">
+      <div className="fixed right-0 top-1/2 transform -translate-y-1/2 space-y-2 z-[2] text-xs">
         <div className="bg-theme text-white px-5 py-1 rounded-l-md text-center">
-          <Link to={"/"}>
+          <Link to={"/bookAppointment"}>
             <div>
               <img src={calender} className="m-auto w-1/3" />
             </div>
@@ -27,7 +27,7 @@ const SidebarButtons = () => {
           </Link>
         </div>
       </div>
-      <div className="fixed right-0 top-[80%] transform -translate-y-3/4 space-y-2 z-[1] text-sm">
+      <div className="fixed right-0 top-[80%] transform -translate-y-3/4 space-y-2 z-[2] text-sm">
         <Link to={"/"}>
           <img src={whatsappIcon} className="w-5/12 ms-auto me-6" />
         </Link>

@@ -9,7 +9,7 @@ const HealthTalksTabs = () => {
     setActiveTab(index);
   };
   return (
-    <div>
+    <div className="health-talk-tabs">
       <Tabs
         activeTab={activeTab}
         onTabClick={onTabClick}

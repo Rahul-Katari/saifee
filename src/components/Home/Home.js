@@ -25,6 +25,7 @@ import CommittedCureTabs from "./CommittedCureTabs";
 import Welcome from "../Welcome";
 import AppointmentSchedule from "../AppointmentSchedule";
 import HomeBannerSlider from "../HomeBannerSlider";
+import BannerCardsSliderHome from "./BannerCardsSliderHome";
 
 import blog1 from "../../assets/images/home/blog1.png";
 import blog2 from "../../assets/images/home/blog2.png";
@@ -35,6 +36,7 @@ import MoreBtn from "../common/MoreBtn";
 import KnowMore from "./KnowMore";
 import NewAppointments from "../banners/NewAppointments";
 import HealthTalksTabs from "./HeathTalksTabs";
+import KnowAboutSlider from "../KnowAboutSlider";
 
 const bannerCardsData = [
   { imgSrc: card1, title1: "Book Doctor", title2: "Appointment" },
@@ -71,19 +73,8 @@ const Home = () => {
           <HomeBannerSlider />
         </div>
         <section>
-          <div className="max-w-7xl m-auto">
-            <div className="flex justify-around grid lg:grid-cols-5 grid-cols-3 md:gap-8 gap-y-8 gap-x-4 mx-4">
-              {bannerCardsData.map((card, index) => {
-                return (
-                  <BannerCard
-                    key={index}
-                    imgSrc={card.imgSrc}
-                    title1={card.title1}
-                    title2={card.title2}
-                  />
-                );
-              })}
-            </div>
+          <div className="max-w-7xl m-auto home-banner-cards">
+            <BannerCardsSliderHome />
           </div>
         </section>
         {/* committed to cure starts  */}
@@ -126,7 +117,11 @@ const Home = () => {
         </section>
         {/* new patients appointments banner end */}
         {/* know about section starts  */}
-        <KnowMore />
+        <section>
+          <div className="know-about">
+            <KnowAboutSlider />
+          </div>
+        </section>
         {/* know about section ends  */}
         {/* committed to cure 2 starts  */}
         <section>

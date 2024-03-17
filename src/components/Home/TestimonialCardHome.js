@@ -1,9 +1,9 @@
 import React from "react";
-import Profile from "../../assets/images/home/profile.png"
+import Profile from "../../assets/images/home/profile.png";
 
 const TestimonialCardHome = () => {
   return (
-    <div className="p-6 rounded-lg shadow-lg bg-white mx-4">
+    <div className="p-6 rounded-lg shadow-lg bg-white m-4">
       <div className="flex items-center">
         <img
           src={Profile} // Replace with your actual profile picture URL

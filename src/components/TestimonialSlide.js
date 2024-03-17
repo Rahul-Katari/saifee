@@ -3,7 +3,7 @@ import Slider from "react-slick";
 
 import testCard from "../assets/images/home/testimonial-card.png";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
-import TestimonialCardHome from "./Home/TestimonialCardHome";
+import TestimonialCardHome from "./home/TestimonialCardHome";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -42,30 +42,36 @@ function TestimonialSlide() {
     swipeToSlide: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    afterChange: function (index) {
-      console.log(
-        `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-      );
-    },
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className="slider-container">
       <Slider {...settings}>
-      <div>
-          <TestimonialCardHome/>
-          </div>
-          <div>
-          <TestimonialCardHome/>
-        </div><div>
-          <TestimonialCardHome/>
-          </div>
-          <div>
-          <TestimonialCardHome/>
-        </div><div>
-          <TestimonialCardHome/>
-          </div>
-          <div>
-          <TestimonialCardHome/>
+        <div>
+          <TestimonialCardHome />
+        </div>
+        <div>
+          <TestimonialCardHome />
+        </div>
+        <div>
+          <TestimonialCardHome />
+        </div>
+        <div>
+          <TestimonialCardHome />
+        </div>
+        <div>
+          <TestimonialCardHome />
+        </div>
+        <div>
+          <TestimonialCardHome />
         </div>
       </Slider>
     </div>

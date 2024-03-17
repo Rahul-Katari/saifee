@@ -56,9 +56,13 @@ const Footer = () => {
   return (
     <div>
       <Topscroll />
-      {(currentUrl !== "/" && !currentUrl.includes("landing") && !currentUrl.includes("Detail")) && <CallUs />}
+      {currentUrl !== "/" &&
+        !currentUrl.includes("landing") &&
+        !currentUrl.includes("Detail") && <CallUs />}
       <div className="container">
-      {(currentUrl !== "/" && !currentUrl.includes("landing") && !currentUrl.includes("Detail")) && <NewAppointments />}
+        {currentUrl !== "/" &&
+          !currentUrl.includes("landing") &&
+          !currentUrl.includes("Detail") && <NewAppointments />}
 
         <div
           className="bg-contain"
@@ -106,7 +110,7 @@ const Footer = () => {
               ))}
             </div>
             <div className="flex-col flex md:flex-row justify-around pb-5 gap-4 md:gap-0 md:text-xl">
-              <div className="btn-primary px-8 justify-center">
+              <div className="btn-primary rounded-full px-8 justify-center">
                 <SocialIcons space={4} />
               </div>
               <div className="flex items-center">
@@ -116,7 +120,7 @@ const Footer = () => {
                 <a
                   target="_blank"
                   href="tel:+91 73400 40097"
-                  className="btn-primary px-8 justify-center text-base"
+                  className="btn-primary rounded-full px-8 justify-center text-base"
                 >
                   <div className="pe-5">
                     <IconPhoneFilled />
@@ -130,7 +134,7 @@ const Footer = () => {
               <a
                 target="_blank"
                 href="mailto:info@drmanasaendocrine.com"
-                className="btn-primary text-base"
+                className="btn-primary text-base rounded-full"
               >
                 <div className="pe-5">
                   <IconMailFilled />

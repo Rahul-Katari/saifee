@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-const SpecialitiesCard = ({ imgSrc, text1, text2 }) => {
+const SpecialitiesCard = ({ id, imgSrc, text1, text2 }) => {
   return (
     <>
       <Link
-        to={"/excellenceDetails"}
+        to={`/excellenceDetails/${id}`}
         className="rounded-lg shadow-3xl text-center md:p-3 p-2 md:py-6 relative specialities-card"
       >
         <img

@@ -48,6 +48,14 @@
     flex-direction: column;
 }
 
+.excellence-details .excellence-content-tabs .rts___tabs {
+    flex-direction: row;
+}
+
+.excellence-details .excellence-content-tabs .rts___nav___btn___container {
+    display: none;
+}
+
 .doctor-details .rts___tabs .rts___btn,
 .excellence-details .rts___tabs .rts___btn {
     border-radius: 0px !important;
@@ -61,7 +69,8 @@
     border-radius: 0px 15px 15px 0px !important;
 }
 
-.patients-visitors {
+.patients-visitors,
+.excellence-content-tabs {
     .rts___tabs {
         padding: 0px;
         width: 100%;
@@ -89,6 +98,7 @@
     }
 }
 
+
 /* CSS for mobile devices only */
 @media only screen and (max-width: 767px) {
     .rts___btn {
@@ -102,4 +112,11 @@
     .rts___nav___btn___container {
         padding: 10px;
     }
+
+    /* health-talk-tabs */
+    .health-talk-tabs .rts___tab {
+        padding: 5px 20px !important;
+        margin: 0px 10px;
+    }
+
 }

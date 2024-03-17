@@ -12,7 +12,7 @@ import {
 } from "react-router-dom";
 import About from "./components/pages/About";
 import Error from "./components/pages/Error";
-import Home from "./components/Home/Home";
+import Home from "./components/home/Home";
 import Contact from "./components/pages/Contact";
 import Excellence from "./components/pages/Excellence";
 import BestDoctors from "./components/pages/BestDoctors";
@@ -85,7 +85,10 @@ root.render(
           <Route path="/excellence" element={<Excellence />} />
           <Route path="/bestdoctors" element={<BestDoctors />} />
           <Route path="/facilities" element={<Facilities />} />
-          <Route path="/excellenceDetails" element={<ExcellenceDetails />} />
+          <Route
+            path="/excellenceDetails/:id"
+            element={<ExcellenceDetails />}
+          />
           <Route path="/doctorDetails" element={<DoctorDetails />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogsDetail" element={<BlogsDetail />} />

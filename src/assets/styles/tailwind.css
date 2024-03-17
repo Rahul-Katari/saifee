@@ -12,11 +12,11 @@
     }
 
     .btn-primary {
-        @apply rounded-full bg-gradient-to-b from-[#245272] to-[#147887] text-white p-2 px-4 flex items-center text-xs;
+        @apply bg-gradient-to-b from-[#245272] to-[#147887] text-white p-2 px-4 flex items-center text-sm rounded-lg;
     }
 
     .btn-theme {
-        @apply rounded-lg text-white p-2 px-4 bg-gradient-to-r from-[#07869B] to-[#0361AD];
+        @apply rounded-lg text-white p-2 px-10 bg-gradient-to-b from-[#07869B] to-[#0361AD];
     }
 
     p {

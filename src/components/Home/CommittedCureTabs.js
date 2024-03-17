@@ -60,7 +60,12 @@ const CommittedCureTabs = () => {
                   specimen book. It has survived not only five centuries, but
                   also the leap into electronic typesetting,
                 </p>
-                <MoreBtn btnText={"Read More"} href={"/"} align={"end"} />
+                <MoreBtn
+                  btn={"theme"}
+                  btnText={"Read More"}
+                  href={"/"}
+                  align={"end"}
+                />
               </div>
             </div>
           </div>

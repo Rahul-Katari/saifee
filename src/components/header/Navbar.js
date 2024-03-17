@@ -48,7 +48,7 @@ const Navbar = () => {
         <>
           <div className="mx-auto md:py-4 py-2 sm:px-6 lg:px-8">
             <div className="relative flex md:h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button
                   className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -63,7 +63,7 @@ const Navbar = () => {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-around sm:justify-between items-center">
+              <div className="flex flex-1 items-center justify-center sm:justify-between items-center">
                 <div className="flex items-center">
                   <div className="hidden sm:block ms-[130px]">
                     <div className="flex">
@@ -107,7 +107,7 @@ const Navbar = () => {
 
           {/* Off-canvas mobile menu */}
           <Disclosure.Panel
-            className={`sm:hidden top-[70px] fixed inset-0 bg-white z-40 w-64 sm:w-80 transform transition-transform ease-in-out shadow-r-3xl ${
+            className={`sm:hidden top-[70px] fixed inset-0 bg-white z-40 w-64 sm:w-80 transform transition-transform ease-in-out shadow-2xl ${
               open ? "translate-x-0" : "-translate-x-full"
             }`}
           >
