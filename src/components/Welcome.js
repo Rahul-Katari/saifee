@@ -15,7 +15,7 @@ const Welcome = ({ img, title }) => {
               <h2 className="text-base font-medium leading-7 text-content text-xl welcome flex items-center">
                 Welcome
               </h2>
-              <p className="mt-1  tracking-tight text-theme text-2xl md:text-3xl">
+              <p className="mt-1  tracking-tight text-theme text-2xl">
                 {title}
               </p>
               <p className="md:mt-6 text-gray-600">

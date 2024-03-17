@@ -14,7 +14,7 @@ const KnowMore = () => {
             />
             <div className="max-sm:mt-4 lg:pr-8 lg:pt-4 lg:col-span-3">
               <div className="">
-                <h2 className="text-base font-medium leading-7 text-content text-xl">
+                <h2 className="text-base font-medium leading-7 text-content text-xl welcome flex items-center">
                   Know About
                 </h2>
                 <p className="md:my-3 mt-2 md:text-4xl text-2xl font-normal tracking-tight text-[#025CAF] sm:text-6xl">

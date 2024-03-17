@@ -8,18 +8,21 @@ const BookApppointments = () => {
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
+  const breadCrumb = [
+    { href: "/", title: "home" },
+    { href: "/bookAppointment", title: "book appointment" },
+  ];
   return (
     <div>
       <div>
         <img src={banner} />
       </div>
-      <BreadCrumb />
-      <section className="bg-banner">
-        <div className="p-4">
-          <h1 className="text-2xl font-bold mb-4">Appointment Form</h1>
-          <form>
+      <BreadCrumb linkData={breadCrumb} />
+      <div className="max-w-7xl m-auto">
+        <div className="p-8 py-24 bg-banner">
+          <form className="grid grid-cols-2 gap-4">
             <div className="mb-4">
-              <label className="block font-semibold">Selected Package*</label>
+              <label className="mb-2 block">Selected Package*</label>
               <select
                 name="package"
                 onChange={handleInputChange}
@@ -33,9 +36,27 @@ const BookApppointments = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block font-semibold">Name*</label>
+              <label className="mb-2 block">Name*</label>
               <input
                 type="text"
+                name="name"
+                onChange={handleInputChange}
+                className="w-full p-2 border rounded"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="mb-2 block">Mobile*</label>
+              <input
+                type="number"
+                name="name"
+                onChange={handleInputChange}
+                className="w-full p-2 border rounded"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="mb-2 block">Email*</label>
+              <input
+                type="email"
                 name="name"
                 onChange={handleInputChange}
                 className="w-full p-2 border rounded"
@@ -45,7 +66,7 @@ const BookApppointments = () => {
             {/* Add other input fields (Mobile, Email, etc.) similarly */}
 
             <div className="mb-4">
-              <label className="block font-semibold">Date*</label>
+              <label className="mb-2 block">Date*</label>
               <input
                 type="date"
                 name="date"
@@ -55,7 +76,7 @@ const BookApppointments = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block font-semibold">Time*</label>
+              <label className="mb-2 block">Time*</label>
               <input
                 type="time"
                 name="time"
@@ -65,7 +86,7 @@ const BookApppointments = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block font-semibold">Address</label>
+              <label className="mb-2 block">Address*</label>
               <textarea
                 name="address"
                 onChange={handleInputChange}
@@ -74,7 +95,7 @@ const BookApppointments = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block font-semibold">Message</label>
+              <label className="mb-2 block">Message*</label>
               <textarea
                 name="message"
                 onChange={handleInputChange}
@@ -82,21 +103,24 @@ const BookApppointments = () => {
               />
             </div>
 
+<div className="flex justify-end">
             <button
-              type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              className="btn-primary text-white px-14 py-2 rounded hover:bg-blue-600"
             >
               Submit
             </button>
+            </div>
+            <div>
             <button
               type="reset"
-              className="bg-gray-300 text-gray-700 ml-2 px-4 py-2 rounded hover:bg-gray-400"
+              className="border border-black text-gray-700 ml-2 px-14 py-2 text-xs rounded hover:bg-gray-400"
             >
               Reset
             </button>
+            </div>
           </form>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

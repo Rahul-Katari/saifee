@@ -1,95 +1,125 @@
 import BreadCrumb from "../common/BreadCrumb";
-const BookApppointments = () => {
+import banner from "../../assets/images/banners/checkup-packages.png"
+import pack1 from "../../assets/images/health-package1.png"
+import pack2 from "../../assets/images/health-package2.png"
+import pack3 from "../../assets/images/health-package3.png"
+import pack4 from "../../assets/images/health-package4.png"
+const HealthCheckup = () => {
+  const breadCrumb = [
+    { href: "/", title: "home" },
+    { href: "/heathCheckup", title: "health checkup packages" }
+  ];
   return (
     <div>
       <div>
         <img src={banner} />
       </div>
-      <BreadCrumb />
-      <section className="bg-banner">
-        <div className="p-4">
-          <h1 className="text-2xl font-bold mb-4">Appointment Form</h1>
-          <form>
-            <div className="mb-4">
-              <label className="block font-semibold">Selected Package*</label>
-              <select
-                name="package"
-                onChange={handleInputChange}
-                className="w-full p-2 border rounded"
-              >
-                <option value="">Choose a package</option>
-                <option value="Package A">Package A</option>
-                <option value="Package B">Package B</option>
-                {/* Add more package options as needed */}
-              </select>
+      <BreadCrumb linkData={breadCrumb} />
+      <section>
+        <div className="max-w-5xl m-auto">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-banner p-2">
+              <div className="mx-auto  flex  space-x-4">
+                <div className="flex-shrink-0">
+                  <img src={pack1} alt="ChitChat Logo" />
+                </div>
+                <div>
+                  <div className="text-xl mt-3 font-medium text-[#0469A9]">DIABETES PACKAGE 1</div>
+                  <ul className="list-disc-default text-gray-500 text-xs ps-4 mb-0">
+                    <li>Fasting Plasma Glucose - FPG</li>
+                    <li>Post Prandial Plasma Glucose - PPPG</li>
+                    <li>HbA1C</li>
+                    <li>Fasting Lipid Profile - FLP</li>
+                    <li>SGPT / SGOT</li>
+                    </ul>
+                    <p className="text-[#FF0000]">Sr. Creatinine</p>
+                    <ul className="list-disc-default text-gray-500 text-xs ps-4 mt-0">
+                    <li>SPOT URINE MICROALBUMIN/ CREATININE RATIO - UACR</li>
+                    <li>Complete Blood Picture</li>
+                    <li>Complete Urine Examination</li>
+                    <li>Diabetic Nerve Test - VPT</li>
+                  </ul>
+
+                </div>
+              </div>
+              <div className="flex justify-end">
+                <button className="mt-2 px-12 py-2 border rounded-md btn-primary">Book Now</button>
+              </div>
             </div>
+            <div className="bg-banner p-2">
+              <div className="mx-auto  flex  space-x-4">
+                <div className="flex-shrink-0">
+                  <img src={pack2} alt="ChitChat Logo" />
+                </div>
+                <div>
+                  <div className="text-xl mt-3 font-medium text-[#0469A9]">DIABETES PACKAGE 1</div>
+                  <ul className="list-disc-default text-gray-500 text-xs ps-4 mb-0">
+                    <li>Fasting Plasma Glucose - FPG</li>
+                    <li>Post Prandial Plasma Glucose - PPPG</li>
+                    <li>HbA1C</li>
+                    <li>Fasting Lipid Profile - FLP</li>
+                    <li>SGPT / SGOT</li>
+                    </ul>
+                    <p className="text-[#FF0000]">Sr. Creatinine</p>
+                    <ul className="list-disc-default text-gray-500 text-xs ps-4 mt-0">
+                    <li>SPOT URINE MICROALBUMIN/ CREATININE RATIO - UACR</li>
+                    <li>Complete Blood Picture</li>
+                    <li>Complete Urine Examination</li>
+                    <li>Diabetic Nerve Test - VPT</li>
+                  </ul>
 
-            <div className="mb-4">
-              <label className="block font-semibold">Name*</label>
-              <input
-                type="text"
-                name="name"
-                onChange={handleInputChange}
-                className="w-full p-2 border rounded"
-              />
+                </div>
+              </div>
+              <div className="flex justify-end">
+                <button className="mt-2 px-12 py-2 border rounded-md btn-primary">Book Now</button>
+              </div>
             </div>
-
-            {/* Add other input fields (Mobile, Email, etc.) similarly */}
-
-            <div className="mb-4">
-              <label className="block font-semibold">Date*</label>
-              <input
-                type="date"
-                name="date"
-                onChange={handleInputChange}
-                className="w-full p-2 border rounded"
-              />
+            <div className="bg-banner p-2">
+              <div className="mx-auto  flex  space-x-4">
+                <div className="flex-shrink-0">
+                  <img src={pack3} alt="ChitChat Logo" />
+                </div>
+                <div>
+                  <div className="text-xl mt-3 font-medium text-[#0469A9]">DIABETES PACKAGE 1</div>
+                  <ul className="list-disc-default text-gray-500 text-xs ps-4 mb-0">
+                  <li>Fasting Plasma Glucose - FPG</li>
+    <li>Post Prandial Plasma Glucose - PPPG</li>
+    <li>HbA1C</li>
+    <li>Fasting Lipid Profile - FLP</li>
+                    </ul>
+                </div>
+              </div>
+              <div className="flex justify-end">
+                <button className="mt-2 px-12 py-2 border rounded-md btn-primary">Book Now</button>
+              </div>
             </div>
-
-            <div className="mb-4">
-              <label className="block font-semibold">Time*</label>
-              <input
-                type="time"
-                name="time"
-                onChange={handleInputChange}
-                className="w-full p-2 border rounded"
-              />
+            <div className="bg-banner p-2">
+              <div className="mx-auto  flex  space-x-4">
+                <div className="flex-shrink-0">
+                  <img src={pack4} alt="ChitChat Logo" />
+                </div>
+                <div>
+                  <div className="text-xl mt-3 font-medium text-[#0469A9]">DIABETES PACKAGE 1</div>
+                  <ul className="list-disc-default text-gray-500 text-xs ps-4 mb-0">
+                  <li>Estradiol - E2</li>
+    <li>Lutenizing Hormone - LH</li>
+    <li>Follicle Stimulating Hormone - FSH</li>
+    <li>Testosterone - TOTAL</li>
+    <li>Prolactin - PRL</li>
+    <li>Thyroid Stimulating Hormone - TSH</li>
+    <li>Free - T4</li>
+    <li>Anti Mullerian Hormone - AMH</li>
+                    </ul>
+                </div>
+              </div>
+              <div className="flex justify-end">
+                <button className="mt-2 px-12 py-2 border rounded-md btn-primary">Book Now</button>
+              </div>
             </div>
-
-            <div className="mb-4">
-              <label className="block font-semibold">Address</label>
-              <textarea
-                name="address"
-                onChange={handleInputChange}
-                className="w-full p-2 border rounded"
-              />
-            </div>
-
-            <div className="mb-4">
-              <label className="block font-semibold">Message</label>
-              <textarea
-                name="message"
-                onChange={handleInputChange}
-                className="w-full p-2 border rounded"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-            >
-              Submit
-            </button>
-            <button
-              type="reset"
-              className="bg-gray-300 text-gray-700 ml-2 px-4 py-2 rounded hover:bg-gray-400"
-            >
-              Reset
-            </button>
-          </form>
+          </div>
         </div>
       </section>
     </div>
   );
 };
-export default BookApppointments;
+export default HealthCheckup;

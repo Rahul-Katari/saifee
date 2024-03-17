@@ -11,17 +11,17 @@ const NewAppointments = () => {
     >
       <div className="col-span-4"></div>
       <div className="flex flex-col justify-center md:p-10 p-4 max-sm:py-10 col-span-8">
-        <Link to={"/bookAppointment"} className="md:text-2xl text-xl mb-2 text-nav-highlight">
+        <h3 className="md:text-2xl text-xl mb-2 text-nav-highlight">
           New Patient Appointments
-        </Link>
+        </h3>
         <p className=" font-semibold md:mb-12 mb-6 text-content">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </p>
         <div className="flex max-sm:flex-col justify-between md:items-center items-start gap-5 md:me-12">
-          <button className="text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-theme-gradient me-6">
+          <Link to={"/bookAppointment"} className="text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-theme-gradient me-6">
             Get An Appointment
-          </button>
+          </Link>
           <div className="flex items-center justify-center">
             <div className=" me-6">
               <img src={clock} className="w-[37px]" />

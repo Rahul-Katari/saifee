@@ -94,7 +94,7 @@ const Home = () => {
         {/* specialities start  */}
         <section>
           <div className="max-w-7xl m-auto">
-            <h3 className="uppercase text-2xl md:text-3xl my-5 text-center text-theme highlight-border">
+            <h3 className="uppercase text-2xl my-5 text-center text-theme highlight-border">
               specialities
             </h3>
             <div className="grid grid-cols-3 lg:grid-cols-5 lg:gap-14 max-sm:gap-3 mx-4">
@@ -131,7 +131,7 @@ const Home = () => {
         {/* committed to cure 2 starts  */}
         <section>
           <div className="lg:px-16">
-            <h2 className="text-theme text-xl md:text-3xl text-center uppercase md:my-5 highlight-border">
+            <h2 className="text-theme text-xl md:text-2xl text-center uppercase md:my-5 highlight-border">
               Committed to cure
             </h2>
             <CommittedCureTabs />
@@ -141,13 +141,13 @@ const Home = () => {
         {/* Health talks section starts */}
         <section>
           <div className="bg-banner md:p-16 max-sm:py-16">
-            <h2 className="text-theme text-3xl text-center uppercase md:mb-10 mb-3 highlight-border">
+            <h2 className="text-theme text-2xl text-center uppercase md:mb-10 mb-3 highlight-border">
               health talks
             </h2>
             <div className="md:grid md:grid-cols-12 md:mx-0">
               <div className="col-span-3 md:pe-6 md:ps-10 mx-4 md:mx-0">
                 <img src={Logo} className="m-auto w-24" />
-                <h3 className="md:text-3xl text-2xl font-semibold py-3">
+                <h3 className="text-2xl font-semibold py-3">
                   Connect with Manasa Mynepally
                 </h3>
                 <p>
