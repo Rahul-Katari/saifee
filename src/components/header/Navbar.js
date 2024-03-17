@@ -40,25 +40,17 @@ const Navbar = () => {
   const { pathname } = useLocation();
   const disclosureRef = useRef(null);
 
-  // useEffect(() => {
-  //   const handleClickOutside = (event) => {
-  //     if (
-  //       disclosureRef.current &&
-  //       !disclosureRef.current.contains(event.target)
-  //     ) {
-  //       disclosureRef.current.click();
-  //     }
-  //   };
-
-  //   document.body.addEventListener("click", handleClickOutside);
-
-  //   return () => {
-  //     document.body.removeEventListener("click", handleClickOutside);
-  //   };
-  // }, []);
-
   const handleLinkClick = () => {
-    disclosureRef.current?.click();
+    if (disclosureRef.current) {
+      disclosureRef.current.click(); // Close the mobile menu
+      // Find the disclosure button inside the navbar
+      const disclosureButton = document.querySelector(".mobile-navbar-toggle");
+      // Check if the disclosure button exists
+      if (disclosureButton) {
+        // Toggle the disclosure panel by clicking the disclosure button
+        disclosureButton.click();
+      }
+    }
   };
 
   return (
@@ -70,7 +62,7 @@ const Navbar = () => {
               <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button
-                  className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white mobile-navbar-toggle"
                   ref={disclosureRef}
                 >
                   <span className="absolute -inset-0.5" />
@@ -92,7 +84,6 @@ const Navbar = () => {
                             <Link
                               key={item.name}
                               to={item.href}
-                              onClick={handleLinkClick}
                               className={classNames(
                                 (item.href === "/" && pathname === "/") ||
                                   (item.href !== "/" &&
@@ -147,7 +138,7 @@ const Navbar = () => {
                     <Link
                       key={item.name}
                       to={item.href}
-                      onClick={handleLinkClick}
+                      onClick={() => handleLinkClick()}
                       className={classNames(
                         (item.href === "/" && pathname === "/") ||
                           (item.href !== "/" && item.href === pathname) ||
