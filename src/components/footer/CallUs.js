@@ -2,7 +2,7 @@ import { IconPhoneFilled } from "@tabler/icons-react";
 
 const CallUs = () => {
   return (
-    <div className="flex md:mb-20 mb-12 justify-center">
+    <div className="flex md:mt-10 mb-12 mt-10 justify-center">
       <div className="p-5 text-white bg-highlight rounded shadow-2xl flex items-center inline md:gap-12 gap-6">
         <IconPhoneFilled
           size={window.innerWidth <= 768 ? 40 : 60}

@@ -13,7 +13,7 @@ const DoctorDetails = () => {
       <section>
         <div>
           <Heading text={"Qualification"} />
-          <ul className="list-disc-default">
+          <ul className="list-disc-default text-sm">
             <li>
               MBBS, Gandhi Medical College, University of Health Sciences,
               Hyderabad in 1996
@@ -39,18 +39,18 @@ const DoctorDetails = () => {
           </ul>
 
           <h2 className="text-theme text-xl">Experience</h2>
-          <ul className="list-disc-default">
+          <ul className="list-disc-default text-sm">
             <li>Medical Oncologists Care Hospital Hyderabad</li>
           </ul>
 
           <h2 className="text-theme text-xl">Memberships</h2>
-          <ul className="list-disc-default">
+          <ul className="list-disc-default text-sm">
             <li>European Society of Medical Oncology</li>
             <li>Indian Medical Association</li>
           </ul>
 
           <h2 className="text-theme text-xl">Research Presentation</h2>
-          <ul className="list-disc-default">
+          <ul className="list-disc-default text-sm">
             <li>
               26th Annual meeting of American Society of Apheresis ASFA 2005
               Plenary Session Safety and Efficacy of Peripheral Blood Progenitor
@@ -190,9 +190,8 @@ const DoctorDetails = () => {
         <img src={banner} />
       </div>
       <div
-        className={`max-sm:hidden transition-all duration-300 fixed ${
-          isFixed ? "top-[144px]" : topHeight
-        } z-[1]`}
+        className={`max-sm:hidden transition-all duration-300 fixed ${isFixed ? "top-[144px]" : topHeight
+          } z-[1]`}
       >
         {/* <ScrollTo tabs={tabs} ref={tabsRef} /> */}
         <div className="">
@@ -204,9 +203,8 @@ const DoctorDetails = () => {
                 setActiveTab(index);
                 scrollToSection(index);
               }}
-              className={`rounded-l-none rounded-lg flex w-[180px] my-1 py-2 bg-slate-200 hover:btn-theme ${
-                activeTab === index ? "btn-theme" : "ps-1"
-              }`}
+              className={`rounded-l-none rounded-lg flex w-[180px] my-1 py-2 bg-slate-200 hover:btn-theme ${activeTab === index ? "btn-theme" : "ps-1"
+                }`}
             >
               {tab.name}
             </button>
@@ -321,7 +319,7 @@ const DoctorDetails = () => {
           </section>
         </div>
       </div>
-      <NeedHelp/>
+      <NeedHelp />
     </div>
   );
 };

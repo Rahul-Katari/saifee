@@ -33,7 +33,7 @@ export default function Contact() {
       </div>
       <div className="grid md:grid-cols-5 max-w-7xl m-auto md:my-24 my-6 px-4">
         <div className="col-span-2">
-          <img src={doctor} className="h-[600px]" />
+          <img src={doctor} className="md:h-[500px] hidden md:block" />
         </div>
         <div className="col-span-3">
           <h3 className="text-xl font-semibold text-theme mb-8 highlight-border highlight-border-left">
@@ -85,21 +85,21 @@ export default function Contact() {
                 </div>
                 <div>
                   <div>
-                  {/* <label for="speciality" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> */}
-  <select id="speciality" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-    <option selected>Choose a Speciality</option>
-    <option value="endo">Endocrinology</option>
-    <option value="general-surgery">General Surgery</option>
-  </select>
+                    {/* <label for="speciality" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> */}
+                    <select id="speciality" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                      <option selected>Choose a Speciality</option>
+                      <option value="endo">Endocrinology</option>
+                      <option value="general-surgery">General Surgery</option>
+                    </select>
                   </div>
                 </div>
                 <div>
                   <div>
-                  <select id="doctor" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-    <option selected>Choose a Doctor</option>
-    <option value="endo">Manasa</option>
-    <option value="general-surgery">Uday</option>
-  </select>
+                    <select id="doctor" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                      <option selected>Choose a Doctor</option>
+                      <option value="endo">Manasa</option>
+                      <option value="general-surgery">Uday</option>
+                    </select>
                   </div>
                 </div>
                 <div className="sm:col-span-2">

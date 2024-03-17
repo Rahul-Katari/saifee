@@ -3,9 +3,9 @@ import React from "react";
 const BlogCardInDetails = ({ imgSrc }) => {
   return (
     <div className="rounded overflow-hidden m-4 p-4">
-      <img className="w-full" src={imgSrc} alt="Medical Experts" />
+      <img className="w-full h-[150px]" src={imgSrc} alt="Medical Experts" />
       <div className="py-4">
-        <div className="text-theme text-lg mb-2">
+        <div className="text-theme mb-2">
           The Medical Experts Carefully...
         </div>
         <p className="text-content text-sm">
@@ -13,8 +13,8 @@ const BlogCardInDetails = ({ imgSrc }) => {
           Fames Quam Pellentesque Interdum Purus Senectus Feugiat Elit.C.
         </p>
       </div>
-      <div className="pt-4 pb-2">
-        <button className="border border-black border-2 text-highlight py-2 px-4 rounded-full">
+      <div className="pt-2 pb-2">
+        <button className="border border-black border-2 text-highlight py-1 px-2 text-xs rounded-full">
           READ MORE
         </button>
       </div>
