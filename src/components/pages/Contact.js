@@ -85,26 +85,21 @@ export default function Contact() {
                 </div>
                 <div>
                   <div>
-                    <input
-                      placeholder="Last Name"
-                      type="text"
-                      name="last-name"
-                      id="last-name"
-                      autoComplete="family-name"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    />
+                  {/* <label for="speciality" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> */}
+  <select id="speciality" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+    <option selected>Choose a Speciality</option>
+    <option value="endo">Endocrinology</option>
+    <option value="general-surgery">General Surgery</option>
+  </select>
                   </div>
                 </div>
                 <div>
                   <div>
-                    <input
-                      placeholder="Company"
-                      type="text"
-                      name="company"
-                      id="company"
-                      autoComplete="organization"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    />
+                  <select id="doctor" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+    <option selected>Choose a Doctor</option>
+    <option value="endo">Manasa</option>
+    <option value="general-surgery">Uday</option>
+  </select>
                   </div>
                 </div>
                 <div className="sm:col-span-2">

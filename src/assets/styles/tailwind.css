@@ -12,7 +12,7 @@
     }
 
     .btn-primary {
-        @apply rounded-full bg-gradient-to-b from-[#245272] to-[#147887] text-white p-2 px-4 flex items-center;
+        @apply rounded-full bg-gradient-to-b from-[#245272] to-[#147887] text-white p-2 px-4 flex items-center text-xs;
     }
 
     .btn-theme {

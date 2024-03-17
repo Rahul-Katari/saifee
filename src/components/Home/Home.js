@@ -177,7 +177,7 @@ const Home = () => {
         {/* testimonials section  */}
         <section>
           <div className="testimonial">
-            <h3 className="text-theme md:text-4xl text-2xl text-center uppercase mb-8 highlight-border">
+            <h3 className="text-theme text-2xl text-center uppercase mb-8 highlight-border">
               what our patients say
             </h3>
             <div
@@ -204,7 +204,7 @@ const Home = () => {
           }}
         >
           <div>
-            <h3 className="text-theme md:text-4xl text-2xl text-center uppercase md:mb-24 mb-8 highlight-border">
+            <h3 className="text-theme text-2xl text-center uppercase md:mb-24 mb-8 highlight-border">
               Blogs
             </h3>
             <div className="md:grid grid-cols-10 justify-end items-center">

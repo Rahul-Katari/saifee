@@ -24,6 +24,8 @@ import Careers from "./components/pages/Careers";
 import PatientsVisitors from "./components/pages/PatientsVisitors";
 import Landing from "./components/pages/Landing";
 import BlogsDetail from "./components/pages/BlogsDetail";
+import BookApppointments from "./components/pages/BookAppointments";
+import Videos from "./components/pages/Videos";
 
 const appRouter = createBrowserRouter([
   {
@@ -89,6 +91,8 @@ root.render(
           <Route path="/careers" element={<Careers />} />
           <Route path="/patientsVisitors" element={<PatientsVisitors />} />
           <Route path="/landing" element={<Landing />} />
+          <Route path="/bookAppointment" element={<BookApppointments />} />
+          <Route path="/videos" element={<Videos />} />
         </Route>
         {/* Additional top-level routes */}
         <Route path="/about" element={<About />} />

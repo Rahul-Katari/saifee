@@ -1,6 +1,7 @@
 import appointments from "../../assets/images/footer/appointments.png";
 import clock from "../../assets/images/clock-icon.png";
 import location from "../../assets/images/location-icon.png";
+import { Link } from "react-router-dom";
 
 const NewAppointments = () => {
   return (
@@ -10,10 +11,10 @@ const NewAppointments = () => {
     >
       <div className="col-span-4"></div>
       <div className="flex flex-col justify-center md:p-10 p-4 max-sm:py-10 col-span-8">
-        <h1 className="md:text-3xl text-xl mb-2 text-nav-highlight">
+        <Link to={"/bookAppointment"} className="md:text-2xl text-xl mb-2 text-nav-highlight">
           New Patient Appointments
-        </h1>
-        <p className="md:text-lg md:mb-12 mb-6 text-content">
+        </Link>
+        <p className=" font-semibold md:mb-12 mb-6 text-content">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </p>

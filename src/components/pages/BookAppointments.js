@@ -1,5 +1,13 @@
 import BreadCrumb from "../common/BreadCrumb";
+import banner from "../../assets/images/banners/book-appointment.png"
+import { useState } from "react";
+
 const BookApppointments = () => {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
   return (
     <div>
       <div>

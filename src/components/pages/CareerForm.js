@@ -13,8 +13,8 @@ const CareerForm = () => {
   };
 
   return (
-    <div>
-      <button onClick={openModal} className="btn-primary">
+    <div className="flex justify-end">
+      <button onClick={openModal} className="btn-primary px-24">
         Apply Now
       </button>
 
@@ -38,26 +38,27 @@ const CareerForm = () => {
             </span>
             <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle max-w-lg w-full">
               {/* Close button */}
+              <div className="flex justify-end">
               <button
                 onClick={closeModal}
                 type="button"
-                className="flex justify-end"
               >
                 <IconX
                   className="bg-highlight text-white p-2 rounded-lg"
                   size={48}
                 />
               </button>
-
+              </div>
+              <h3 className="text-center text-theme text-xl font-semibold">Career Form</h3>
               {/* Form fields */}
-              <form className="p-6">
+              <form className="p-6 text-xs">
                 <div className="mb-4">
                   <input
                     type="text"
                     id="fullName"
                     name="fullName"
-                    placeholder="John Doe"
-                    className="w-full px-3 py-2 border rounded"
+                    placeholder="Full Name"
+                    className="w-full px-3 py-3 border rounded"
                   />
                 </div>
 
@@ -66,8 +67,8 @@ const CareerForm = () => {
                     type="tel"
                     id="phoneNo"
                     name="phoneNo"
-                    placeholder="123-456-7890"
-                    className="w-full px-3 py-2 border rounded"
+                    placeholder="Phone No"
+                    className="w-full px-3 py-3 border rounded"
                   />
                 </div>
 
@@ -76,8 +77,8 @@ const CareerForm = () => {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="john.doe@example.com"
-                    className="w-full px-3 py-2 border rounded"
+                    placeholder="Email"
+                    className="w-full px-3 py-3 border rounded"
                   />
                 </div>
 
@@ -86,8 +87,8 @@ const CareerForm = () => {
                     type="text"
                     id="qualification"
                     name="qualification"
-                    placeholder="Bachelor's Degree"
-                    className="w-full px-3 py-2 border rounded"
+                    placeholder="Qualification"
+                    className="w-full px-3 py-3 border rounded"
                   />
                 </div>
 
@@ -96,8 +97,8 @@ const CareerForm = () => {
                     type="number"
                     id="totalExp"
                     name="totalExp"
-                    placeholder="5 years"
-                    className="w-full px-3 py-2 border rounded"
+                    placeholder="Total Exp"
+                    className="w-full px-3 py-3 border rounded"
                   />
                 </div>
 
@@ -106,8 +107,8 @@ const CareerForm = () => {
                     type="text"
                     id="location"
                     name="location"
-                    placeholder="City, Country"
-                    className="w-full px-3 py-2 border rounded"
+                    placeholder="Location"
+                    className="w-full px-3 py-3 border rounded"
                   />
                 </div>
 
@@ -124,7 +125,7 @@ const CareerForm = () => {
                     id="cv"
                     name="cv"
                     accept=".pdf,.doc,.docx"
-                    className="w-full"
+                    className="w-full border p-1"
                   />
                 </div>
 

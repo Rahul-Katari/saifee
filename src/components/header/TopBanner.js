@@ -5,7 +5,7 @@ const topLinks = [
   { name: "Blogs", href: "/blogs" },
   { name: "Patients & Visitors", href: "/patientsVisitors" },
   { name: "Careers", href: "/careers" },
-  { name: "News & Media", href: "#" },
+  { name: "News & Media", href: "/videos" },
 ];
 const TopBanner = () => {
   return (
