@@ -6,3 +6,5 @@
 @import 'components/header/header.css';
 
 @import 'assets/styles/variables.css';
+
+@import 'aos/dist/aos.css'

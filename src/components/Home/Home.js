@@ -46,19 +46,21 @@ const bannerCardsData = [
   { imgSrc: card5, title1: "Book Lab", title2: "Test" },
 ];
 const specialitiesData = [
-  { imgSrc: spec1, text1: "Thyroid Treatments" },
+  { id: 0, imgSrc: spec1, text1: "Thyroid Treatments" },
+  { id: 1, imgSrc: spec2, text1: "Diabetes", text2: "Diabetes - 1 & 2" },
+  { id: 2, imgSrc: spec3, text1: "Menopause" },
+  { id: 3, imgSrc: spec4, text1: "Pituitary Disorders" },
+  { id: 4, imgSrc: spec5, text1: "Osteoporosis" },
+  { id: 5, imgSrc: spec6, text1: "Adrenal Conditions" },
+  { id: 6, imgSrc: spec7, text1: "Endocrine Cancers" },
   {
-    imgSrc: spec2,
-    text1: "Diabetes",
-    text2: "Diabetes - 1 & 2",
+    id: 7,
+    imgSrc: spec8,
+    text1: "Endocrine-Related",
+    text2: "Heart Conditions",
   },
-  { imgSrc: spec3, text1: "Menopause" },
-  { imgSrc: spec4, text1: "Pituitary Disorders" },
-  { imgSrc: spec5, text1: "Osteoporosis" },
-  { imgSrc: spec6, text1: "Adrenal Conditions" },
-  { imgSrc: spec7, text1: "Endocrine Cancers" },
-  { imgSrc: spec8, text1: "Endocrine-Related", text2: "Heart Conditions" },
 ];
+
 const blogs = [
   { src: blog1, text: "Top medical equipments" },
   { src: blog2, text: "Know the new techniques of endocrinology" },
@@ -92,6 +94,7 @@ const Home = () => {
               {specialitiesData.map((spec, index) => {
                 return (
                   <SpecialitiesCard
+                    id={spec.id}
                     imgSrc={spec.imgSrc}
                     key={index}
                     text1={spec.text1}
@@ -152,7 +155,15 @@ const Home = () => {
                 </p>
               </div>
               <div className="col-span-6 m-4 mb-0">
-                <iframe className="w-full max-sm:h-[200px]" height="400" src="https://www.youtube.com/embed/LzpCldPiT0c?si=HfrHjmyU-hGkDdoH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe
+                  className="w-full max-sm:h-[200px]"
+                  height="400"
+                  src="https://www.youtube.com/embed/LzpCldPiT0c?si=HfrHjmyU-hGkDdoH"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
               </div>
               <div className="col-span-3 md:ps-10">
                 <HealthTalksTabs />

@@ -12,9 +12,11 @@ const Welcome = ({ img, title }) => {
           </div>
           <div className="lg:pr-8 lg:col-span-3">
             <div>
-              <h2 className="text-base font-medium leading-7 text-content text-xl welcome flex items-center">
-                Welcome
-              </h2>
+              <div data-aos="fade-right">
+                <h2 className="text-base font-medium leading-7 text-content text-xl welcome flex items-center">
+                  Welcome
+                </h2>
+              </div>
               <p className="mt-1  tracking-tight text-theme text-2xl">
                 {title}
               </p>

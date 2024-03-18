@@ -161,96 +161,112 @@ const DoctorServices = ({ speciality }) => {
 
   const generalData = [
     {
+      id: 15,
       text1: "General Surgery",
       content: "Content for General Surgery",
       imgSrc: gs,
     },
     {
+      id: 16,
       text1: "Laparoscopic GI",
       text2: "Surgery",
       content: "Content for Laparoscopic GI Surgery",
       imgSrc: lapro,
     },
     {
+      id: 17,
       text1: "Colorectal Surgery",
       content: "Content for Colorectal Surgery",
       imgSrc: colorec,
     },
     {
+      id: 18,
       text1: "Gallbladder and Biliary",
       text2: "Tract Surgery",
       content: "Content for Gallbladder and Biliary Tract Surgery",
       imgSrc: gallbladder,
     },
     {
+      id: 19,
       text1: "Hernia Surgery",
       content: "Content for Hernia Surgery",
       imgSrc: hernia,
     },
     {
+      id: 20,
       text1: "Bariatric Surgery",
       content: "Content for Bariatric Surgery",
       imgSrc: bariatric,
     },
     {
+      id: 21,
       text1: "Trauma Surgery",
       content: "Content for Trauma Surgery",
       imgSrc: trauma,
     },
     {
+      id: 22,
       text1: "Esophageal Surgery",
       content: "Content for Esophageal Surgery",
       imgSrc: Esophageal,
     },
-
     {
+      id: 23,
       text1: "Small Bowel Surgery",
       content: "Content for Small Bowel Surgery",
       imgSrc: smallBowl,
     },
     {
+      id: 24,
       text1: "Pancreatic Surgery",
       content: "Content for Pancreatic Surgery",
       imgSrc: pancreatic,
     },
     {
+      id: 25,
       text1: "Liver Surgery",
       content: "Content for Liver Surgery",
       imgSrc: liver,
     },
     {
+      id: 26,
       text1: "Gastric Surgery",
       content: "Content for Gastric Surgery",
       imgSrc: gastric,
     },
     {
+      id: 27,
       text1: "Piles Surgery",
       content: "Content for Piles Surgery",
       imgSrc: piles,
     },
     {
+      id: 28,
       text1: "Fistula Surgery",
       content: "Content for Fistula Surgery",
       imgSrc: fistula,
     },
     {
+      id: 29,
       text1: "Diabetic Foot",
       text2: "Treatment",
       content: "Content for Diabetic Foot Treatment",
       imgSrc: diabetic,
     },
     {
+      id: 30,
       text1: "Breast Lump",
       text2: "Treatment",
       content: "Content for Breast Lump Treatment",
       imgSrc: breast,
     },
   ];
-  const spec = speciality === "endo" ? endoData : generalData;
+
+  const specs = speciality === "endo" ? endoData : generalData;
 
   return (
     <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-10 gap-5 max-sm:mx-4">
-      {spec.map((spec, index) => (
+      {specs.map((spec, index) => (
         <SpecialitiesCard
           id={spec.id}
           imgSrc={spec.imgSrc}

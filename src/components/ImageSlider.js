@@ -21,7 +21,7 @@ function ImageSlider({ slidesToShow, images }) {
         {images.map((img, index) => {
           return (
             <div key={index}>
-              <img className=" max-sm:h-[200px]" src={img.src} />
+              <img className=" max-sm:h-[200px] m-auto" src={img.src} />
             </div>
           );
         })}
