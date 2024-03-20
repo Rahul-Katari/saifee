@@ -1,5 +1,4 @@
-// import banner from "../../assets/images/banners/excellence-details-banner.png";
-import banner from "../../assets/images/osteoporosis.jpg";
+import banner from "../../assets/images/banners/excellence-details-banner.png";
 import { Tab, TabScreen, Tabs } from "react-tabs-scrollable";
 import React, { useEffect, useState } from "react";
 import BreadCrumb from "../common/BreadCrumb";
@@ -11,10 +10,8 @@ const ExcellenceDetails = () => {
   const { id } = useParams();
   const [endoActiveTab, setendoActiveTab] = React.useState(id);
   const [generalActiveTab, setgeneralActiveTab] = React.useState(
-    id > 15 ? id - 15 : 0
+    id > 15 ? id - 15 : false
   );
-  console.log(endoActiveTab);
-  console.log(generalActiveTab);
   const [activeData, setActiveData] = useState(id < 15 ? "endo" : "");
   // setActiveTab(id);
   // Define your tab data dynamically
@@ -87,17 +84,7 @@ const ExcellenceDetails = () => {
       content: "Content for Breast Lump Treatment",
     },
   ];
-  const orderedEndoData = [...endoData];
-  const orderedGeneralData = [...generalData];
-  const activeTabIndex =
-    activeData === "endo" ? Number(endoActiveTab) : Number(generalActiveTab);
-  if (activeData === "endo") {
-    const activeTab = orderedEndoData.splice(activeTabIndex, 1)[0];
-    orderedEndoData.unshift(activeTab);
-  } else {
-    const activeTab = orderedGeneralData.splice(activeTabIndex, 1)[0];
-    orderedGeneralData.unshift(activeTab);
-  }
+
   const breadCrumb = [
     { href: "/", title: "home" },
     { href: "/excellence", title: "center of excellence" },
@@ -105,8 +92,8 @@ const ExcellenceDetails = () => {
       href: "",
       title:
         activeData === "endo"
-          ? orderedEndoData[endoActiveTab].title
-          : orderedGeneralData[generalActiveTab].title,
+          ? endoData[endoActiveTab].title
+          : generalData[generalActiveTab].title,
     },
   ];
 
@@ -140,7 +127,7 @@ const ExcellenceDetails = () => {
                   className="flex flex-col col-span-2"
                 >
                   {/* Map over Endocrinology tab data and render Tab components */}
-                  {orderedEndoData.map((tab, index) => (
+                  {endoData.map((tab, index) => (
                     <Tab key={index}>
                       <img src={tab.imgSrc} />{" "}
                       {/* Assuming 'imgSrc' is the correct property */}
@@ -158,7 +145,7 @@ const ExcellenceDetails = () => {
                   className="flex flex-col col-span-2"
                 >
                   {/* Map over General Surgery tab data and render Tab components */}
-                  {orderedGeneralData.map((tab, index) => (
+                  {generalData.map((tab, index) => (
                     <Tab key={index}>
                       <img src={tab.imgSrc} />{" "}
                       {/* Assuming 'imgSrc' is the correct property */}
@@ -171,7 +158,7 @@ const ExcellenceDetails = () => {
           </div>
           {/* Map over tab data and conditionally render TabScreen components */}
           {activeData === "endo"
-            ? orderedEndoData.map((tab, index) => (
+            ? endoData.map((tab, index) => (
                 <TabScreen
                   className="md:ps-12 col-span-6"
                   key={index}
@@ -181,7 +168,7 @@ const ExcellenceDetails = () => {
                   {tab.content}
                 </TabScreen>
               ))
-            : orderedGeneralData.map((tab, index) => (
+            : generalData.map((tab, index) => (
                 <TabScreen
                   className="md:ps-12 col-span-6"
                   key={index}
