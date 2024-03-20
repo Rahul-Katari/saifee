@@ -1,7 +1,7 @@
 const ManasaVideos = () => {
   return (
     <iframe
-      className="rounded-lg w-full h-[300px]"
+      className="rounded-lg w-full md:h-[200px] h-[100px]"
       src="https://www.youtube.com/embed/spLFToQNX94?si=ZrkKehnBN34CTjmn"
       title="YouTube video player"
       frameborder="0"

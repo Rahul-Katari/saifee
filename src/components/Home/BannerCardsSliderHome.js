@@ -13,10 +13,24 @@ import card4 from "../../assets/images/home/online-consultancy.png";
 import card5 from "../../assets/images/home/book-lab-test.png";
 
 const bannerCardsData = [
-  { imgSrc: card1, title1: "Book Doctor", title2: "Appointment" },
-  { imgSrc: card2, title1: "Find Your", title2: "Doctors" },
-  { imgSrc: card5, title1: "Health", title2: "Package" },
-  { imgSrc: card4, title1: "Online", title2: "Consultancy" },
+  {
+    imgSrc: card1,
+    title1: "Book Doctor",
+    title2: "Appointment",
+    href: "",
+  },
+  {
+    imgSrc: card2,
+    title1: "Find Your",
+    title2: "Doctors",
+    href: "/bestDoctors",
+  },
+  {
+    imgSrc: card3,
+    title1: "Health",
+    title2: "Package",
+    href: "/healthCheckup",
+  },
 ];
 
 const BannerCardsSliderHome = () => {
@@ -47,9 +61,9 @@ const BannerCardsSliderHome = () => {
       {
         breakpoint: 480,
         settings: {
-          infinite: true,
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          infinite: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
         },
       },
     ],
@@ -64,6 +78,7 @@ const BannerCardsSliderHome = () => {
               imgSrc={card.imgSrc}
               title1={card.title1}
               title2={card.title2}
+              href={card.href}
             />
           );
         })}

@@ -84,8 +84,8 @@ const Videos = () => {
       </section>
       <section>
         <div className="max-w-7xl m-auto">
-          <div className="grid md:grid-cols-3 gap-4 m-4">
-            {[...Array(3).keys()].map(() => {
+          <div className="grid md:grid-cols-4 grid-cols-2 gap-4 m-4">
+            {[...Array(12).keys()].map(() => {
               return (
                 <div>
                   {selectedVideos === "manasa" ? (

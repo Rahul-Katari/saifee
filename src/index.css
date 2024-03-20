@@ -102,3 +102,15 @@ code {
   width: -webkit-fill-available;
 
 }
+
+.book-appointment-modal input,
+.book-appointment-modal select,
+.book-appointment-modal textarea {
+  border: 1px solid var(--appointment-input);
+}
+
+.book-appointment-modal input::placeholder,
+.book-appointment-modal select::placeholder,
+.book-appointment-modal textarea::placeholder {
+  color: var(--appointment-input);
+}

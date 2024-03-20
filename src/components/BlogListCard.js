@@ -5,18 +5,20 @@ import { Link } from "react-router-dom";
 
 const BlogListCard = () => {
   return (
-    <div className="bg-white p-3 rounded-lg shadow-md">
+    <div className="bg-white p-3 rounded-lg shadow-md m-4">
       <img
         src={ListImg}
         alt="Medical Experts"
         className="w-full h-auto rounded-t-lg"
       />
       <div className="flex justify-between mt-4">
-        <h1 className="font-medium  text-sm">The Medical Experts Carefully...</h1>
+        <h1 className="font-medium  text-sm me-2">
+          The Medical Experts Carefully...
+        </h1>
         <div>
           <Link
             to={"/blogsDetail"}
-            className="border border-black border-2 text-highlight py-1 px-4 rounded-full text-xs text-nowrap"
+            className="border border-black border-2 text-highlight py-1 px-3 rounded-full text-xs text-nowrap"
           >
             READ MORE
           </Link>

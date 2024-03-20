@@ -1,22 +1,30 @@
-const BannerCard = ({ imgSrc, title1, title2 }) => {
+import { Link } from "react-router-dom";
+
+const BannerCard = ({ imgSrc, title1, title2, href }) => {
   return (
     <>
-      <div
-        className="rounded border-4 p-3 m-4 pb-0 text-center shadow-3xl border-theme flex flex-col justify-between"
-        data-aos="fade-left"
-      >
-        <div className="text-sm md:text-base">
-          <h3 className=" font-medium">{title1}</h3>
-          <h3 className=" font-medium">{title2}</h3>
+      <Link to={href}>
+        <div
+          className="rounded border-4 md:p-3 p-2 md:m-4 m-2 pb-0 text-center shadow-3xl border-theme flex flex-col justify-between"
+          data-aos="fade-left"
+        >
+          <div className="text-sm md:text-base">
+            <h3 className=" font-medium max-sm:text-xs">{title1}</h3>
+            <h3 className=" font-medium max-sm:text-xs">{title2}</h3>
+          </div>
+          <div className=" w-28 md:min-h-[115px] max-sm:w-20 max-sm:h-16 flex justify-center m-auto">
+            <img
+              src={imgSrc}
+              alt="Card Image"
+              className={
+                title1 === "Health"
+                  ? "h-full m-auto mb-0  max-sm:object-contain"
+                  : "m-auto mb-0  max-sm:object-contain"
+              }
+            />
+          </div>
         </div>
-        <div className=" w-28 min-h-[80px] max-sm:w-24 max-sm:h-16 flex justify-center m-auto">
-          <img
-            src={imgSrc}
-            alt="Card Image"
-            className="m-auto mb-0  max-sm:object-contain"
-          />
-        </div>
-      </div>
+      </Link>
     </>
   );
 };

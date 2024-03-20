@@ -6,7 +6,7 @@ import MoreBtn from "./common/MoreBtn";
 const OurTopDoctors = () => {
   return (
     <div>
-      <div className="md:mb-[350px] mb-[900px]">
+      <div className="md:mb-[350px] mb-[700px]">
         <div className="bg-theme md:m-12  m-4 md:mx-60 rounded-[50px] md:px-20 md:pt-16 p-6 pb-60 relative flex flex-col items-center">
           <div className="grid md:grid-cols-5 text-white">
             <div className="md:text-4xl text-2xl mb-2  font-medium col-span-3">
@@ -22,7 +22,7 @@ const OurTopDoctors = () => {
           <div className="absolute md:top-[180px] top-[210px] md:mx-16 mx-6">
             <div className="grid md:grid-cols-2 gap-10">
               <div className="shadow-2xl p-5 rounded-xl flex flex-col bg-white ">
-                <img src={manasa} className="h-[300px] rounded-lg" />
+                <img src={manasa} className="rounded-lg" />
                 <div>
                   <h3 className="md:text-2xl text-xl font-semibold mt-4">
                     Dr. Manasa Mynepally
@@ -41,7 +41,7 @@ const OurTopDoctors = () => {
                 </div>
               </div>
               <div className="shadow-2xl p-5 rounded-xl flex flex-col bg-white">
-                <img src={uday} className="h-[300px]" />
+                <img src={uday} className="rounded-lg" />
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold mt-4">
                     DR. G UDAY KIRAN

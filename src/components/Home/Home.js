@@ -145,7 +145,12 @@ const Home = () => {
         {/* Health talks section starts */}
         <section>
           <div className="bg-banner md:p-16 max-sm:py-8">
-            <Heading text={"health talks"} uppercase={true} center={true} />
+            <Heading
+              text={"health talks"}
+              uppercase={true}
+              center={true}
+              aos={"down"}
+            />
             <div className="md:grid md:grid-cols-12 md:mx-0">
               <div className="col-span-3 md:pe-6 md:ps-10 mx-4 md:mx-0 max-sm:hidden">
                 <img src={Logo} className="m-auto w-24" />
@@ -185,7 +190,7 @@ const Home = () => {
               center={true}
             />
             <div
-              className="bg-right bg-contain bg-no-repeat h-[400px] flex flex-col justify-center relative"
+              className="bg-right max-sm:bg-cover md:bg-contain bg-no-repeat md:h-[400px] h-[300px] flex flex-col justify-center relative"
               style={{
                 backgroundImage: `url(${testBg1})`,
               }}
@@ -202,7 +207,7 @@ const Home = () => {
         </section>
         {/* blogs section  */}
         <div
-          className="pb-4 blogs bg-cover bg-center bg-no-repeat md:h-[500px]  h-[380px] flex flex-col justify-center"
+          className="pb-4 blogs bg-cover bg-center bg-no-repeat md:h-[500px]  h-[500px] flex flex-col justify-center"
           style={{
             backgroundImage: `url(${blogsBg})`,
           }}

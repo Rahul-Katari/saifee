@@ -24,10 +24,11 @@ import Careers from "./components/pages/Careers";
 import PatientsVisitors from "./components/pages/PatientsVisitors";
 import Landing from "./components/pages/Landing";
 import BlogsDetail from "./components/pages/BlogsDetail";
-import BookApppointments from "./components/pages/BookAppointments";
+import BookApppointments from "./components/pages/AppointmentModal";
 import Videos from "./components/pages/Videos";
 import HealthCheckup from "./components/pages/HealthCheckUp";
 import ExcellenceContentTabs from "./components/pages/ExcellenceContentTabs";
+import HealthCheckUpForm from "./components/pages/healthCheckUpForm";
 
 const appRouter = createBrowserRouter([
   {
@@ -96,9 +97,10 @@ root.render(
           <Route path="/careers" element={<Careers />} />
           <Route path="/patientsVisitors" element={<PatientsVisitors />} />
           <Route path="/landing" element={<Landing />} />
-          <Route path="/bookAppointment" element={<BookApppointments />} />
+          {/* <Route path="/bookAppointment" element={<BookApppointments />} /> */}
           <Route path="/videos" element={<Videos />} />
           <Route path="/healthCheckup" element={<HealthCheckup />} />
+          <Route path="/healthCheckupForm" element={<HealthCheckUpForm />} />
           <Route
             path="/excellenceContent"
             element={<ExcellenceContentTabs />}

@@ -2,7 +2,7 @@ import BreadCrumb from "../common/BreadCrumb";
 import banner from "../../assets/images/banners/book-appointment.png";
 import { useState } from "react";
 
-const BookApppointments = () => {
+const HealthCheckUpForm = () => {
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (event) => {
@@ -10,7 +10,8 @@ const BookApppointments = () => {
   };
   const breadCrumb = [
     { href: "/", title: "home" },
-    { href: "/bookAppointment", title: "book appointment" },
+    { href: "/healthCheckup", title: "Heath Checkup Packages" },
+    { href: "/healthCheckupForm", title: "Appointment" },
   ];
   return (
     <div>
@@ -19,9 +20,9 @@ const BookApppointments = () => {
       </div>
       <BreadCrumb linkData={breadCrumb} />
       <div className=" bg-banner">
-        <div className="p-8 py-24 max-w-7xl m-auto">
-          <form className="md:grid grid-cols-2 gap-4">
-            <div className="mb-4">
+        <div className="p-8 md:py-24 max-w-7xl m-auto">
+          <form className="grid md:grid-cols-2  gap-4">
+            <div>
               <label className="mb-2 block">Selected Package*</label>
               <select
                 name="package"
@@ -35,7 +36,7 @@ const BookApppointments = () => {
               </select>
             </div>
 
-            <div className="mb-4">
+            <div>
               <label className="mb-2 block">Name*</label>
               <input
                 type="text"
@@ -44,7 +45,7 @@ const BookApppointments = () => {
                 className="w-full p-2 border rounded"
               />
             </div>
-            <div className="mb-4">
+            <div>
               <label className="mb-2 block">Mobile*</label>
               <input
                 type="number"
@@ -53,7 +54,7 @@ const BookApppointments = () => {
                 className="w-full p-2 border rounded"
               />
             </div>
-            <div className="mb-4">
+            <div>
               <label className="mb-2 block">Email*</label>
               <input
                 type="email"
@@ -65,7 +66,7 @@ const BookApppointments = () => {
 
             {/* Add other input fields (Mobile, Email, etc.) similarly */}
 
-            <div className="mb-4">
+            <div>
               <label className="mb-2 block">Date*</label>
               <input
                 type="date"
@@ -75,7 +76,7 @@ const BookApppointments = () => {
               />
             </div>
 
-            <div className="mb-4">
+            <div>
               <label className="mb-2 block">Time*</label>
               <input
                 type="time"
@@ -85,7 +86,7 @@ const BookApppointments = () => {
               />
             </div>
 
-            <div className="mb-4">
+            <div>
               <label className="mb-2 block">Address*</label>
               <textarea
                 name="address"
@@ -94,7 +95,7 @@ const BookApppointments = () => {
               />
             </div>
 
-            <div className="mb-4">
+            <div>
               <label className="mb-2 block">Message*</label>
               <textarea
                 name="message"
@@ -102,7 +103,7 @@ const BookApppointments = () => {
                 className="w-full p-2 border rounded"
               />
             </div>
-            <div className="max-sm:flex ">
+            <div className="flex">
               <div className="flex justify-end">
                 <button className="btn-primary text-white px-14 py-2 rounded hover:bg-blue-600">
                   Submit
@@ -111,7 +112,7 @@ const BookApppointments = () => {
               <div>
                 <button
                   type="reset"
-                  className="border border-black text-gray-700 ml-2 px-14 py-2 text-xs rounded hover:bg-gray-400"
+                  className="border border-black text-gray-700 px-14 py-2 text-xs rounded hover:bg-gray-400"
                 >
                   Reset
                 </button>
@@ -123,4 +124,4 @@ const BookApppointments = () => {
     </div>
   );
 };
-export default BookApppointments;
+export default HealthCheckUpForm;

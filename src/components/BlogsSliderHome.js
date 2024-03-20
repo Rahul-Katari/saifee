@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../assets/styles/slider.css";
+import BlogCardInDetails from "./BlogCardInDetails";
+import BlogListCard from "./BlogListCard";
 
 function BlogsSlider({ slides }) {
   const [oldSlide, setOldSlide] = useState(0);
@@ -57,15 +59,16 @@ function BlogsSlider({ slides }) {
       <Slider {...settings}>
         {slides.map((slide, index) => {
           return (
-            <div key={index} className="">
-              <img
-                src={slide.src}
-                className="h-200px rounded-t-[25px] bg-white m-auto w-[250px]"
-              />
-              <div className=" text-sm text-center uppercase w-[250px] h-[60px] bg-white m-auto rounded-b-[25px] p-3">
-                {slide.text}
-              </div>
-            </div>
+            // <div key={index} className="">
+            //   <img
+            //     src={slide.src}
+            //     className="h-200px rounded-t-[25px] bg-white m-auto w-[250px]"
+            //   />
+            //   <div className=" text-sm text-center uppercase w-[250px] h-[60px] bg-white m-auto rounded-b-[25px] p-3">
+            //     {slide.text}
+            //   </div>
+            // </div>
+            <BlogListCard />
           );
         })}
       </Slider>

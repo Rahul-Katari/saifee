@@ -3,11 +3,18 @@ import appointmentsMobile from "../../assets/images/footer/appointments-mobile.p
 import clock from "../../assets/images/clock-icon.png";
 import location from "../../assets/images/location-icon.png";
 import { Link } from "react-router-dom";
+import AppointmentModal from "../pages/AppointmentModal";
+import AppointmentModalOpener from "../AppointmentModalOpener";
 
 const NewAppointments = () => {
   return window.innerWidth < 578 ? (
-    <img src={appointmentsMobile} className="w-full" />
+    <AppointmentModalOpener img={"true"} />
   ) : (
+    //   <button className="btn-theme">Get An Appointment</button>
+    // </AppointmentModalOpener>
+    // <Link to={"/bookAppointment"}>
+    //   <img src={appointmentsMobile} className="w-full" />
+    // </Link>
     <div
       className="md:grid grid-cols-12 justify-end bg-center bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${appointments})` }}
@@ -22,12 +29,10 @@ const NewAppointments = () => {
           industry.
         </p>
         <div className="flex max-sm:flex-col justify-between md:items-center items-start gap-5 md:me-12">
-          <Link
-            to={"/bookAppointment"}
-            className="text-sm text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-theme-gradient me-6"
-          >
-            Get An Appointment
-          </Link>
+          <div>
+            {/* <AppointmentModal /> */}
+            <AppointmentModalOpener />
+          </div>
           <div className="flex items-center justify-center">
             <div className=" me-6">
               <img src={clock} className="w-[25px]" />
