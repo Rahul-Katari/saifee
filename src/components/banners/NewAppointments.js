@@ -31,7 +31,7 @@ const NewAppointments = () => {
         <div className="flex max-sm:flex-col justify-between md:items-center items-start gap-5 md:me-12">
           <div>
             {/* <AppointmentModal /> */}
-            <AppointmentModalOpener />
+            <AppointmentModalOpener button={"Get New Appointment"} />
           </div>
           <div className="flex items-center justify-center">
             <div className=" me-6">

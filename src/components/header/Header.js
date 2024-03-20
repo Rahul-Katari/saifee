@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <header className="container shadow-lg md:relative sticky top-0 bg-white z-[1]">
       <div className="flex flex-shrink-0 items-center w-16 md:w-24 absolute top-[7%] left-[4%] md:top-[15%] md:left-[2%]">
-        <Link to={"/"}>
+        <Link to={"/"} className="max-sm:hidden">
           <img className="w-100 h-100" src={logo} alt="Your Company" />
         </Link>
       </div>

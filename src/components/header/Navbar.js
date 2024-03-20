@@ -3,6 +3,8 @@ import { Disclosure } from "@headlessui/react";
 import { Link, useLocation } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import navHelp from "../../assets/images/home/nav-help.png";
+import logo from "../../assets/images/logo.png";
+import AppointmentModalOpener from "../AppointmentModalOpener";
 
 const navigation = [
   { name: "Home", href: "/", current: true, desktopNav: true },
@@ -57,9 +59,20 @@ const Navbar = () => {
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto md:py-4 py-2 sm:px-6 lg:px-8">
-            <div className="relative flex md:h-16 items-center justify-between">
-              <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
+          <div className="mx-auto md:py-4 sm:px-6 lg:px-8">
+            <div className="text-white md:hidden">
+              <div className="py-2 bg-[#046AA9] text-center text-sm">
+                Contact Number: <a href="tel:+917340040097">+91 73400 40097 </a>
+              </div>
+              <div className="py-2 text-center bg-gradient-to-r from-[#07879A] to-[#97c7ce] text-sm">
+                Best Endocrinologist in hyderabad
+              </div>
+            </div>
+            <div className="relative flex md:h-16 items-center justify-between p-2">
+              <div className="md:hidden">
+                <img className="w-16 h-100" src={logo} alt="Your Company" />
+              </div>
+              <div className="inset-y-0 right-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button
                   className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white mobile-navbar-toggle"
@@ -73,8 +86,13 @@ const Navbar = () => {
                     <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
+                <div>
+                  {/* <button className="btn-primary">Appointment</button> */}
+                  <AppointmentModalOpener button={"Appointment"} />
+                </div>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:justify-between items-center">
+
+              <div className="flex flex-1 items-center justify-center sm:justify-between items-center max-sm:hidden">
                 <div className="flex items-center">
                   <div className="hidden sm:block ms-[130px]">
                     <div className="flex">
@@ -124,7 +142,7 @@ const Navbar = () => {
 
           {/* Off-canvas mobile menu */}
           <Disclosure.Panel
-            className={`sm:hidden top-[70px] fixed inset-0 bg-white z-40 w-64 sm:w-80 transform transition-transform ease-in-out shadow-2xl ${
+            className={`sm:hidden top-[152px] fixed inset-0 bg-white z-40 w-64 sm:w-80 transform transition-transform ease-in-out shadow-2xl ${
               open ? "translate-x-0" : "-translate-x-full"
             }`}
           >
