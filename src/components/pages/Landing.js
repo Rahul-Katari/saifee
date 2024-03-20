@@ -253,7 +253,7 @@ const Landing = () => {
       <section>
         <div className="bg-banner py-12">
           <div className="max-w-6xl m-auto max-sm:mx-4">
-            <Heading text={"Patient Testimonials"} />
+            <Heading text={"Patient Testimonials"} left={true} />
             <BlogsSliderDetail card={"testimonial"} />
           </div>
         </div>
@@ -261,13 +261,13 @@ const Landing = () => {
       {/* blogs section  */}
       <section>
         <div className="detailPage-Blogs-Slider max-w-6xl max-sm:mx-4 m-auto">
-          <Heading text={"Blogs"} />
+          <Heading text={"Blogs"} left={true} />
           <BlogsSliderDetail card={"blog"} />
         </div>
       </section>
       <section>
         <div className="max-w-6xl m-auto max-sm:mx-4">
-          <Heading text={"Regular News"} />
+          <Heading text={"Regular News"} left={true} />
           <p>
             Get to know the information regarding our healthcare aspects to be
             able to get to better informed decisions. ..

@@ -1,14 +1,17 @@
-import banner from "../../assets/images/our-doctors-banner.png";
+// import banner from "../../assets/images/banners/our-doctors-banner.png";
+import banner from "../../assets/images/banners/our-doctors-banner.png";
 import OurTopDoctors from "../OurTopDoctors";
 import hexagon from "../../assets/images/landing/hexagon.png";
 
 const BestDoctors = () => {
   return (
     <div>
-      <div>
-        <img src={banner} className="w-full md:h-[350px] h-[150px]" />
+      <div className="relative md:mb-[650px] mb-[1250px]">
+        <img src={banner} className="w-full" />
+        <div className="absolute top-[75%]">
+          <OurTopDoctors />
+        </div>
       </div>
-      <OurTopDoctors />
       <div className="grid md:grid-cols-2 bg-banner py-12 md:px-40 p-4 md:gap-24 gap-12 items-center">
         <div className="flex items-center justify-center">
           <img src={hexagon} className="h-[200px] md:h-[300px]" />

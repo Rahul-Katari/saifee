@@ -27,6 +27,7 @@ import BlogsDetail from "./components/pages/BlogsDetail";
 import BookApppointments from "./components/pages/BookAppointments";
 import Videos from "./components/pages/Videos";
 import HealthCheckup from "./components/pages/HealthCheckUp";
+import ExcellenceContentTabs from "./components/pages/ExcellenceContentTabs";
 
 const appRouter = createBrowserRouter([
   {
@@ -98,6 +99,10 @@ root.render(
           <Route path="/bookAppointment" element={<BookApppointments />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/healthCheckup" element={<HealthCheckup />} />
+          <Route
+            path="/excellenceContent"
+            element={<ExcellenceContentTabs />}
+          />
         </Route>
         {/* Additional top-level routes */}
         <Route path="/about" element={<About />} />

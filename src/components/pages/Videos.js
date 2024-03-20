@@ -1,14 +1,47 @@
 import BreadCrumb from "../common/BreadCrumb";
 import banner from "../../assets/images/banners/patients-visitors.png";
 import AppointmentSchedule from "../AppointmentSchedule";
-import VideosListCard from "../VideosListCard";
+import { useEffect, useState } from "react";
+import ManasaVideos from "../ManasaVideos";
+import UdayVideos from "../UdayVideos";
+import PatientTestimonialVideos from "../PatientTestimonialVideos";
 
+const breadCrumb = [
+  { href: "/", title: "home" },
+  { href: "/blogs", title: "blog" },
+  { href: "", title: "endocrinology" },
+];
 const Videos = () => {
-  const breadCrumb = [
-    { href: "/", title: "home" },
-    { href: "/blogs", title: "blog" },
-    { href: "", title: "endocrinology" },
+  const [videoType, setVideoType] = useState("doctors");
+  const doctorVideos = [
+    { name: "Dr. Manasa Mynepally", value: "manasa" },
+    { name: "Dr. Uday Kiran", value: "uday" },
   ];
+  const [videosToShow, setvideosToShow] = useState(doctorVideos);
+  const [selectedVideos, setselectedVideos] = useState("manasa");
+  const handleVideoTypeChange = (event) => {
+    const selectedValue = event.target.value;
+    setVideoType(selectedValue);
+    if (selectedValue === "doctors") {
+      setvideosToShow([
+        { name: "Dr. Manasa Mynepally", value: "manasa" },
+        { name: "Dr. Uday Kiran", value: "uday" },
+      ]);
+      setselectedVideos("manasa");
+    } else if (selectedValue === "patients") {
+      setselectedVideos("");
+      setvideosToShow([]);
+    }
+  };
+  const handleVideosChange = (event) => {
+    const selectedValue = event.target.value;
+    if (selectedValue === "manasa") {
+      setselectedVideos("manasa");
+    } else if (selectedValue === "uday") {
+      setselectedVideos("uday");
+    }
+  };
+  useEffect(() => {}, [videosToShow, selectedVideos]);
   return (
     <div>
       <div>
@@ -23,20 +56,27 @@ const Videos = () => {
             </div>
             <div>
               <select
-                id="videos"
+                value={videoType}
+                onChange={handleVideoTypeChange}
                 class=" md:w-[250px] border border-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full my-2 md:py-1 py-2 ps-2 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500 md:mx-3"
               >
-                <option value="doctor">Doctor Videos</option>
-                <option value="other">Other Videos</option>
+                <option value="doctors">Doctors Videos</option>
+                <option value="patients">Patients Testimonials</option>
               </select>
             </div>
             <div>
               <select
-                id="videos"
+                value={selectedVideos}
+                onChange={handleVideosChange}
                 class=" md:w-[250px] border border-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full my-2 md:py-1 py-2 ps-2 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500 md:mx-3"
               >
-                <option value="doctor">Dr.Manasa Mynepally</option>
-                <option value="other">Other Videos</option>
+                {videosToShow.map((option, index) => {
+                  return (
+                    <option key={index} value={option.value}>
+                      {option.name}
+                    </option>
+                  );
+                })}
               </select>
             </div>
           </div>
@@ -45,10 +85,16 @@ const Videos = () => {
       <section>
         <div className="max-w-7xl m-auto">
           <div className="grid md:grid-cols-3 gap-4 m-4">
-            {[...Array(12).keys()].map(() => {
+            {[...Array(3).keys()].map(() => {
               return (
                 <div>
-                  <VideosListCard />
+                  {selectedVideos === "manasa" ? (
+                    <ManasaVideos />
+                  ) : selectedVideos === "uday" ? (
+                    <UdayVideos />
+                  ) : (
+                    <PatientTestimonialVideos />
+                  )}
                 </div>
               );
             })}

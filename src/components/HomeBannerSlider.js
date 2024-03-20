@@ -6,7 +6,10 @@ import "slick-carousel/slick/slick-theme.css";
 import "../assets/styles/slider.css";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 
-import banner1 from "../assets/images/home/banners/doctor-banner.jpg";
+import uday from "../assets/images/home/banners/uday-banner.jpg";
+import manasa from "../assets/images/home/banners/manasa-banner.png";
+import manasaMobile from "../assets/images/home/banners/mobile/manasa.png";
+import udayMobile from "../assets/images/home/banners/mobile/uday.png";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -36,7 +39,7 @@ function SamplePrevArrow(props) {
 
 export default function HomeBannerSlider() {
   var settings = {
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
     infinite: true,
     speed: 500,
@@ -56,19 +59,34 @@ export default function HomeBannerSlider() {
   return (
     <Slider {...settings}>
       <div>
-        <img src={banner1} />
+        <img
+          src={window.innerWidth < 578 ? manasaMobile : manasa}
+          className="w-full"
+        />
       </div>
       <div>
-        <img src={banner1} />
+        <img
+          src={window.innerWidth < 578 ? udayMobile : uday}
+          className="w-full"
+        />
       </div>
       <div>
-        <img src={banner1} />
+        <img
+          src={window.innerWidth < 578 ? manasaMobile : manasa}
+          className="w-full"
+        />
       </div>
       <div>
-        <img src={banner1} />
+        <img
+          src={window.innerWidth < 578 ? udayMobile : uday}
+          className="w-full"
+        />
       </div>
       <div>
-        <img src={banner1} />
+        <img
+          src={window.innerWidth < 578 ? manasaMobile : manasa}
+          className="w-full"
+        />
       </div>
     </Slider>
   );

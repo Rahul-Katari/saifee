@@ -37,6 +37,7 @@ import KnowMore from "./KnowMore";
 import NewAppointments from "../banners/NewAppointments";
 import HealthTalksTabs from "./HeathTalksTabs";
 import KnowAboutSlider from "../KnowAboutSlider";
+import Heading from "../common/Heading";
 
 const bannerCardsData = [
   { imgSrc: card1, title1: "Book Doctor", title2: "Appointment" },
@@ -80,16 +81,18 @@ const Home = () => {
           </div>
         </section>
         {/* committed to cure starts  */}
-        <section>
-          <Welcome img={cure} title={"Committed to cure"} />
-          {/* committed to cure ends  */}
-        </section>
+        {window.innerWidth > 768 ? (
+          <section>
+            <Welcome img={cure} title={"Committed to cure"} />
+            {/* committed to cure ends  */}
+          </section>
+        ) : (
+          ""
+        )}
         {/* specialities start  */}
         <section>
           <div className="max-w-7xl m-auto">
-            <h3 className="uppercase text-2xl my-5 text-center text-theme highlight-border">
-              specialities
-            </h3>
+            <Heading text={"specialities"} uppercase={true} center={true} />
             <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-14 max-sm:gap-3 mx-4 mb-4">
               {specialitiesData.map((spec, index) => {
                 return (
@@ -129,9 +132,12 @@ const Home = () => {
         {/* committed to cure 2 starts  */}
         <section>
           <div className="lg:px-16">
-            <h2 className="text-theme text-xl md:text-2xl text-center uppercase md:my-5 highlight-border">
-              Committed to cure
-            </h2>
+            <Heading
+              text={"committed to cure"}
+              uppercase={true}
+              center={true}
+            />
+
             <CommittedCureTabs />
           </div>
         </section>
@@ -139,11 +145,9 @@ const Home = () => {
         {/* Health talks section starts */}
         <section>
           <div className="bg-banner md:p-16 max-sm:py-8">
-            <h2 className="text-theme text-2xl text-center uppercase md:mb-10 mb-3 highlight-border">
-              health talks
-            </h2>
+            <Heading text={"health talks"} uppercase={true} center={true} />
             <div className="md:grid md:grid-cols-12 md:mx-0">
-              <div className="col-span-3 md:pe-6 md:ps-10 mx-4 md:mx-0">
+              <div className="col-span-3 md:pe-6 md:ps-10 mx-4 md:mx-0 max-sm:hidden">
                 <img src={Logo} className="m-auto w-24" />
                 <h3 className="md:text-2xl text-xl font-semibold py-3">
                   Connect with Manasa Mynepally
@@ -175,9 +179,11 @@ const Home = () => {
         {/* testimonials section  */}
         <section className="max-sm:mb-0">
           <div className="testimonial">
-            <h3 className="text-theme text-2xl text-center uppercase md:mb-8 highlight-border">
-              what our patients say
-            </h3>
+            <Heading
+              text={"what our patients say"}
+              uppercase={true}
+              center={true}
+            />
             <div
               className="bg-right bg-contain bg-no-repeat h-[400px] flex flex-col justify-center relative"
               style={{
@@ -202,9 +208,7 @@ const Home = () => {
           }}
         >
           <div>
-            <h3 className="text-theme text-2xl text-center uppercase md:mb-10 mb-8 highlight-border">
-              Blogs
-            </h3>
+            <Heading text={"blogs"} uppercase={true} center={true} />
             <div className="md:grid grid-cols-10 justify-end items-center">
               <div className="col-span-4"></div>
               <div className="col-span-6 ">

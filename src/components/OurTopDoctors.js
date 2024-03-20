@@ -1,5 +1,5 @@
-import doctor from "../assets/images/about/doctors.png";
-import doctorManasa from "../assets/images/about/doctor-manasa.png";
+import uday from "../assets/images/doctors/uday-new.png";
+import manasa from "../assets/images/doctors/manasa-new.png";
 import { Link } from "react-router-dom";
 import MoreBtn from "./common/MoreBtn";
 
@@ -22,7 +22,7 @@ const OurTopDoctors = () => {
           <div className="absolute md:top-[180px] top-[210px] md:mx-16 mx-6">
             <div className="grid md:grid-cols-2 gap-10">
               <div className="shadow-2xl p-5 rounded-xl flex flex-col bg-white ">
-                <img src={doctorManasa} className="md:h-[300px]" />
+                <img src={manasa} className="h-[300px] rounded-lg" />
                 <div>
                   <h3 className="md:text-2xl text-xl font-semibold mt-4">
                     Dr. Manasa Mynepally
@@ -41,7 +41,7 @@ const OurTopDoctors = () => {
                 </div>
               </div>
               <div className="shadow-2xl p-5 rounded-xl flex flex-col bg-white">
-                <img src={doctor} className="md:h-[300px]" />
+                <img src={uday} className="h-[300px]" />
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold mt-4">
                     DR. G UDAY KIRAN

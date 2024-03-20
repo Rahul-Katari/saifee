@@ -1,6 +1,6 @@
 @import url('./assets/styles/fonts.css');
 @import url('./assets/styles/react-tabs-scrollable.css');
-@import url('./assets/styles/tailwind.css');
+@import url('./assets/styles/additional-tailwind.css');
 @import url('./assets/styles/variables.css');
 
 @import url('./assets/styles/responsive.css');
@@ -12,8 +12,9 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: 0.5s ease;
+  /* transition: 0.5s ease; */
   font-family: 'Poppins', sans-serif;
+  transition: all 0.5s ease-in-out;
 }
 
 * {
@@ -88,4 +89,16 @@ code {
 
 .highlight-border-left::after {
   margin: 5px 0px;
+}
+
+/* excellence dtails tabs  */
+.excellence-content-tabs button:nth-child(odd) {
+  background: var(--highlight) !important;
+  width: -webkit-fill-available;
+}
+
+.excellence-content-tabs button:nth-child(even) {
+  background: var(--theme) !important;
+  width: -webkit-fill-available;
+
 }

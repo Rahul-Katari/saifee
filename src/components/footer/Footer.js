@@ -74,9 +74,13 @@ const Footer = () => {
                 src={footerLogo}
                 alt="logo"
                 className="m-auto my-5 w-24 h-24 md:w-auto"
+                data-aos="zoom-out"
               />
             </div>
-            <div className="justify-center md:flex items-center border py-3 border-cyan-500 border-x-0">
+            <div
+              className="justify-center md:flex items-center border py-3 border-cyan-500 border-x-0"
+              data-aos="fade-right"
+            >
               <div className="text-nav-highlight  text-base">Quick Links :</div>
               <PageLinks
                 links={quickLinks}
@@ -86,11 +90,17 @@ const Footer = () => {
             </div>
             <div className="flex justify-center items-center mt-5">
               <div className="flex items-center">
-                <div class="border-b-2 border-dashed pr-4 md:w-[150px] border-highlight"></div>
+                <div
+                  class="border-b-2 border-dashed pr-4 md:w-[150px] border-highlight"
+                  data-aos="fade-right"
+                ></div>
               </div>
               <h1 className="uppercase text-center text-2xl px-8">Reach Us</h1>
               <div className="flex items-center">
-                <div class="border-b-2 border-dashed pr-4 md:w-[150px] border-highlight"></div>
+                <div
+                  class="border-b-2 border-dashed pr-4 md:w-[150px] border-highlight"
+                  data-aos="fade-left"
+                ></div>
               </div>
             </div>
             <div className="lg:grid-cols-3 sm:grid-cols-2 grid">
@@ -110,13 +120,16 @@ const Footer = () => {
               ))}
             </div>
             <div className="flex-col flex md:flex-row justify-around pb-5 gap-4 md:gap-0 md:text-xl">
-              <div className="btn-primary rounded-full px-8 justify-center">
+              <div
+                className="btn-primary rounded-full px-8 justify-center"
+                data-aos="fade-right"
+              >
                 <SocialIcons space={4} />
               </div>
               <div className="flex items-center">
                 <div class="md:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
               </div>
-              <div className="telephone-footer-link">
+              <div className="telephone-footer-link" data-aos="zoom-in">
                 <a
                   target="_blank"
                   href="tel:+91 73400 40097"
@@ -131,16 +144,18 @@ const Footer = () => {
               <div className="flex items-center">
                 <div class="md:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
               </div>
-              <a
-                target="_blank"
-                href="mailto:info@drmanasaendocrine.com"
-                className="btn-primary text-base rounded-full"
-              >
-                <div className="pe-5">
-                  <IconMailFilled />
-                </div>
-                info@drmanasaendocrine.com
-              </a>
+              <div data-aos="fade-left">
+                <a
+                  target="_blank"
+                  href="mailto:info@drmanasaendocrine.com"
+                  className="btn-primary text-base rounded-full"
+                >
+                  <div className="pe-5">
+                    <IconMailFilled />
+                  </div>
+                  info@drmanasaendocrine.com
+                </a>
+              </div>
             </div>
             <div className="text-center md:mt-5">
               C {new Date().getFullYear()} Hospital all rights reserved

@@ -1,4 +1,4 @@
-import banner from "../../assets/images/excellence-banner.png";
+import banner from "../../assets/images/banners/excellence-banner.png";
 import DoctorServices from "../DoctorServices";
 
 const Excellence = () => {

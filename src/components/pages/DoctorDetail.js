@@ -12,7 +12,7 @@ const DoctorDetails = () => {
     return (
       <section>
         <div>
-          <Heading text={"Qualification"} />
+          <Heading text={"Qualification"} left={true} />
           <ul className="list-disc-default text-sm">
             <li>
               MBBS, Gandhi Medical College, University of Health Sciences,
@@ -190,8 +190,9 @@ const DoctorDetails = () => {
         <img src={banner} />
       </div>
       <div
-        className={`max-sm:hidden transition-all duration-300 fixed ${isFixed ? "top-[144px]" : topHeight
-          } z-[1]`}
+        className={`max-sm:hidden transition-all duration-300 fixed ${
+          isFixed ? "top-[144px]" : topHeight
+        } z-[1]`}
       >
         {/* <ScrollTo tabs={tabs} ref={tabsRef} /> */}
         <div className="">
@@ -203,8 +204,9 @@ const DoctorDetails = () => {
                 setActiveTab(index);
                 scrollToSection(index);
               }}
-              className={`rounded-l-none rounded-lg flex w-[180px] my-1 py-2 bg-slate-200 hover:btn-theme ${activeTab === index ? "btn-theme" : "ps-1"
-                }`}
+              className={`rounded-l-none rounded-lg flex w-[180px] my-1 py-2 bg-slate-200 hover:btn-theme ${
+                activeTab === index ? "btn-theme" : "ps-1"
+              }`}
             >
               {tab.name}
             </button>
@@ -225,7 +227,7 @@ const DoctorDetails = () => {
               <h1 className="text-black text-3xl font-bold mb-5">
                 Dr. G UDAY KIRAN
               </h1>
-              <Heading text={"About us"} />
+              <Heading text={"About us"} left={true} />
               <p className="mb-5 text-content">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
@@ -279,7 +281,7 @@ const DoctorDetails = () => {
         <div id="services" ref={(el) => (sectionsRef.current[2] = el)}>
           <section>
             <div>
-              <Heading text={"SERVICES"} />
+              <Heading text={"SERVICES"} left={true} />
               <DoctorServices speciality={"endo"} />
             </div>
           </section>
@@ -290,7 +292,7 @@ const DoctorDetails = () => {
         <section>
           <div className="bg-banner py-12">
             <div className="max-w-6xl ms-auto md:me-24 max-sm:mx-4">
-              <Heading text={"Patient Testimonials"} />
+              <Heading text={"Patient Testimonials"} left={true} />
               <BlogsSliderDetail card="testimonial" />
             </div>
           </div>
@@ -301,7 +303,7 @@ const DoctorDetails = () => {
         <div id="blogs" ref={(el) => (sectionsRef.current[3] = el)}>
           <section>
             <div className="detailPage-Blogs-Slider">
-              <Heading text={"Blogs"} />
+              <Heading text={"Blogs"} left={true} />
               <BlogsSliderDetail card="blog" />
             </div>
           </section>
@@ -309,7 +311,7 @@ const DoctorDetails = () => {
         <div id="videos" ref={(el) => (sectionsRef.current[4] = el)}>
           <section>
             <div>
-              <Heading text={"Regular News"} />
+              <Heading text={"Regular News"} left={true} />
               <p>
                 Get to know the information regarding our healthcare aspects to
                 be able to get to better informed decisions. ..

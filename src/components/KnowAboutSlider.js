@@ -8,7 +8,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "../assets/styles/slider.css";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 
-import banner1 from "../assets/images/home/banners/doctor-banner.jpg";
 import KnowMore from "./home/KnowMore";
 
 function SampleNextArrow(props) {
@@ -40,9 +39,9 @@ function SamplePrevArrow(props) {
 export default function KnowAboutSlider() {
   var settings = {
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,

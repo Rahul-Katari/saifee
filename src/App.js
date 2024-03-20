@@ -5,10 +5,7 @@ import { Outlet } from "react-router-dom";
 import AOS from "aos";
 
 function App() {
-  AOS
-    .init
-    // { duration: 2000 }
-    ();
+  AOS.init({ easing: "ease-out-cubic", duration: 2000 });
   return (
     <>
       <Header />
