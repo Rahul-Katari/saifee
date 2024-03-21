@@ -1,5 +1,4 @@
-// import banner from "../../assets/images/banners/excellence-details-banner.png";
-import banner from "../../assets/images/osteoporosis.jpg";
+import banner from "../../assets/images/banners/excellence-details-banner.png";
 import { Tab, TabScreen, Tabs } from "react-tabs-scrollable";
 import React, { useEffect, useState } from "react";
 import BreadCrumb from "../common/BreadCrumb";
@@ -153,7 +152,7 @@ const ExcellenceDetails = () => {
                   className="flex flex-col col-span-2"
                 >
                   {/* Map over Endocrinology tab data and render Tab components */}
-                  {orderedEndoData.map((tab, index) => (
+                  {endoData.map((tab, index) => (
                     <Tab key={index}>
                       {/* Assuming 'imgSrc' is the correct property */}
                       {tab?.title}
@@ -173,7 +172,7 @@ const ExcellenceDetails = () => {
                   className="flex flex-col col-span-2"
                 >
                   {/* Map over General Surgery tab data and render Tab components */}
-                  {orderedGeneralData.map((tab, index) => (
+                  {generalData.map((tab, index) => (
                     <Tab key={index}>
                       {/* Assuming 'imgSrc' is the correct property */}
                       {tab?.title}
@@ -185,7 +184,7 @@ const ExcellenceDetails = () => {
           </div>
           {/* Map over tab data and conditionally render TabScreen components */}
           {activeData === "endo"
-            ? orderedEndoData.map((tab, index) => (
+            ? endoData.map((tab, index) => (
                 <TabScreen
                   className="md:ps-12 col-span-6"
                   key={index}
@@ -195,7 +194,7 @@ const ExcellenceDetails = () => {
                   {tab?.content}
                 </TabScreen>
               ))
-            : orderedGeneralData.map((tab, index) => (
+            : generalData.map((tab, index) => (
                 <TabScreen
                   className="md:ps-12 col-span-6"
                   key={index}
