@@ -13,33 +13,31 @@ const FooterCard = ({
 }) => {
   return (
     <div
-      className={`md:px-8 px-4 my-2 md:my-8 text-center ${
+      className={`md:px-8 px-4 my-2 md:my-8 text-center space-y-2 ${
         index < 2 ? "md:border-r-2 border-[#99999999] border-dashed" : ""
       }`}
     >
       <div className="bg-footer-highlight inline-block rounded-full p-2 text-white">
         <img src={iconSrc} className="h-7 w-7 m-1" />
       </div>
-      <div className="font-medium  text-base md:my-4 md:highlight-border">
+      <div className="font-medium  text-base md:mt-4 md:highlight-border">
         {title}
       </div>
-      <p className="mt-2 text-gray-500 text-sm max-sm:hidden">{description1}</p>
+      <p className="text-gray-500 text-sm">{description1}</p>
       <p
         className={`${
-          description3
-            ? "mt-2 text-gray-500 text-sm"
-            : "text-gray-500 text-sm max-sm:hidden"
+          description3 ? "text-gray-500 text-sm" : "text-gray-500 text-sm"
         }`}
       >
         {description2}
       </p>
       {description3 ? (
-        <p className="mt-2 text-gray-500 text-sm">{description3}</p>
+        <p className="text-gray-500 text-sm">{description3}</p>
       ) : (
         ""
       )}
       {description4 ? (
-        <p className="mt-2 text-gray-500 text-sm">{description4}</p>
+        <p className="text-gray-500 text-sm">{description4}</p>
       ) : (
         ""
       )}

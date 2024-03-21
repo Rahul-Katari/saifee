@@ -6,7 +6,7 @@ const Heading = ({ text, size, left, uppercase, center, aos }) => {
   aos = aos ? aos : "down";
   return (
     <h3
-      data-aos={`fade-${aos}`}
+      // data-aos={`fade-${aos}`}
       className={`text-theme text-${size} font-medium highlight-border ${left} ${uppercase} ${center} mb-4`}
     >
       {text}

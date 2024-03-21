@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import banner from "../../assets/images/banners/excellence-details-banner.png";
+import banner from "../../assets/images/banners/mansa-detail.png";
 import BlogsSliderDetail from "../BlogsSliderDetail";
 import DoctorServices from "../DoctorServices";
 import NewAppointments from "../banners/NewAppointments";
@@ -90,37 +90,6 @@ const DoctorDetails = () => {
     sectionsRef.current[index]?.scrollIntoView({ behavior: "smooth" });
   };
   useEffect(() => {
-    // Event listener for scrolling
-    // const handleScroll = () => {
-    //   const sectionInView = sectionsRef.current.findIndex(
-    //     (section) =>
-    //       section.getBoundingClientRect().top >= 0 &&
-    //       section.getBoundingClientRect().top < window.innerHeight / 2
-    //   );
-    //   setActiveTab(sectionInView);
-    //   const bannerHeight = bannerRef.current.offsetHeight;
-    //   // setHeight(bannerHeight);
-    //   const scrollPosition = window.pageYOffset;
-    //   const scrollOffset = isFixed ? bannerHeight + 170 : bannerHeight;
-    //   if (scrollPosition > bannerHeight + 170) {
-    //     setIsFixed(true);
-    //   } else {
-    //     setIsFixed(false);
-    //   }
-    //   const tabPositions = tabs.map((tab) => {
-    //     const element = document.querySelector(tab.href);
-    //     return element ? element.offsetTop : 0; // Check if element exists
-    //   });
-
-    //   // Find the index of the first tab whose section is below the current scroll position
-    //   const activeTabIndex = tabPositions.findIndex(
-    //     (position) => position > scrollPosition + scrollOffset
-    //   );
-
-    //   // If no section is below the current scroll position, activate the last tab
-    //   setActiveTab(activeTabIndex === -1 ? tabs.length - 1 : activeTabIndex);
-    // };
-
     const handleScroll = () => {
       const bannerHeight = bannerRef.current.offsetHeight;
       const scrollPosition = window.pageYOffset;
@@ -187,7 +156,7 @@ const DoctorDetails = () => {
   return (
     <div className="doctor-details">
       <div ref={bannerRef}>
-        <img src={banner} />
+        <img src={banner} className="w-full" />
       </div>
       <div
         className={`max-sm:hidden transition-all duration-300 fixed ${
@@ -225,7 +194,7 @@ const DoctorDetails = () => {
           <section>
             <div>
               <h1 className="text-black text-3xl font-bold mb-5">
-                Dr. G UDAY KIRAN
+                Dr. Manasa Mynepally
               </h1>
               <Heading text={"About us"} left={true} />
               <p className="mb-5 text-content">
