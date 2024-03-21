@@ -119,17 +119,14 @@ const Footer = () => {
                 />
               ))}
             </div>
-            <div className="flex-col flex md:flex-row justify-around pb-5 gap-4 md:gap-0 md:text-xl">
-              <div
-                className="btn-primary rounded-full px-8 justify-center"
-                data-aos="fade-right"
-              >
+            <div className="flex-col flex md:flex-row justify-around pb-5 gap-2 md:gap-0 md:text-xl">
+              <div className="btn-primary rounded-full px-8 justify-center">
                 <SocialIcons space={4} />
               </div>
               <div className="flex items-center">
                 <div class="md:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
               </div>
-              <div className="telephone-footer-link" data-aos="zoom-in">
+              <div className="telephone-footer-link">
                 <a
                   target="_blank"
                   href="tel:+91 73400 40097"
@@ -144,7 +141,7 @@ const Footer = () => {
               <div className="flex items-center">
                 <div class="md:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
               </div>
-              <div data-aos="fade-left">
+              <div>
                 <a
                   target="_blank"
                   href="mailto:info@drmanasaendocrine.com"

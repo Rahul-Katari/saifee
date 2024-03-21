@@ -69,9 +69,9 @@ const Navbar = () => {
               </div>
             </div>
             <div className="relative flex md:h-16 items-center justify-between p-2">
-              <div className="md:hidden">
+              <Link className="md:hidden" to={"/"}>
                 <img className="w-16 h-100" src={logo} alt="Your Company" />
-              </div>
+              </Link>
               <div className="inset-y-0 right-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button

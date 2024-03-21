@@ -44,8 +44,8 @@
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 import React, { useState } from "react";
 
-const Accordion = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(true);
+const Accordion = ({ title, children, accordionOpen }) => {
+  const [isOpen, setIsOpen] = useState(accordionOpen);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
@@ -59,7 +59,15 @@ const Accordion = ({ title, children }) => {
           <span>{isOpen ? <IconChevronDown /> : <IconChevronUp />}</span>
         </button>
       </div>
-      {isOpen && <div className="accordion-content">{children}</div>}
+      {isOpen && (
+        <div
+          className={`accordion-content transition-all duration-500 ${
+            isOpen ? "h-auto" : "h-0"
+          }`}
+        >
+          {children}
+        </div>
+      )}
     </div>
   );
 };

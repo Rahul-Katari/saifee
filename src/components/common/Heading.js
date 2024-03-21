@@ -3,7 +3,7 @@ const Heading = ({ text, size, left, uppercase, center, aos }) => {
   left = left ? "highlight-border-left" : "";
   uppercase = uppercase ? "uppercase" : "";
   center = center ? "text-center" : "";
-  aos = aos ? aos : "right";
+  aos = aos ? aos : "down";
   return (
     <h3
       data-aos={`fade-${aos}`}
