@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const BreadCrumb = ({ linkData }) => {
   return (
-    <div className="bg-gradient-to-r from-[#FF744B] via-[#FF744B] to-[rgba(255, 116, 75, 0.52)] uppercase p-3 md:ps-16 text-white">
+    <div className="bg-gradient-to-r from-[#FF744B] via-[#FF744B] to-[rgba(255, 116, 75, 0.52)] uppercase p-3 md:ps-16 text-white text-xs max-sm:py-2">
       {linkData.map((link, index) => {
         return (
           <span key={index}>

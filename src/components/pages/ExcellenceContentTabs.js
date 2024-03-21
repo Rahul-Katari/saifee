@@ -46,7 +46,7 @@ const ExcellenceContentTabs = () => {
               <button
                 key={index}
                 onClick={() => scrollToSection(button.id)}
-                className="p-2 text-white"
+                className="md:p-2 max-sm:px-2 text-white max-sm:text-xs"
               >
                 {button.name}
               </button>
