@@ -12,15 +12,15 @@ const AppointmentModal = ({ isOpen, onClose }) => {
                 {/* Left Column */}
                 <div className="md:space-y-4 space-y-2">
                   <select className="w-full border p-2 rounded ">
-                    <option>-Select Speciality-</option>
-                    <option value="endo">Endocrinology</option>
-                    <option value="general">General Surgery</option>
-                    {/* Add more options */}
-                  </select>
-                  <select className="w-full border p-2 rounded ">
                     <option>-Select Doctor-</option>
                     <option value="manasa">Dr. Manasa</option>
                     <option value="uday">Dr. Uday</option>
+                    {/* Add more options */}
+                  </select>
+                  <select className="w-full border p-2 rounded ">
+                    <option>-Select Speciality-</option>
+                    <option value="endo">Endocrinology</option>
+                    <option value="general">General Surgery</option>
                     {/* Add more options */}
                   </select>
                   <input

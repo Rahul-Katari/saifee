@@ -19,6 +19,10 @@
         @apply rounded-lg text-white px-3 py-2 text-sm bg-gradient-to-b from-[#07869B] to-[#0361AD];
     }
 
+    /* .btn-theme:hover {
+        @apply rounded-lg text-white px-3 py-2 text-sm bg-gradient-to-b from-[#07869B] to-[#85c6fb];
+    } */
+
     p {
         @apply text-sm
     }

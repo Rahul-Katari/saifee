@@ -8,8 +8,7 @@ import PatientTestimonialVideos from "../PatientTestimonialVideos";
 
 const breadCrumb = [
   { href: "/", title: "home" },
-  { href: "/blogs", title: "blog" },
-  { href: "", title: "endocrinology" },
+  { href: "/videos", title: "news & media" },
 ];
 const Videos = () => {
   const [videoType, setVideoType] = useState("doctors");

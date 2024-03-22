@@ -70,7 +70,7 @@ const Navbar = () => {
             </div>
             <div className="relative flex md:h-16 items-center justify-between p-2">
               <Link className="md:hidden" to={"/"}>
-                <img className="w-16 h-100" src={logo} alt="Your Company" />
+                <img className="w-24 h-100" src={logo} alt="Your Company" />
               </Link>
               <div className="inset-y-0 right-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -142,34 +142,42 @@ const Navbar = () => {
 
           {/* Off-canvas mobile menu */}
           <Disclosure.Panel
-            className={`sm:hidden top-[152px] fixed inset-0 bg-white z-40 w-64 sm:w-80 transform transition-transform ease-in-out shadow-2xl ${
+            className={`overflow-auto sm:hidden top-[184px] fixed inset-0 bg-white z-40 w-64 sm:w-80 transform transition-transform ease-in-out shadow-2xl ${
               open ? "translate-x-0" : "-translate-x-full"
             }`}
           >
-            <div
-              className="h-full flex flex-col justify-between"
-              ref={disclosureRef}
-            >
-              <div>
-                <div className="space-y-1 px-2 pb-3 pt-2">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      onClick={() => handleLinkClick()}
-                      className={classNames(
-                        (item.href === "/" && pathname === "/") ||
-                          (item.href !== "/" && item.href === pathname) ||
-                          (pathname.includes(item.href) && item.href !== "/")
-                          ? "text-nav-highlight underline"
-                          : "hover:text-nav-highlight hover:underline",
-                        "rounded-md px-3 py-2  font-medium block"
-                      )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+            <div className="" ref={disclosureRef}>
+              <div className="space-y-1 pb-3 pt-2">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => handleLinkClick()}
+                    className={classNames(
+                      (item.href === "/" && pathname === "/") ||
+                        (item.href !== "/" && item.href === pathname) ||
+                        (pathname.includes(item.href) && item.href !== "/")
+                        ? "text-nav-highlight underline"
+                        : "hover:text-nav-highlight hover:underline",
+                      "px-3 py-1 text-sm font-medium block border-b mx-2"
+                    )}
+                    aria-current={item.current ? "page" : undefined}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <div>
+                  <h3 className="text-white font-medium bg-theme p-1.5">
+                    Reach Us
+                  </h3>
+                  <p className="text-sm font-medium px-5 mt-2">
+                    101, Siri Sampada Arcade, I,Khajaguda - Nanakramguda
+                    Rd,Behind Andhra Bank/UBl,Khajaguda, Telangana, 500032.
+                  </p>
+                  <a href="tel:+91 73400 40097" className="text-theme p-5">
+                    {" "}
+                    +91 73400 40097
+                  </a>
                 </div>
               </div>
               {/* Additional content */}

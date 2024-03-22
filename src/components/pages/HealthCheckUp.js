@@ -19,7 +19,7 @@ const HealthCheckup = () => {
       <BreadCrumb linkData={breadCrumb} />
       <section>
         <div className="max-w-5xl m-auto">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="md:grid grid-cols-2 gap-4">
             <HealthCheckCard
               packageName={"DIABETES PACKAGE 1"}
               imgSrc={pack1}

@@ -6,6 +6,7 @@ import NewAppointments from "../banners/NewAppointments";
 import Heading from "../common/Heading";
 import { useEffect, useRef, useState } from "react";
 import NeedHelp from "../banners/NeedHelp";
+import AppointmentFormDetail from "../AppointmentFormDetail";
 
 const DoctorDetails = () => {
   const Qualification = () => {
@@ -13,7 +14,7 @@ const DoctorDetails = () => {
       <section>
         <div>
           <Heading text={"Qualification"} left={true} />
-          <ul className="list-disc-default text-sm">
+          <ul className="list-disc-default text-sm ps-4">
             <li>
               MBBS, Gandhi Medical College, University of Health Sciences,
               Hyderabad in 1996
@@ -39,18 +40,18 @@ const DoctorDetails = () => {
           </ul>
 
           <h2 className="text-theme text-xl">Experience</h2>
-          <ul className="list-disc-default text-sm">
+          <ul className="list-disc-default text-sm ps-4">
             <li>Medical Oncologists Care Hospital Hyderabad</li>
           </ul>
 
           <h2 className="text-theme text-xl">Memberships</h2>
-          <ul className="list-disc-default text-sm">
+          <ul className="list-disc-default text-sm ps-4">
             <li>European Society of Medical Oncology</li>
             <li>Indian Medical Association</li>
           </ul>
 
           <h2 className="text-theme text-xl">Research Presentation</h2>
-          <ul className="list-disc-default text-sm">
+          <ul className="list-disc-default text-sm ps-4">
             <li>
               26th Annual meeting of American Society of Apheresis ASFA 2005
               Plenary Session Safety and Efficacy of Peripheral Blood Progenitor
@@ -155,8 +156,13 @@ const DoctorDetails = () => {
   const topHeight = `top[144px ${height}px]`;
   return (
     <div className="doctor-details">
-      <div ref={bannerRef}>
-        <img src={banner} className="w-full" />
+      <div>
+        <div ref={bannerRef} className="relative">
+          <img src={banner} className="w-full" />
+          <div className="md:absolute right-[15%] top-[50%] md:transform md:-translate-y-1/2">
+            <AppointmentFormDetail />
+          </div>
+        </div>
       </div>
       <div
         className={`max-sm:hidden transition-all duration-300 fixed ${

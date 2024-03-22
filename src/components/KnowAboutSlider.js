@@ -35,10 +35,45 @@ function SamplePrevArrow(props) {
     </div>
   );
 }
+const manasaSpecs = [
+  "Thyroid Treatments - Hypothyroidism",
+  "Diabetes - Type 1 Diabetes, Type 2 Diabetes",
+  "Menopause",
+  "Pituitary Disorders",
+  "Osteoporosis",
+  "Adrenal Conditions - Done",
+  "Endocrine Cancers",
+  "Endocrine-Related Heart Conditions",
+  "Hormone Disorders",
+  "Short Stature",
+  "Growth Hormone Deficiency",
+  "PCOS",
+  "Fertility Disorders",
+  "Obesity",
+  "Nutrition",
+];
+const udaySpecs = [
+  "General Surgery",
+  "Laparoscopic GI Surgery",
+  "Colorectal Surgery",
+  "Gallbladder and Biliary Tract Surgery",
+  "Hernia Surgery",
+  "Bariatric Surgery",
+  "Trauma Surgery",
+  "Esophageal Surgery",
+  "Small Bowel Surgery",
+  "Pancreatic Surgery",
+  "Liver Surgery",
+  "Gastric Surgery",
+  "Piles surgery",
+  "Fistula surgery",
+  "Diabetic Foot Treatment",
+  "Breast Lump Treatment",
+];
 
 export default function KnowAboutSlider() {
   var settings = {
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 5000,
     infinite: true,
     speed: 1000,
@@ -58,22 +93,58 @@ export default function KnowAboutSlider() {
   return (
     <Slider {...settings}>
       <div>
-        <KnowMore doctor="Dr. Manasa Mynepally" imgSrc={doctor} />
+        <KnowMore
+          doctor="Dr. Manasa Mynepally"
+          imgSrc={doctor}
+          specialities={manasaSpecs}
+          qualifications={"M.D.,D.M.(Gold Medalist)"}
+          specialization={"Diabetes, Thyroid & Endocrine Centre"}
+        />
       </div>
       <div>
-        <KnowMore doctor="Dr. G Uday Kiran" imgSrc={doctorUday} />
+        <KnowMore
+          doctor="Dr. G Uday Kiran"
+          imgSrc={doctorUday}
+          specialities={udaySpecs}
+          qualifications={"MS, FMAS, FIAGES, EFIAGES, FALS (ROBOTIC)"}
+          specialization={"General and Laparoscopic Surgeon"}
+        />
       </div>
       <div>
-        <KnowMore doctor="Dr. Manasa Mynepally" imgSrc={doctor} />
+        <KnowMore
+          doctor="Dr. Manasa Mynepally"
+          imgSrc={doctor}
+          specialities={manasaSpecs}
+          qualifications={"M.D.,D.M.(Gold Medalist)"}
+          specialization={"Diabetes, Thyroid & Endocrine Centre"}
+        />
       </div>
       <div>
-        <KnowMore doctor="Dr. G Uday Kiran" imgSrc={doctorUday} />
+        <KnowMore
+          doctor="Dr. G Uday Kiran"
+          imgSrc={doctorUday}
+          specialities={udaySpecs}
+          qualifications={"MS, FMAS, FIAGES, EFIAGES, FALS (ROBOTIC)"}
+          specialization={"General and Laparoscopic Surgeon"}
+        />
       </div>
       <div>
-        <KnowMore doctor="Dr. Manasa Mynepally" imgSrc={doctor} />
+        <KnowMore
+          doctor="Dr. Manasa Mynepally"
+          imgSrc={doctor}
+          specialities={manasaSpecs}
+          qualifications={"M.D.,D.M.(Gold Medalist)"}
+          specialization={"Diabetes, Thyroid & Endocrine Centre"}
+        />
       </div>
       <div>
-        <KnowMore doctor="Dr. G Uday Kiran" imgSrc={doctorUday} />
+        <KnowMore
+          doctor="Dr. G Uday Kiran"
+          imgSrc={doctorUday}
+          specialities={udaySpecs}
+          qualifications={"MS, FMAS, FIAGES, EFIAGES, FALS (ROBOTIC)"}
+          specialization={"General and Laparoscopic Surgeon"}
+        />
       </div>
     </Slider>
   );

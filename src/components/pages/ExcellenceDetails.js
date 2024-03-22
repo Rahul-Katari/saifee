@@ -141,8 +141,8 @@ const ExcellenceDetails = () => {
       <BreadCrumb linkData={breadcrumb} />
       <section>
         {/* Your existing JSX */}
-        <div className="md:grid grid-cols-8 max-w-7xl m-auto max-sm:m-4">
-          <div className="col-span-2 max-sm:hidden">
+        <div className="grid md:grid-cols-8 max-w-7xl m-auto max-sm:m-4 max-sm:flex-col">
+          <div className="md:col-span-2 max-sm:order-last">
             <div>
               <Accordion title="Endocrinology" accordionOpen={endoaccordion}>
                 <Tabs
@@ -152,7 +152,7 @@ const ExcellenceDetails = () => {
                   className="flex flex-col col-span-2"
                 >
                   {/* Map over Endocrinology tab data and render Tab components */}
-                  {endoData.map((tab, index) => (
+                  {orderedEndoData.map((tab, index) => (
                     <Tab key={index}>
                       {/* Assuming 'imgSrc' is the correct property */}
                       {tab?.title}
@@ -172,7 +172,7 @@ const ExcellenceDetails = () => {
                   className="flex flex-col col-span-2"
                 >
                   {/* Map over General Surgery tab data and render Tab components */}
-                  {generalData.map((tab, index) => (
+                  {orderedGeneralData.map((tab, index) => (
                     <Tab key={index}>
                       {/* Assuming 'imgSrc' is the correct property */}
                       {tab?.title}
@@ -183,27 +183,29 @@ const ExcellenceDetails = () => {
             </div>
           </div>
           {/* Map over tab data and conditionally render TabScreen components */}
-          {activeData === "endo"
-            ? endoData.map((tab, index) => (
-                <TabScreen
-                  className="md:ps-12 col-span-6"
-                  key={index}
-                  activeTab={endoActiveTab}
-                  index={index}
-                >
-                  {tab?.content}
-                </TabScreen>
-              ))
-            : generalData.map((tab, index) => (
-                <TabScreen
-                  className="md:ps-12 col-span-6"
-                  key={index}
-                  activeTab={generalActiveTab}
-                  index={index}
-                >
-                  {tab?.content}
-                </TabScreen>
-              ))}
+          <div>
+            {activeData === "endo"
+              ? orderedEndoData.map((tab, index) => (
+                  <TabScreen
+                    className="md:ps-12 col-span-6"
+                    key={index}
+                    activeTab={endoActiveTab}
+                    index={index}
+                  >
+                    {tab?.content}
+                  </TabScreen>
+                ))
+              : orderedGeneralData.map((tab, index) => (
+                  <TabScreen
+                    className="md:ps-12 col-span-6"
+                    key={index}
+                    activeTab={generalActiveTab}
+                    index={index}
+                  >
+                    {tab?.content}
+                  </TabScreen>
+                ))}
+          </div>
         </div>
       </section>
     </div>
