@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/saifee/static/css/main.cde8e684.css",
-    "main.js": "/saifee/static/js/main.c905050e.js",
+    "main.css": "/saifee/static/css/main.39d20889.css",
+    "main.js": "/saifee/static/js/main.f41ba295.js",
     "static/media/testi-bg.png": "/saifee/static/media/testi-bg.cfd3d4030abcead18264.png",
     "static/media/checkup-packages.png": "/saifee/static/media/checkup-packages.839ed3f21a21b668c229.png",
     "static/media/book-appointment.png": "/saifee/static/media/book-appointment.eeaeb4d5baac487ae506.png",
@@ -68,11 +68,11 @@
     "static/media/slick.ttf": "/saifee/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/saifee/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/saifee/index.html",
-    "main.cde8e684.css.map": "/saifee/static/css/main.cde8e684.css.map",
-    "main.c905050e.js.map": "/saifee/static/js/main.c905050e.js.map"
+    "main.39d20889.css.map": "/saifee/static/css/main.39d20889.css.map",
+    "main.f41ba295.js.map": "/saifee/static/js/main.f41ba295.js.map"
   },
   "entrypoints": [
-    "static/css/main.cde8e684.css",
-    "static/js/main.c905050e.js"
+    "static/css/main.39d20889.css",
+    "static/js/main.f41ba295.js"
   ]
 }
