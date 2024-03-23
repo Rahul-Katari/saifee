@@ -29,6 +29,8 @@ import Videos from "./components/pages/Videos";
 import HealthCheckup from "./components/pages/HealthCheckUp";
 import ExcellenceContentTabs from "./components/pages/ExcellenceContentTabs";
 import HealthCheckUpForm from "./components/pages/healthCheckUpForm";
+import AppointmentModal from "./components/pages/AppointmentModal";
+import AppointmentModalForm from "./components/AppointmentModalForm";
 
 const appRouter = createBrowserRouter([
   {
@@ -91,13 +93,19 @@ root.render(
             path="/excellenceDetails/:id"
             element={<ExcellenceDetails />}
           />
-          <Route path="/bestDoctorsDetails" element={<DoctorDetails />} />
+          <Route
+            path="/bestDoctorsDetails/:doctor"
+            element={<DoctorDetails />}
+          />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogsDetail" element={<BlogsDetail />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/patientsVisitors" element={<PatientsVisitors />} />
           <Route path="/landing" element={<Landing />} />
-          {/* <Route path="/bookAppointment" element={<BookApppointments />} /> */}
+          <Route
+            path="/bookAppointment"
+            element={<AppointmentModalForm modal={false} />}
+          />
           <Route path="/videos" element={<Videos />} />
           <Route path="/healthCheckup" element={<HealthCheckup />} />
           <Route path="/healthCheckupForm" element={<HealthCheckUpForm />} />

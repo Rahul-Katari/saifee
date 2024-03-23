@@ -38,6 +38,7 @@ import NewAppointments from "../banners/NewAppointments";
 import HealthTalksTabs from "./HeathTalksTabs";
 import KnowAboutSlider from "../KnowAboutSlider";
 import Heading from "../common/Heading";
+import { useEffect, useState } from "react";
 
 const bannerCardsData = [
   { imgSrc: card1, title1: "Book Doctor", title2: "Appointment" },
@@ -69,6 +70,23 @@ const blogs = [
 ];
 
 const Home = () => {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const targetElement = document.querySelector(hash);
+      if (targetElement) {
+        const previousSection = targetElement.previousElementSibling;
+        if (previousSection) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: "smooth",
+          });
+        }
+      }
+    }
+  }, []);
+  const [location, setLocation] = useState();
+
   return (
     <>
       <div>
@@ -224,7 +242,9 @@ const Home = () => {
         </div>
         {/* blogs section  */}
         {/* schedule an appointment starts  */}
-        <AppointmentSchedule />
+        <div id="Location">
+          <AppointmentSchedule />
+        </div>
         {/* schedule an appointment ends */}
       </div>
     </>

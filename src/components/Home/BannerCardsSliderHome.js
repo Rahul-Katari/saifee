@@ -11,13 +11,13 @@ import card2 from "../../assets/images/home/find-your-doctors.png";
 import card3 from "../../assets/images/home/health-package.png";
 import card4 from "../../assets/images/home/online-consultancy.png";
 import card5 from "../../assets/images/home/book-lab-test.png";
+import AppointmentModalOpener from "../AppointmentModalOpener";
 
 const bannerCardsData = [
   {
     imgSrc: card1,
     title1: "Book Doctor",
     title2: "Appointment",
-    href: "",
   },
   {
     imgSrc: card2,
@@ -69,21 +69,35 @@ const BannerCardsSliderHome = () => {
     ],
   };
   return (
-    <div className="slider-container">
-      <Slider {...settings}>
-        {bannerCardsData.map((card, index) => {
-          return (
-            <BannerCard
-              key={index}
-              imgSrc={card.imgSrc}
-              title1={card.title1}
-              title2={card.title2}
-              href={card.href}
-            />
-          );
-        })}
-      </Slider>
+    // <div className="slider-container">
+    //   <Slider {...settings}>
+    <div className="flex justify-center">
+      {bannerCardsData.map((card, index) => {
+        return card.href ? (
+          <BannerCard
+            key={index}
+            imgSrc={card.imgSrc}
+            title1={card.title1}
+            title2={card.title2}
+            href={card.href}
+          />
+        ) : (
+          <AppointmentModalOpener
+            key={index}
+            Component={
+              <BannerCard
+                imgSrc={card.imgSrc}
+                title1={card.title1}
+                title2={card.title2}
+                href={card.href}
+              />
+            }
+          />
+        );
+      })}
     </div>
+    //   </Slider>
+    // </div>
   );
 };
 

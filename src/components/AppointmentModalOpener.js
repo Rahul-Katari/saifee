@@ -3,7 +3,7 @@ import AppointmentModal from "./pages/AppointmentModal";
 import appointmentsMobile from "../assets/images/footer/appointments-mobile.png";
 import { Link } from "react-router-dom";
 
-const AppointmentModalOpener = ({ img, button }) => {
+const AppointmentModalOpener = ({ Component, img, button }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleModal = () => {
@@ -17,7 +17,11 @@ const AppointmentModalOpener = ({ img, button }) => {
 
   return (
     <div>
-      {img ? (
+      {Component ? (
+        <button className="modal-opener-link" onClick={toggleModal}>
+          {Component}
+        </button>
+      ) : img ? (
         <Link to="#" className="modal-opener-link" onClick={toggleModal}>
           <img
             src={appointmentsMobile}

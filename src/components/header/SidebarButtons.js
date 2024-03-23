@@ -9,7 +9,7 @@ const SidebarButtons = () => {
     <div>
       <div className="fixed right-0 top-1/2 transform -translate-y-1/2 space-y-2 z-[2] text-xs max-sm:hidden">
         <div className="bg-theme text-white md:px-5 px-3 py-1 rounded-l-md text-center">
-          <Link>
+          <Link to={"/bookAppointment"}>
             <div>
               <img src={calender} className="m-auto w-1/3 max-sm:w-1/4" />
             </div>

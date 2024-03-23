@@ -9,10 +9,11 @@ import calender from "../../assets/images/about/calender.png";
 import vision from "../../assets/images/about/vision.png";
 import mission from "../../assets/images/about/mission.png";
 import OurTopDoctors from "../OurTopDoctors";
+import AppointmentModalOpener from "../AppointmentModalOpener";
 
 const iconsbanner = [
-  { imgSrc: locate, text1: "Locate", text2: "Clinic" },
-  { imgSrc: steth, text1: "Find", text2: "Doctor" },
+  { imgSrc: locate, text1: "Locate", text2: "Clinic", href: "/#Location" },
+  { imgSrc: steth, text1: "Find", text2: "Doctor", href: "/bestDoctors" },
   { imgSrc: calender, text1: "Book", text2: "Appointment" },
 ];
 
@@ -32,13 +33,31 @@ const About = () => {
           <div className="card shadow-xl grid grid-cols-3 items-center md:justify-around font-semibold text-center gap-y-8 max-w-7xl m-auto">
             {iconsbanner.map((icon, index) => {
               return (
-                <IconText
-                  key={index}
-                  iconSrc={icon.imgSrc}
-                  text1={icon.text1}
-                  text2={icon.text2}
-                  weight={"bold"}
-                />
+                <div>
+                  {icon.href ? (
+                    <IconText
+                      key={index}
+                      iconSrc={icon.imgSrc}
+                      text1={icon.text1}
+                      text2={icon.text2}
+                      weight={"bold"}
+                      href={icon.href}
+                      // click={handleClick}
+                    />
+                  ) : (
+                    <AppointmentModalOpener
+                      Component={
+                        <IconText
+                          key={index}
+                          iconSrc={icon.imgSrc}
+                          text1={icon.text1}
+                          text2={icon.text2}
+                          weight={"bold"}
+                        />
+                      }
+                    />
+                  )}
+                </div>
               );
             })}
           </div>

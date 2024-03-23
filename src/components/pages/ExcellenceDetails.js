@@ -183,7 +183,7 @@ const ExcellenceDetails = () => {
             </div>
           </div>
           {/* Map over tab data and conditionally render TabScreen components */}
-          <div>
+          <div className="md:col-span-6">
             {activeData === "endo"
               ? orderedEndoData.map((tab, index) => (
                   <TabScreen
