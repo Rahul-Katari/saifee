@@ -1,4 +1,20 @@
 import banner from "../../assets/images/banners/excellence-details-banner.png";
+
+import breastLump from "../../assets/images/specialities/banners/breast-lump-treatment.jpg";
+import diabeticFoot from "../../assets/images/specialities/banners/diabetic-foot-treatment.jpg";
+import fistulaSurgery from "../../assets/images/specialities/banners/fistula-surgery.jpg";
+import gallbladder from "../../assets/images/specialities/banners/gallbladder.jpg";
+import gastricSurgery from "../../assets/images/specialities/banners/gastric-surgery.jpg";
+import generalSurgery from "../../assets/images/specialities/banners/general-surgery.jpg";
+import pilesSurgery from "../../assets/images/specialities/banners/piles-surgery.jpg";
+import shortStature from "../../assets/images/specialities/banners/short-stature.jpg";
+import smallBowelSurgery from "../../assets/images/specialities/banners/small-bowel-surgery.jpg";
+import traumaSurgery from "../../assets/images/specialities/banners/trauma-surgery.jpg";
+import diabetes from "../../assets/images/specialities/banners/diabetes.jpg";
+import menopause from "../../assets/images/specialities/banners/menopause.jpg";
+import osteoporosis from "../../assets/images/specialities/banners/osteoporosis.jpg";
+import pitutaryDisorders from "../../assets/images/specialities/banners/pitutary-disorders.jpg";
+
 import { Tab, TabScreen, Tabs } from "react-tabs-scrollable";
 import React, { useEffect, useState } from "react";
 import BreadCrumb from "../common/BreadCrumb";
@@ -11,16 +27,23 @@ const endoData = [
   {
     title: "Diabetes I Diabetes / 2 Diabetes",
     content: <ExcellenceContentTabs />,
+    bannerSrc: diabetes,
   },
   {
     title: "Menopause",
     content: <ExcellenceContentTabs />,
+    bannerSrc: menopause,
   },
   {
     title: "Pituitary Disorders",
     content: "Content for Pituitary Disorders",
+    bannerSrc: pitutaryDisorders,
   },
-  { title: "Osteoporosis", content: "Content for Osteoporosis" },
+  {
+    title: "Osteoporosis",
+    content: "Content for Osteoporosis",
+    bannerSrc: osteoporosis,
+  },
   { title: "Adrenal Conditions", content: "Content for Adrenal Conditions" },
   { title: "Endocrine Cancers", content: "Content for Endocrine Cancers" },
   {
@@ -28,7 +51,11 @@ const endoData = [
     content: "Content for Endocrine-Related Heart Conditions",
   },
   { title: "Hormone Disorders", content: "Content for Hormone Disorders" },
-  { title: "Short Stature", content: "Content for Short Stature" },
+  {
+    title: "Short Stature",
+    content: "Content for Short Stature",
+    bannerSrc: shortStature,
+  },
   {
     title: "Growth Hormone Deficiency",
     content: "Content for Growth Hormone Deficiency",
@@ -43,39 +70,73 @@ const endoData = [
 ];
 
 const generalData = [
-  { title: "General Surgery", content: "Content for General Surgery" },
+  {
+    title: "General Surgery",
+    content: "Content for General Surgery",
+    bannerSrc: generalSurgery,
+  },
   {
     title: "Laparoscopic GI Surgery",
     content: "Content for Laparoscopic GI Surgery",
+    bannerSrc: "",
   },
   { title: "Colorectal Surgery", content: "Content for Colorectal Surgery" },
   {
     title: "Gallbladder and Biliary Tract Surgery",
     content: "Content for Gallbladder and Biliary Tract Surgery",
+    bannerSrc: gallbladder,
   },
   { title: "Hernia Surgery", content: "Content for Hernia Surgery" },
   { title: "Bariatric Surgery", content: "Content for Bariatric Surgery" },
-  { title: "Trauma Surgery", content: "Content for Trauma Surgery" },
+  {
+    title: "Trauma Surgery",
+    content: "Content for Trauma Surgery",
+    bannerSrc: traumaSurgery,
+  },
   { title: "Esophageal Surgery", content: "Content for Esophageal Surgery" },
   {
     title: "Small Bowel Surgery",
     content: "Content for Small Bowel Surgery",
+    bannerSrc: smallBowelSurgery,
   },
-  { title: "Pancreatic Surgery", content: "Content for Pancreatic Surgery" },
-  { title: "Liver Surgery", content: "Content for Liver Surgery" },
-  { title: "Gastric Surgery", content: "Content for Gastric Surgery" },
-  { title: "Piles Surgery", content: "Content for Piles Surgery" },
-  { title: "Fistula Surgery", content: "Content for Fistula Surgery" },
+  {
+    title: "Pancreatic Surgery",
+    content: "Content for Pancreatic Surgery",
+    bannerSrc: "",
+  },
+  {
+    title: "Liver Surgery",
+    content: "Content for Liver Surgery",
+    bannerSrc: "",
+  },
+  {
+    title: "Gastric Surgery",
+    content: "Content for Gastric Surgery",
+    bannerSrc: gastricSurgery,
+  },
+  {
+    title: "Piles Surgery",
+    content: "Content for Piles Surgery",
+    bannerSrc: pilesSurgery,
+  },
+  {
+    title: "Fistula Surgery",
+    content: "Content for Fistula Surgery",
+    bannerSrc: fistulaSurgery,
+  },
   {
     title: "Diabetic Foot Treatment",
     content: "Content for Diabetic Foot Treatment",
+    bannerSrc: diabeticFoot,
   },
   {
     title: "Breast Lump Treatment",
     content: "Content for Breast Lump Treatment",
+    bannerSrc: breastLump,
   },
 ];
 const ExcellenceDetails = () => {
+  const [bannerImage, setBannerImage] = useState(banner);
   const { id } = useParams();
   const [endoActiveTab, setEndoActiveTab] = React.useState(id);
   const [generalActiveTab, setGeneralActiveTab] = React.useState(
@@ -94,6 +155,8 @@ const ExcellenceDetails = () => {
     const activeTabIndex =
       activeData === "endo" ? Number(endoActiveTab) : Number(generalActiveTab);
     if (activeData === "endo") {
+      const bannerImage = endoData[endoActiveTab]?.bannerSrc || banner;
+      setBannerImage(bannerImage);
       const activeTab = endoDataCopy.splice(activeTabIndex, 1)[0];
       endoDataCopy.unshift(activeTab);
       setOrderedEndoData(endoDataCopy);
@@ -101,6 +164,8 @@ const ExcellenceDetails = () => {
       setOrderedGeneralData(generalDataCopy);
       setEndoaccordion(true);
     } else {
+      const bannerImage = generalData[generalActiveTab]?.bannerSrc || banner;
+      setBannerImage(bannerImage);
       const activeTab = generalDataCopy.splice(activeTabIndex, 1)[0];
       generalDataCopy.unshift(activeTab);
       setOrderedGeneralData(generalDataCopy);
@@ -133,17 +198,19 @@ const ExcellenceDetails = () => {
     setActiveData("");
   };
 
+  const flexCol = activeData !== "endo" ? "flex-col-reverse" : "";
+
   return (
     <div className="excellence-details">
       <div>
-        <img src={banner} className="w-full" />
+        <img src={bannerImage} className="w-full" />
       </div>
       <BreadCrumb linkData={breadcrumb} />
       <section>
         {/* Your existing JSX */}
         <div className="grid md:grid-cols-8 max-w-7xl m-auto max-sm:m-4 max-sm:flex-col">
           <div className="md:col-span-2 max-sm:order-last">
-            <div>
+            <div className={`flex flex-col ${flexCol}`}>
               <Accordion title="Endocrinology" accordionOpen={endoaccordion}>
                 <Tabs
                   activeTab={Number(endoActiveTab)}
