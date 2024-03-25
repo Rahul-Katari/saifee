@@ -57,7 +57,7 @@ const OurTopDoctors = () => {
                         align={"end"}
                         btn={"primary"}
                         btnText={"View More"}
-                        href={`/bestDoctorsDetails`}
+                        href={doctor.detailHref}
                         round={"full"}
                       />
                     </div>
