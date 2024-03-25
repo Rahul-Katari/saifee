@@ -31,6 +31,8 @@ import ExcellenceContentTabs from "./components/pages/ExcellenceContentTabs";
 import HealthCheckUpForm from "./components/pages/healthCheckUpForm";
 import AppointmentModal from "./components/pages/AppointmentModal";
 import AppointmentModalForm from "./components/AppointmentModalForm";
+import DoctorDetailsManasa from "./components/pages/DoctorDetailManasa";
+import DoctorDetailsUday from "./components/pages/DoctorDetailUday";
 
 const appRouter = createBrowserRouter([
   {
@@ -96,6 +98,15 @@ root.render(
           <Route
             path="/bestDoctorsDetails/:doctor"
             element={<DoctorDetails />}
+          />
+          <Route path="/bestDoctorsDetails" element={<DoctorDetails />} />
+          <Route
+            path="/bestDoctorsDetailsManasa"
+            element={<DoctorDetailsManasa />}
+          />
+          <Route
+            path="/bestDoctorsDetailsUday"
+            element={<DoctorDetailsUday />}
           />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogsDetail" element={<BlogsDetail />} />

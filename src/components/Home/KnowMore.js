@@ -6,6 +6,7 @@ const KnowMore = ({
   specialities,
   qualifications,
   specialization,
+  href,
 }) => {
   return (
     <div className="overflow-hidden md:ps-8">
@@ -57,7 +58,7 @@ const KnowMore = ({
         <MoreBtn
           btn={"theme"}
           btnText={"Read More"}
-          href={"/bestDoctorsDetails"}
+          href={href}
           align={"end"}
         />
       </div>

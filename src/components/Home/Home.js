@@ -33,7 +33,6 @@ import blog3 from "../../assets/images/home/blog3.png";
 import TestimonialSlide from "../TestimonialSlide";
 import BlogsSlider from "../BlogsSliderHome";
 import MoreBtn from "../common/MoreBtn";
-import KnowMore from "./KnowMore";
 import NewAppointments from "../banners/NewAppointments";
 import HealthTalksTabs from "./HeathTalksTabs";
 import KnowAboutSlider from "../KnowAboutSlider";
@@ -85,7 +84,6 @@ const Home = () => {
       }
     }
   }, []);
-  const [location, setLocation] = useState();
 
   return (
     <>

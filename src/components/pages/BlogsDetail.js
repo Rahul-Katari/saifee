@@ -8,7 +8,7 @@ const BlogsDetail = () => {
   const breadCrumb = [
     { href: "/", title: "home" },
     { href: "/blogs", title: "blog" },
-    { href: "/bestDoctorsDetails", title: " Dr. Manasa Mynepally" },
+    { href: "/bestDoctorsDetailsManasa", title: " Dr. Manasa Mynepally" },
     { href: "", title: "Topic Of Blog" },
   ];
   return (

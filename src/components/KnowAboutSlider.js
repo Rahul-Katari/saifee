@@ -99,6 +99,7 @@ export default function KnowAboutSlider() {
           specialities={manasaSpecs}
           qualifications={"M.D.,D.M.(Gold Medalist)"}
           specialization={"Diabetes, Thyroid & Endocrine Centre"}
+          href="/bestDoctorsDetailsManasa"
         />
       </div>
       <div>
@@ -108,6 +109,7 @@ export default function KnowAboutSlider() {
           specialities={udaySpecs}
           qualifications={"MS, FMAS, FIAGES, EFIAGES, FALS (ROBOTIC)"}
           specialization={"General and Laparoscopic Surgeon"}
+          href="/bestDoctorsDetailsUday"
         />
       </div>
       <div>
@@ -117,6 +119,7 @@ export default function KnowAboutSlider() {
           specialities={manasaSpecs}
           qualifications={"M.D.,D.M.(Gold Medalist)"}
           specialization={"Diabetes, Thyroid & Endocrine Centre"}
+          href="/bestDoctorsDetailsManasa"
         />
       </div>
       <div>
@@ -126,6 +129,7 @@ export default function KnowAboutSlider() {
           specialities={udaySpecs}
           qualifications={"MS, FMAS, FIAGES, EFIAGES, FALS (ROBOTIC)"}
           specialization={"General and Laparoscopic Surgeon"}
+          href="/bestDoctorsDetailsUday"
         />
       </div>
       <div>
@@ -135,6 +139,7 @@ export default function KnowAboutSlider() {
           specialities={manasaSpecs}
           qualifications={"M.D.,D.M.(Gold Medalist)"}
           specialization={"Diabetes, Thyroid & Endocrine Centre"}
+          href="/bestDoctorsDetailsManasa"
         />
       </div>
       <div>
@@ -144,6 +149,7 @@ export default function KnowAboutSlider() {
           specialities={udaySpecs}
           qualifications={"MS, FMAS, FIAGES, EFIAGES, FALS (ROBOTIC)"}
           specialization={"General and Laparoscopic Surgeon"}
+          href="/bestDoctorsDetailsUday"
         />
       </div>
     </Slider>

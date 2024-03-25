@@ -10,6 +10,7 @@ const doctorDetails = [
     qualifications: "M.D,D.M ENDOCRINOLOGY (Gold Medalist)",
     specialization: "Consultant Endocrinologist & Diabetologist",
     slugName: "manasa",
+    detailHref: "/bestDoctorsDetailsManasa",
   },
   {
     doctor: "G UDAY KIRAN",
@@ -17,6 +18,7 @@ const doctorDetails = [
     qualifications: "MS, FMAS, MAGES, EFIAGES, FALS (ROBOTIC)",
     specialization: "General and Laparoscopic Surgeon",
     slugName: "uday",
+    detailHref: "/bestDoctorsDetailsUday",
   },
 ];
 
