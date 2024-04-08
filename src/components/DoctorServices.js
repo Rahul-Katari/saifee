@@ -31,6 +31,7 @@ import pcos from "../assets/images/specialities/endocrinology/PCOS.png";
 import fertility from "../assets/images/specialities/endocrinology/Fertility-Disorders.png";
 import obesity from "../assets/images/specialities/endocrinology/Obesity.png";
 import nutrition from "../assets/images/specialities/endocrinology/Nutrition.png";
+import { ASSET_URL } from "../controller/config";
 
 // context for endocrinology folder
 const endocrinolgyContext = require.context(
@@ -45,7 +46,7 @@ const generalsurgeryContext = require.context(
   /\.(png|jpe?g|svg)$/
 );
 
-const DoctorServices = ({ speciality }) => {
+const DoctorServices = ({ speciality, services }) => {
   // importing all images of endocrinology
   const endocrinolgyData = endocrinolgyContext.keys().map((imagePath) => {
     const imageName = imagePath.replace("./", "");
@@ -266,13 +267,13 @@ const DoctorServices = ({ speciality }) => {
 
   return (
     <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-10 gap-5 max-sm:mx-4">
-      {specs.map((spec, index) => (
+      {services?.map((spec, index) => (
         <SpecialitiesCard
           id={spec.id}
-          imgSrc={spec.imgSrc}
-          key={index}
-          text1={spec.text1}
-          text2={spec.text2}
+          imgSrc={ASSET_URL + spec.service_img}
+          key={spec._id}
+          text1={spec.service_name}
+          // text2={spec.text2}
         />
       ))}
     </div>
