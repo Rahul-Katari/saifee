@@ -26,6 +26,34 @@ function classNames(...classes) {
 export default function Contact() {
   const [agreed, setAgreed] = useState(false);
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+
+    try {
+      const response = await fetch('http://localhost:3000/submitcontact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      // const json = await response.json();
+      // console.log(json);
+      window.alert("Your message has been sent successfully");
+      window.location.reload();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div>
       <div>
@@ -47,14 +75,14 @@ export default function Contact() {
             only five centuries, but also the leap into electronic typesetting,{" "}
           </p>
           <div>
-            <form action="#" method="POST" className="mx-auto mt-12">
+            <form onSubmit={handleSubmit} method="POST" className="mx-auto mt-12">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div className="sm:col-span-2">
                   <div>
                     <input
                       placeholder="First Name"
                       type="text"
-                      name="first-name"
+                      name="firstname"
                       id="first-name"
                       autoComplete="given-name"
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-gray-300 placeholder:text-gray-400 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
@@ -65,7 +93,7 @@ export default function Contact() {
                   <input
                     placeholder="Phone Number"
                     type="tel"
-                    name="phone-number"
+                    name="phonenumber"
                     id="phone-number"
                     autoComplete="tel"
                     className="block w-full rounded-md border-0  py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-gray-300 placeholder:text-gray-400 focus:ring-inset focus:ring-indigo-600 sm:text-sm"

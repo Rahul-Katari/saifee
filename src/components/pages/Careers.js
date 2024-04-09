@@ -2,8 +2,24 @@ import AppointmentSchedule from "../AppointmentSchedule";
 import banner from "../../assets/images/banners/careers.png";
 import MoreBtn from "../common/MoreBtn";
 import CareerCard from "../CareerCard";
+import { useEffect, useState } from "react";
 
 const Careers = () => {
+  const [careers, setCareers] = useState([]);
+  useEffect(() => {
+
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow"
+    };
+
+    fetch("http://localhost:3000/careers?reqtype=api", requestOptions)
+      .then((response) => response.text())
+      .then((result) => {
+        setCareers(JSON.parse(result)?.result?.data?.careers);
+      })
+      .catch((error) => console.error(error));
+  }, []);
   return (
     <div>
       <div>
@@ -15,10 +31,10 @@ const Careers = () => {
             Career
           </h2>
           <div className="md:grid grid-cols-2 gap-20">
-            <CareerCard />
-            <CareerCard />
-            <CareerCard />
-            <CareerCard />
+            {careers?.map((career) => {
+              return <CareerCard career={career} />;
+            })}
+
           </div>
           <div className="flex justify-end">
             <MoreBtn btn="theme" btnText={"View More"} href={"/"} />
