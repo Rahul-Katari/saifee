@@ -7,10 +7,9 @@ import { useEffect, useState } from "react";
 const Careers = () => {
   const [careers, setCareers] = useState([]);
   useEffect(() => {
-
     const requestOptions = {
       method: "GET",
-      redirect: "follow"
+      redirect: "follow",
     };
 
     fetch("http://localhost:3000/careers?reqtype=api", requestOptions)
@@ -34,9 +33,8 @@ const Careers = () => {
             {careers?.map((career) => {
               return <CareerCard career={career} />;
             })}
-
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end hidden">
             <MoreBtn btn="theme" btnText={"View More"} href={"/"} />
           </div>
         </div>

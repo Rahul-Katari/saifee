@@ -1,8 +1,10 @@
 import { IconX } from "@tabler/icons-react";
 import React, { useState } from "react";
+import ApiService from "../../controller/apiService";
 
-const CareerForm = () => {
+const CareerForm = ({ careerid }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [formResponse, setFormResponse] = useState(null);
 
   const openModal = () => {
     setIsOpen(true);
@@ -10,6 +12,63 @@ const CareerForm = () => {
 
   const closeModal = () => {
     setIsOpen(false);
+  };
+
+  const [formData, setFormData] = useState({
+    myfile: null, // doctor
+    name: "", // name
+    phonenumber: "", // phone
+    email: "", // email
+    qualification: "", // speciality
+    totalexp: "", // time
+    location: "", // location
+    careerid: careerid, // careerid
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+      careerid: careerid,
+    }));
+  };
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setFormData((prevData) => ({
+      ...prevData,
+      myfile: file,
+    }));
+  };
+
+  const submitForm = async (e) => {
+    e.preventDefault();
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("myfile", formData.myfile);
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("phonenumber", formData.phonenumber);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("qualification", formData.qualification);
+      formDataToSend.append("totalexp", formData.totalexp);
+      formDataToSend.append("location", formData.location);
+      formDataToSend.append("careerid", formData.careerid);
+
+      const submitResponse = await ApiService.post(
+        "saveapplication",
+        formDataToSend
+      );
+      setFormResponse(submitResponse.data.result);
+
+      if (submitResponse.status === 200) {
+        window.alert(formResponse.message);
+        closeModal();
+      } else {
+        window.alert("Form not submitted");
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -33,31 +92,30 @@ const CareerForm = () => {
             <span
               className="hidden sm:inline-block sm:align-middle sm:h-screen"
               aria-hidden="true"
-            >
-
-            </span>
+            ></span>
             <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle max-w-lg w-full">
               {/* Close button */}
               <div className="flex justify-end">
-                <button
-                  onClick={closeModal}
-                  type="button"
-                >
+                <button onClick={closeModal} type="button">
                   <IconX
                     className="bg-highlight text-white p-2 rounded-lg"
                     size={48}
                   />
                 </button>
               </div>
-              <h3 className="text-center text-theme text-xl font-semibold">Career Form</h3>
+              <h3 className="text-center text-theme text-xl font-semibold">
+                Career Form
+              </h3>
               {/* Form fields */}
               <form className="p-6 text-xs">
                 <div className="mb-4">
                   <input
                     type="text"
-                    id="fullName"
-                    name="fullName"
-                    placeholder="Full Name"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    placeholder="Name"
                     className="w-full px-3 py-3 border rounded"
                   />
                 </div>
@@ -65,9 +123,11 @@ const CareerForm = () => {
                 <div className="mb-4">
                   <input
                     type="tel"
-                    id="phoneNo"
-                    name="phoneNo"
-                    placeholder="Phone No"
+                    id="phonenumber"
+                    name="phonenumber"
+                    value={formData.phonenumber}
+                    onChange={handleInputChange}
+                    placeholder="Phone Number"
                     className="w-full px-3 py-3 border rounded"
                   />
                 </div>
@@ -77,6 +137,8 @@ const CareerForm = () => {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     placeholder="Email"
                     className="w-full px-3 py-3 border rounded"
                   />
@@ -87,6 +149,8 @@ const CareerForm = () => {
                     type="text"
                     id="qualification"
                     name="qualification"
+                    value={formData.qualification}
+                    onChange={handleInputChange}
                     placeholder="Qualification"
                     className="w-full px-3 py-3 border rounded"
                   />
@@ -94,10 +158,12 @@ const CareerForm = () => {
 
                 <div className="mb-4">
                   <input
-                    type="number"
-                    id="totalExp"
-                    name="totalExp"
-                    placeholder="Total Exp"
+                    type="text"
+                    id="totalexp"
+                    name="totalexp"
+                    value={formData.totalexp}
+                    onChange={handleInputChange}
+                    placeholder="Total Experience"
                     className="w-full px-3 py-3 border rounded"
                   />
                 </div>
@@ -107,31 +173,29 @@ const CareerForm = () => {
                     type="text"
                     id="location"
                     name="location"
+                    value={formData.location}
+                    onChange={handleInputChange}
                     placeholder="Location"
                     className="w-full px-3 py-3 border rounded"
                   />
                 </div>
 
-                {/* Upload CV */}
                 <div className="mb-4">
-                  <label
-                    htmlFor="cv"
-                    className="block text-theme text-xl font-semibold mb-2"
-                  >
-                    Upload CV :
-                  </label>
                   <input
                     type="file"
-                    id="cv"
-                    name="cv"
+                    id="myfile"
+                    name="myfile"
                     accept=".pdf,.doc,.docx"
-                    className="w-full border p-1"
+                    onChange={handleFileChange}
+                    className="w-full px-3 py-3 border rounded"
                   />
                 </div>
-
                 {/* Submit button */}
                 <div className="flex justify-end">
-                  <button className="btn-primary text-xs flex justify-end px-8">
+                  <button
+                    onClick={submitForm}
+                    className="btn-primary text-xs flex justify-end px-8"
+                  >
                     Submit
                   </button>
                 </div>
