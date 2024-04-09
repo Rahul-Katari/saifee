@@ -1,13 +1,36 @@
 import React from "react";
 import { Tab, TabScreen, Tabs } from "react-tabs-scrollable";
 import medicalExperts from "../../assets/images/home/medical-experts.png";
+import { useBlogData } from "../../controller/blogDataContext";
 
+const VideosList = ({ videos }) => {
+  return (
+    <div className="max-sm:m-4 mt-0 space-y-5">
+      {videos?.map((video) => {
+        return (
+          <div className="flex items-center " key={video._id}>
+            <iframe
+              className=" max-w-[100px] max-h-[80px] rounded"
+              src={video.videosrc}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <p className="text-[#222F66] ps-4">{video.displayname}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 const HealthTalksTabs = () => {
   const [activeTab, setActiveTab] = React.useState(0);
 
   const onTabClick = (e, index) => {
     setActiveTab(index);
   };
+  const videos = useBlogData()?.allblogs.filter((blog) => blog.type === 1);
   return (
     <div className="health-talk-tabs">
       <Tabs
@@ -21,38 +44,9 @@ const HealthTalksTabs = () => {
       </Tabs>
 
       <TabScreen>
-        {activeTab === 0 && (
-          <div className="max-sm:m-4 mt-0">
-            <div className="flex items-center ">
-              <img src={medicalExperts} className="h-16" />
-              <p className="text-[#222F66] ps-4">The Medical Experts</p>
-            </div>
-            <div className="flex items-center pt-4 ">
-              <img src={medicalExperts} className="h-16" />
-              <p className="text-[#222F66] ps-4">The Medical Experts</p>
-            </div>
-            <div className="flex items-center pt-4 ">
-              <img src={medicalExperts} className="h-16" />
-              <p className="text-[#222F66] ps-4">The Medical Experts</p>
-            </div>
-            <div className="flex items-center pt-4 ">
-              <img src={medicalExperts} className="h-16" />
-              <p className="text-[#222F66] ps-4">The Medical Experts</p>
-            </div>
-          </div>
-        )}
-        {activeTab === 1 && (
-          <div>
-            <h2>Diagnostic & Therapeutic</h2>
-            <p>Content for Diagnostic & Therapeutic tab goes here.</p>
-          </div>
-        )}
-        {activeTab === 2 && (
-          <div>
-            <h2>Pharmacy</h2>
-            <p>Content for Pharmacy tab goes here.</p>
-          </div>
-        )}
+        {activeTab === 0 && <VideosList videos={videos?.slice(0, 4)} />}
+        {activeTab === 1 && <VideosList videos={videos?.slice(4, 8)} />}
+        {activeTab === 2 && <VideosList videos={videos?.slice(8, 12)} />}
       </TabScreen>
     </div>
   );

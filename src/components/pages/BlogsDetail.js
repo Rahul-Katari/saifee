@@ -1,24 +1,19 @@
 import banner from "../../assets/images/banners/excellence-details-banner.png";
 import BreadCrumb from "../common/BreadCrumb";
 import latestBlog from "../../assets/images/latest-blogs.png";
-import topicOfBlog from "../../assets/images/topicOfBlog.png";
 import calender from "../../assets/images/calender-blog.png";
 import profile from "../../assets/images/profile.png";
 import { useParams } from "react-router-dom";
 import { useBlogData } from "../../controller/blogDataContext";
 import { ASSET_URL } from "../../controller/config";
-import React, { useEffect, useState } from "react";
 import DateFormat from "../DateFormat";
 import FormatHtml from "../FormatHtml";
 
-function decodeHTML(html) {
-  var txt = document.createElement("textarea");
-  txt.innerHTML = html;
-  return txt.value;
-}
 const BlogsDetail = () => {
-  const [decodedHTML, setDecodedHTML] = useState("");
   const { blogid } = useParams();
+  const latestBlogs = useBlogData()
+    ?.allblogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+    .slice(0, 2);
   const blogDetails = useBlogData()?.allblogs?.filter(
     (blog) => blog._id === blogid
   )[0];
@@ -29,40 +24,8 @@ const BlogsDetail = () => {
     { href: "/bestDoctorsDetailsManasa", title: " Dr. Manasa Mynepally" },
     { href: "", title: blogTitle },
   ];
-  useEffect(() => {
-    // Assuming you have fetched the HTML content from the API and stored it in bloghtml state
-    let bloghtml = blogDetails?.description
-      .replace(/"/g, "")
-      .replace(/\\\"/g, '"');
-
-    const decoded = decodeHTML(bloghtml);
-    setDecodedHTML(decoded);
-  }, []);
-  function createReactElements(html) {
-    const div = document.createElement("div");
-    div.innerHTML = html;
-
-    const reactElements = [];
-    for (let i = 0; i < div.childNodes.length; i++) {
-      const childNode = div.childNodes[i];
-      if (childNode.nodeType === Node.TEXT_NODE) {
-        // If it's a text node, convert it to a React text node
-        reactElements.push(childNode.textContent);
-      } else {
-        // If it's an element node, convert it to a React element
-        reactElements.push(
-          React.createElement(childNode.nodeName.toLowerCase(), {
-            dangerouslySetInnerHTML: { __html: childNode.innerHTML },
-          })
-        );
-      }
-    }
-
-    return reactElements;
-  }
   return (
     <div>
-      {console.log(blogDetails)}
       <div>
         <img src={banner} alt="banner" />
       </div>
@@ -91,7 +54,6 @@ const BlogsDetail = () => {
               </div>
               <img src={ASSET_URL + blogDetails?.displayimg} />
               <div>
-                {/* {createReactElements(decodedHTML)} */}
                 <FormatHtml htmlString={blogDetails?.description} />
                 {/* <div>
                   <h3 className="text-theme mt-16">
@@ -229,6 +191,7 @@ const BlogsDetail = () => {
                 <h2 className="text-theme text-2xl font-semibold highlight-border highlight-border-left">
                   Latest Blogs
                 </h2>
+                {console.log(latestBlogs)}
                 <div className="divide-y divide-slate-700">
                   <div className="flex py-4">
                     <div>

@@ -41,14 +41,7 @@ const Blogs = () => {
               {activeTab === 0 && (
                 <div className="grid md:grid-cols-4 grid-cols-1 gap-6">
                   {blogsData?.map((blog) => (
-                    <BlogListCard
-                      key={blog._id}
-                      imgSrc={blog.displayimg}
-                      displayname={blog.displayname}
-                      createdAt={blog.createdAt}
-                      doctorid={blog.doctorid}
-                      blogid={blog._id}
-                    />
+                    <BlogListCard blogData={blog} key={blog._id} />
                   ))}
                 </div>
               )}

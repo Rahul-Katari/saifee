@@ -38,6 +38,7 @@ import HealthTalksTabs from "./HeathTalksTabs";
 import KnowAboutSlider from "../KnowAboutSlider";
 import Heading from "../common/Heading";
 import { useEffect, useState } from "react";
+import { useBlogData } from "../../controller/blogDataContext";
 
 const bannerCardsData = [
   { imgSrc: card1, title1: "Book Doctor", title2: "Appointment" },
@@ -62,13 +63,15 @@ const specialitiesData = [
   },
 ];
 
-const blogs = [
-  { src: blog1, text: "Top medical equipments" },
-  { src: blog2, text: "Know the new techniques of endocrinology" },
-  { src: blog3, text: "5 ways to improve user retention for your startup" },
-];
+// const blogs = [
+//   { src: blog1, text: "Top medical equipments" },
+//   { src: blog2, text: "Know the new techniques of endocrinology" },
+//   { src: blog3, text: "5 ways to improve user retention for your startup" },
+// ];
 
 const Home = () => {
+  const blogs = useBlogData()?.allblogs.filter((blog) => blog.type === 0);
+
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {

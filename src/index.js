@@ -30,6 +30,7 @@ import AppointmentModalForm from "./components/AppointmentModalForm";
 import DoctorDetailsManasa from "./components/pages/DoctorDetailManasa";
 import DoctorDetailsUday from "./components/pages/DoctorDetailUday";
 import { BlogDataProvider } from "./controller/blogDataContext";
+import { ServicesDataProvider } from "./controller/servicesDataContext";
 
 const appRouter = createBrowserRouter([
   {
@@ -90,8 +91,12 @@ root.render(
             <Route path="/bestDoctors" element={<BestDoctors />} />
             <Route path="/facilities" element={<Facilities />} />
             <Route
-              path="/excellenceDetails/:id"
-              element={<ExcellenceDetails />}
+              path="/excellenceDetails/:serviceId"
+              element={
+                <ServicesDataProvider>
+                  <ExcellenceDetails />
+                </ServicesDataProvider>
+              }
             />
             <Route
               path="/bestDoctorsDetails/:doctorUrl"

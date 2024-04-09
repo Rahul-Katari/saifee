@@ -269,7 +269,7 @@ const DoctorServices = ({ speciality, services }) => {
     <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-10 gap-5 max-sm:mx-4">
       {services?.map((spec, index) => (
         <SpecialitiesCard
-          id={spec.id}
+          serviceId={spec._id}
           imgSrc={ASSET_URL + spec.service_img}
           key={spec._id}
           text1={spec.service_name}

@@ -11,6 +11,15 @@ const ApiService = {
       throw error;
     }
   },
+  async post(endpoint, data) {
+    try {
+      const response = await axios.post(`${API_URL}/${endpoint}`, data);
+      return response;
+    } catch (error) {
+      console.error("API Error:", error);
+      throw error;
+    }
+  },
 };
 
 export default ApiService;

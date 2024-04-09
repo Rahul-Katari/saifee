@@ -8,9 +8,9 @@ export const useBlogData = () => useContext(BlogDataContext);
 
 export const BlogDataProvider = ({ children }) => {
   const [blogData, setBlogData] = useState(null);
+  // Fetch blog data from the API
   const { data: blogs, loading, error } = useApiData("blogs?reqtype=api");
   useEffect(() => {
-    // Fetch blog data from the API
     if (blogs) {
       setBlogData(blogs?.result?.data);
     }

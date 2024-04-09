@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-const SpecialitiesCard = ({ id, imgSrc, text1, text2 }) => {
+const SpecialitiesCard = ({ serviceId, imgSrc, text1, text2 }) => {
   return (
     <>
       <Link
         data-aos="zoom-in"
-        to={`/excellenceDetails/${id}`}
+        to={`/excellenceDetails/${serviceId}`}
         className="rounded-lg shadow-3xl text-center md:p-3 p-2 py-4 md:py-6 relative specialities-card"
       >
         <div>

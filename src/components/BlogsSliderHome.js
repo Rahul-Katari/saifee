@@ -57,7 +57,7 @@ function BlogsSlider({ slides }) {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {slides.map((slide, index) => {
+        {slides?.map((slide, index) => {
           return (
             // <div key={index} className="">
             //   <img
@@ -68,7 +68,7 @@ function BlogsSlider({ slides }) {
             //     {slide.text}
             //   </div>
             // </div>
-            <BlogListCard />
+            <BlogListCard blogData={slide} key={slide._id} />
           );
         })}
       </Slider>
