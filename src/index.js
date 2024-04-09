@@ -84,10 +84,24 @@ root.render(
             fallback={<Error />}
           >
             {/* Nested routes for App */}
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/"
+              element={
+                <ServicesDataProvider>
+                  <Home />
+                </ServicesDataProvider>
+              }
+            />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/excellence" element={<Excellence />} />
+            <Route
+              path="/excellence"
+              element={
+                <ServicesDataProvider>
+                  <Excellence />
+                </ServicesDataProvider>
+              }
+            />
             <Route path="/bestDoctors" element={<BestDoctors />} />
             <Route path="/facilities" element={<Facilities />} />
             <Route

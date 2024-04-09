@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import banner from "../../assets/images/banners/excellence-banner.png";
 import DoctorServices from "../DoctorServices";
 import useApiData from "../../controller/useApiData";
+import { useServicesData } from "../../controller/servicesDataContext";
 
 const Excellence = () => {
   const [servicesData, setServicesData] = useState(null);
   const { data: services, loading, error } = useApiData("services?reqtype=api");
+  // const services = useServicesData();
+
   useEffect(() => {
     if (services) {
       setServicesData(services?.result?.data?.services);
@@ -22,7 +25,6 @@ const Excellence = () => {
           endocrinology
         </h1>
         <DoctorServices
-          speciality={"endo"}
           services={servicesData?.filter(
             (service) => service.servicecategory === 1
           )}
@@ -31,7 +33,6 @@ const Excellence = () => {
           general Surgery
         </h1>
         <DoctorServices
-          speciality={""}
           services={servicesData?.filter(
             (service) => service.servicecategory === 2
           )}

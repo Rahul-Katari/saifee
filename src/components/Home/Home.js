@@ -39,6 +39,8 @@ import KnowAboutSlider from "../KnowAboutSlider";
 import Heading from "../common/Heading";
 import { useEffect, useState } from "react";
 import { useBlogData } from "../../controller/blogDataContext";
+import DoctorServices from "../DoctorServices";
+import { useServicesData } from "../../controller/servicesDataContext";
 
 const bannerCardsData = [
   { imgSrc: card1, title1: "Book Doctor", title2: "Appointment" },
@@ -63,15 +65,9 @@ const specialitiesData = [
   },
 ];
 
-// const blogs = [
-//   { src: blog1, text: "Top medical equipments" },
-//   { src: blog2, text: "Know the new techniques of endocrinology" },
-//   { src: blog3, text: "5 ways to improve user retention for your startup" },
-// ];
-
 const Home = () => {
   const blogs = useBlogData()?.allblogs.filter((blog) => blog.type === 0);
-
+  const services = useServicesData();
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
@@ -86,8 +82,7 @@ const Home = () => {
         }
       }
     }
-  }, []);
-
+  }, [services]);
   return (
     <>
       <div>
@@ -112,19 +107,7 @@ const Home = () => {
         <section>
           <div className="max-w-7xl m-auto">
             <Heading text={"specialities"} uppercase={true} center={true} />
-            <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-14 max-sm:gap-3 mx-4 mb-4">
-              {specialitiesData.map((spec, index) => {
-                return (
-                  <SpecialitiesCard
-                    id={spec.id}
-                    imgSrc={spec.imgSrc}
-                    key={index}
-                    text1={spec.text1}
-                    text2={spec.text2}
-                  />
-                );
-              })}
-            </div>
+            <DoctorServices services={services} />
             <MoreBtn
               btnText={"View More"}
               href={"/excellence"}
