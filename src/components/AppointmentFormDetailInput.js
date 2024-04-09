@@ -1,7 +1,17 @@
+// AppointmentFormDetailInput.js
+import React from "react";
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-const AppointmentFormDetailInput = ({ Icon, type, placeholder }) => {
+
+const AppointmentFormDetailInput = ({
+  Icon,
+  type,
+  placeholder,
+  value,
+  onChange,
+}) => {
   return (
     <div className="p-1 border rounded-full flex">
       <div className="size-[30px]">
@@ -22,9 +32,12 @@ const AppointmentFormDetailInput = ({ Icon, type, placeholder }) => {
           )}
           type={type}
           placeholder={placeholder}
+          value={value}
+          onChange={onChange}
         />
       </div>
     </div>
   );
 };
+
 export default AppointmentFormDetailInput;

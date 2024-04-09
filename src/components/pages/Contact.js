@@ -1,17 +1,3 @@
-/*
-  This example requires some changes to your config:
-
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
@@ -33,12 +19,12 @@ export default function Contact() {
     const data = Object.fromEntries(formData);
 
     try {
-      const response = await fetch('http://localhost:3000/submitcontact', {
-        method: 'POST',
+      const response = await fetch("http://localhost:3000/submitcontact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
       });
 
       if (!response.ok) {
@@ -75,7 +61,11 @@ export default function Contact() {
             only five centuries, but also the leap into electronic typesetting,{" "}
           </p>
           <div>
-            <form onSubmit={handleSubmit} method="POST" className="mx-auto mt-12">
+            <form
+              onSubmit={handleSubmit}
+              method="POST"
+              className="mx-auto mt-12"
+            >
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div className="sm:col-span-2">
                   <div>

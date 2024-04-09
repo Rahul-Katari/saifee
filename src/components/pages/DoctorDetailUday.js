@@ -6,7 +6,7 @@ import NewAppointments from "../banners/NewAppointments";
 import Heading from "../common/Heading";
 import { useEffect, useRef, useState } from "react";
 import NeedHelp from "../banners/NeedHelp";
-import AppointmentFormDetail from "../AppointmentFormDetail";
+import AppointmentFormDetail from "./AppointmentFormDetail";
 
 const DoctorDetailsUday = () => {
   const Qualification = () => {

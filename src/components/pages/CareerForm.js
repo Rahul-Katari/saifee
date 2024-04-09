@@ -63,6 +63,16 @@ const CareerForm = ({ careerid }) => {
       if (submitResponse.status === 200) {
         window.alert(formResponse.message);
         closeModal();
+        setFormData({
+          myfile: null,
+          name: "",
+          phonenumber: "",
+          email: "",
+          qualification: "",
+          totalexp: "",
+          location: "",
+          careerid: careerid,
+        });
       } else {
         window.alert("Form not submitted");
       }

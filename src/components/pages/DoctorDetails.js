@@ -6,7 +6,7 @@ import NewAppointments from "../banners/NewAppointments";
 import Heading from "../common/Heading";
 import { useEffect, useRef, useState } from "react";
 import NeedHelp from "../banners/NeedHelp";
-import AppointmentFormDetail from "../AppointmentFormDetail";
+import AppointmentFormDetail from "./AppointmentFormDetail";
 import { useBlogData } from "../../controller/blogDataContext";
 import { ASSET_URL } from "../../controller/config";
 import Qualifications from "../Qualifications";
@@ -113,7 +113,7 @@ const DoctorDetails = () => {
             className="w-full"
           />
           <div className="md:absolute right-[15%] top-[50%] md:transform md:-translate-y-1/2">
-            <AppointmentFormDetail />
+            <AppointmentFormDetail details={doctorDetails} />
           </div>
         </div>
       </div>
@@ -163,43 +163,6 @@ const DoctorDetails = () => {
                   "</p>\n<p className='mb-5 text-content'>"
                 )}</p>`}
               />
-              {/* </p> */}
-              {/* <p className="mb-5 text-content">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
-              <p className="mb-5 text-content">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
-              <p className="mb-5 text-content">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p> */}
             </div>
           </section>
         </div>

@@ -49,6 +49,20 @@ const AppointmentModalForm = ({ modal }) => {
       setFormResponse(submitResponse.data.result);
       if (submitResponse.status === 200) {
         window.alert(formResponse.message);
+        setFormData({
+          preferredDoctor: "", // doctor
+          preferredDepartment: "", // speciality
+          appointmentDate: "", // date
+          appointmentTime: "", // time
+          pastconsultation: "", // message
+          patientName: "", // name
+          patientGender: "", // gender
+          patientAge: "", // age
+          location: "", // location
+          patientEmail: "", // email
+          patientMobile: "", // phone
+          // doctorid: doctorid,
+        });
       } else window.alert("form not submitted");
     } catch (error) {
       setError(error);
