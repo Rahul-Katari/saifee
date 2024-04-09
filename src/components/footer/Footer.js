@@ -62,7 +62,8 @@ const Footer = () => {
       <div className="container">
         {currentUrl !== "/" &&
           !currentUrl.includes("landing") &&
-          !currentUrl.includes("Detail") && <NewAppointments />}
+          !currentUrl.includes("Detail") &&
+          !currentUrl.includes("bookAppointment") && <NewAppointments />}
 
         <div
           className="bg-contain"

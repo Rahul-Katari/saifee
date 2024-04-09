@@ -16,7 +16,9 @@ const BlogListCard = ({ blogData }) => {
           className="w-full h-auto rounded-t-lg"
         />
         <div className="flex justify-between mt-4">
-          <h1 className="font-medium  text-sm me-2">{blogData?.displayname}</h1>
+          <h1 className="font-medium  text-sm me-2 line-clamp-2">
+            {blogData?.displayname}
+          </h1>
           <div>
             <Link
               to={`/blogsDetail/${blogData?._id}`}

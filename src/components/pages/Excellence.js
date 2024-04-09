@@ -6,17 +6,16 @@ import { useServicesData } from "../../controller/servicesDataContext";
 
 const Excellence = () => {
   const [servicesData, setServicesData] = useState(null);
-  const { data: services, loading, error } = useApiData("services?reqtype=api");
-  // const services = useServicesData();
+  // const { data: services, loading, error } = useApiData("services?reqtype=api");
+  const services = useServicesData();
 
   useEffect(() => {
     if (services) {
-      setServicesData(services?.result?.data?.services);
+      setServicesData(services);
     }
   }, [services]);
   return (
     <div>
-      {console.log(servicesData)}
       <div>
         <img src={banner} className="w-full" />
       </div>

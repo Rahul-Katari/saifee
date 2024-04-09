@@ -67,7 +67,15 @@ const specialitiesData = [
 
 const Home = () => {
   const blogs = useBlogData()?.allblogs.filter((blog) => blog.type === 0);
+  const firstVideo = useBlogData()
+    ?.allblogs.filter((blog) => blog.type === 1)
+    .slice(0, 1)[0];
+  const testimonials = useBlogData()?.reviews.slice(0, 10);
   const services = useServicesData();
+  const [mainVideoSrc, setMainVideoSrc] = useState(firstVideo?.videosrc);
+  const updateMainVideoSrc = (videosrc) => {
+    setMainVideoSrc(videosrc);
+  };
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
@@ -82,7 +90,8 @@ const Home = () => {
         }
       }
     }
-  }, [services]);
+    setMainVideoSrc(firstVideo?.videosrc);
+  }, [services, firstVideo]);
   return (
     <>
       <div>
@@ -167,9 +176,9 @@ const Home = () => {
               </div>
               <div className="col-span-6 m-4 mb-0">
                 <iframe
-                  className="w-full max-sm:h-[200px]"
+                  className="w-full max-sm:h-[200px] rounded"
                   height="400"
-                  src="https://www.youtube.com/embed/LzpCldPiT0c?si=HfrHjmyU-hGkDdoH"
+                  src={mainVideoSrc}
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -177,7 +186,7 @@ const Home = () => {
                 ></iframe>
               </div>
               <div className="col-span-3 md:ps-10">
-                <HealthTalksTabs />
+                <HealthTalksTabs onSelectVideo={updateMainVideoSrc} />
               </div>
             </div>
           </div>
@@ -203,7 +212,7 @@ const Home = () => {
               <div className="absolute left-[8%] md:bottom-[35%] bottom-[10%] font-medium">
                 Client <br></br> Testimonials
               </div>
-              <TestimonialSlide />
+              <TestimonialSlide testimonials={testimonials} />
             </div>
           </div>
         </section>

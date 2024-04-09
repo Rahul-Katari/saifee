@@ -40,12 +40,22 @@ const Blogs = () => {
             <TabScreen>
               {activeTab === 0 && (
                 <div className="grid md:grid-cols-4 grid-cols-1 gap-6">
-                  {blogsData?.map((blog) => (
-                    <BlogListCard blogData={blog} key={blog._id} />
-                  ))}
+                  {blogsData
+                    ?.filter((blog) => blog.servicecategory === 1)
+                    ?.map((blog) => (
+                      <BlogListCard blogData={blog} key={blog._id} />
+                    ))}
                 </div>
               )}
-              {activeTab === 1 && <div>General</div>}
+              {activeTab === 1 && (
+                <div className="grid md:grid-cols-4 grid-cols-1 gap-6">
+                  {blogsData
+                    ?.filter((blog) => blog.servicecategory === 2)
+                    ?.map((blog) => (
+                      <BlogListCard blogData={blog} key={blog._id} />
+                    ))}
+                </div>
+              )}
             </TabScreen>
           </div>
         </div>

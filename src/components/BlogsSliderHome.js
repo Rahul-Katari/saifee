@@ -14,7 +14,7 @@ function BlogsSlider({ slides }) {
   const settings = {
     // className: "center",
     // centerMode: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3500,
     arrows: false,
     dots: true,
@@ -58,18 +58,7 @@ function BlogsSlider({ slides }) {
     <div className="slider-container">
       <Slider {...settings}>
         {slides?.map((slide, index) => {
-          return (
-            // <div key={index} className="">
-            //   <img
-            //     src={slide.src}
-            //     className="h-200px rounded-t-[25px] bg-white m-auto w-[250px]"
-            //   />
-            //   <div className=" text-sm text-center uppercase w-[250px] h-[60px] bg-white m-auto rounded-b-[25px] p-3">
-            //     {slide.text}
-            //   </div>
-            // </div>
-            <BlogListCard blogData={slide} key={slide._id} />
-          );
+          return <BlogListCard blogData={slide} key={slide._id} />;
         })}
       </Slider>
     </div>

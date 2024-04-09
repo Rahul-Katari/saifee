@@ -31,7 +31,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-function TestimonialSlide() {
+function TestimonialSlide({ testimonials }) {
   const settings = {
     // autoplay: true,
     autoplaySpeed: 3000,
@@ -55,24 +55,13 @@ function TestimonialSlide() {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        <div>
-          <TestimonialCardHome />
-        </div>
-        <div>
-          <TestimonialCardHome />
-        </div>
-        <div>
-          <TestimonialCardHome />
-        </div>
-        <div>
-          <TestimonialCardHome />
-        </div>
-        <div>
-          <TestimonialCardHome />
-        </div>
-        <div>
-          <TestimonialCardHome />
-        </div>
+        {testimonials?.map((review) => {
+          return (
+            <div>
+              <TestimonialCardHome testimonial={review} />
+            </div>
+          );
+        })}
       </Slider>
     </div>
   );

@@ -100,6 +100,9 @@ const DoctorDetails = () => {
   const doctorBlogs = useBlogData()?.allblogs.filter(
     (blog) => blog.doctorid === doctorDetails._id
   );
+  const testimonials = useBlogData()?.reviews.filter(
+    (review) => review.doctorid === doctorDetails._id
+  );
   return (
     <div className="doctor-details">
       {console.log(doctorDetails)}
@@ -233,7 +236,10 @@ const DoctorDetails = () => {
           <div className="bg-banner py-12">
             <div className="max-w-6xl ms-auto md:me-24 max-sm:mx-4">
               <Heading text={"Patient Testimonials"} left={true} />
-              <BlogsSliderDetail card="testimonial" />
+              <BlogsSliderDetail
+                card="testimonial"
+                testimonials={testimonials}
+              />
             </div>
           </div>
         </section>

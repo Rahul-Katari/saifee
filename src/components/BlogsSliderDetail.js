@@ -33,7 +33,7 @@ const videos = [
   { imgSrc: "" },
 ];
 
-function BlogsSliderDetail({ card, blogsData }) {
+function BlogsSliderDetail({ card, blogsData, testimonials }) {
   const settings = {
     dots: false,
     infinite: true,
@@ -90,7 +90,7 @@ function BlogsSliderDetail({ card, blogsData }) {
           testimonials?.map((test, index) => {
             return (
               <div key={index}>
-                <PatientTestimonialsCard imgSrc={test.imgSrc} />
+                <PatientTestimonialsCard testimonial={test} />
               </div>
             );
           })}

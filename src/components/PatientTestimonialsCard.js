@@ -1,14 +1,12 @@
 import React from "react";
-import quote from "../assets/images/landing/quote.png"
+import quote from "../assets/images/landing/quote.png";
 
-function PatientTestimonialsCard() {
+function PatientTestimonialsCard({ testimonial }) {
   return (
     <div className="bg-[#07879A] p-8 rounded-lg text-white max-w-sm m-6">
       <img src={quote} />
-      <p className=" leading-snug my-4">
-        Headspace provides me with ... a connection to myself, and a disconnection from negative thoughts, feelings, and sensations.
-      </p>
-      <p className="text-sm">Hyd, India</p>
+      <p className=" leading-snug my-4 line-clamp-[6]">{testimonial.text}</p>
+      <p className="text-sm">{testimonial.name}</p>
       <p className="text-xs italic">on finding her happy place</p>
     </div>
   );

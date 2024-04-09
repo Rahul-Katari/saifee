@@ -51,7 +51,7 @@ const OurTopDoctors = () => {
                   >
                     <img
                       src={ASSET_URL + doctor?.imgsrc}
-                      className="rounded-lg"
+                      className="rounded-lg h-[300px]"
                     />
                     <div>
                       <h3 className="md:text-2xl text-xl font-semibold mt-4">
