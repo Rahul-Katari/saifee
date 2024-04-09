@@ -3,21 +3,23 @@ import banner from "../../assets/images/banners/excellence-details-banner.png";
 import BreadCrumb from "../common/BreadCrumb";
 import BlogListCard from "../BlogListCard";
 import { useState } from "react";
+import useApiData from "../../controller/useApiData";
+import { useBlogData } from "../../controller/blogDataContext";
 
 const Blogs = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const blogsData = useBlogData()?.allblogs?.filter((blog) => blog.type === 0);
   const onTabClick = (e, index) => {
     setActiveTab(index);
   };
   const breadCrumb = [
     { href: "/", title: "home" },
     { href: "/blogs", title: "blog" },
-    { href: "/bestDoctorsDetailsManasa", title: " Dr. Manasa Mynepally" },
   ];
   return (
     <div>
       <div>
-        <img src={banner} alt="banner" />
+        <img src={banner} alt="banner" className="w-full" />
       </div>
       <BreadCrumb linkData={breadCrumb} />
       <section>
@@ -38,8 +40,15 @@ const Blogs = () => {
             <TabScreen>
               {activeTab === 0 && (
                 <div className="grid md:grid-cols-4 grid-cols-1 gap-6">
-                  {[...Array(20).keys()].map((item) => (
-                    <BlogListCard key={item} />
+                  {blogsData?.map((blog) => (
+                    <BlogListCard
+                      key={blog._id}
+                      imgSrc={blog.displayimg}
+                      displayname={blog.displayname}
+                      createdAt={blog.createdAt}
+                      doctorid={blog.doctorid}
+                      blogid={blog._id}
+                    />
                   ))}
                 </div>
               )}

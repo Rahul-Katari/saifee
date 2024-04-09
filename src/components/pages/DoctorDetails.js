@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import banner from "../../assets/images/banners/mansa-detail.png";
 import BlogsSliderDetail from "../BlogsSliderDetail";
 import DoctorServices from "../DoctorServices";
@@ -7,73 +7,13 @@ import Heading from "../common/Heading";
 import { useEffect, useRef, useState } from "react";
 import NeedHelp from "../banners/NeedHelp";
 import AppointmentFormDetail from "../AppointmentFormDetail";
+import { useBlogData } from "../../controller/blogDataContext";
+import { ASSET_URL } from "../../controller/config";
+import Qualifications from "../Qualifications";
+import FormatHtml from "../FormatHtml";
 
 const DoctorDetails = () => {
-  const Qualification = () => {
-    return (
-      <section>
-        <div>
-          <Heading text={"Qualification"} left={true} />
-          <ul className="list-disc-default text-sm ps-4">
-            <li>
-              MBBS, Gandhi Medical College, University of Health Sciences,
-              Hyderabad in 1996
-            </li>
-            <li>
-              Intern - Internal Medicine , St. Barnabas Medical Centre
-              Livingston, NJ, USA (1998–1999)
-            </li>
-            <li>
-              Resident – Internal Medicine , St. Barnabas Medical Centre
-              Livingston, NJ USA (1999–2001)
-            </li>
-            <li>
-              Fellowship in Haematology and Oncology Caritas St. Elizabeth’s
-              Medical Centre Tufts University School of Medicine Boston MA USA
-              (2002–2005)
-            </li>
-            <li>
-              Chief fellow – Sub-speciality of Haematology and Oncology Caritas
-              St Elizabeth’s Medical Centre Tufts University School of Medicine
-              Boston MA USA (2002–2005)
-            </li>
-          </ul>
-
-          <h2 className="text-theme text-xl">Experience</h2>
-          <ul className="list-disc-default text-sm ps-4">
-            <li>Medical Oncologists Care Hospital Hyderabad</li>
-          </ul>
-
-          <h2 className="text-theme text-xl">Memberships</h2>
-          <ul className="list-disc-default text-sm ps-4">
-            <li>European Society of Medical Oncology</li>
-            <li>Indian Medical Association</li>
-          </ul>
-
-          <h2 className="text-theme text-xl">Research Presentation</h2>
-          <ul className="list-disc-default text-sm ps-4">
-            <li>
-              26th Annual meeting of American Society of Apheresis ASFA 2005
-              Plenary Session Safety and Efficacy of Peripheral Blood Progenitor
-              cell Mobilization and collection in Patients with Advanced
-              Coronary Heart Disease
-            </li>
-            <li>
-              46th Annual Meeting American Society Hematology ASH 2005 Practice
-              Forum The Business Practice The Evolving State Hematology Practice
-              Progress Challenges 2004 Advocacy Efforts
-            </li>
-            <li>
-              {" "}
-              Sinha S Schneider D Aish L Oo TH Morphologic heterogeneity Acute
-              Promyelocytic Leukemia Annual Research Day Caritas St Elizabeth’s
-              Med...
-            </li>
-          </ul>
-        </div>
-      </section>
-    );
-  };
+  const { doctorUrl } = useParams();
   const tabs = [
     { name: "About Us", href: "about" },
     { name: "Qualification", href: "qualification" },
@@ -154,11 +94,21 @@ const DoctorDetails = () => {
     });
   };
   const topHeight = `top[144px ${height}px]`;
+  const doctorDetails = useBlogData()?.doctors.filter(
+    (doctorDetail) => doctorDetail.urlname === doctorUrl
+  )[0];
+  const doctorBlogs = useBlogData()?.allblogs.filter(
+    (blog) => blog.doctorid === doctorDetails._id
+  );
   return (
     <div className="doctor-details">
+      {console.log(doctorDetails)}
       <div>
         <div ref={bannerRef} className="relative">
-          <img src={banner} className="w-full" />
+          <img
+            src={ASSET_URL + doctorDetails?.doctorbanner}
+            className="w-full"
+          />
           <div className="md:absolute right-[15%] top-[50%] md:transform md:-translate-y-1/2">
             <AppointmentFormDetail />
           </div>
@@ -200,10 +150,18 @@ const DoctorDetails = () => {
           <section>
             <div>
               <h1 className="text-black text-3xl font-bold mb-5">
-                Dr. Manasa Mynepally
+                Dr. {doctorDetails?.firstName + " " + doctorDetails?.lastName}
               </h1>
               <Heading text={"About us"} left={true} />
-              <p className="mb-5 text-content">
+              {/* <p className="mb-5 text-content"> */}
+              <FormatHtml
+                htmlString={`<p className="mb-5 text-content">${doctorDetails?.doctorabout?.replace(
+                  /\n/g,
+                  "</p>\n<p className='mb-5 text-content'>"
+                )}</p>`}
+              />
+              {/* </p> */}
+              {/* <p className="mb-5 text-content">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -238,7 +196,7 @@ const DoctorDetails = () => {
                 containing Lorem Ipsum passages, and more recently with desktop
                 publishing software like Aldus PageMaker including versions of
                 Lorem Ipsum.
-              </p>
+              </p> */}
             </div>
           </section>
         </div>
@@ -249,7 +207,11 @@ const DoctorDetails = () => {
         {/* qualification section  */}
         <div id="qualification" ref={(el) => (sectionsRef.current[1] = el)}>
           <section>
-            <Qualification />
+            <Qualifications
+              qualifications={doctorDetails?.education}
+              experience={doctorDetails?.experience}
+              extrainfo={doctorDetails?.extrainfo}
+            />
           </section>
         </div>
         {/* services section  */}
@@ -257,7 +219,10 @@ const DoctorDetails = () => {
           <section>
             <div>
               <Heading text={"SERVICES"} left={true} />
-              <DoctorServices speciality={"endo"} />
+              <DoctorServices
+                services={doctorDetails?.service}
+                speciality={"endo"}
+              />
             </div>
           </section>
         </div>
@@ -279,7 +244,10 @@ const DoctorDetails = () => {
           <section>
             <div className="detailPage-Blogs-Slider">
               <Heading text={"Blogs"} left={true} />
-              <BlogsSliderDetail card="blog" />
+              <BlogsSliderDetail
+                card="blog"
+                blogsData={doctorBlogs?.filter((blog) => blog.type === 0)}
+              />
             </div>
           </section>
         </div>
@@ -291,7 +259,10 @@ const DoctorDetails = () => {
                 Get to know the information regarding our healthcare aspects to
                 be able to get to better informed decisions. ..
               </p>
-              <BlogsSliderDetail card="videos" />
+              <BlogsSliderDetail
+                card="videos"
+                blogsData={doctorBlogs?.filter((blog) => blog.type === 1)}
+              />
             </div>
           </section>
         </div>

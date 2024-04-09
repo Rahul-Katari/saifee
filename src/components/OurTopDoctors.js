@@ -2,8 +2,10 @@ import uday from "../assets/images/doctors/uday-new.png";
 import manasa from "../assets/images/doctors/manasa-new.png";
 import { Link } from "react-router-dom";
 import MoreBtn from "./common/MoreBtn";
+import { ASSET_URL } from "../controller/config";
+import { useBlogData } from "../controller/blogDataContext";
 
-const doctorDetails = [
+const doctorDetailsStatic = [
   {
     doctor: "Manasa Mynepally",
     imgSrc: manasa,
@@ -23,6 +25,7 @@ const doctorDetails = [
 ];
 
 const OurTopDoctors = () => {
+  const doctorDetails = useBlogData()?.doctors;
   return (
     <div>
       <div className="md:mb-[350px] mb-[700px]">
@@ -40,24 +43,27 @@ const OurTopDoctors = () => {
           </div>
           <div className="absolute md:top-[180px] top-[210px] md:mx-16 mx-6">
             <div className="grid md:grid-cols-2 gap-10">
-              {doctorDetails.map((doctor, index) => {
+              {doctorDetails?.slice(0, 2).map((doctor, index) => {
                 return (
                   <div
                     key={index}
                     className="shadow-2xl p-5 rounded-xl flex flex-col bg-white "
                   >
-                    <img src={doctor.imgSrc} className="rounded-lg" />
+                    <img
+                      src={ASSET_URL + doctor?.imgsrc}
+                      className="rounded-lg"
+                    />
                     <div>
                       <h3 className="md:text-2xl text-xl font-semibold mt-4">
-                        Dr. {doctor.doctor}
+                        Dr. {doctor?.firstName + doctor?.lastName}
                       </h3>
-                      <p className="mt-4">{doctor.qualifications}</p>
-                      <p className="mb-4">{doctor.specialization}</p>
+                      <p className="mt-4">{doctor?.qualifications}</p>
+                      <p className="mb-4">{doctor?.designation}</p>
                       <MoreBtn
                         align={"end"}
                         btn={"primary"}
                         btnText={"View More"}
-                        href={doctor.detailHref}
+                        href={`/bestDoctorsDetails/${doctor?.urlname}`}
                         round={"full"}
                       />
                     </div>
