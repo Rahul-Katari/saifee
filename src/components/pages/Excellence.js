@@ -21,11 +21,21 @@ const Excellence = () => {
         <h1 className="uppercase text-theme text-3xl font-medium my-12 text-center highlight-border">
           endocrinology
         </h1>
-        <DoctorServices speciality={"endo"} services={servicesData} />
+        <DoctorServices
+          speciality={"endo"}
+          services={servicesData?.filter(
+            (service) => service.servicecategory === 1
+          )}
+        />
         <h1 className="uppercase text-theme text-3xl font-medium my-12 text-center highlight-border">
           general Surgery
         </h1>
-        <DoctorServices speciality={""} />
+        <DoctorServices
+          speciality={""}
+          services={servicesData?.filter(
+            (service) => service.servicecategory === 2
+          )}
+        />
       </div>
     </div>
   );

@@ -270,7 +270,7 @@ const DoctorServices = ({ speciality, services }) => {
       {services?.map((spec, index) => (
         <SpecialitiesCard
           serviceId={spec._id}
-          imgSrc={ASSET_URL + spec.service_img}
+          imgSrc={ASSET_URL + spec.service_url}
           key={spec._id}
           text1={spec.service_name}
           // text2={spec.text2}

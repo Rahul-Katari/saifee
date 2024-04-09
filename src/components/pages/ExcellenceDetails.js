@@ -1,7 +1,7 @@
 import banner from "../../assets/images/banners/excellence-details-banner.png";
 
 import { Tab, TabScreen, Tabs } from "react-tabs-scrollable";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BreadCrumb from "../common/BreadCrumb";
 import { Link, useParams } from "react-router-dom";
 import Accordion from "../Accordion";
@@ -26,12 +26,29 @@ const ExcellenceDetails = () => {
   }
   const servicesDetails = useServicesData()?.filter(
     (service) => service._id === serviceId
-  );
+  )[0];
   const toggleAccordion = (accordionName) => {
     setActiveAccordion(
       activeAccordion === accordionName ? null : accordionName
     );
   };
+  useEffect(() => {
+    if (servicesDetails) {
+      const breadCrumb = [
+        { href: "/", title: "home" },
+        { href: "/excellence", title: "center of excellence" },
+        {
+          href: `/excellenceDetails/${servicesDetails?._id}`,
+          title: servicesDetails?.service_name,
+        },
+      ];
+      setBreadcrumb(breadCrumb);
+      servicesDetails?.servicecategory === 1
+        ? setActiveAccordion("Endocrinology")
+        : setActiveAccordion("General Surgery");
+    }
+  }, [servicesDetails]);
+
   return (
     <div className="excellence-details">
       <div>
@@ -41,7 +58,11 @@ const ExcellenceDetails = () => {
       <section>
         <div className="grid md:grid-cols-8 max-w-7xl m-auto max-sm:m-4 max-sm:flex-col">
           <div className="md:col-span-2 max-sm:order-last">
-            <div className={`flex flex-col`}>
+            <div
+              className={`flex flex-col ${
+                servicesDetails?.servicecategory === 2 ? "flex-col-reverse" : ""
+              }`}
+            >
               <Accordion
                 title="Endocrinology"
                 accordionOpen={activeAccordion === "Endocrinology"}
@@ -53,6 +74,7 @@ const ExcellenceDetails = () => {
                     ?.map((service, index) => {
                       return (
                         <Link
+                          key={service._id}
                           className={`p-3 ${
                             service._id === serviceId ? "btn-theme" : ""
                           }  rounded-none hover:text-white hover:bg-gradient-to-r from-[#00637B] to-[#00A0C6]`}
@@ -76,6 +98,7 @@ const ExcellenceDetails = () => {
                     ?.map((service, index) => {
                       return (
                         <Link
+                          key={service._id}
                           className={`p-3 ${
                             service._id === serviceId ? "btn-theme" : ""
                           }  rounded-none hover:text-white hover:bg-gradient-to-r from-[#00637B] to-[#00A0C6]`}
