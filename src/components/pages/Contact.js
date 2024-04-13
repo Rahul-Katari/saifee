@@ -4,6 +4,7 @@ import { Switch } from "@headlessui/react";
 
 import banner from "../../assets/images/banners/contact.png";
 import doctor from "../../assets/images/doctor-cartoon.png";
+import ApiService from "../../controller/apiService";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -19,20 +20,11 @@ export default function Contact() {
     const data = Object.fromEntries(formData);
 
     try {
-      const response = await fetch("http://localhost:3000/submitcontact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const submitResponse = await ApiService.post("submitcontact", data);
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      if (!submitResponse.ok) {
+        throw new Error(`HTTP error! status: ${submitResponse.status}`);
       }
-
-      // const json = await response.json();
-      // console.log(json);
       window.alert("Your message has been sent successfully");
       window.location.reload();
     } catch (error) {
@@ -109,8 +101,8 @@ export default function Contact() {
                       class="ring-1 border-0 ring-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 placeholder:text-gray-400 dark:border-gray-600 dark:placeholder-gray-400  focus:ring-indigo-600"
                     >
                       <option selected>Choose a Speciality</option>
-                      <option value="endo">Endocrinology</option>
-                      <option value="general-surgery">General Surgery</option>
+                      <option value="1">Endocrinology</option>
+                      <option value="2">General Surgery</option>
                     </select>
                   </div>
                 </div>
