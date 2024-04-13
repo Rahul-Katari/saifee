@@ -29,6 +29,7 @@ const cards = [
     description2: "Consultant Endocrinologist & Diabetologist",
     timing1: "12:30PM - 2 PM (Mon-sat)",
     timing2: "6 PM - 9 PM (Mon-sat)",
+    href: "dr-sudha-sinha-best-medical-oncology",
   },
   {
     imgSrc: doctor,
@@ -36,6 +37,7 @@ const cards = [
     description1: "MS, FMAS, FIAGES, EFIAGES, FALS (ROBOTIC)",
     description2: "General and Laparoscopic Surgeon",
     timing1: "12:30PM - 2 PM (Mon-sat)",
+    href: "dr-deepak-koppaka-best-medical-oncologist",
   },
   {
     imgSrc: location,
@@ -117,6 +119,7 @@ const Footer = () => {
                   timing1={card.timing1}
                   timing2={card.timing2}
                   index={index}
+                  href={card.href}
                 />
               ))}
             </div>

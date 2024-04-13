@@ -1,3 +1,5 @@
+import { ASSET_URL } from "../../controller/config";
+import FormatHtml from "../FormatHtml";
 import MoreBtn from "../common/MoreBtn";
 
 const KnowMore = ({
@@ -8,12 +10,17 @@ const KnowMore = ({
   specialization,
   href,
 }) => {
+  const services = doctor?.service;
   return (
     <div className="overflow-hidden md:ps-8">
       <div className="px-6 lg:px-8">
         <div className="mx-auto md:grid max-w-2xl grid-cols-1 gap-x-4 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <div className="lg:col-span-2" data-aos="fade-right">
-            <img src={imgSrc} alt="Product screenshot" className="rounded-md" />
+            <img
+              src={ASSET_URL + doctor?.doc_profile}
+              alt="Product screenshot"
+              className="rounded-md"
+            />
           </div>
           <div className="max-sm:mt-4 lg:pr-8 lg:pt-4 lg:col-span-3">
             <div className="">
@@ -24,30 +31,26 @@ const KnowMore = ({
                 className="md:my-3 mt-2 md:text-4xl text-2xl font-normal tracking-tight text-[#025CAF] sm:text-6xl"
                 data-aos="fade-left"
               >
-                {doctor}
+                Dr. {doctor?.firstName + " " + doctor?.lastName}
               </p>
               <div>
-                <p className="font-medium py-1">{qualifications}</p>
+                <p className="font-medium py-1">{doctor?.designation}</p>
                 <p className="text-red-600 text-base md:text-xl">
                   {specialization}
                 </p>
               </div>
-              <p className="my-4 text-gray-600">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
-              </p>
-              <p className="my-4 text-gray-600">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
-              </p>
+              <FormatHtml
+                htmlString={`<p className="mb-5 text-content">${doctor?.doctorabout?.replace(
+                  /\n/g,
+                  "</p>\n<p className='mb-5 text-content'>"
+                )}</p>`}
+              />
               <div className="text-blue-900">
                 <p className="text-xl underline">Specialities</p>
                 <div className="text-sm">
                   <ul className="list-disc list-disc-default max-sm:mb-0 ps-4 grid grid-cols-2">
-                    {specialities.map((spec, index) => {
-                      return <li key={index}>{spec}</li>;
+                    {services?.map((spec, index) => {
+                      return <li key={index}>{spec.service_name}</li>;
                     })}
                   </ul>
                 </div>

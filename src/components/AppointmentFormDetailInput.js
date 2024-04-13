@@ -10,7 +10,8 @@ const AppointmentFormDetailInput = ({
   type,
   placeholder,
   value,
-  onChange,
+  handleChange,
+  name,
 }) => {
   return (
     <div className="p-1 border rounded-full flex">
@@ -33,7 +34,9 @@ const AppointmentFormDetailInput = ({
           type={type}
           placeholder={placeholder}
           value={value}
-          onChange={onChange}
+          name={name}
+          // onChange={(e) => handleChange(e.target.value)}
+          onChange={(e) => handleChange(e)}
         />
       </div>
     </div>

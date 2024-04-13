@@ -129,7 +129,7 @@ root.render(
             <Route path="/blogsDetail/:blogid" element={<BlogsDetail />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/patientsVisitors" element={<PatientsVisitors />} />
-            <Route path="/landing" element={<Landing />} />
+            <Route path="/landing/:doctorUrl" element={<Landing />} />
             <Route
               path="/bookAppointment"
               element={<AppointmentModalForm modal={false} />}

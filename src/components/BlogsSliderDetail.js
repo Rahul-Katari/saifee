@@ -90,7 +90,9 @@ function BlogsSliderDetail({ card, blogsData, testimonials }) {
           testimonials?.map((test, index) => {
             return (
               <div key={index}>
-                <PatientTestimonialsCard testimonial={test} />
+                <div>
+                  <PatientTestimonialsCard testimonial={test} />
+                </div>
               </div>
             );
           })}

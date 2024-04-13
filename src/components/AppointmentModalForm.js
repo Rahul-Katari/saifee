@@ -113,6 +113,7 @@ const AppointmentModalForm = ({ modal }) => {
             value={formData.appointmentDate}
             onChange={handleInputChange}
             className="w-full border p-2 rounded "
+            required
           />
           <input
             type="time"
@@ -137,6 +138,7 @@ const AppointmentModalForm = ({ modal }) => {
             onChange={handleInputChange}
             placeholder="Name"
             className="w-full border p-2 rounded "
+            required
           />
 
           <select

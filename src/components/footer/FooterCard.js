@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FooterCard = ({
   iconSrc,
@@ -10,6 +11,7 @@ const FooterCard = ({
   timing1,
   timing2,
   index,
+  href,
 }) => {
   return (
     <div
@@ -20,9 +22,17 @@ const FooterCard = ({
       <div className="bg-footer-highlight inline-block rounded-full p-2 text-white">
         <img src={iconSrc} className="h-7 w-7 m-1" />
       </div>
-      <div className="font-medium  text-base md:mt-4 md:highlight-border">
-        {title}
-      </div>
+      {href ? (
+        <Link to={`/landing/${href}`}>
+          <div className="font-medium text-base md:mt-4 md:highlight-border">
+            {title}
+          </div>
+        </Link>
+      ) : (
+        <div className="font-medium text-base md:mt-4 md:highlight-border">
+          {title}
+        </div>
+      )}
       <p className="text-gray-500 text-sm">{description1}</p>
       <p
         className={`${

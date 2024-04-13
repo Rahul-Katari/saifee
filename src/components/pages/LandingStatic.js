@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import banner from "../../assets/images/banners/landing.png";
 import best from "../../assets/images/landing/general-surgeon.png";
 import areas from "../../assets/images/landing/hexagon.png";
@@ -15,9 +15,6 @@ import quick from "../../assets/images/landing/guarantee/quick.png";
 import care from "../../assets/images/landing/guarantee/affordable.png";
 import SpecialitiesCard from "../home/SpecialitiesCard";
 import NeedHelp from "../banners/NeedHelp";
-import useApiData from "../../controller/useApiData";
-import { useBlogData } from "../../controller/blogDataContext";
-import { useEffect } from "react";
 const guarantee = [
   { imgSrc: advProc, text: "Advanced Procedure" },
   { imgSrc: shorterStay, text: "Shorter Hospital Stay" },
@@ -25,22 +22,7 @@ const guarantee = [
   { imgSrc: quick, text: "Quick Recovery" },
   { imgSrc: care, text: "Affordable Care" },
 ];
-
 const Landing = () => {
-  const { doctorUrl } = useParams();
-  const doctor = useBlogData()?.doctors.filter(
-    (doctorDetail) => doctorDetail.urlname === doctorUrl
-  )[0];
-  // const doctor = useBlogData()?.doctors.slice(0, 1)[0];
-  const doctorId = doctor?._id;
-  const services = doctor?.service;
-  const testimonials = useBlogData()?.reviews.filter(
-    (review) => review.doctorid === doctorId
-  );
-  const doctorBlogs = useBlogData()?.allblogs.filter(
-    (blog) => blog.doctorid === doctorId
-  );
-  useEffect(() => {}, [doctor]);
   return (
     <div>
       <div className="relative">
@@ -183,7 +165,7 @@ const Landing = () => {
         <NewAppointments />
       </section>
       <section>
-        <KnowMore doctor={doctor} />
+        <KnowMore />
       </section>
       <section>
         <div className="bg-banner relative flex justify-end relative">
@@ -264,7 +246,7 @@ const Landing = () => {
           <h2 className="text-3xl font-semibold text-[#025CAF] text-center mb-16">
             Service
           </h2>
-          <DoctorServices services={services} />
+          <DoctorServices />
         </div>
       </section>
       {/* testimonials start  */}
@@ -272,10 +254,7 @@ const Landing = () => {
         <div className="bg-banner py-12">
           <div className="max-w-6xl m-auto max-sm:mx-4">
             <Heading text={"Patient Testimonials"} left={true} />
-            <BlogsSliderDetail
-              card={"testimonial"}
-              testimonials={testimonials}
-            />
+            <BlogsSliderDetail card={"testimonial"} />
           </div>
         </div>
       </section>
@@ -283,10 +262,7 @@ const Landing = () => {
       <section>
         <div className="detailPage-Blogs-Slider max-w-6xl max-sm:mx-4 m-auto">
           <Heading text={"Blogs"} left={true} />
-          <BlogsSliderDetail
-            card={"blog"}
-            blogsData={doctorBlogs?.filter((blog) => blog.type === 0)}
-          />
+          <BlogsSliderDetail card={"blog"} />
         </div>
       </section>
       <section>
@@ -296,10 +272,7 @@ const Landing = () => {
             Get to know the information regarding our healthcare aspects to be
             able to get to better informed decisions. ..
           </p>
-          <BlogsSliderDetail
-            card={"videos"}
-            blogsData={doctorBlogs?.filter((blog) => blog.type === 1)}
-          />
+          <BlogsSliderDetail card={"videos"} />
         </div>
       </section>
       <NeedHelp />
