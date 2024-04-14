@@ -103,6 +103,20 @@ const DoctorDetails = () => {
   const testimonials = useBlogData()?.reviews.filter(
     (review) => review.doctorid === doctorDetails._id
   );
+  if (window.innerWidth <= 578) {
+    const generalSurgeon = document.getElementsByClassName("generalSurgeon")[0];
+    const endocrinologist = document.getElementsByClassName(
+      "endocrinologist"
+    )[0];
+
+    if (doctorDetails?.department === "1") {
+      generalSurgeon?.classList.add("hidden");
+      endocrinologist?.classList.remove("hidden");
+    } else {
+      endocrinologist?.classList.add("hidden");
+      generalSurgeon?.classList.remove("hidden");
+    }
+  }
   return (
     <div className="doctor-details">
       {console.log(doctorDetails)}

@@ -39,7 +39,7 @@ function SamplePrevArrow(props) {
 
 export default function HomeBannerSlider() {
   var settings = {
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 3000,
     infinite: true,
     speed: 500,
@@ -55,6 +55,24 @@ export default function HomeBannerSlider() {
         },
       },
     ],
+    afterChange: (index) => {
+      if (window.innerWidth <= 578) {
+        const generalSurgeon = document.getElementsByClassName(
+          "generalSurgeon"
+        )[0];
+        const endocrinologist = document.getElementsByClassName(
+          "endocrinologist"
+        )[0];
+
+        if (index % 2 === 0) {
+          generalSurgeon.classList.add("hidden");
+          endocrinologist.classList.remove("hidden");
+        } else {
+          endocrinologist.classList.add("hidden");
+          generalSurgeon.classList.remove("hidden");
+        }
+      }
+    },
   };
   return (
     <Slider {...settings}>

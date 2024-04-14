@@ -6,6 +6,7 @@ const AppointmentInput = ({
   inputType,
   selectType,
   onChange,
+  required,
 }) => {
   if (inputType === "select") {
     return (
@@ -13,8 +14,8 @@ const AppointmentInput = ({
         <select
           name={name}
           className="p-2 px-5 rounded-full w-full text-sm"
-          required
           onChange={onChange}
+          required={required}
         >
           <option value="" disabled selected>
             Select an {placeholder}
@@ -41,7 +42,7 @@ const AppointmentInput = ({
           name={name}
           placeholder={placeholder}
           className="p-2 px-5 rounded-full w-full text-sm"
-          required
+          required={required}
         />
       </div>
     );

@@ -12,6 +12,7 @@ import FooterBg from "../../assets/images/footer/footer-bg.png";
 import { useLocation } from "react-router-dom";
 import NewAppointments from "../banners/NewAppointments";
 import Topscroll from "../common/TopScroll";
+import { useBlogData } from "../../controller/blogDataContext";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -29,7 +30,6 @@ const cards = [
     description2: "Consultant Endocrinologist & Diabetologist",
     timing1: "12:30PM - 2 PM (Mon-sat)",
     timing2: "6 PM - 9 PM (Mon-sat)",
-    href: "dr-sudha-sinha-best-medical-oncology",
   },
   {
     imgSrc: doctor,
@@ -37,7 +37,6 @@ const cards = [
     description1: "MS, FMAS, FIAGES, EFIAGES, FALS (ROBOTIC)",
     description2: "General and Laparoscopic Surgeon",
     timing1: "12:30PM - 2 PM (Mon-sat)",
-    href: "dr-deepak-koppaka-best-medical-oncologist",
   },
   {
     imgSrc: location,
@@ -55,6 +54,7 @@ const styles = {
 const Footer = () => {
   const location = useLocation();
   const currentUrl = location.pathname;
+  const doctors = useBlogData()?.doctors;
   return (
     <div>
       <Topscroll />
@@ -119,7 +119,7 @@ const Footer = () => {
                   timing1={card.timing1}
                   timing2={card.timing2}
                   index={index}
-                  href={card.href}
+                  href={doctors ? doctors[index]?.urlname : ""}
                 />
               ))}
             </div>

@@ -9,6 +9,7 @@ import "../assets/styles/slider.css";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 
 import KnowMore from "./home/KnowMore";
+import { useBlogData } from "../controller/blogDataContext";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -72,6 +73,7 @@ const udaySpecs = [
 ];
 
 export default function KnowAboutSlider() {
+  const doctors = useBlogData()?.doctors;
   var settings = {
     // autoplay: true,
     autoplaySpeed: 5000,
@@ -92,7 +94,14 @@ export default function KnowAboutSlider() {
   };
   return (
     <Slider {...settings}>
-      <div>
+      {doctors?.map((doctor) => {
+        return (
+          <div>
+            <KnowMore doctor={doctor} />
+          </div>
+        );
+      })}
+      {/* <div>
         <KnowMore
           doctor="Dr. Manasa Mynepally"
           imgSrc={doctor}
@@ -151,7 +160,7 @@ export default function KnowAboutSlider() {
           specialization={"General and Laparoscopic Surgeon"}
           href="/bestDoctorsDetailsUday"
         />
-      </div>
+      </div> */}
     </Slider>
   );
 }

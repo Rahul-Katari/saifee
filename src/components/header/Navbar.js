@@ -64,8 +64,13 @@ const Navbar = () => {
               <div className="py-2 bg-[#046AA9] text-center text-sm">
                 Contact Number: <a href="tel:+917340040097">+91 73400 40097 </a>
               </div>
-              <div className="py-2 text-center bg-gradient-to-r from-[#07879A] to-[#97c7ce] text-sm">
-                Best Endocrinologist in hyderabad
+              <div className="">
+                <div className="py-2 text-center bg-gradient-to-r from-[#07879A] to-[#97c7ce] text-sm endocrinologist transform fade-left">
+                  Best Endocrinologist in hyderabad
+                </div>
+                <div className="py-2 text-center bg-gradient-to-r from-[#07879A] to-[#97c7ce] text-sm generalSurgeon transform hidden fade-left">
+                  Best General Surgeon in hyderabad
+                </div>
               </div>
             </div>
             <div className="relative flex md:h-16 items-center justify-between p-2">

@@ -29,11 +29,10 @@ const AppointmentSchedule = () => {
     try {
       const submitResponse = await ApiService.post("submitcontact", data);
 
-      if (!submitResponse.ok) {
-        throw new Error(`HTTP error! status: ${submitResponse.status}`);
-      }
-      window.alert("Your message has been sent successfully");
-      window.location.reload();
+      if (submitResponse.data.result.status === 200) {
+        window.alert(submitResponse.data.result.message);
+        window.location.reload();
+      } else window.alert("form not submitted");
     } catch (error) {
       console.error(error);
     }
@@ -68,23 +67,32 @@ const AppointmentSchedule = () => {
           </div>
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-              <AppointmentInput name={"firstname"} placeholder={"First Name"} />
+              <AppointmentInput
+                name={"firstname"}
+                placeholder={"First Name"}
+                required={"required"}
+              />
               <AppointmentInput name={"lastName"} placeholder={"Last Name"} />
               <AppointmentInput name={"email"} placeholder={"Email Id"} />
               <AppointmentInput
                 name={"phoneNumber"}
                 placeholder={"Phone No."}
+                required={"required"}
               />
               <AppointmentInput
+                name={"speciality"}
                 placeholder={"Speciality"}
                 inputType={"select"}
                 selectType={"speciality"}
                 onChange={handleSpecialityChange}
+                required={"required"}
               />
               <AppointmentInput
+                name={"doctor"}
                 placeholder={"Doctor"}
                 inputType={"select"}
                 selectType={filteredDoctors}
+                required={"required"}
               />
               <textarea
                 placeholder="Type Message"

@@ -18,15 +18,21 @@ const Header = () => {
     }
   }, [pathname]);
   return (
-    <header className="container shadow-lg md:relative sticky top-0 bg-white z-[1]">
-      <div className="flex flex-shrink-0 items-center w-16 md:w-24 absolute top-[7%] left-[4%] md:top-[15%] md:left-[2%]">
+    <header className="container md:grid grid-cols-12 shadow-lg md:relative sticky top-0 bg-white z-[1]">
+      <div className="flex col-span-2 justify-center items-center">
         <Link to={"/"} className="max-sm:hidden">
-          <img className="w-100 h-100" src={logo} alt="Your Company" />
+          <img
+            className="w-100 h-100 w-16 md:w-24"
+            src={logo}
+            alt="Your Company"
+          />
         </Link>
       </div>
-      <TopBanner />
-      <Navbar />
-      <SidebarButtons />
+      <div className="col-span-10">
+        <TopBanner />
+        <Navbar />
+        <SidebarButtons />
+      </div>
     </header>
   );
 };

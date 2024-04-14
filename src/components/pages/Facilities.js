@@ -4,7 +4,7 @@ import "react-tabs-scrollable/dist/rts.css";
 import banner from "../../assets/images/banners/facilities.png";
 
 const Facilities = () => {
-  const [activeTab, setActiveTab] = React.useState(0);
+  const [activeTab, setActiveTab] = React.useState(1);
   const onTabClick = (e, index) => {
     setActiveTab(index);
   };

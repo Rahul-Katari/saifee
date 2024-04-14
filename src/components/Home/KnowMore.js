@@ -2,14 +2,7 @@ import { ASSET_URL } from "../../controller/config";
 import FormatHtml from "../FormatHtml";
 import MoreBtn from "../common/MoreBtn";
 
-const KnowMore = ({
-  doctor,
-  imgSrc,
-  specialities,
-  qualifications,
-  specialization,
-  href,
-}) => {
+const KnowMore = ({ doctor }) => {
   const services = doctor?.service;
   return (
     <div className="overflow-hidden md:ps-8">
@@ -36,7 +29,7 @@ const KnowMore = ({
               <div>
                 <p className="font-medium py-1">{doctor?.designation}</p>
                 <p className="text-red-600 text-base md:text-xl">
-                  {specialization}
+                  {/* {specialization} */}
                 </p>
               </div>
               <FormatHtml
@@ -61,7 +54,7 @@ const KnowMore = ({
         <MoreBtn
           btn={"theme"}
           btnText={"Read More"}
-          href={href}
+          href={`/bestDoctorsDetails/${doctor?.urlname}`}
           align={"end"}
         />
       </div>

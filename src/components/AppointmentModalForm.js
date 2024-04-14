@@ -191,6 +191,7 @@ const AppointmentModalForm = ({ modal }) => {
               })}
             </select>
             <input
+              id="appointmentDate"
               type="date"
               name="appointmentDate"
               value={formData.selectedDate}
