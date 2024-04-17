@@ -1,21 +1,22 @@
 import { Link } from "react-router-dom";
 
-const HealthCheckCard = ({ packageName, imgSrc }) => {
+const HealthCheckCard = ({ healthPackage }) => {
   return (
     <div className="bg-banner p-4">
       <div className="mx-auto  md:flex  space-4">
         <div className="flex-shrink-0">
           <img
-            src={imgSrc}
-            alt="ChitChat Logo"
+            src={healthPackage.package_imgSrc}
+            alt="health pckage image"
             className="max-sm:h-[150px] w-full object-cover"
           />
         </div>
         <div>
           <div className="md:text-xl mt-3 font-medium text-[#0469A9]">
-            {packageName}
+            {healthPackage?.package_name}
           </div>
           <ul className="list-disc-default text-gray-500 text-xs ps-4 mb-0">
+            <li>{healthPackage.package_description}</li>
             <li>Fasting Plasma Glucose - FPG</li>
             <li>Post Prandial Plasma Glucose - PPPG</li>
             <li>HbA1C</li>
@@ -33,7 +34,7 @@ const HealthCheckCard = ({ packageName, imgSrc }) => {
       </div>
       <div className="flex justify-end">
         <Link
-          to={"/healthCheckUpForm"}
+          to={`/healthCheckUpForm/${healthPackage._id}`}
           className="mt-2 md:px-12 py-2 border rounded-md btn-primary max-sm:text-xs"
         >
           Book Now

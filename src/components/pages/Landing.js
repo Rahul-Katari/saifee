@@ -15,7 +15,6 @@ import quick from "../../assets/images/landing/guarantee/quick.png";
 import care from "../../assets/images/landing/guarantee/affordable.png";
 import SpecialitiesCard from "../home/SpecialitiesCard";
 import NeedHelp from "../banners/NeedHelp";
-import useApiData from "../../controller/useApiData";
 import { useBlogData } from "../../controller/blogDataContext";
 import { useEffect } from "react";
 const guarantee = [

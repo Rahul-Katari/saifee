@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import banner from "../../assets/images/banners/excellence-banner.png";
 import DoctorServices from "../DoctorServices";
-import useApiData from "../../controller/useApiData";
 import { useServicesData } from "../../controller/servicesDataContext";
 
 const Excellence = () => {

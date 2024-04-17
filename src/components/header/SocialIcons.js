@@ -7,10 +7,19 @@ import {
 } from "@tabler/icons-react";
 
 const icons = [
-  { name: IconBrandFacebookFilled, href: "https://www.facebook.com" },
-  { name: IconBrandInstagram, href: "https://www.instagram.com" },
-  { name: IconBrandTwitterFilled, href: "https://www.twitter.com" },
-  { name: IconBrandLinkedin, href: "https://www.linkedin.com" },
+  {
+    name: IconBrandFacebookFilled,
+    href: "https://www.facebook.com/drmanasamynepally",
+  },
+  {
+    name: IconBrandInstagram,
+    href: "https://www.instagram.com/drmanasamynepally/",
+  },
+  { name: IconBrandTwitterFilled, href: "https://twitter.com/manasamynepally" },
+  {
+    name: IconBrandLinkedin,
+    href: "https://www.linkedin.com/company/96949237/admin/feed/posts/",
+  },
   { name: IconBrandYoutube, href: "https://www.youtube.com" },
 ];
 

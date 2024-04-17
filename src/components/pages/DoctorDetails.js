@@ -171,12 +171,18 @@ const DoctorDetails = () => {
               </h1>
               <Heading text={"About us"} left={true} />
               {/* <p className="mb-5 text-content"> */}
-              <FormatHtml
-                htmlString={`<p className="mb-5 text-content">${doctorDetails?.doctorabout?.replace(
-                  /\n/g,
-                  "</p>\n<p className='mb-5 text-content'>"
-                )}</p>`}
-              />
+              <div className="doctorAbout">
+                {doctorDetails ? (
+                  <FormatHtml
+                    htmlString={`<p className="mb-5 text-content">${doctorDetails?.doctorabout?.replace(
+                      /\n/g,
+                      "</p>\n<p className='mb-5 text-content'>"
+                    )}</p>`}
+                  />
+                ) : (
+                  ""
+                )}
+              </div>
             </div>
           </section>
         </div>

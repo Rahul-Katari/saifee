@@ -136,7 +136,10 @@ root.render(
             />
             <Route path="/videos" element={<Videos />} />
             <Route path="/healthCheckup" element={<HealthCheckup />} />
-            <Route path="/healthCheckupForm" element={<HealthCheckUpForm />} />
+            <Route
+              path="/healthCheckupForm/:packageId"
+              element={<HealthCheckUpForm />}
+            />
             <Route
               path="/excellenceContent"
               element={<ExcellenceContentTabs />}

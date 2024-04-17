@@ -3,9 +3,6 @@ import banner from "../../assets/images/banners/patients-visitors.png";
 import AppointmentSchedule from "../AppointmentSchedule";
 import { useEffect, useState } from "react";
 import ManasaVideos from "../ManasaVideos";
-import UdayVideos from "../UdayVideos";
-import PatientTestimonialVideos from "../PatientTestimonialVideos";
-import useApiData from "../../controller/useApiData";
 import { useBlogData } from "../../controller/blogDataContext";
 
 const breadCrumb = [

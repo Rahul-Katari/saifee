@@ -7,12 +7,12 @@ function decodeHTML(html) {
 }
 
 const FormatHtml = ({ htmlString }) => {
+  console.log(htmlString);
   const [decodedHTML, setDecodedHTML] = useState("");
 
   useEffect(() => {
     // Assuming you have fetched the HTML content from the API and stored it in bloghtml state
     let html = htmlString?.replace(/['"]/g, "").replace(/\\\"/g, '"');
-
     const decoded = decodeHTML(html);
     setDecodedHTML(decoded);
   }, []);

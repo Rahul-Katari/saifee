@@ -27,7 +27,7 @@ const Qualifications = ({
             );
           })}
         </ul>
-        <FormatHtml htmlString={extrainfo} />
+        {extrainfo ? <FormatHtml htmlString={extrainfo} /> : ""}
       </div>
     </section>
   );

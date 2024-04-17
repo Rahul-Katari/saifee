@@ -27,5 +27,17 @@
         @apply text-sm
     }
 
+    #qualification h3 {
+        @apply text-theme text-xl;
+    }
+
+    #qualification ul {
+        @apply list-disc my-3 ps-4 text-sm;
+    }
+
+    #about .doctorAbout p {
+        @apply mb-2;
+    }
+
     /* ... */
 }

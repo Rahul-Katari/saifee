@@ -3,7 +3,6 @@ import banner from "../../assets/images/banners/excellence-details-banner.png";
 import BreadCrumb from "../common/BreadCrumb";
 import BlogListCard from "../BlogListCard";
 import { useState } from "react";
-import useApiData from "../../controller/useApiData";
 import { useBlogData } from "../../controller/blogDataContext";
 
 const Blogs = () => {
