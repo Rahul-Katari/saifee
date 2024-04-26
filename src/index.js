@@ -27,10 +27,10 @@ import HealthCheckup from "./components/pages/HealthCheckUp";
 import ExcellenceContentTabs from "./components/pages/ExcellenceContentTabs";
 import HealthCheckUpForm from "./components/pages/healthCheckUpForm";
 import AppointmentModalForm from "./components/AppointmentModalForm";
-import DoctorDetailsManasa from "./components/pages/DoctorDetailManasa";
-import DoctorDetailsUday from "./components/pages/DoctorDetailUday";
 import { BlogDataProvider } from "./controller/blogDataContext";
 import { ServicesDataProvider } from "./controller/servicesDataContext";
+import PrivacyPolicy from "./components/pages/PrivacyPolicy";
+import FaqS from "./components/pages/faqs";
 
 const appRouter = createBrowserRouter([
   {
@@ -117,14 +117,14 @@ root.render(
               element={<DoctorDetails />}
             />
             <Route path="/bestDoctorsDetails" element={<DoctorDetails />} />
-            <Route
+            {/* <Route
               path="/bestDoctorsDetailsManasa"
               element={<DoctorDetailsManasa />}
             />
             <Route
               path="/bestDoctorsDetailsUday"
               element={<DoctorDetailsUday />}
-            />
+            /> */}
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/blogsDetail/:blogid" element={<BlogsDetail />} />
             <Route path="/careers" element={<Careers />} />
@@ -144,6 +144,8 @@ root.render(
               path="/excellenceContent"
               element={<ExcellenceContentTabs />}
             />
+            <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+            <Route path="/faqs" element={<FaqS />} />
           </Route>
           {/* Additional top-level routes */}
           <Route path="/about" element={<About />} />

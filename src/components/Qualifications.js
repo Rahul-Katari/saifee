@@ -13,7 +13,9 @@ const Qualifications = ({
         <Heading text={"Qualification"} left={true} />
         <ul className="list-disc-default text-sm ps-4">
           {qualifications?.map((qual, index) => {
-            return <li>{`${qual?.degree}, ${qual.institution}`}</li>;
+            return (
+              <li key={index}>{`${qual?.degree}, ${qual.institution}`}</li>
+            );
           })}
         </ul>
 
@@ -21,7 +23,7 @@ const Qualifications = ({
         <ul className="list-disc-default text-sm ps-4">
           {experience?.map((exp, index) => {
             return (
-              <li key={exp?._id}>
+              <li key={index}>
                 {exp.jobposition + " " + exp.company + exp.location}
               </li>
             );

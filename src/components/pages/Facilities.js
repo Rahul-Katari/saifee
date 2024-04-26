@@ -4,7 +4,7 @@ import "react-tabs-scrollable/dist/rts.css";
 import banner from "../../assets/images/banners/facilities.png";
 
 const Facilities = () => {
-  const [activeTab, setActiveTab] = React.useState(1);
+  const [activeTab, setActiveTab] = React.useState(0);
   const onTabClick = (e, index) => {
     setActiveTab(index);
   };
@@ -21,7 +21,7 @@ const Facilities = () => {
           hideNavBtnsOnMobile={false}
         >
           <Tab className="rounded flex items-center gap-x-4 text-sm">
-            <div>Facilities & Services</div>
+            Facilities & Services
           </Tab>
           <Tab className="rounded flex items-center gap-x-4 text-sm">
             Diagnostic & Therapeutic

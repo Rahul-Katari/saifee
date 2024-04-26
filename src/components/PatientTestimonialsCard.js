@@ -3,7 +3,7 @@ import quote from "../assets/images/landing/quote.png";
 
 function PatientTestimonialsCard({ testimonial }) {
   return (
-    <div className="bg-[#07879A] p-8 rounded-lg text-white max-w-sm m-6">
+    <div className="text-white">
       <img src={quote} />
       <p className=" leading-snug my-4 line-clamp-[6]">{testimonial.text}</p>
       <p className="text-sm">{testimonial.name}</p>

@@ -13,6 +13,7 @@ import { useLocation } from "react-router-dom";
 import NewAppointments from "../banners/NewAppointments";
 import Topscroll from "../common/TopScroll";
 import { useBlogData } from "../../controller/blogDataContext";
+import { useEffect } from "react";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -21,6 +22,8 @@ const quickLinks = [
   { name: "Consult Our Best Doctors", href: "/bestdoctors" },
   { name: "Facilities", href: "/facilities" },
   { name: "Contact Us", href: "/contact" },
+  { name: "Privacy Policy", href: "/privacyPolicy" },
+  { name: "FAQ's", href: "/faqs" },
 ];
 const cards = [
   {
@@ -30,6 +33,7 @@ const cards = [
     description2: "Consultant Endocrinologist & Diabetologist",
     timing1: "12:30PM - 2 PM (Mon-sat)",
     timing2: "6 PM - 9 PM (Mon-sat)",
+    hrefName: "Best Endocrinologist in Hyderabad",
   },
   {
     imgSrc: doctor,
@@ -37,6 +41,7 @@ const cards = [
     description1: "MS, FMAS, FIAGES, EFIAGES, FALS (ROBOTIC)",
     description2: "General and Laparoscopic Surgeon",
     timing1: "12:30PM - 2 PM (Mon-sat)",
+    hrefName: "Best General Surgeon in Hyderabad",
   },
   {
     imgSrc: location,
@@ -54,7 +59,8 @@ const styles = {
 const Footer = () => {
   const location = useLocation();
   const currentUrl = location.pathname;
-  const doctors = useBlogData()?.doctors;
+  const doctors = useBlogData()?.doctors.slice(0, 2);
+  useEffect(() => {}, [doctors]);
   return (
     <div>
       <Topscroll />
@@ -94,14 +100,14 @@ const Footer = () => {
             <div className="flex justify-center items-center mt-5">
               <div className="flex items-center">
                 <div
-                  class="border-b-2 border-dashed pr-4 md:w-[150px] border-highlight"
+                  className="border-b-2 border-dashed pr-4 md:w-[150px] border-highlight"
                   data-aos="fade-right"
                 ></div>
               </div>
               <h1 className="uppercase text-center text-2xl px-8">Reach Us</h1>
               <div className="flex items-center">
                 <div
-                  class="border-b-2 border-dashed pr-4 md:w-[150px] border-highlight"
+                  className="border-b-2 border-dashed pr-4 md:w-[150px] border-highlight"
                   data-aos="fade-left"
                 ></div>
               </div>
@@ -120,6 +126,7 @@ const Footer = () => {
                   timing2={card.timing2}
                   index={index}
                   href={doctors ? doctors[index]?.urlname : ""}
+                  hrefName={card.hrefName}
                 />
               ))}
             </div>
@@ -128,7 +135,7 @@ const Footer = () => {
                 <SocialIcons space={4} />
               </div>
               <div className="flex items-center">
-                <div class="md:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
+                <div className="md:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
               </div>
               <div className="telephone-footer-link">
                 <a
@@ -143,7 +150,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center">
-                <div class="md:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
+                <div className="md:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
               </div>
               <div>
                 <a

@@ -1,6 +1,5 @@
 import React from "react";
 import MoreBtn from "./common/MoreBtn";
-import jobCard from "../assets/images/job.png";
 import CareerForm from "./pages/CareerForm";
 
 const CareerCard = ({ career }) => {

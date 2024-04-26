@@ -3,7 +3,7 @@ import Profile from "../../assets/images/home/profile.png";
 
 const TestimonialCardHome = ({ testimonial }) => {
   return (
-    <div className="md:p-6 p-3 md:py-10 rounded-lg shadow-lg bg-white m-4">
+    <div className="">
       <div className="flex items-center">
         <img
           src={testimonial.image} // Replace with your actual profile picture URL

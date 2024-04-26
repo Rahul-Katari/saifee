@@ -1,8 +1,8 @@
 import banner from "../../assets/images/banners/excellence-details-banner.png";
 import BreadCrumb from "../common/BreadCrumb";
-import latestBlog from "../../assets/images/latest-blogs.png";
 import calender from "../../assets/images/calender-blog.png";
 import profile from "../../assets/images/profile.png";
+import latestBlog from "../../assets/images/latest-blogs.png";
 import { useParams } from "react-router-dom";
 import { useBlogData } from "../../controller/blogDataContext";
 import { ASSET_URL } from "../../controller/config";

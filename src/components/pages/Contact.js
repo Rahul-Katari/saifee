@@ -60,13 +60,7 @@ export default function Contact() {
           <h3 className="text-xl font-semibold text-theme mb-8 highlight-border highlight-border-left">
             Contact Us
           </h3>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,{" "}
-          </p>
+          <p>Your Path to Health Starts Here.</p>
           <div>
             <form
               onSubmit={handleSubmit}
@@ -112,13 +106,13 @@ export default function Contact() {
                 </div>
                 <div>
                   <div>
-                    {/* <label for="speciality" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> */}
+                    {/* <label for="speciality" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> */}
                     <select
                       name="speciality"
                       required
                       onChange={handleSpecialityChange}
                       id="speciality"
-                      class="ring-1 border-0 ring-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 placeholder:text-gray-400 dark:border-gray-600 dark:placeholder-gray-400  focus:ring-indigo-600"
+                      className="ring-1 border-0 ring-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 placeholder:text-gray-400 dark:border-gray-600 dark:placeholder-gray-400  focus:ring-indigo-600"
                     >
                       <option value="">-Select Speciality-</option>
                       <option value="1">Endocrinology</option>
@@ -132,7 +126,7 @@ export default function Contact() {
                       name="doctor"
                       required
                       id="doctor"
-                      class="border-0 ring-gray-300 ring-1 text-gray-900 text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 placeholder:text-gray-400 dark:border-gray-600 dark:placeholder-gray-400   focus:ring-indigo-600"
+                      className="border-0 ring-gray-300 ring-1 text-gray-900 text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 placeholder:text-gray-400 dark:border-gray-600 dark:placeholder-gray-400   focus:ring-indigo-600"
                     >
                       <option value="">-Select Doctor-</option>
                       {filteredDoctors?.map((doctor) => {

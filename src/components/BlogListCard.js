@@ -1,13 +1,16 @@
 import React from "react";
-import ListImg from "../assets/images/blog-list-card.png";
-import Avatar from "../assets/images/venkat.png";
 import { Link } from "react-router-dom";
 import { ASSET_URL } from "../controller/config";
 import DateFormat from "./DateFormat";
+import { useBlogData } from "../controller/blogDataContext";
 
 const BlogListCard = ({ blogData }) => {
+  const doctorData = useBlogData()?.doctors.filter(
+    (doctor) => doctor._id == blogData.doctorid
+  )[0];
   return (
     <div className="bg-white p-3 rounded-lg shadow-md m-4 flex flex-col justify-between">
+      {console.log(doctorData)}
       <div>
         <img
           // src={ListImg}
@@ -31,8 +34,14 @@ const BlogListCard = ({ blogData }) => {
       </div>
       <div className="flex items-center mt-4 justify-between">
         {/* <div className="flex items-center"> */}
-        <img src={Avatar} alt="Venkat" className="w-8 h-8 rounded-full mr-2" />
-        <p className="text-gray-600 truncate">{blogData?.doctorid}</p>
+        <img
+          src={ASSET_URL + doctorData?.imgsrc}
+          alt="blog creator"
+          className="w-8 h-8 rounded-full mr-2 object-cover"
+        />
+        <p className="text-gray-600 truncate">
+          {doctorData?.firstName + " " + doctorData?.lastName}
+        </p>
         {/* </div> */}
         <p className="text-gray-600 ml-2 text-xs text-nowrap">
           <DateFormat date={blogData?.createdAt} />

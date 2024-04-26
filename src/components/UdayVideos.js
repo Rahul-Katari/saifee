@@ -4,9 +4,9 @@ const UdayVideos = () => {
       className="rounded-lg w-full h-[300px]"
       src="https://www.youtube.com/embed/4fKBYArjYHI?si=8YAhPCaOLo5mU4xp"
       title="YouTube video player"
-      frameborder="0"
+      frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
+      allowFullScreen
     ></iframe>
   );
 };

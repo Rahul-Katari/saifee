@@ -139,3 +139,36 @@ input#appointmentDate::-webkit-calendar-picker-indicator {
   top: 0;
   width: auto;
 }
+
+.slick-track {
+  display: flex !important;
+}
+
+
+
+.slick-slide {
+  height: inherit !important;
+}
+
+.slick-slide>div:first-child {
+
+  height: 100%;
+
+}
+
+#detailsTestimonials .slick-slide>div:first-child {
+  background-color: rgb(7 135 154 / var(--tw-bg-opacity));
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  padding: 2rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+#homeTestimonials .slick-slide>div:first-child {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1.5rem;
+}

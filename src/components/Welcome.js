@@ -24,36 +24,21 @@ const Welcome = ({ img, title }) => {
                 {title}
               </p>
               <p className="md:mt-6 text-gray-600">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset
-                sheetscontaining Lorem Ipsum passages, and more recently with
-                desktop publishing software like Aldus PageMaker including
-                versions of Lorem Ipsum.
+                At Dr. Manasa Hospital, our promise is simple: to walk beside
+                you every step of your healing journey with unwavering
+                dedication and compassion.
               </p>
               <p className="my-4  text-gray-600">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting,
+                We're not just here to treat illnesses; we're here to understand
+                your concerns, ease your worries, and celebrate your victories.
+                Your health and well-being are our top priorities, and we'll
+                stop at nothing to ensure you receive the exceptional care you
+                deserve.
               </p>
               <p className=" text-gray-600">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Let's conquer challenges together, embrace hope, and pave the
+                way to a brighter, healthier tomorrow. You're not alone—we're
+                here for you, always.
               </p>
             </div>
           </div>

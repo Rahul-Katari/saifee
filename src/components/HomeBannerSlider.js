@@ -7,7 +7,7 @@ import "../assets/styles/slider.css";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 
 import uday from "../assets/images/home/banners/uday-banner.jpg";
-import manasa from "../assets/images/home/banners/manasa-banner.png";
+import manasa from "../assets/images/home/banners/manasa-banner.jpg";
 import manasaMobile from "../assets/images/home/banners/mobile/manasa.png";
 import udayMobile from "../assets/images/home/banners/mobile/uday.png";
 

@@ -10,15 +10,6 @@ import card3 from "../../assets/images/home/health-package.png";
 import card4 from "../../assets/images/home/online-consultancy.png";
 import card5 from "../../assets/images/home/book-lab-test.png";
 
-import spec1 from "../../assets/images/specialities/endocrinology/Thyroid-Treatments.png";
-import spec2 from "../../assets/images/specialities/endocrinology/Diabetes-1 Diabetes 2 Diabetes.png";
-import spec3 from "../../assets/images/specialities/endocrinology/Menopause.png";
-import spec4 from "../../assets/images/specialities/endocrinology/Pituitary-Disorders.png";
-import spec5 from "../../assets/images/specialities/endocrinology/Osteoporosis.png";
-import spec6 from "../../assets/images/specialities/endocrinology/Adrenal-Conditions.png";
-import spec7 from "../../assets/images/specialities/endocrinology/Endocrine-Cancers.png";
-import spec8 from "../../assets/images/specialities/endocrinology/Endocrine Related-Heart Conditions.png";
-
 import SpecialitiesCard from "./SpecialitiesCard";
 import cure from "../../assets/images/home/comm-to-cure.png";
 import CommittedCureTabs from "./CommittedCureTabs";
@@ -42,36 +33,13 @@ import { useBlogData } from "../../controller/blogDataContext";
 import DoctorServices from "../DoctorServices";
 import { useServicesData } from "../../controller/servicesDataContext";
 
-const bannerCardsData = [
-  { imgSrc: card1, title1: "Book Doctor", title2: "Appointment" },
-  { imgSrc: card2, title1: "Find Your", title2: "Doctors" },
-  { imgSrc: card3, title1: "Health", title2: "Package" },
-  { imgSrc: card4, title1: "Online", title2: "Consultancy" },
-  { imgSrc: card5, title1: "Book Lab", title2: "Test" },
-];
-const specialitiesData = [
-  { id: 0, imgSrc: spec1, text1: "Thyroid Treatments" },
-  { id: 1, imgSrc: spec2, text1: "Diabetes", text2: "Diabetes - 1 & 2" },
-  { id: 2, imgSrc: spec3, text1: "Menopause" },
-  { id: 3, imgSrc: spec4, text1: "Pituitary Disorders" },
-  { id: 4, imgSrc: spec5, text1: "Osteoporosis" },
-  { id: 5, imgSrc: spec6, text1: "Adrenal Conditions" },
-  { id: 6, imgSrc: spec7, text1: "Endocrine Cancers" },
-  {
-    id: 7,
-    imgSrc: spec8,
-    text1: "Endocrine-Related",
-    text2: "Heart Conditions",
-  },
-];
-
 const Home = () => {
   const blogs = useBlogData()?.allblogs.filter((blog) => blog.type === 0);
   const firstVideo = useBlogData()
     ?.allblogs.filter((blog) => blog.type === 1)
     .slice(0, 1)[0];
   const testimonials = useBlogData()?.reviews.slice(0, 10);
-  const services = useServicesData();
+  const services = useServicesData()?.slice(0, 10);
   const [mainVideoSrc, setMainVideoSrc] = useState(firstVideo?.videosrc);
   const updateMainVideoSrc = (videosrc) => {
     setMainVideoSrc(videosrc);
@@ -180,9 +148,9 @@ const Home = () => {
                   height="400"
                   src={mainVideoSrc}
                   title="YouTube video player"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
               </div>
               <div className="col-span-3 md:ps-10">
@@ -193,7 +161,7 @@ const Home = () => {
         </section>
         {/* Health talks section ends */}
         {/* testimonials section  */}
-        <section className="max-sm:mb-0">
+        <section className="max-sm:mb-0" id="homeTestimonials">
           <div className="testimonial">
             <Heading
               text={"what our patients say"}

@@ -32,12 +32,17 @@ const KnowMore = ({ doctor }) => {
                   {/* {specialization} */}
                 </p>
               </div>
-              <FormatHtml
-                htmlString={`<p className="mb-5 text-content">${doctor?.doctorabout?.replace(
-                  /\n/g,
-                  "</p>\n<p className='mb-5 text-content'>"
-                )}</p>`}
-              />
+              <div className="line-clamp-6">
+                {doctor && (
+                  <FormatHtml
+                    htmlString={`<div className="line-clamp-6"><p className="mb-5 text-content">${doctor?.doctorabout?.replace(
+                      /\n/g,
+                      "</p>\n<p className='mb-5 text-content'>"
+                    )}</p></div>`}
+                  />
+                )}
+              </div>
+
               <div className="text-blue-900">
                 <p className="text-xl underline">Specialities</p>
                 <div className="text-sm">

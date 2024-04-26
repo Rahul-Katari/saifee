@@ -37,6 +37,7 @@ const AppointmentFormDetailInput = ({
           value={value}
           name={name}
           id={id}
+          min={new Date().toISOString().split("T")[0]}
           // onChange={(e) => handleChange(e.target.value)}
           onChange={(e) => handleChange(e)}
         />

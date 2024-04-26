@@ -71,10 +71,11 @@ const About = () => {
               </div>
               <h3 className="text-theme text-2xl font-medium">Our Vision</h3>
               <p className="py-3">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
+                Our vision at Dr. Manasa Mynepally's Hospital is simple: we want
+                to make your Endocrine health better. We're working hard to
+                discover new ways to help you feel your best, and we're here to
+                support you through it all. Together, we're building a healthier
+                future for everyone.
               </p>
             </div>
             <div>
@@ -83,10 +84,12 @@ const About = () => {
               </div>
               <h3 className="text-theme text-2xl font-medium">Our Mission</h3>
               <p className="py-3">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
+                At Dr. Manasa Mynepally's Hospital, our mission is to lead the
+                way in Endocrine health. We're dedicated to finding better
+                treatments and therapies by teaming up with different healthcare
+                experts like your family doctor, dentist, and others. Our goal
+                is to make sure you and your family feel supported and cared for
+                every step of the way.
               </p>
             </div>
           </div>

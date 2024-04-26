@@ -97,10 +97,10 @@ const AppointmentFormDetail = ({ details }) => {
 
   for (let hour = startHour; hour <= endHour; hour++) {
     for (let minute = 0; minute < 60; minute += 30) {
-      let period = "AM";
+      let period = "am";
       let hour12 = hour;
       if (hour >= 12) {
-        period = "PM";
+        period = "pm";
         hour12 -= 12;
       }
       if (hour12 === 0) {

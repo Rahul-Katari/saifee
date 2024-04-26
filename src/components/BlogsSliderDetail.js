@@ -1,37 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
 import BlogCardInDetails from "./BlogCardInDetails";
-import blog1 from "../assets/images/blog1.png";
-import blog2 from "../assets/images/blog2.png";
-import blog3 from "../assets/images/blog3.png";
 import PatientTestimonialsCard from "./PatientTestimonialsCard";
 import NewsYoutubeCard from "./NewsYoutubeCard";
 import { ASSET_URL } from "../controller/config";
-
-const blogs = [
-  { imgSrc: blog1 },
-  { imgSrc: blog2 },
-  { imgSrc: blog3 },
-  { imgSrc: blog1 },
-  { imgSrc: blog2 },
-  { imgSrc: blog3 },
-];
-const testimonials = [
-  { imgSrc: "" },
-  { imgSrc: "" },
-  { imgSrc: "" },
-  { imgSrc: "" },
-  { imgSrc: "" },
-  { imgSrc: "" },
-];
-const videos = [
-  { imgSrc: "" },
-  { imgSrc: "" },
-  { imgSrc: "" },
-  { imgSrc: "" },
-  { imgSrc: "" },
-  { imgSrc: "" },
-];
 
 function BlogsSliderDetail({ card, blogsData, testimonials }) {
   const settings = {
@@ -72,7 +44,7 @@ function BlogsSliderDetail({ card, blogsData, testimonials }) {
   };
   return (
     <div className="slider-container">
-      <Slider {...settings}>
+      <Slider {...settings} className="carousel">
         {card === "blog" &&
           blogsData?.map((blog, index) => {
             return (
@@ -88,13 +60,7 @@ function BlogsSliderDetail({ card, blogsData, testimonials }) {
           })}
         {card === "testimonial" &&
           testimonials?.map((test, index) => {
-            return (
-              <div key={index}>
-                <div>
-                  <PatientTestimonialsCard testimonial={test} />
-                </div>
-              </div>
-            );
+            return <PatientTestimonialsCard testimonial={test} />;
           })}
         {card === "videos" &&
           blogsData?.map((video, index) => {

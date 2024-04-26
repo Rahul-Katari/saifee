@@ -12,6 +12,7 @@ const FooterCard = ({
   timing2,
   index,
   href,
+  hrefName,
 }) => {
   return (
     <div
@@ -67,6 +68,13 @@ const FooterCard = ({
         </div>
       ) : (
         ""
+      )}
+      {href && (
+        <Link to={`/landing/${href}`}>
+          <div className="font-medium text-[#025CAF] md:mt-4 md:highlight-border hover:text-nav-highlight hover:underline">
+            {hrefName}
+          </div>
+        </Link>
       )}
     </div>
   );

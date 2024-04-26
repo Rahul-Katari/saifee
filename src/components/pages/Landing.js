@@ -17,6 +17,7 @@ import SpecialitiesCard from "../home/SpecialitiesCard";
 import NeedHelp from "../banners/NeedHelp";
 import { useBlogData } from "../../controller/blogDataContext";
 import { useEffect } from "react";
+import AppointmentFormDetail from "./AppointmentFormDetail";
 const guarantee = [
   { imgSrc: advProc, text: "Advanced Procedure" },
   { imgSrc: shorterStay, text: "Shorter Hospital Stay" },
@@ -44,7 +45,7 @@ const Landing = () => {
     <div>
       <div className="relative">
         <img src={banner} className="w-full" />
-        <div className="absolute rounded-lg p-8 top-[20%] bg-gradient-to-b from-[#07869B] via-[#07869B] to-[#0366AB] left-[10%]">
+        <div className="md:absolute m-4 rounded-lg p-8 top-[20%] bg-gradient-to-b from-[#07869B] via-[#07869B] to-[#0366AB] left-[10%]">
           <h2 className="text-[#FFF500] font-semibold text-3xl">
             Advanced Laparoscopic and <br></br> General Surgery in Hyderabad
           </h2>
@@ -69,8 +70,8 @@ const Landing = () => {
       </div>
       <section>
         <div className="max-w-7xl m-auto">
-          <div className="grid border rounded-lg grid-cols-10">
-            <div className="col-span-4 p-8">
+          <div className="md:grid  rounded-lg grid-cols-10 items-center">
+            <div className="col-span-4 p-8 text-center">
               <h3 className="text-center text-2xl font-semibold ">
                 Book a Consultation
               </h3>
@@ -85,19 +86,22 @@ const Landing = () => {
                 industry. Lorem Ipsum{" "}
               </p>
             </div>
-            <div className="col-span-6 flex flex-col p-4 ps-10 border-l">
-              <input className="border py-2 rounded-lg my-2" />
+            <div className="col-span-6 flex flex-col p-4 md:ps-10 ">
+              <div className="">
+                <AppointmentFormDetail details={doctor} />
+              </div>
+              {/* <input className="border py-2 rounded-lg my-2" />
               <input className="border py-2 rounded-lg my-2" />
               <input className="border py-2 rounded-lg my-2" />
               <button className="rounded-lg btn-primary justify-center">
                 SUBMIT
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
       </section>
       <section>
-        <div className="grid grid-cols-12">
+        <div className="md:grid grid-cols-12 m-4">
           <div className="col-span-5">
             <div>
               <img src={best} className="w-9/12" />
@@ -138,13 +142,13 @@ const Landing = () => {
         </div>
       </section>
       <section>
-        <div className="grid grid-cols-12">
+        <div className="md:grid grid-cols-12 m-4">
           <div className="col-span-7 md:ps-24">
             <h2 className="text-[#025CAF] text-3xl font-semibold">
               Areas of Treatments{" "}
             </h2>
-            <div className="flex">
-              <ul className="list-disc-default">
+            <div className="md:flex">
+              <ul className="list-disc-default max-sm:mb-0">
                 <li>Cholecystectomy (gallbladder removal)</li>
                 <li>Hernia</li>
                 <li>Gallbladder Stone</li>
@@ -157,7 +161,7 @@ const Landing = () => {
                 <li>Thyroid surgery</li>
                 <li>Varicose Veins</li>
               </ul>
-              <ul className="list-disc-default">
+              <ul className="list-disc-default max-sm:mt-0">
                 <li>Tonsillectomy</li>
                 <li>Adenoidectomy</li>
                 <li>Breast Surgery</li>
@@ -185,11 +189,11 @@ const Landing = () => {
         <KnowMore doctor={doctor} />
       </section>
       <section>
-        <div className="bg-banner relative flex justify-end relative">
+        <div className="bg-banner relative md:flex justify-end relative">
           <div>
             <img src={whyChoose} className="w-8/12" />
           </div>
-          <div className="bg-gradient-to-b from-[#07879B] to-[#035FAE] text-white p-8 absolute left-[10%] top-[10%]">
+          <div className="bg-gradient-to-b from-[#07879B] to-[#035FAE] text-white p-8 md:absolute left-[10%] top-[10%]">
             <h1 className="text-3xl font-semibold mb-4 ml-12">
               Why Choose Us?
             </h1>
@@ -245,7 +249,7 @@ const Landing = () => {
           <h2 className="text-3xl font-semibold text-[#025CAF] text-center mb-16">
             We Guarantee
           </h2>
-          <div className="grid grid-cols-5 space-x-6 justify-center max-w-7xl m-auto">
+          <div className="grid md:grid-cols-5 grid-cols-2 md:space-x-6 gap-6 justify-center max-w-7xl m-auto">
             {guarantee.map((guar, index) => {
               return (
                 <SpecialitiesCard
@@ -267,7 +271,7 @@ const Landing = () => {
         </div>
       </section>
       {/* testimonials start  */}
-      <section>
+      <section id="detailsTestimonials">
         <div className="bg-banner py-12">
           <div className="max-w-6xl m-auto max-sm:mx-4">
             <Heading text={"Patient Testimonials"} left={true} />

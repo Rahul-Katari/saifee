@@ -4,28 +4,14 @@ import { Link } from "react-router-dom";
 import MoreBtn from "./common/MoreBtn";
 import { ASSET_URL } from "../controller/config";
 import { useBlogData } from "../controller/blogDataContext";
-
-const doctorDetailsStatic = [
-  {
-    doctor: "Manasa Mynepally",
-    imgSrc: manasa,
-    qualifications: "M.D,D.M ENDOCRINOLOGY (Gold Medalist)",
-    specialization: "Consultant Endocrinologist & Diabetologist",
-    slugName: "manasa",
-    detailHref: "/bestDoctorsDetailsManasa",
-  },
-  {
-    doctor: "G UDAY KIRAN",
-    imgSrc: uday,
-    qualifications: "MS, FMAS, MAGES, EFIAGES, FALS (ROBOTIC)",
-    specialization: "General and Laparoscopic Surgeon",
-    slugName: "uday",
-    detailHref: "/bestDoctorsDetailsUday",
-  },
-];
+import { useEffect, useState } from "react";
 
 const OurTopDoctors = () => {
+  const [doctors, setDoctors] = useState([]);
   const doctorDetails = useBlogData()?.doctors;
+  useEffect(() => {
+    setDoctors(doctorDetails);
+  }, [doctorDetails]);
   return (
     <div>
       <div className="md:mb-[350px] mb-[700px]">
@@ -43,7 +29,7 @@ const OurTopDoctors = () => {
           </div>
           <div className="absolute md:top-[180px] top-[210px] md:mx-16 mx-6">
             <div className="grid md:grid-cols-2 gap-10">
-              {doctorDetails?.slice(0, 2).map((doctor, index) => {
+              {doctorDetails.slice(0, 2)?.map((doctor, index) => {
                 return (
                   <div
                     key={index}

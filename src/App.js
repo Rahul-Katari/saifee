@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 function App() {
   const blogData = useBlogData();
-  AOS.init({ easing: "ease-out-cubic", duration: 2000 });
+  // AOS.init({ easing: "ease-out-cubic", duration: 2000 });
   const history = useNavigate();
 
   useEffect(() => {

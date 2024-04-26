@@ -1,5 +1,4 @@
 import { Link, useParams } from "react-router-dom";
-import banner from "../../assets/images/banners/mansa-detail.png";
 import BlogsSliderDetail from "../BlogsSliderDetail";
 import DoctorServices from "../DoctorServices";
 import NewAppointments from "../banners/NewAppointments";
@@ -215,7 +214,7 @@ const DoctorDetails = () => {
       </div>
       {/* testimonials start  */}
       <div>
-        <section>
+        <section id="detailsTestimonials">
           <div className="bg-banner py-12">
             <div className="max-w-6xl ms-auto md:me-24 max-sm:mx-4">
               <Heading text={"Patient Testimonials"} left={true} />

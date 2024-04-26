@@ -28,8 +28,10 @@
 .facilities-main-div {
 
     .rts___tab___selected,
-    .rts___nav___btn:hover {
+    .rts___nav___btn:hover,
+    .rts___btn:hover {
         background: linear-gradient(180deg, #245272 0%, #147887 100%) !important;
+        color: #fff;
     }
 
     .rts___btn {

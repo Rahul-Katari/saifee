@@ -7,6 +7,7 @@ import { Link, useParams } from "react-router-dom";
 import Accordion from "../Accordion";
 import ExcellenceContentTabs from "./ExcellenceContentTabs";
 import { useServicesData } from "../../controller/servicesDataContext";
+import { ASSET_URL } from "../../controller/config";
 
 const ExcellenceDetails = () => {
   const [bannerImage, setBannerImage] = useState(banner);
@@ -42,6 +43,7 @@ const ExcellenceDetails = () => {
           title: servicesDetails?.service_name,
         },
       ];
+      setBannerImage(servicesDetails?.serviceBanner_url);
       setBreadcrumb(breadCrumb);
       servicesDetails?.servicecategory === 1
         ? setActiveAccordion("Endocrinology")
@@ -52,7 +54,7 @@ const ExcellenceDetails = () => {
   return (
     <div className="excellence-details">
       <div>
-        <img src={bannerImage} className="w-full" />
+        <img src={ASSET_URL + bannerImage} className="w-full" />
       </div>
       <BreadCrumb linkData={breadcrumb} />
       <section>

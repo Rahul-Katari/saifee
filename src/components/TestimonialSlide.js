@@ -56,11 +56,7 @@ function TestimonialSlide({ testimonials }) {
     <div className="slider-container">
       <Slider {...settings}>
         {testimonials?.map((review) => {
-          return (
-            <div>
-              <TestimonialCardHome testimonial={review} />
-            </div>
-          );
+          return <TestimonialCardHome testimonial={review} />;
         })}
       </Slider>
     </div>
