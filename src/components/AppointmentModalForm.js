@@ -172,7 +172,7 @@ const AppointmentModalForm = ({ modal }) => {
             </select>
             <select
               name="preferredDoctor"
-              value={formData.preferredDoctor}
+              value={formData.preferredDoctor || (specDoctors?.length > 0 ? specDoctors[0]?.value : '')}
               onChange={handleInputChange}
               className="w-full border p-2 rounded "
               required
