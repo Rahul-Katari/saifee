@@ -66,7 +66,7 @@ const Footer = () => {
       <Topscroll />
       {currentUrl !== "/" &&
         !currentUrl.includes("landing") &&
-        !currentUrl.includes("Detail") && <CallUs />}
+        !currentUrl.includes("bestDoctorsDetails") && currentUrl.includes('excellenceDetails') && <CallUs />}
       <div className="container">
         {currentUrl !== "/" &&
           !currentUrl.includes("landing") &&
