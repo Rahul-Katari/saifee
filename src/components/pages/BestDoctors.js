@@ -1,7 +1,7 @@
 // import banner from "../../assets/images/banners/our-doctors-banner.png";
 import banner from "../../assets/images/banners/our-doctors-banner.png";
 import OurTopDoctors from "../OurTopDoctors";
-import hexagon from "../../assets/images/landing/hexagon.png";
+import hexagon from "../../assets/images/landing/areas-general.png";
 
 const BestDoctors = () => {
   return (
