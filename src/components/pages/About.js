@@ -12,7 +12,7 @@ import OurTopDoctors from "../OurTopDoctors";
 import AppointmentModalOpener from "../AppointmentModalOpener";
 
 const iconsbanner = [
-  { imgSrc: locate, text1: "Locate", text2: "Clinic", href: "/#Location" },
+  { imgSrc: locate, text1: "Locate", text2: "Clinic", href: "https://maps.app.goo.gl/jX65mQLBgNvubiu2A", target:true },
   { imgSrc: steth, text1: "Find", text2: "Doctor", href: "/bestDoctors" },
   { imgSrc: calender, text1: "Book", text2: "Appointment" },
 ];
@@ -42,6 +42,7 @@ const About = () => {
                       text2={icon.text2}
                       weight={"bold"}
                       href={icon.href}
+                      target={icon.target}
                       // click={handleClick}
                     />
                   ) : (

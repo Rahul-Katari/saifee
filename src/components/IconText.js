@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-const IconText = ({ iconText, iconSrc, text1, text2, href, click }) => {
+const IconText = ({ iconText, iconSrc, text1, text2, href, click, target }) => {
   return (
-    <Link to={href} onClick={click}>
+    <Link to={href} onClick={click} target={target && '_blank'}>
       <div className="flex flex-col items-center text-center">
         <div className="mb-5">
           {iconText ? (

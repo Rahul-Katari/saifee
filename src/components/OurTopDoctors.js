@@ -29,7 +29,7 @@ const OurTopDoctors = () => {
           </div>
           <div className="absolute md:top-[180px] top-[210px] md:mx-16 mx-6">
             <div className="grid md:grid-cols-2 gap-10">
-              {doctorDetails.slice(0, 2)?.map((doctor, index) => {
+              {doctorDetails?.slice(0, 2)?.map((doctor, index) => {
                 return (
                   <div
                     key={index}

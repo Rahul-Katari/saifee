@@ -57,9 +57,9 @@ const ExcellenceDetails = () => {
         <img src={ASSET_URL + bannerImage} className="w-full" />
       </div>
       <BreadCrumb linkData={breadcrumb} />
-      <section>
+      <section className="mb-0">
         <div className="grid md:grid-cols-8 max-w-7xl m-auto max-sm:m-4 max-sm:flex-col">
-          <div className="md:col-span-2 max-sm:order-last">
+          <div className="md:col-span-2 max-sm:order-last relative sticky top-0">
             <div
               className={`flex flex-col ${
                 servicesDetails?.servicecategory === 2 ? "flex-col-reverse" : ""

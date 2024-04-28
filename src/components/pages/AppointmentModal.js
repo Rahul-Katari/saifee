@@ -3,7 +3,7 @@ import AppointmentModalForm from "../AppointmentModalForm";
 const AppointmentModal = ({ isOpen, onClose }) => {
   const handleSubmit = () => {
     document.getElementById("submitFormButton").click();
-    onClose();
+    // onClose();
   };
   return (
     <div>

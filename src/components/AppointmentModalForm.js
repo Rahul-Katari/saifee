@@ -300,6 +300,19 @@ const AppointmentModalForm = ({ modal }) => {
           >
             Submit
           </button>
+          <div className={`${modal ? "flex" : "hidden"} justify-end mt-3`}>
+                <button
+                  // onClick={onClose}
+                  className="border px-12 border-black rounded-lg hover:bg-gray-300 py-2 rounded mr-4 text-sm"
+                >
+                  Close
+                </button>
+                <button
+                //  onClick={handleSubmit}
+                 className="btn-theme px-12 py-2">
+                  Submit
+                </button>
+              </div>
         </div>
       </form>
     </div>
