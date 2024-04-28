@@ -84,7 +84,7 @@ const Home = () => {
         <section>
           <div className="max-w-7xl m-auto">
             <Heading text={"specialities"} uppercase={true} center={true} />
-            <DoctorServices services={services} fromDetails={true} />
+            <DoctorServices services={services} />
             <MoreBtn
               btnText={"View More"}
               href={"/excellence"}
