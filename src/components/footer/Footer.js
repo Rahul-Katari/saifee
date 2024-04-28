@@ -60,7 +60,7 @@ const Footer = () => {
   const location = useLocation();
   const currentUrl = location.pathname;
   const doctors = useBlogData()?.doctors.slice(0, 2);
-  useEffect(() => {}, [doctors]);
+  useEffect(() => { }, [doctors]);
   return (
     <div>
       <Topscroll />
@@ -155,18 +155,19 @@ const Footer = () => {
               <div>
                 <a
                   target="_blank"
-                  href="mailto:info@drmanasaendocrine.com"
+                  href="mailto:doctormanasamynepally@gmail.com"
                   className="btn-primary text-base rounded-full"
                 >
                   <div className="pe-5">
                     <IconMailFilled />
                   </div>
-                  info@drmanasaendocrine.com
+                  doctormanasamynepally@gmail.com
                 </a>
               </div>
             </div>
             <div className="text-center md:mt-5">
-              C {new Date().getFullYear()} Hospital all rights reserved
+              {/* C {new Date().getFullYear()} Hospital all rights reserved */}
+              Copyright © 2024 Dr.Manasa Maneaplly rights reserved. Developed by KL ADS
             </div>
           </div>
         </div>

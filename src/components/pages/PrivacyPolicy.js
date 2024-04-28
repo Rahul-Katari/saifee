@@ -76,10 +76,10 @@ const PrivacyPolicy = () => {
               obligations. To exercise these rights or for inquiries regarding
               our Privacy Policy, please contact our Privacy Officer at{" "}
               <a
-                href="mailto:info@drmanasaendocrine.com"
+                href="mailto:doctormanasamynepally@gmail.com"
                 className="text-blue-900 font-medium hover:text-blue-700"
               >
-                info@drmanasaendocrine.com
+                doctormanasamynepally@gmail.com
               </a>
               /
               <a

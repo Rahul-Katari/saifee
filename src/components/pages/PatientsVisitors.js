@@ -112,10 +112,10 @@ const PatientsVisitors = () => {
                     <span className="font-semibold">+91 7340 040 097</span> or
                     visit our website at{" "}
                     <a
-                      href="mailto:info@drmanasaendocrine.com"
+                      href="mailto:doctormanasamynepally@gmail.com"
                       className="font-semibold"
                     >
-                      info@drmanasaendocrine.com
+                      doctormanasamynepally@gmail.com
                     </a>
                     . Our staff is available to assist you during regular
                     business hours.
@@ -325,10 +325,10 @@ const PatientsVisitors = () => {
                 For inquiries or assistance related to insurance and TPA
                 matters, please contact our Insurance Helpdesk at{" "}
                 <a
-                  href="mailto:info@drmanasaendocrine.com"
+                  href="mailto:doctormanasamynepally@gmail.com"
                   className="text-blue-500"
                 >
-                  info@drmanasaendocrine.com
+                  doctormanasamynepally@gmail.com
                 </a>{" "}
                 /{" "}
                 <a href="tel:+917340040097" className="text-blue-500">
