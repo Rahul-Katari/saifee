@@ -1,7 +1,9 @@
 import { Link, useParams } from "react-router-dom";
 import banner from "../../assets/images/banners/landing.png";
-import best from "../../assets/images/landing/general-surgeon.png";
-import areas from "../../assets/images/landing/hexagon.png";
+import bestGeneral from "../../assets/images/landing/best-general-surgeon.png";
+import bestEndo from "../../assets/images/landing/best-endo.png";
+import areasGeneral from "../../assets/images/landing/areas-general.png";
+import areasEndo from "../../assets/images/landing/areas-endo.png";
 import NewAppointments from "../banners/NewAppointments";
 import KnowMore from "../home/KnowMore";
 import whyChoose from "../../assets/images/landing/why-choose-us.png";
@@ -31,7 +33,6 @@ const Landing = () => {
   const doctor = useBlogData()?.doctors.filter(
     (doctorDetail) => doctorDetail.urlname === doctorUrl
   )[0];
-  // const doctor = useBlogData()?.doctors.slice(0, 1)[0];
   const doctorId = doctor?._id;
   const services = doctor?.service;
   const testimonials = useBlogData()?.reviews.filter(
@@ -99,12 +100,6 @@ const Landing = () => {
               <div className="">
                 <AppointmentFormDetail details={doctor} />
               </div>
-              {/* <input className="border py-2 rounded-lg my-2" />
-              <input className="border py-2 rounded-lg my-2" />
-              <input className="border py-2 rounded-lg my-2" />
-              <button className="rounded-lg btn-primary justify-center">
-                SUBMIT
-              </button> */}
             </div>
           </div>
         </div>
@@ -113,7 +108,8 @@ const Landing = () => {
         <div className="md:grid grid-cols-12 m-4">
           <div className="col-span-5">
             <div>
-              <img src={best} className="w-9/12" />
+            {doctor?.department == 1 ? <img src={bestEndo} className=" w-8/12" /> : <img src={bestGeneral} className=" w-8/12" />}
+
             </div>
           </div>
           <div className="col-span-7 md:pe-24">
@@ -210,7 +206,7 @@ const Landing = () => {
           </div>
           <div className="col-span-5">
             <div>
-              <img src={areas} className=" w-8/12" />
+            {doctor?.department == 1 ? <img src={areasEndo} className=" w-8/12" /> : <img src={areasGeneral} className=" w-8/12" />}
             </div>
           </div>
         </div>
