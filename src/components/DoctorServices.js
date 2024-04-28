@@ -1,12 +1,12 @@
 import SpecialitiesCard from "./home/SpecialitiesCard";
 import { ASSET_URL } from "../controller/config";
 
-const DoctorServices = ({ speciality, services }) => {
+const DoctorServices = ({ speciality, services, fromDetails }) => {
   return (
     <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-10 gap-5 max-sm:mx-4">
       {services?.map((spec, index) => (
         <SpecialitiesCard
-          serviceId={spec.service_id}
+          serviceId={fromDetails ? spec.service_id : spec._id}
           imgSrc={
             ASSET_URL + (spec.service_url ? spec.service_url : spec.service_img)
           }

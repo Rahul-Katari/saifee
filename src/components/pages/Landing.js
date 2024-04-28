@@ -300,7 +300,7 @@ const Landing = () => {
           <h2 className="text-3xl font-semibold text-[#025CAF] text-center mb-16">
             Service
           </h2>
-          <DoctorServices services={services} />
+          <DoctorServices services={services} fromDetails={true}/>
         </div>
       </section>
       {/* testimonials start  */}

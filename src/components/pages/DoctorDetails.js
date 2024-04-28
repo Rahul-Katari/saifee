@@ -206,7 +206,7 @@ const DoctorDetails = () => {
               <Heading text={"SERVICES"} left={true} />
               <DoctorServices
                 services={doctorDetails?.service}
-                speciality={"endo"}
+                speciality={"endo"} fromDetails={true}
               />
             </div>
           </section>
