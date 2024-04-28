@@ -137,9 +137,7 @@ const Home = () => {
                   Connect with Manasa Mynepally
                 </h3>
                 <p className="mb-2">
-                  Lorem ipsum dolor sit amet, consect etur adipiscing elit.
-                  Fusce enim fames quam pellentesque interdum purus senectus
-                  feugiat elit.c.
+                  Connect with Manasa Mynepally for insightful discussions, valuable insights, and engaging videos! Explore the Dr. Manasa Manepally  channel for detailed information on a variety of topics.
                 </p>
               </div>
               <div className="col-span-6 m-4 mb-0">

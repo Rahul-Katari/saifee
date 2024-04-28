@@ -25,8 +25,7 @@ const NewAppointments = () => {
           New Patient Appointments
         </h3>
         <p className=" font-semibold md:mb-12 mb-6 text-content">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          Take Control of Your Health: Reserve Your Appointment Now!
         </p>
         <div className="flex max-sm:flex-col justify-between md:items-center items-start gap-5 md:me-12">
           <div>
