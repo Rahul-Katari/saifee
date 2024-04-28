@@ -20,7 +20,7 @@ const icons = [
     name: IconBrandLinkedin,
     href: "https://www.linkedin.com/company/96949237/admin/feed/posts/",
   },
-  { name: IconBrandYoutube, href: "https://www.youtube.com" },
+  { name: IconBrandYoutube, href: "https://www.youtube.com/@drmanasaendocrine" },
 ];
 
 const SocialIcons = ({ space }) => {

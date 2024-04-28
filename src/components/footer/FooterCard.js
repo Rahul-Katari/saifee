@@ -24,7 +24,7 @@ const FooterCard = ({
         <img src={iconSrc} className="h-7 w-7 m-1" />
       </div>
       {href ? (
-        <Link to={`/landing/${href}`}>
+        <Link to={`/bestDoctorsDetails/${href}`}>
           <div className="font-medium text-base md:mt-4 md:highlight-border">
             {title}
           </div>

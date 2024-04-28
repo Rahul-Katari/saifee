@@ -47,7 +47,7 @@ const Landing = () => {
         <img src={banner} className="w-full" />
         <div className="md:absolute m-4 rounded-lg p-8 top-[20%] bg-gradient-to-b from-[#07869B] via-[#07869B] to-[#0366AB] left-[10%]">
           <h2 className="text-[#FFF500] font-semibold text-3xl">
-            Advanced Laparoscopic and <br></br> General Surgery in Hyderabad
+            {doctor?.department === 1 ? 'Endocrinologist in Hyderabad' : 'Advanced Laparoscopic and General Surgery in Hyderabad'}
           </h2>
           <ul className="list-disc-default text-white space-y-4 ">
             <li>24+ Years of experience. 20,000+ patients treated</li>
@@ -79,7 +79,8 @@ const Landing = () => {
                 Get a Second opinion from the most experienced
               </p>
               <p className="text-center my-3">
-                consultant, Lady general Surgeons.
+                consultant, Lady 
+            {doctor?.department === 1 ? 'Endocrinologist.' : 'general Surgeons.'}
               </p>
               <p className="text-sm">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -109,7 +110,7 @@ const Landing = () => {
           </div>
           <div className="col-span-7 md:pe-24">
             <h2 className="text-[#025CAF] text-3xl font-semibold">
-              Best General Surgeon
+            {doctor?.department === 1 ? 'Best Endocrinologist' : 'Best General Surgeon'}
             </h2>
             <h2 className="text-[#025CAF] text-3xl font-semibold my-4">
               in Hyderabad
@@ -204,7 +205,7 @@ const Landing = () => {
                 </span>
                 <div>
                   <h2 className="text-xl">
-                    Expert General and <br></br> Laparoscopic Surgeon:
+                  {doctor?.department === 1 ? 'Expert Endocrinologist' : 'Expert General and Laparoscopic Surgeon'}
                   </h2>
                   <p className="text-[10px]">
                     Lorem Ipsum is an excellent team of surgeons experienced

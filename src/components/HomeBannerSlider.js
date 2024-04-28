@@ -6,8 +6,10 @@ import "slick-carousel/slick/slick-theme.css";
 import "../assets/styles/slider.css";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 
-import uday from "../assets/images/home/banners/uday-banner.jpg";
-import manasa from "../assets/images/home/banners/manasa-banner.jpg";
+import uday from "../assets/images/home/banners/uday-banner.jfif";
+import manasa from "../assets/images/home/banners/manasa-banner.jfif";
+import healthJourney from "../assets/images/home/banners/health-journey.jfif";
+import generalSurgeon from "../assets/images/home/banners/general-surgeon.jfif";
 import manasaMobile from "../assets/images/home/banners/mobile/manasa.png";
 import udayMobile from "../assets/images/home/banners/mobile/uday.png";
 
@@ -90,6 +92,18 @@ export default function HomeBannerSlider() {
       </div>
       <div>
         <img
+          src={window.innerWidth < 578 ? manasaMobile : healthJourney}
+          className="w-full"
+        />
+      </div>
+      <div>
+        <img
+          src={window.innerWidth < 578 ? udayMobile : generalSurgeon}
+          className="w-full"
+        />
+      </div>
+      <div>
+        <img
           src={window.innerWidth < 578 ? manasaMobile : manasa}
           className="w-full"
         />
@@ -102,7 +116,13 @@ export default function HomeBannerSlider() {
       </div>
       <div>
         <img
-          src={window.innerWidth < 578 ? manasaMobile : manasa}
+          src={window.innerWidth < 578 ? manasaMobile : healthJourney}
+          className="w-full"
+        />
+      </div>
+      <div>
+        <img
+          src={window.innerWidth < 578 ? udayMobile : generalSurgeon}
           className="w-full"
         />
       </div>
