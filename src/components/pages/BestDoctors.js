@@ -23,12 +23,10 @@ const BestDoctors = () => {
             <h1 className="text-red-500">For Best</h1>
           </div>
           <p className="my-5">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's{" "}
+            Meet Our Top Trainee Doctors: Exceptional Talent, Exceptional Care.{" "}
           </p>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's{" "}
+            Learn more about the dedicated individuals shaping the future of healthcare with their passion, expertise, and commitment to excellence.{" "}
           </p>
         </div>
       </div>
