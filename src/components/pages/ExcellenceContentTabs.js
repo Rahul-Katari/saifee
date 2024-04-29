@@ -40,7 +40,7 @@ const ExcellenceContentTabs = ({ servicesDetails }) => {
           <Tab>Treatment & Management</Tab>
         </Tabs>
         <TabScreen className="max-w-7xl m-auto"> */}
-        <div className="flex sticky top-0 flex-grow">
+        <div className="flex md:sticky top-[144px] flex-grow">
           {buttons.map((button, index) => {
             return (
               <button
