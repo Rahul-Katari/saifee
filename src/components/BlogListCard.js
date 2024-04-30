@@ -10,7 +10,6 @@ const BlogListCard = ({ blogData }) => {
   )[0];
   return (
     <div className="bg-white p-3 rounded-lg shadow-md m-4 flex flex-col justify-between">
-      {console.log(doctorData)}
       <div>
         <img
           // src={ListImg}

@@ -9,11 +9,11 @@ function BlogsSliderDetail({ card, blogsData, testimonials }) {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 3,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    autoplay: false,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
@@ -51,7 +51,6 @@ function BlogsSliderDetail({ card, blogsData, testimonials }) {
               <div key={index}>
                 <BlogCardInDetails
                   imgSrc={ASSET_URL + blog.displayimg}
-                  desc={"desc"}
                   title={blog.displayname}
                   blogid={blog._id}
                 />

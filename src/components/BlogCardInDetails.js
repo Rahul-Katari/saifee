@@ -11,7 +11,7 @@ const BlogCardInDetails = ({ title, desc, imgSrc, blogid }) => {
       </div>
       <div className="pt-2 pb-2">
         <Link
-          to={`/blogDetail/${blogid}`}
+          to={`/blogsDetail/${blogid}`}
           className="border border-black border-2 text-highlight py-1 px-2 text-xs rounded-full"
         >
           READ MORE

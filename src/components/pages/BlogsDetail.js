@@ -17,11 +17,13 @@ const BlogsDetail = () => {
   const blogDetails = useBlogData()?.allblogs?.filter(
     (blog) => blog._id === blogid
   )[0];
+  const doctorData = useBlogData()?.doctors.filter(
+    (doctor) => doctor._id == blogDetails?.doctorid
+  )[0];
   const blogTitle = blogDetails?.displayname;
   const breadCrumb = [
     { href: "/", title: "home" },
     { href: "/blogs", title: "blog" },
-    { href: "/bestDoctorsDetailsManasa", title: " Dr. Manasa Mynepally" },
     { href: "", title: blogTitle },
   ];
   return (
@@ -49,11 +51,11 @@ const BlogsDetail = () => {
                 </div>
                 <div className="flex items-center space-x-4">
                   <img src={profile} className="w-[14px]" />
-                  <span>{blogDetails?.doctorid}</span>
+                  <span>{doctorData?.firstName + " " + doctorData?.lastName}</span>
                 </div>
               </div>
-              <img src={ASSET_URL + blogDetails?.displayimg} />
-              <div>
+              <img  src={ASSET_URL + blogDetails?.displayimg} />
+              <div className="mt-6">
                 <FormatHtml htmlString={blogDetails?.description} />
                 {/* <div>
                   <h3 className="text-theme mt-16">
@@ -188,10 +190,9 @@ const BlogsDetail = () => {
             </div>
             <div className="col-span-2 max-sm:mt-5">
               <div className="shadow-3xl rounded-lg p-4">
-                <h2 className="text-theme text-2xl font-semibold highlight-border highlight-border-left">
+                <h2 className="text-theme text-xl font-semibold highlight-border highlight-border-left">
                   Latest Blogs
                 </h2>
-                {console.log(latestBlogs)}
                 <div className="divide-y divide-slate-700">
                   <div className="flex py-4">
                     <div>
