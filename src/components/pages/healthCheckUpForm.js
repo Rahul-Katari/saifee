@@ -214,6 +214,7 @@ const HealthCheckUpForm = () => {
                 type="date"
                 name="date"
                 onChange={handleInputChange}
+                min={new Date().toISOString().split("T")[0]}
                 className="w-full p-2 border rounded"
               />
             </div>

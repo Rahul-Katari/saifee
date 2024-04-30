@@ -3,7 +3,7 @@ import BreadCrumb from "../common/BreadCrumb";
 import calender from "../../assets/images/calender-blog.png";
 import profile from "../../assets/images/profile.png";
 import latestBlog from "../../assets/images/latest-blogs.png";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useBlogData } from "../../controller/blogDataContext";
 import { ASSET_URL } from "../../controller/config";
 import DateFormat from "../DateFormat";
@@ -13,7 +13,7 @@ const BlogsDetail = () => {
   const { blogid } = useParams();
   const latestBlogs = useBlogData()
     ?.allblogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-    .slice(0, 2);
+    .slice(0, 3);
   const blogDetails = useBlogData()?.allblogs?.filter(
     (blog) => blog._id === blogid
   )[0];
@@ -194,66 +194,36 @@ const BlogsDetail = () => {
                   Latest Blogs
                 </h2>
                 <div className="divide-y divide-slate-700">
-                  <div className="flex py-4">
-                    <div>
+                  {
+                    latestBlogs?.map((blog,index) => 
+                      (
+           
+                        <div className="" index={index}>
+                           <Link
+              to={`/blogsDetail/${blog?._id}`} className="flex py-4">
+                    <div className="w-8/12">
                       <img
-                        src={latestBlog}
+                        src={ASSET_URL + blog?.displayimg}
                         alt="latest blog image"
                         className=""
                       />
                     </div>
                     <div className="flex flex-col justify-between px-4">
                       <p>
-                        Lorem Ipsum is simply dummy text of the printing and .
+                        {blog.displayname}
                       </p>
                       <div className="flex items-center space-x-5">
                         <div>
                           <img src={calender} className="w-[14px]" />
                         </div>
-                        Jan 28 2024
+                        <DateFormat date={blog?.createdAt} />
                       </div>
                     </div>
+            </Link>
+
                   </div>
-                  <div className="flex py-4">
-                    <div>
-                      <img
-                        src={latestBlog}
-                        alt="latest blog image"
-                        className=""
-                      />
-                    </div>
-                    <div className="flex flex-col justify-between px-4">
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and .
-                      </p>
-                      <div className="flex items-center space-x-5">
-                        <div>
-                          <img src={calender} className="w-[14px]" />
-                        </div>
-                        Jan 28 2024
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex py-4">
-                    <div>
-                      <img
-                        src={latestBlog}
-                        alt="latest blog image"
-                        className=""
-                      />
-                    </div>
-                    <div className="flex flex-col justify-between px-4">
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and .
-                      </p>
-                      <div className="flex items-center space-x-5">
-                        <div>
-                          <img src={calender} className="w-[14px]" />
-                        </div>
-                        Jan 28 2024
-                      </div>
-                    </div>
-                  </div>
+                      ))
+                  }
                 </div>
               </div>
             </div>
