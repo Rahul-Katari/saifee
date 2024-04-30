@@ -1,4 +1,4 @@
-import banner from "../../assets/images/banners/excellence-details-banner.png";
+import banner from "../../assets/images/banners/blogs-banner.png";
 import BreadCrumb from "../common/BreadCrumb";
 import calender from "../../assets/images/calender-blog.png";
 import profile from "../../assets/images/profile.png";
@@ -29,7 +29,7 @@ const BlogsDetail = () => {
   return (
     <div>
       <div>
-        <img src={banner} alt="banner" />
+        <img className="w-full" src={banner} alt="banner" />
       </div>
       <BreadCrumb linkData={breadCrumb} />
       {/* <section>

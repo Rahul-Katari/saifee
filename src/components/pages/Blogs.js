@@ -1,5 +1,5 @@
 import { Tab, TabScreen, Tabs } from "react-tabs-scrollable";
-import banner from "../../assets/images/banners/excellence-details-banner.png";
+import banner from "../../assets/images/banners/blogs-banner.png";
 import BreadCrumb from "../common/BreadCrumb";
 import BlogListCard from "../BlogListCard";
 import { useState } from "react";

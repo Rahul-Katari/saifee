@@ -1,5 +1,5 @@
 import BreadCrumb from "../common/BreadCrumb";
-import banner from "../../assets/images/banners/patients-visitors.png";
+import banner from "../../assets/images/banners/videos-banner.png";
 import AppointmentSchedule from "../AppointmentSchedule";
 import { useEffect, useState } from "react";
 import ManasaVideos from "../ManasaVideos";
@@ -56,7 +56,7 @@ const Videos = () => {
     <div>
       {console.log(doctors)}
       <div>
-        <img src={banner} alt="banner" />
+        <img src={banner} alt="banner" className="w-full"/>
       </div>
       <BreadCrumb linkData={breadCrumb} />
       <section>
