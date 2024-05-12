@@ -10,6 +10,7 @@ import vision from "../../assets/images/about/vision.png";
 import mission from "../../assets/images/about/mission.png";
 import OurTopDoctors from "../OurTopDoctors";
 import AppointmentModalOpener from "../AppointmentModalOpener";
+import { Helmet } from 'react-helmet-async';
 
 const iconsbanner = [
   { imgSrc: locate, text1: "Locate", text2: "Clinic", href: "https://maps.app.goo.gl/jX65mQLBgNvubiu2A", target:true },
@@ -27,6 +28,12 @@ const bottomBanner = [
 const About = () => {
   return (
     <>
+     <Helmet>
+<title>
+Best Endocrinologist Doctors in Hyderabad | Dr. Manasa Mynepally</title>
+<meta name='description' content="Dr. Manasa Mynepally is among Hyderabad's finest endocrinologists, providing top-notch care and expertise in managing endocrine disorders effectively." />
+<meta name='keywords' content='Endocrinologist Hyderabad, Endocrine Clinic Hyderabad, Thyroid Doctor in Hyderabad, Hormonal Imbalance Specialist in Hyderabad, Endocrinology Doctors Hyderabad, Diabetes doctor Hyderabad' />
+</Helmet>
       <div>
         <img src={aboutBanner} className="w-full" />
         <section>

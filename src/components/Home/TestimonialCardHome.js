@@ -14,7 +14,7 @@ const TestimonialCardHome = ({ testimonial }) => {
           <h2 className="text-blue-900 font-semibold md:text-lg">
             {testimonial?.name}
           </h2>
-          <p className="text-gray-300">Lead Intranet Technician</p>
+          {/* <p className="text-gray-300">Lead Intranet Technician</p> */}
         </div>
       </div>
       <p className="mt-4 max-sm:text-xs line-clamp-5">{testimonial?.text}</p>

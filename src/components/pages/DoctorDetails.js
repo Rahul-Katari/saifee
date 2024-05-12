@@ -10,9 +10,18 @@ import { useBlogData } from "../../controller/blogDataContext";
 import { ASSET_URL } from "../../controller/config";
 import Qualifications from "../Qualifications";
 import FormatHtml from "../FormatHtml";
+import { Helmet } from 'react-helmet-async';
+
 
 const DoctorDetails = () => {
   const { doctorUrl } = useParams();
+  const [metaTags, setMetaTags] = useState({
+    title: "Best Endocrinologist in Hyderabad | Dr. Manasa Mynepally",
+    description:
+      "Dr Manasa Mynepally is the ideal of excellence in endocrinology, dedicated to transforming lives with unparalleled expertise and compassionate care in Hyderabad.",
+    keywords:
+      "Best endocrinologists, Top endocrinologists in Hyderabad, Endocrinology specialists in Hyderabad, Diabetes specialists Hyderabad, Thyroid specialists in Hyderabad, Hormone disorder experts Hyderabad, Best endocrinology centers in Hyderabad",
+  });
   const tabs = [
     { name: "About Us", href: "about" },
     { name: "Qualification", href: "qualification" },
@@ -85,7 +94,39 @@ const DoctorDetails = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+
   }, []);
+  useEffect(()=>{
+    // Update meta tags based on service ID
+    let title = "";
+    let description = "";
+    let keywords = "";
+    switch (doctorUrl) {
+      case "dr-manasa-mynepally": // Laparoscopic Endoscopy Doctor
+        title =
+          "Best Thyroid Doctor in Hyderabad";
+        description =
+          "Dr. Manasa Mynepally stands out as Hyderabad's premier thyroid specialist, renowned for her expertise and compassionate patient care.";
+        keywords =
+          "Thyroid specialists, Thyroid doctor Hyderabad, Best Doctor In Hyderabad, Thyroid Near Me";
+        break;
+      case "dr-G-UDAY-KIRAN": // Best General Surgeon Doctor in Hyderabad
+        title =
+          "Best Laparoscopic Doctor In Hyderabad |Dr.G Uday Kiran";
+        description =
+          "Dr G Uday Kiran stands out as Hyderabad's premier laparoscopic surgeon, renowned for expertise, precision, and compassionate care, delivering optimal outcomes.";
+        keywords =
+          "Laparoscopic surgery, Best laparoscopic doctors, Top laparoscopic surgeons, Laparoscopic specialists, Best laparoscopic surgeon in Hyderabad";
+        break;
+        default:
+        break;
+        }
+        setMetaTags({
+          title,
+          description,
+          keywords,
+        });
+  },[])
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -118,7 +159,11 @@ const DoctorDetails = () => {
   }
   return (
     <div className="doctor-details">
-      {console.log(doctorDetails)}
+            <Helmet>
+      <title>{metaTags.title}</title>
+      <meta name="description" content={metaTags.description} />
+      <meta name="keywords" content={metaTags.keywords} />
+    </Helmet>
       <div>
         <div ref={bannerRef} className="relative">
           <img

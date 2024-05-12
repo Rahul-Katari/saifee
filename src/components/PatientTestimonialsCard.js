@@ -7,7 +7,7 @@ function PatientTestimonialsCard({ testimonial }) {
       <img src={quote} />
       <p className=" leading-snug my-4 line-clamp-[6]">{testimonial.text}</p>
       <p className="text-sm">{testimonial.name}</p>
-      <p className="text-xs italic">on finding her happy place</p>
+      {/* <p className="text-xs italic">on finding her happy place</p> */}
     </div>
   );
 }

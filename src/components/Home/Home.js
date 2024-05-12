@@ -32,6 +32,7 @@ import { useEffect, useState } from "react";
 import { useBlogData } from "../../controller/blogDataContext";
 import DoctorServices from "../DoctorServices";
 import { useServicesData } from "../../controller/servicesDataContext";
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
   const blogs = useBlogData()?.allblogs.filter((blog) => blog.type === 0);
@@ -62,6 +63,11 @@ const Home = () => {
   }, [services, firstVideo]);
   return (
     <>
+    <Helmet>
+<title>Best Endocrinologist in Hyderabad | Dr. Manasa Mynepally </title>
+<meta name='description' content='Dr Manasa Mynepally is the ideal of excellence in endocrinology, dedicated to transforming lives with unparalleled expertise and compassionate care in Hyderabad.' />
+<meta name='keywords' content='Best endocrinologists, Top endocrinologists in Hyderabad, Endocrinology specialists in Hyderabad, Diabetes specialists Hyderabad, Thyroid specialists in Hyderabad, Hormone disorder experts Hyderabad, Best endocrinology centers in Hyderabad' />
+</Helmet>
       <div>
         <div className="home-main-banner">
           <HomeBannerSlider />

@@ -5,6 +5,7 @@ import { Outlet, unstable_HistoryRouter, useNavigate } from "react-router-dom";
 import AOS from "aos";
 import { useBlogData } from "./controller/blogDataContext";
 import { useEffect } from "react";
+import { HelmetProvider } from 'react-helmet-async';
 
 function App() {
   const blogData = useBlogData();
@@ -25,13 +26,14 @@ function App() {
   }, [history]);
   return (
     <>
-      {console.log(blogData)}
-      <Header />
+<HelmetProvider>
+        <Header />
       {/* <Body /> */}
       <main className="container">
         <Outlet />
       </main>
       <Footer />
+      </HelmetProvider>
     </>
   );
 }
