@@ -18,7 +18,7 @@ const Header = () => {
     }
   }, [pathname]);
   return (
-    <header className="container md:grid grid-cols-12 shadow-lg relative sticky top-0 bg-white z-[1]">
+    <header className="container max-w-screen-2xl md:grid grid-cols-12 shadow-lg relative sticky top-0 bg-white z-[1]">
       <div className="flex col-span-2 justify-center items-center">
         <Link to={"/"} className="max-sm:hidden">
           <img

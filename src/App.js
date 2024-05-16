@@ -29,7 +29,7 @@ function App() {
 <HelmetProvider>
         <Header />
       {/* <Body /> */}
-      <main className="container">
+      <main className="container max-w-screen-2xl">
         <Outlet />
       </main>
       <Footer />

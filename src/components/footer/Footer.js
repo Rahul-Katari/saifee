@@ -67,7 +67,7 @@ const Footer = () => {
       {currentUrl !== "/" &&
         !currentUrl.includes("landing") &&
         !currentUrl.includes("bestDoctorsDetails") && currentUrl.includes('excellenceDetails') && <CallUs />}
-      <div className="container">
+      <div className="container max-w-screen-2xl">
         {currentUrl !== "/" &&
           !currentUrl.includes("landing") &&
           !currentUrl.includes("Detail") &&
