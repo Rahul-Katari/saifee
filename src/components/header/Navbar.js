@@ -11,7 +11,7 @@ const navigation = [
   { name: "About Us", href: "/about", current: false, desktopNav: true },
   {
     name: "Center Of Excellence",
-    href: "/excellence",
+    href: "/centerofexcellence",
     current: false,
     desktopNav: true,
   },

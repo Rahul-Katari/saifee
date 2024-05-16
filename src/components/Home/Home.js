@@ -93,7 +93,7 @@ const Home = () => {
             <DoctorServices services={services} />
             <MoreBtn
               btnText={"View More"}
-              href={"/excellence"}
+              href={"/centerofexcellence"}
               btn={"theme"}
               align={"end"}
             />

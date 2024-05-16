@@ -95,7 +95,7 @@ root.render(
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route
-              path="/excellence"
+              path="/centerofexcellence"
               element={
                 <ServicesDataProvider>
                   <Excellence />
@@ -105,7 +105,7 @@ root.render(
             <Route path="/bestDoctors" element={<BestDoctors />} />
             <Route path="/facilities" element={<Facilities />} />
             <Route
-              path="/excellenceDetails/:serviceId"
+              path="/centerofexcellence/:serviceId"
               element={
                 <ServicesDataProvider>
                   <ExcellenceDetails />

@@ -6,7 +6,7 @@ const DoctorServices = ({ speciality, services, fromDetails }) => {
     <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-10 gap-5 max-sm:mx-4">
       {services?.map((spec, index) => (
         <SpecialitiesCard
-          serviceId={fromDetails ? spec.service_id : spec._id}
+          serviceId={fromDetails ? spec.service_displayurl : spec.service_displayurl}
           imgSrc={
             ASSET_URL + (spec.service_url ? spec.service_url : spec.service_img)
           }

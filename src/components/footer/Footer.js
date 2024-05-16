@@ -18,7 +18,7 @@ import { useEffect } from "react";
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  { name: "Center Of Excellence", href: "/excellence" },
+  { name: "Center Of Excellence", href: "/centerofexcellence" },
   { name: "Consult Our Best Doctors", href: "/bestdoctors" },
   { name: "Facilities", href: "/facilities" },
   { name: "Contact Us", href: "/contact" },

@@ -36,7 +36,7 @@
       });
     }
     const servicesDetails = useServicesData()?.filter(
-      (service) => service._id === serviceId
+      (service) => service.service_displayurl === serviceId
     )[0];
     const toggleAccordion = (accordionName) => {
       setActiveAccordion(
@@ -47,9 +47,9 @@
       if (servicesDetails) {
         const breadCrumb = [
           { href: "/", title: "home" },
-          { href: "/excellence", title: "center of excellence" },
+          { href: "/centerofexcellence", title: "center of excellence" },
           {
-            href: `/excellenceDetails/${servicesDetails?._id}`,
+            href: `/centerofexcellence/${servicesDetails?.service_displayurl}`,
             title: servicesDetails?.service_name,
           },
         ];
