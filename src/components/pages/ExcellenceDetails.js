@@ -30,8 +30,8 @@
     let sortedServiceList;
     if (servicesList && Array.isArray(servicesList)) {
       sortedServiceList = [...servicesList]?.sort((a, b) => {
-        if (a._id === serviceId) return -1;
-        if (b._id === serviceId) return 1;
+        if (a.service_displayurl === serviceId) return -1;
+        if (b.service_displayurl === serviceId) return 1;
         return 0;
       });
     }
@@ -221,11 +221,11 @@ switch (servicesDetails?._id) {
                     ?.map((service, index) => {
                       return (
                         <Link
-                          key={service._id}
+                          key={service.service_displayurl}
                           className={`p-3 ${
-                            service._id === serviceId ? "btn-theme" : ""
+                            service.service_displayurl === serviceId ? "btn-theme" : ""
                           }  rounded-none hover:text-white hover:bg-gradient-to-r from-[#00637B] to-[#00A0C6]`}
-                          to={`/excellenceDetails/${service._id}`}
+                          to={`/centerofexcellence/${service.service_displayurl}`}
                         >
                           {service?.service_name}
                         </Link>
@@ -245,11 +245,11 @@ switch (servicesDetails?._id) {
                     ?.map((service, index) => {
                       return (
                         <Link
-                          key={service._id}
+                          key={service.service_displayurl}
                           className={`p-3 ${
-                            service._id === serviceId ? "btn-theme" : ""
+                            service.service_displayurl === serviceId ? "btn-theme" : ""
                           }  rounded-none hover:text-white hover:bg-gradient-to-r from-[#00637B] to-[#00A0C6]`}
-                          to={`/excellenceDetails/${service._id}`}
+                          to={`/centerofexcellence/${service.service_displayurl}`}
                         >
                           {service?.service_name}
                         </Link>
