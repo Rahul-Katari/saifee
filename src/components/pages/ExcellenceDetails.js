@@ -14,7 +14,7 @@
 
   const ExcellenceDetails = () => {
     const [bannerImage, setBannerImage] = useState(banner);
-    const { serviceId } = useParams();
+    const { serviceId } = useParams(); 
     const [breadcrumb, setBreadcrumb] = useState([]);
     const [activeAccordion, setActiveAccordion] = useState(null);
     const [endoaccordion, setEndoaccordion] = useState(true);
@@ -59,7 +59,7 @@
           ? setActiveAccordion("Endocrinology")
           : setActiveAccordion("General Surgery");
 
-
+console.log(servicesDetails?._id)
 // Update meta tags based on service ID
 let title = "";
 let description = "";
@@ -67,11 +67,11 @@ let keywords = "";
 switch (servicesDetails?._id) {
   case "6623ca06c562e9a8bbd00c96": // Laparoscopic Endoscopy Doctor
     title =
-      "Best Laparoscopic Endoscopy Doctor In Hyderabad | Dr.G Uday Kiran";
+      "Laparoscopic GI Surgery in Hyderabad | Dr.G Uday Kiran";
     description =
-      "Dr G Uday Kiran, renowned for his excellence in laparoscopic endoscopy, is a leading figure in Hyderabad. Expertise, compassion, and cutting-edge technology define their practice. Trusted by many.";
+      "Dr G Uday Kiran offers expert Laparoscopic GI Surgery in Hyderabad, ensuring advanced care and precise treatments. Trust us for unparalleled surgical excellence.";
     keywords =
-      "Top laparoscopic doctor Hyderabad, Laparoscopic surgery specialist Hyderabad, Advanced laparoscopic, Laparoscopic Surgery Expertise Hyderabad";
+      "Laparoscopic surgery Hyderabad, Laparoscopic gastroenterology Hyderabad, Best GI surgeon Hyderabad, Laparoscopic treatment Hyderabad";
     break;
   case "6623c99bc562e9a8bbd00c90": // Best General Surgeon Doctor in Hyderabad
     title =
@@ -176,6 +176,142 @@ switch (servicesDetails?._id) {
       "Discover Hyderabad's top osteoporosis specialist for expert diagnosis and personalized treatment plans. Trust in their expertise for optimal bone health and well-being.";
       keywords =
       "Osteoporosis specialist Hyderabad, Bone health specialist Hyderabad, Osteoporosis treatment Hyderabad, Best Doctor In Hyderabad";
+      break;
+      case "6623cb0fc562e9a8bbd00cb2": // Best small bowel surgery  In Hyderabad
+      title =
+      "Small Bowel Surgery in Hyderabad | Dr.G Uday Kiran";
+      description =
+      "Dr G Uday Kiran, renowned for his excellence in laparoscopic endoscopy, is a leading figure in Hyderabad. Expertise, compassion, and cutting-edge technology define their practice. Trusted by many.";
+      keywords =
+      "Osteoporosis specialist Hyderabad, Bone health specialist Hyderabad, Osteoporosis treatment Hyderabad, Best Doctor In Hyderabad";
+      break;
+      case "6623cb37c562e9a8bbd00cb9": // Best Esophageal  Doctor In Hyderabad
+      title =
+      "Best Esophageal Treatment in Hyderabad | Dr.G Uday Kiran";
+      description =
+      "Dr G Uday Kiran offers the best esophageal treatment in Hyderabad. Trust our expertise for comprehensive care and solutions.";
+      keywords =
+      "Esophageal Treatment Hyderabad, Esophagus Specialist Hyderabad, Best Esophageal Surgeon Hyderabad, Esophageal disorders Hyderabad";
+      break;
+      case "6623cae7c562e9a8bbd00cac": // Best  Doctor In Hyderabad
+      title =
+      "Best Pancreatic Surgeon in Hyderabad | Dr.G Uday Kiran";
+      description =
+      "Dr G Uday Kiran is renowned for excellence in pancreatic surgery. Trust one of the best pancreatic surgeon doctors in Hyderabad for expert care and unparalleled results.";
+      keywords =
+      "Best Pancreatic Surgeon Doctors in Hyderabad, Best Pancreatic Surgeon, Pancreatic Surgeon Doctors, Pancreatic Surgery Specialists";
+      break;
+      case "6623ca72c562e9a8bbd00ca2": // Best  Doctor In Hyderabad
+      title =
+      "Best Liver Specialist in Hyderabad | Dr.G Uday Kiran";
+      description =
+      "Dr G Uday Kiran: The premier destination for liver care in Hyderabad. Expertise, compassion, and the latest treatments define us as the best liver specialist in Hyderabad.";
+      keywords =
+      "Best Hepatologist Hyderabad, Liver Care Expert in Hyderabad, Expert Liver Surgeon Hyderabad, Liver Specialist Hyderabad";
+      break;
+      case "6623ca50c562e9a8bbd00c9c": // Best  Doctor In Hyderabad
+      title =
+      "Diabetic Foot Treatment in Hyderabad  | Dr.G Uday Kiran";
+      description =
+      "Dr G Uday Kiran: The premier destination for liver care in Hyderabad. Expertise, compassion, and the latest treatments define us as the best liver specialist in Hyderabad.";
+      keywords =
+      "Diabetic foot care Hyderabad, Foot ulcer treatment Hyderabad, Diabetic foot surgery Hyderabad, Diabetic foot specialist Hyderabad";
+      break;
+      case "6623ca41c562e9a8bbd00c99": // Best  Doctor In Hyderabad
+      title =
+      "Best Colorectal Surgeon in Hyderabad | Dr.G Uday Kiran";
+      description =
+      "Dr G Uday Kiran, renowned for excellence in colorectal surgery, offers top-notch care in Hyderabad. Trust the best for your colorectal health.";
+      keywords =
+      "Best Colorectal Surgeon Doctors in Hyderabad, Colorectal Surgeon in Hyderabad, Best Colorectal Surgeon, Colorectal Treatment Hyderabad, Top Colorectal Specialists";
+      break;
+      case "631dea4b89c17af4583325e7": // Best  Doctor In Hyderabad
+      title =
+      "Best fistula doctor in Hyderabad | Dr.G Uday Kiran";
+      description =
+      "Dr G Uday Kiran, the expert in Fistula Surgeries, offers unparalleled care in Hyderabad. Experience specialised treatment and compassionate care for optimal recovery.";
+      keywords =
+      "Fistula Surgeries Doctors, Fistula surgery Hyderabad, Fistula treatment Hyderabad, Best fistula doctor in Hyderabad, Fistula specialist Hyderabad";
+      break;
+      case "630c5edee9a67b382febd0b3": // Best  Doctor In Hyderabad
+      title =
+      "Best Piles Treatment Doctors In Hyderabad | Dr.G Uday Kiran";
+      description =
+      "Discover top-notch Piles treatment in Hyderabad with Dr G Uday Kiran, renowned for expert care and advanced solutions. Your path to relief starts here.";
+      keywords =
+      "Piles specialists in Hyderabad, Piles surgeons Hyderabad, Piles doctors near me Hyderabad, Best Piles Treatment Doctors In Hyderabad, Piles Surgeons Hyderabad";
+      break;
+      case "62b54d58c9b6fa4492051e2f": // Best  Doctor In Hyderabad
+      title =
+      "Best Gastroenterologist Doctor in Hyderabad | Dr.G Uday Kiran";
+      description =
+      "Dr G Uday Kiran, the expert in Fistula Surgeries, offers unparalleled care in Hyderabad. Experience specialised treatment and compassionate care for optimal recovery.";
+      keywords =
+      "Gastroenterologist Hyderabad, Gastroenterology specialist Hyderabad, Gastrointestinal doctor Hyderabad, Gastroenterologist near me Hyderabad, Expert Gastroenterologist in Hyderabad";
+      break;
+      case "62b547f8c9b6fa4492051e2c": // Best  Doctor In Hyderabad
+      title =
+      "Best Trauma Surgery Doctors In Hyderabad | Dr.G Uday Kiran";
+      description =
+      "Best Trauma Surgery Doctors in Hyderabad at Dr G Uday Kiran's clinic. Expert care for trauma injuries, ensuring your health and well-being.";
+      keywords =
+      "Trauma surgery specialists Hyderabad, Expert trauma surgeons in Hyderabad, Trauma Surgery Doctors, Trauma surgery experts near me, Trauma Care Specialists Hyderabad";
+      break;
+      case "6623c661c562e9a8bbd00bc2": // Best  Doctor In Hyderabad
+      title =
+      "Endocrine Cancer Treatment Hyderabad";
+      description =
+      "For advanced endocrine cancer treatment in Hyderabad, trust leading hospitals like Dr Manasa Mynepally. Expert oncologists offer personalized care with cutting-edge technology for optimal outcomes.";
+      keywords =
+      "Endocrine cancer treatment Hyderabad, Endocrine oncologists in Hyderabad, Endocrine cancer specialists Hyderabad, Endocrine oncology Hyderabad, Endocrine cancer surgery Hyderabad";
+      break;
+      case "6623c631c562e9a8bbd00b9b": // Best  Doctor In Hyderabad
+      title =
+      "Best Adrenal Disorders Treatment Doctors in Hyderabad";
+      description =
+      "Find the best adrenal disorders treatment doctors in Hyderabad at Dr Manasa Mynepally’s clinic, offering expert care and personalised treatment plans for optimal health.";
+      keywords =
+      "Adrenal Disorders Treatment, Adrenal Specialists, Best Adrenal Disorders Treatment Doctors in Hyderabad, Adrenal Disorders Specialist Hyderabad, Adrenal Gland Treatment Hyderabad";
+      break;
+      case "66216afdd650ec917ce349c1": // Best  Doctor In Hyderabad
+      title =
+      "Best Osteoporosis Treatment In Hyderabad | Dr. Manasa Mynepally";
+      description =
+      "Experience the best osteoporosis treatment in Hyderabad with Dr Manasa Mynepally, providing expert care and personalised plans to improve bone health and quality of life.";
+      keywords =
+      "Osteoporosis specialist Hyderabad, Best Osteoporosis Treatment In Hyderabad, Osteoporosis treatment centers in Hyderabad, Osteoporosis doctor Hyderabad";
+      break;
+      case "66215f4dd650ec917ce349a9": // Best  Doctor In Hyderabad
+      title =
+      "Best Menopause Doctors in Hyderabad | Dr. Manasa Mynepally";
+      description =
+      "Dr Manasa Mynepally is among the best menopause doctors in Hyderabad, offering expert care and personalised treatment for a smooth, healthy transition through menopause.";
+      keywords =
+      "Menopause Specialists, Menopause Treatment Experts, Menopause specialist Hyderabad, menopause treatment Hyderabad, Menopause specialist in Hyderabad";
+      break;
+      case "62b54794c9b6fa4492051e29": // Best  Doctor In Hyderabad
+      title =
+      "Nutrition Treatment  In Hyderabad";
+      description =
+      "For top-notch nutrition treatment in Hyderabad, consider consulting with experienced dietitians like Dr. Manasa Mynepally at Nutri Clinic, or exploring services   They offer personalized diet plans for various health needs and conditions​";
+      keywords =
+      "Nutritionist for diabetes Hyderabad, Best nutritionist Hyderabad, Weight loss nutritionist Hyderabad, Pediatric nutritionist Hyderabad, Women's health nutritionist Hyderabad";
+      break;
+      case "6623c73bc562e9a8bbd00c25": // Best  Doctor In Hyderabad
+      title =
+      "Best Short Stature Doctors in Hyderabad | Dr. Manasa Mynepally";
+      description =
+      "Dr Manasa Mynepally: Renowned for expert care in Short Stature. Discover top services in Hyderabad. Trust the best for comprehensive treatment and compassionate support.";
+      keywords =
+      "Short Stature Specialists Hyderabad, Short Stature Treatment Experts Hyderabad, Best Doctors for Short Stature in Hyderabad";
+      break;
+      case "6623c760c562e9a8bbd00c43": // Best  Doctor In Hyderabad
+      title =
+      "Best Doctors for Growth Hormone Deficiency Treatment in Hyderabad | Dr. Manasa Mynepally";
+      description =
+      "Discover premier care for Growth Hormone Deficiency at Dr Manasa Mynepally's clinic in Hyderabad. Experience expertise and compassion for optimal treatment outcomes.";
+      keywords =
+      "Best Doctors Growth Hormone Deficiency Treatment, Hormonal Disorders, Specialized Treatment, Growth Hormone Deficiency in Children, Growth Hormone Deficiency in Hyderabad";
       break;
       default:
       break;

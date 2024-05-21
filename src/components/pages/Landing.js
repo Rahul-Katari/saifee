@@ -18,8 +18,10 @@ import care from "../../assets/images/landing/guarantee/affordable.png";
 import SpecialitiesCard from "../home/SpecialitiesCard";
 import NeedHelp from "../banners/NeedHelp";
 import { useBlogData } from "../../controller/blogDataContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AppointmentFormDetail from "./AppointmentFormDetail";
+import { Helmet } from 'react-helmet-async';
+
 const guarantee = [
   { imgSrc: advProc, text: "Advanced Procedure" },
   { imgSrc: shorterStay, text: "Shorter Hospital Stay" },
@@ -42,8 +44,52 @@ const Landing = () => {
     (blog) => blog.doctorid === doctorId
   );
   useEffect(() => { }, [doctor]);
+  const [metaTags, setMetaTags] = useState({
+    title: "",
+    description:
+      "",
+    keywords:
+      "",
+  });
+  // Update meta tags based on service ID
+let title = "";
+let description = "";
+let keywords = "";
+useEffect(() => {
+switch (doctorId) {
+      case "62b453ac9431269586ca8953": // Best Fertility Specialist in Hyderabad
+      title =
+      "Best Endocrinologist in Hyderabad | Dr. Manasa Mynepally";
+      description =
+      "Dr Manasa Mynepally is the ideal of excellence in endocrinology, dedicated to transforming lives with unparalleled expertise and compassionate care in Hyderabad.";
+      keywords =
+      "Best endocrinologists, Top endocrinologists in Hyderabad, Endocrinology specialists in Hyderabad, Diabetes specialists Hyderabad, Thyroid specialists in Hyderabad, Hormone disorder experts Hyderabad, Best endocrinology centers in Hyderabad";
+      break;
+      case "62b590d1c9b6fa449205202c": // Best Osteoporosis Doctor In Hyderabad
+      title =
+      "Best General Surgeon In Hyderabad | Dr.G Uday Kiran";
+      description =
+      "Dr G Uday Kiran, renowned for his excellence in laparoscopic endoscopy, is a leading figure in Hyderabad. Expertise, compassion, and cutting-edge technology define their practice. Trusted by many.";
+      keywords =
+      "Top laparoscopic doctor Hyderabad, Laparoscopic surgery specialist Hyderabad, Advanced laparoscopic, Laparoscopic Surgery Expertise Hyderabad";
+      break;
+      default:
+      break;
+      }
+      setMetaTags({
+        title,
+        description,
+        keywords,
+      });
+  }, [doctor]);
+  
   return (
     <div>
+            <Helmet>
+      <title>{metaTags.title}</title>
+      <meta name="description" content={metaTags.description} />
+      <meta name="keywords" content={metaTags.keywords} />
+    </Helmet>
       <div className="relative">
         <img src={banner} className="w-full h-[600px]" />
         <div className="md:absolute m-4 rounded-lg p-8 top-[12%] bg-gradient-to-b from-[#07869B] via-[#07869B] to-[#0366AB] left-[10%]">
