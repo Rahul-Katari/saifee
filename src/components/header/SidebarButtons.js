@@ -28,9 +28,9 @@ const SidebarButtons = () => {
         </div>
       </div>
       <div className="fixed right-0 top-[80%] transform -translate-y-3/4 space-y-2 z-[2] text-sm">
-        <Link to={"/"}>
+      <a href="https://wa.me/7340040097" target="_blank" rel="noopener noreferrer">
           <img src={whatsappIcon} className="w-5/12 ms-auto me-6" />
-        </Link>
+        </a>
       </div>
     </div>
   );

@@ -97,9 +97,9 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="flex flex-1 items-center justify-center sm:justify-between items-center max-sm:hidden">
+              <div className="flex flex-1 justify-end items-center max-sm:hidden">
                 <div className="flex items-center">
-                  <div className="hidden sm:block ms-[130px]">
+                  <div className="hidden sm:block mr-10">
                     <div className="flex">
                       {navigation.map((item) => {
                         return (
@@ -115,7 +115,7 @@ const Navbar = () => {
                                     item.href !== "/")
                                   ? "text-nav-highlight underline"
                                   : "hover:text-nav-highlight hover:underline",
-                                "rounded-md px-3 py-2  font-medium"
+                                "rounded-md px-3 py-2  font-medium whitespace-nowrap"
                               )}
                               aria-current={item.current ? "page" : undefined}
                             >
@@ -132,10 +132,10 @@ const Navbar = () => {
                     <img src={navHelp} alt="help" />
                   </div>
                   <div>
-                    <p className="text-sm">24x7 Help line</p>
+                    <p className="text-sm whitespace-nowrap">24x7 Help line</p>
                     <a
                       href="tel:+91 73400 40097"
-                      className="font-semibold text-cyan-900 text-sm"
+                      className="font-semibold text-cyan-900 text-sm whitespace-nowrap"
                     >
                       +91 73400 40097
                     </a>

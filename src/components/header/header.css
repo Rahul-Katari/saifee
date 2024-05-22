@@ -19,7 +19,7 @@
 
 
 .top-banner {
-    background: linear-gradient(48deg, #ffffff 20%, #158D9F 59%, #2696A7 100%);
+    background: linear-gradient(48deg, #ffffff 0%, #158D9F 70%, #2696A7 100%);
 }
 
 /* css to navigate header specialist according to banner  */
