@@ -6,6 +6,8 @@ const AutoRotatingTabs = ({ tabs, panels }) => {
   const [isHovering, setIsHovering] = useState(false); // State to track hovering over the panel
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef(null);
+  const tabRefs = useRef([]);
+
   useEffect(() => {
     let interval;
     if (!isHovering && isInView) {
@@ -36,6 +38,16 @@ const AutoRotatingTabs = ({ tabs, panels }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (tabRefs.current[selectedIndex]) {
+      tabRefs.current[selectedIndex].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center"
+      });
+    }
+  }, [selectedIndex]);
+
   return (
     <div ref={sectionRef}>
     <TabGroup selectedIndex={selectedIndex} onChange={setSelectedIndex}>
@@ -43,6 +55,7 @@ const AutoRotatingTabs = ({ tabs, panels }) => {
         {tabs.map((tab, index) => (
           <Tab
             key={index}
+            ref={(el) => (tabRefs.current[index] = el)}
             className={`whitespace-nowrap hover:bg-theme-gradient hover:text-white px-4 py-2 rounded-lg border-${
               selectedIndex === index ? "theme-gradient" : "[#4D4D4D]"
             } border data-[selected]:bg-theme-gradient data-[selected]:text-white`}

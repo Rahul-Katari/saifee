@@ -73,7 +73,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="relative flex lg:h-16 items-center md:justify-between justify-around p-2">
+            <div className="relative flex lg:h-16 items-center justify-between p-2">
               <Link className="lg:hidden" to={"/"}>
                 <img className="w-24 h-100" src={logo} alt="Your Company" />
               </Link>
