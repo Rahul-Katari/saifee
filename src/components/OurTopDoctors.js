@@ -15,7 +15,7 @@ const OurTopDoctors = () => {
   return (
     <div>
       <div className="md:mb-[350px] mb-[700px]">
-        <div className="bg-theme md:m-12  m-4 md:mx-60 rounded-[50px] md:px-20 md:pt-16 p-6 pb-60 relative flex flex-col items-center">
+        <div className="bg-theme md:m-12  m-4 lg:mx-60 rounded-[50px] md:px-20 md:pt-16 p-6 pb-60 relative flex flex-col items-center">
           <div className="grid md:grid-cols-5 text-white">
             <div className="md:text-4xl text-2xl mb-2  font-medium col-span-3">
               <h2>Meet Our Top Doctors</h2>
@@ -27,13 +27,13 @@ const OurTopDoctors = () => {
               ever since the 1500s, when an unknown
             </p>
           </div>
-          <div className="absolute md:top-[180px] top-[210px] md:mx-16 mx-6">
+          <div className="absolute lg:top-[180px] md:top-[240px] top-[210px] md:mx-16 mx-6">
             <div className="grid md:grid-cols-2 gap-10">
               {doctorDetails?.slice(0, 2)?.map((doctor, index) => {
                 return (
                   <div
                     key={index}
-                    className="shadow-2xl p-5 rounded-xl flex flex-col bg-white "
+                    className="shadow-2xl p-5 rounded-xl flex flex-col bg-white " data-aos="fade-up"
                   >
                     <img
                       src={ASSET_URL + doctor?.imgsrc}

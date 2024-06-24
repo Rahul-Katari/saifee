@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const SidebarButtons = () => {
   return (
     <div>
-      <div className="fixed right-0 top-1/2 transform -translate-y-1/2 space-y-2 z-[2] text-xs max-sm:hidden">
+      <div className="fixed right-0 top-1/2 transform -translate-y-1/2 space-y-2 z-[2] text-xs max-lg:hidden">
         <div className="bg-theme text-white md:px-5 px-3 py-1 rounded-l-md text-center">
           <Link to={"/bookAppointment"}>
             <div>

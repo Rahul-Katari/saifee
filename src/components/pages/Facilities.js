@@ -33,89 +33,107 @@ const Facilities = () => {
         <TabScreen>
           {activeTab === 0 && (
             <div>
-              <div className="my-5">
-                <h2 className="text-theme font-medium text-xl pb-4">
-                  Out Patient Services
-                </h2>
-                <p>
-                  At Manasa Mynepally Centre in Hyderabad, we prioritise your convenience and well-being by offering comprehensive outpatient services. Whether you're consulting a specialist, undergoing diagnostic tests, or having minor procedures, our outpatient department provides efficient care without hospitalisation. Our healthcare professionals are dedicated to offering personalised medical attention tailored to your needs, ensuring a smooth experience from consultation to treatment.
-                </p>
+            <div className="my-5 text-content space-y-2">
+              <h1 className="text-2xl font-bold mb-4">
+                Welcome to Dr. Manasa Mynepally's Hospital
+              </h1>
+              <p>
+                We strive to ensure that your visit to our facility is as
+                smooth and comfortable as possible. To help you plan your
+                visit effectively, please review the following information:
+              </p>
 
-              </div>
+              <ol className="list-decimal pl-4 space-y-2">
+                <li>
+                  <strong>Appointment Scheduling:</strong> To schedule an
+                  appointment with one of our healthcare providers, please
+                  contact our appointment desk at{" "}
+                  <span className="font-semibold">+91 7340 040 097</span> or
+                  use our online appointment booking system. We recommend
+                  scheduling appointments in advance to ensure availability
+                  and minimize waiting times.
+                </li>
+                <li>
+                  <strong>Preparing for Your Appointment:</strong> Before your
+                  scheduled appointment, please gather any relevant medical
+                  records, test results, and insurance information that may be
+                  required. Arrive at least 15 minutes before your scheduled
+                  appointment time to complete any necessary paperwork.
+                </li>
+                <li>
+                  <strong>Insurance and Payment Information:</strong> Dr.
+                  Manasa Mynepally's Hospital accepts a variety of insurance
+                  plans. Please verify your insurance coverage and co-payment
+                  requirements before your visit. For uninsured or self-pay
+                  patients, payment options and financial assistance programs
+                  may be available. Please inquire with our billing department
+                  for further information.
+                </li>
+                <li>
+                  <strong>Hospital Policies:</strong> For the safety and
+                  well-being of all patients and visitors, Dr. Manasa
+                  Mynepally's Hospital maintains certain policies and
+                  guidelines. Please familiarize yourself with our hospital
+                  policies regarding visitor hours, smoking regulations,
+                  infection control measures, and other pertinent information.
+                </li>
+                <li>
+                  <strong>Visitor Information:</strong> We welcome visitors to
+                  Dr. Manasa Mynepally's Hospital and encourage their support
+                  and companionship during your stay. However, please be
+                  mindful of our visitor policies, including restrictions on
+                  visiting hours, the number of visitors allowed per patient,
+                  and guidelines for children and pets.
+                </li>
+                <li>
+                  <strong>Accessibility and Accommodations:</strong> Dr.
+                  Manasa Mynepally's Hospital is committed to providing
+                  accessible facilities and accommodations for individuals
+                  with disabilities. If you require special assistance or
+                  accommodations during your visit, please notify our staff in
+                  advance, and we will do our best to accommodate your needs.
+                </li>
+                <li>
+                  <strong>Feedback and Concerns:</strong> Your feedback is
+                  important to us. If you have any questions, concerns, or
+                  suggestions regarding your visit to Dr. Manasa Mynepally's
+                  Hospital, please don't hesitate to contact our patient
+                  relations department. We are dedicated to providing
+                  exceptional care and addressing any issues promptly and
+                  effectively.
+                </li>
+                <li>
+                  <strong>Emergency Services:</strong> In the event of a
+                  medical emergency, please proceed to the nearest emergency
+                  room or dial{" "}
+                  <span className="font-semibold">+91 7340 040 097</span>. Dr.
+                  Manasa Mynepally's Hospital does not provide emergency
+                  services and is not equipped to handle life-threatening
+                  emergencies.
+                </li>
+                <li>
+                  <strong>Contact Information:</strong> For general inquiries
+                  or assistance, please contact our hospital reception at{" "}
+                  <span className="font-semibold">+91 7340 040 097</span> or
+                  visit our website at{" "}
+                  <a
+                    href="mailto:doctormanasamynepally@gmail.com"
+                    className="font-semibold"
+                  >
+                    doctormanasamynepally@gmail.com
+                  </a>
+                  . Our staff is available to assist you during regular
+                  business hours.
+                </li>
+              </ol>
 
-              <div className="my-5">
-                <h3 className="text-theme text-2xl font-semibold my-5">
-                  Day-care
-                </h3>
-                <h4 className="text-theme font-medium pb-2">Day Care Units</h4>
-                <p>
-                  Our state-of-the-art day-care facility is designed to accommodate patients who require medical procedures or treatments that extend beyond a simple outpatient visit but do not necessitate an overnight stay. From minor surgeries to infusion therapies, our day-care units provide a comfortable and supportive environment for patients to receive specialised medical care while allowing them to return home on the same day. With advanced medical equipment and a skilled team of healthcare professionals, we ensure optimal outcomes and minimal disruption to your daily routine.
-                </p>
-
-                <h4 className="text-theme font-medium mt-5 pb-2">
-                  Dialysis Centre
-                </h4>
-                <p>
-                  We provide comprehensive care and support at our specialised dialysis centre for patients with kidney-related conditions that require regular dialysis treatments. Our experienced nephrology team and state-of-the-art dialysis equipment ensure high-quality services tailored to meet each patient's individual needs. Whether you need haemodialysis or peritoneal dialysis, we aim to assist you in managing your kidney health and enhancing your quality of life through personalised care and support.
-                </p>
-
-                <p className="mt-4 font-semibold">Dialysis Services Offered:</p>
-
-                <ul className="list-disc-default">
-                  <li>Hemodialysis</li>
-                  <li>Peritoneal Dialysis</li>
-                  <li>Continuous Ambulatory Peritoneal Dialysis (CAPD)</li>
-                  <li>Continuous Cycling Peritoneal Dialysis (CCPD)</li>
-                  <li>Nocturnal Dialysis</li>
-                  <li>Slow Continuous Ultrafiltration (SCUF)</li>
-                  <li>Hemodiafiltration (HDF)</li>
-                  <li>Intermittent Hemodialysis</li>
-                  <li>Sustained Low-Efficiency Dialysis (SLED)</li>
-                  <li>Home Hemodialysis</li>
-
-                </ul>
-
-                <h1 className="text-theme font-medium mt-5 pb-2">
-                  Health Check-ups
-                </h1>
-                <p>Preventive healthcare is paramount to maintaining overall health and well-being. At Manasa Mynepally Centre, we offer a range of comprehensive health check-up packages designed to detect potential health issues early and facilitate timely intervention. From basic screenings to advanced diagnostics, our health check-up services are tailored to individuals at different stages of life, ensuring proactive management of health conditions and promoting overall wellness.</p>
-                <p className="mt-4 font-semibold">Health Check-Ups Offered:</p>
-
-                <ul className="list-disc-default mt-0">
-                  <li>Basic Health Screening</li>
-                  <li>Comprehensive Annual Health Check-Up</li>
-                  <li>Executive Health Check-Up</li>
-                  <li>Women's Wellness Package</li>
-                  <li>Men's Health Screening</li>
-                  <li>Cardiac Risk Assessment</li>
-                  <li>Diabetes Screening</li>
-                  <li>Cancer Screening</li>
-                  <li>Senior Citizen Health Check-Up</li>
-                  <li>Paediatric Health Check-Up</li>
-
-                </ul>
-              </div>
-
-              <div>
-                <div>
-                  <h2 className="text-theme text-2xl font-medium my-5">
-                    Critical Care Services
-                  </h2>
-                  <h4 className="text-theme font-medium pb-2">
-                    Intensive critical care services for faster recovery
-                  </h4>
-                  <p>
-                    In critical medical situations or emergencies where intensive monitoring and specialised treatment are required, our critical care services are available round-the-clock to provide prompt and comprehensive care. Our multidisciplinary team of critical care specialists, nurses, and support staff are equipped with state-of-the-art facilities and advanced medical technology to deliver life-saving interventions and compassionate care.
-                  </p>
-                  <p className="my-4">
-                    With a focus on patient safety and comfort, we strive to create a healing environment conducive to faster recovery and improved outcomes for our critically ill patients.
-                  </p>
-                  <p>
-                    Contact Manasa Mynepally Centre today to book your appointment and experience the highest level of medical care and support.
-                  </p>
-                </div>
-              </div>
+              <p>
+                We look forward to welcoming you to Dr. Manasa Mynepally's
+                Hospital and providing you with exceptional care and service.
+                Thank you for choosing us for your healthcare needs.
+              </p>
             </div>
+          </div>
           )}
           {activeTab === 1 && (
             <div>

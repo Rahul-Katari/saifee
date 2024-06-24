@@ -14,7 +14,7 @@ function BlogsSlider({ slides }) {
   const settings = {
     // className: "center",
     // centerMode: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 3500,
     arrows: false,
     dots: true,

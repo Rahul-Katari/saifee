@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const PageLinks = ({ links, size, weight, space }) => {
   return (
     <div
-      className={`flex md:flex-row flex-col md:space-x-${
+      className={`flex lg:flex-row flex-col md:space-x-${
         space ? space : "4"
-      } md:items-center md:text-${size} font-${weight}`}
+      } lg:items-center md:text-${size} font-${weight}`}
     >
       {links.map((link) => (
         <Link

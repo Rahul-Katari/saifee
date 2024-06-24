@@ -215,7 +215,7 @@ const DoctorDetails = () => {
               </h1>
               <Heading text={"About us"} left={true} />
               {/* <p className="mb-5 text-content"> */}
-              <div className="doctorAbout">
+              <div className="doctorAbout" data-aos="fade-up">
                 {doctorDetails ? (
                   <FormatHtml
                     htmlString={`<p className="mb-5 text-content">${doctorDetails?.doctorabout?.replace(
@@ -236,7 +236,7 @@ const DoctorDetails = () => {
       <div className="max-w-6xl ms-auto md:me-24 max-sm:mx-4">
         {/* qualification section  */}
         <div id="qualification" ref={(el) => (sectionsRef.current[1] = el)}>
-          <section>
+          <section data-aos="fade-up">
             <Qualifications
               qualifications={doctorDetails?.education}
               experience={doctorDetails?.experience}

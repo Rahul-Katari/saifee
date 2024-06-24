@@ -33,7 +33,7 @@ function SamplePrevArrow(props) {
 
 function TestimonialSlide({ testimonials }) {
   const settings = {
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 3000,
     className: "center",
     infinite: true,

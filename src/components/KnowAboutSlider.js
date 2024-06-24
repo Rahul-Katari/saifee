@@ -75,7 +75,7 @@ const udaySpecs = [
 export default function KnowAboutSlider() {
   const doctors = useBlogData()?.doctors;
   var settings = {
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 5000,
     infinite: true,
     speed: 1000,
@@ -101,66 +101,6 @@ export default function KnowAboutSlider() {
           </div>
         );
       })}
-      {/* <div>
-        <KnowMore
-          doctor="Dr. Manasa Mynepally"
-          imgSrc={doctor}
-          specialities={manasaSpecs}
-          qualifications={"M.D.,D.M.(Gold Medalist)"}
-          specialization={"Diabetes, Thyroid & Endocrine Centre"}
-          href="/bestDoctorsDetailsManasa"
-        />
-      </div>
-      <div>
-        <KnowMore
-          doctor="Dr. G Uday Kiran"
-          imgSrc={doctorUday}
-          specialities={udaySpecs}
-          qualifications={"MS, FMAS, FIAGES, EFIAGES, FALS (ROBOTIC)"}
-          specialization={"General and Laparoscopic Surgeon"}
-          href="/bestDoctorsDetailsUday"
-        />
-      </div>
-      <div>
-        <KnowMore
-          doctor="Dr. Manasa Mynepally"
-          imgSrc={doctor}
-          specialities={manasaSpecs}
-          qualifications={"M.D.,D.M.(Gold Medalist)"}
-          specialization={"Diabetes, Thyroid & Endocrine Centre"}
-          href="/bestDoctorsDetailsManasa"
-        />
-      </div>
-      <div>
-        <KnowMore
-          doctor="Dr. G Uday Kiran"
-          imgSrc={doctorUday}
-          specialities={udaySpecs}
-          qualifications={"MS, FMAS, FIAGES, EFIAGES, FALS (ROBOTIC)"}
-          specialization={"General and Laparoscopic Surgeon"}
-          href="/bestDoctorsDetailsUday"
-        />
-      </div>
-      <div>
-        <KnowMore
-          doctor="Dr. Manasa Mynepally"
-          imgSrc={doctor}
-          specialities={manasaSpecs}
-          qualifications={"M.D.,D.M.(Gold Medalist)"}
-          specialization={"Diabetes, Thyroid & Endocrine Centre"}
-          href="/bestDoctorsDetailsManasa"
-        />
-      </div>
-      <div>
-        <KnowMore
-          doctor="Dr. G Uday Kiran"
-          imgSrc={doctorUday}
-          specialities={udaySpecs}
-          qualifications={"MS, FMAS, FIAGES, EFIAGES, FALS (ROBOTIC)"}
-          specialization={"General and Laparoscopic Surgeon"}
-          href="/bestDoctorsDetailsUday"
-        />
-      </div> */}
     </Slider>
   );
 }

@@ -1,25 +1,26 @@
 @media only screen and (min-width: 768px) {
-    .footer .top-banner-links:not(:last-child):after {
-        background-color: var(--nav-highlight-color);
-        /* bottom: 7px; */
-        height: 14px;
-    }
-
-    .top-banner-links:not(:last-child):after {
-        content: '';
-        display: block;
-        height: 12px;
-        width: 2px;
-        background-color: #fff;
-        position: absolute;
-        right: -9px;
-        bottom: 5px;
-    }
+  .footer .top-banner-links:not(:last-child):after {
+    background-color: var(--nav-highlight-color);
+    /* bottom: 7px; */
+    height: 14px;
+  }
 }
 
+@media only screen and (min-width: 1024px) {
+  .top-banner-links:not(:last-child):after {
+    content: "";
+    display: block;
+    height: 12px;
+    width: 2px;
+    background-color: #fff;
+    position: absolute;
+    right: -9px;
+    bottom: 5px;
+  }
+}
 
 .top-banner {
-    background: linear-gradient(48deg, #ffffff 0%, #158D9F 70%, #2696A7 100%);
+  background: linear-gradient(48deg, #ffffff 0%, #158d9f 70%, #2696a7 100%);
 }
 
 /* css to navigate header specialist according to banner  */
@@ -34,17 +35,17 @@
     transform: translateX(0);
 } */
 @keyframes fadeLeft {
-    from {
-        opacity: 0;
-        transform: translateX(100%);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .fade-left {
-    animation: fadeLeft 0.5s ease-in-out;
+  animation: fadeLeft 0.5s ease-in-out;
 }

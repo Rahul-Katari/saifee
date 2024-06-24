@@ -18,6 +18,9 @@ module.exports = {
         "theme-gradient":
           "linear-gradient(180deg, #07869B 0%, #0361AD 100%) !important;",
       },
+      screens: {
+        "3xl": "1920px",
+      },
     },
     container: {
       center: true,

@@ -67,7 +67,7 @@ const Footer = () => {
       {currentUrl !== "/" &&
         !currentUrl.includes("landing") &&
         !currentUrl.includes("bestDoctorsDetails") && currentUrl.includes('excellenceDetails') && <CallUs />}
-      <div className="container max-w-screen-2xl">
+      <div className="container max-w-screen-3xl">
         {currentUrl !== "/" &&
           !currentUrl.includes("landing") &&
           !currentUrl.includes("Detail") &&
@@ -87,7 +87,7 @@ const Footer = () => {
               />
             </div>
             <div
-              className="justify-center md:flex items-center border py-3 border-cyan-500 border-x-0"
+              className="justify-center lg:flex items-center border py-3 border-cyan-500 border-x-0"
               data-aos="fade-right"
             >
               <div className="text-nav-highlight  text-base">Quick Links :</div>
@@ -130,12 +130,12 @@ const Footer = () => {
                 />
               ))}
             </div>
-            <div className="flex-col flex md:flex-row justify-around pb-5 gap-2 md:gap-0 md:text-xl">
+            <div className="flex-col flex lg:flex-row justify-around pb-5 gap-2 lg:gap-0 md:text-xl">
               <div className="btn-primary rounded-full px-8 justify-center">
                 <SocialIcons space={4} />
               </div>
               <div className="flex items-center">
-                <div className="md:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
+                <div className="lg:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
               </div>
               <div className="telephone-footer-link">
                 <a
@@ -150,13 +150,13 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center">
-                <div className="md:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
+                <div className="lg:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
               </div>
               <div>
                 <a
                   target="_blank"
                   href="mailto:doctormanasamynepally@gmail.com"
-                  className="btn-primary text-base rounded-full"
+                  className="btn-primary text-base rounded-full max-sm:text-sm"
                 >
                   <div className="pe-5">
                     <IconMailFilled />

@@ -4,22 +4,21 @@ import "react-tabs-scrollable/dist/rts.css";
 import LaboratorySvg from "./LaboratorySvg";
 import labTests from "../../assets/images/home/laboratory-tests.png";
 import MoreBtn from "../common/MoreBtn";
-import AutoRotatingTabs from "./AutoRotatingTabs";
 
 const TabNames = [
   "Laboratory Tests",
   "Hormone Replacement Therapy",
   "Education",
   "Diet and Nutrition Counselling",
-  // "Hormone Replacement Therapy",
-  // "Education",
-  // "Diet and Nutrition Counselling",
+  "Hormone Replacement Therapy",
+  "Education",
+  "Diet and Nutrition Counselling",
 ];
 
 const LaboratoryTestsTabScreen = () => (
   <div className="animate__animated animate__fadeInLeft" role="tabpanel">
     <div className="m-4">
-      <div className="lg:grid grid-cols-5 items-center">
+      <div className="grid grid-cols-5 items-center">
         <div className="md:col-span-2 col-span-5 flex items-center justify-center">
           <img
             src={labTests}
@@ -72,7 +71,7 @@ const LaboratoryTestsTabScreen = () => (
 const HormoneReplacementTherapyTabScreen = () => (
   <div className="animate__animated animate__fadeInLeft" role="tabpanel">
     <div className="m-4">
-      <div className="lg:grid grid-cols-5 items-center">
+      <div className="grid grid-cols-5 items-center">
         <div className="md:col-span-2 col-span-5 flex items-center justify-center">
           <img
             src={labTests}
@@ -166,10 +165,12 @@ const HormoneReplacementTherapyTabScreen = () => (
   </div>
 );
 
+// Add similar components for Education and DietAndNutritionCounselling
+
 const EducationTabScreen = () => (
   <div className="animate__animated animate__fadeInLeft" role="tabpanel">
     <div className="m-4">
-      <div className="lg:grid grid-cols-5 items-center">
+      <div className="grid grid-cols-5 items-center">
         <div className="md:col-span-2 col-span-5 flex items-center justify-center">
           <img
             src={labTests}
@@ -247,7 +248,7 @@ const EducationTabScreen = () => (
 const DietAndNutritionCounsellingTabScreen = () => (
   <div className="animate__animated animate__fadeInLeft" role="tabpanel">
     <div className="m-4">
-      <div className="lg:grid grid-cols-5 items-center">
+      <div className="grid grid-cols-5 items-center">
         <div className="md:col-span-2 col-span-5 flex items-center justify-center">
           <img
             src={labTests}
@@ -340,15 +341,8 @@ const DietAndNutritionCounsellingTabScreen = () => (
     </div>
   </div>
 );
-const panels = [
-  <LaboratoryTestsTabScreen/>,
-  <HormoneReplacementTherapyTabScreen/>,
-  <EducationTabScreen/>,
-  <DietAndNutritionCounsellingTabScreen/>
 
-]
-
-const CommittedCureTabs = () => {
+const CommittedCureTabsOld = () => {
   const [activeTab, setActiveTab] = React.useState(0);
 
   const onTabClick = (e, index) => {
@@ -357,9 +351,29 @@ const CommittedCureTabs = () => {
 
   return (
     <div>
-      <AutoRotatingTabs tabs={TabNames} panels={panels} />
+      <Tabs
+        activeTab={activeTab}
+        onTabClick={onTabClick}
+        hideNavBtnsOnMobile={false}
+      >
+        {TabNames.map((item, index) => (
+          <Tab className="rounded flex items-center gap-x-4 text-sm" key={item}>
+            <LaboratorySvg color={activeTab === index ? "White" : "#434343"} />
+            {item}
+          </Tab>
+        ))}
+      </Tabs>
+      {/* Render the appropriate TabScreen based on activeTab */}
+      {activeTab === 0 && <LaboratoryTestsTabScreen />}
+      {activeTab === 1 && <HormoneReplacementTherapyTabScreen />}
+      {activeTab === 2 && <EducationTabScreen />}
+      {activeTab === 3 && <DietAndNutritionCounsellingTabScreen />}
+      {activeTab === 4 && <HormoneReplacementTherapyTabScreen />}
+      {activeTab === 5 && <EducationTabScreen />}
+      {activeTab === 6 && <DietAndNutritionCounsellingTabScreen />}
+      {/* Add similar condition for other tabs */}
     </div>
   );
 };
 
-export default CommittedCureTabs;
+export default CommittedCureTabsOld;

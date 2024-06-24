@@ -59,8 +59,8 @@ const Navbar = () => {
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto md:py-4 sm:px-6 lg:px-8">
-            <div className="text-white md:hidden">
+          <div className="mx-auto lg:py-4 lg:px-8">
+            <div className="text-white lg:hidden">
               <div className="py-2 bg-[#046AA9] text-center text-sm">
                 Contact Number: <a href="tel:+917340040097">+91 73400 40097 </a>
               </div>
@@ -73,11 +73,11 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="relative flex md:h-16 items-center justify-between p-2">
-              <Link className="md:hidden" to={"/"}>
+            <div className="relative flex lg:h-16 items-center md:justify-between justify-around p-2">
+              <Link className="lg:hidden" to={"/"}>
                 <img className="w-24 h-100" src={logo} alt="Your Company" />
               </Link>
-              <div className="inset-y-0 right-0 flex items-center sm:hidden">
+              <div className="inset-y-0 right-0 flex items-center lg:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button
                   className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white mobile-navbar-toggle"
@@ -97,7 +97,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="flex flex-1 justify-end items-center max-sm:hidden">
+              <div className="flex flex-1 justify-end items-center max-xl:hidden">
                 <div className="flex items-center">
                   <div className="hidden sm:block mr-10">
                     <div className="flex">
@@ -147,7 +147,7 @@ const Navbar = () => {
 
           {/* Off-canvas mobile menu */}
           <Disclosure.Panel
-            className={`overflow-auto sm:hidden top-[184px] fixed inset-0 bg-white z-40 w-64 sm:w-80 transform transition-transform ease-in-out shadow-2xl ${
+            className={`overflow-auto lg:hidden top-[184px] fixed inset-0 bg-white z-40 w-64 sm:w-80 transform transition-transform ease-in-out shadow-2xl ${
               open ? "translate-x-0" : "-translate-x-full"
             }`}
           >

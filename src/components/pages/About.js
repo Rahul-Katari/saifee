@@ -72,13 +72,13 @@ Best Endocrinologist Doctors in Hyderabad | Dr. Manasa Mynepally</title>
         </section>
         <Welcome img={cure} title={"How We Are"} />
         <section>
-          <div className="bg-banner md:flex gap-20 p-10 my-10 md:px-52">
+          <div className="bg-banner lg:flex gap-20 p-10 my-10 lg:px-52">
             <div>
-              <div>
+              <div data-aos="fade-up">
                 <img src={vision} className="p-5 w-20 h-20 object-contain" />
               </div>
-              <h3 className="text-theme text-2xl font-medium">Our Vision</h3>
-              <p className="py-3">
+              <h3 className="text-theme text-2xl font-medium" data-aos="fade-up">Our Vision</h3>
+              <p className="py-3" data-aos="fade-up">
                 Our vision at Dr. Manasa Mynepally's Hospital is simple: we want
                 to make your Endocrine health better. We're working hard to
                 discover new ways to help you feel your best, and we're here to
@@ -87,11 +87,11 @@ Best Endocrinologist Doctors in Hyderabad | Dr. Manasa Mynepally</title>
               </p>
             </div>
             <div>
-              <div>
+              <div data-aos="fade-up">
                 <img src={mission} className="p-5 w-20 h-20 object-contain" />
               </div>
-              <h3 className="text-theme text-2xl font-medium">Our Mission</h3>
-              <p className="py-3">
+              <h3 className="text-theme text-2xl font-medium" data-aos="fade-up">Our Mission</h3>
+              <p className="py-3" data-aos="fade-up">
                 At Dr. Manasa Mynepally's Hospital, our mission is to lead the
                 way in Endocrine health. We're dedicated to finding better
                 treatments and therapies by teaming up with different healthcare

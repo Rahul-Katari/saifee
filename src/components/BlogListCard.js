@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ASSET_URL } from "../controller/config";
 import DateFormat from "./DateFormat";
 import { useBlogData } from "../controller/blogDataContext";
+import avatar from "../assets/images/profile.png"
 
 const BlogListCard = ({ blogData }) => {
   const doctorData = useBlogData()?.doctors.filter(
@@ -34,12 +35,12 @@ const BlogListCard = ({ blogData }) => {
       <div className="flex items-center mt-4 justify-between">
         {/* <div className="flex items-center"> */}
         <img
-          src={ASSET_URL + doctorData?.imgsrc}
+          src={doctorData?.imgsrc ? ASSET_URL + doctorData?.imgsrc : avatar}
           alt="blog creator"
           className="w-8 h-8 rounded-full mr-2 object-cover"
         />
         <p className="text-gray-600 truncate">
-          {doctorData?.firstName + " " + doctorData?.lastName}
+          {(doctorData?.firstName || 'Admin') + " " + (doctorData?.lastName || '')}
         </p>
         {/* </div> */}
         <p className="text-gray-600 ml-2 text-xs text-nowrap">

@@ -5,7 +5,7 @@ import { Outlet, unstable_HistoryRouter, useNavigate } from "react-router-dom";
 import AOS from "aos";
 import { useBlogData } from "./controller/blogDataContext";
 import { useEffect } from "react";
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   const blogData = useBlogData();
@@ -24,15 +24,25 @@ function App() {
       endocrinologist?.classList.remove("hidden");
     }
   }, [history]);
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      offset: 50,
+      easing: "ease",
+      once: true,
+      anchorPlacement: "center-bottom",
+      delay: 200,
+    });
+  }, []);
   return (
     <>
-<HelmetProvider>
+      <HelmetProvider>
         <Header />
-      {/* <Body /> */}
-      <main className="container max-w-screen-2xl">
-        <Outlet />
-      </main>
-      <Footer />
+        {/* <Body /> */}
+        <main className="container max-w-screen-3xl">
+          <Outlet />
+        </main>
+        <Footer />
       </HelmetProvider>
     </>
   );

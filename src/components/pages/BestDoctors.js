@@ -6,26 +6,26 @@ import hexagon from "../../assets/images/landing/areas-general.png";
 const BestDoctors = () => {
   return (
     <div>
-      <div className="relative md:mb-[650px] mb-[1250px]">
+      <div className="relative lg:mb-[650px] md:mb-[800px] mb-[1250px]">
         <img src={banner} className="w-full" />
         <div className="absolute top-[75%]">
           <OurTopDoctors />
         </div>
       </div>
-      <div className="grid md:grid-cols-2 bg-banner py-12 md:px-40 p-4 md:gap-24 gap-12 items-center">
+      <div className="grid md:grid-cols-2 bg-banner py-12 lg:px-40 p-4 md:gap-24 gap-12 items-center">
         <div className="flex items-center justify-center">
           <img src={hexagon} className="h-[200px] md:h-[300px]" />
         </div>
-        <div className="md:pe-40">
+        <div className="lg:pe-40">
           <div className="text-2xl font-semibold">
-            <h1>Train with the</h1>
-            <h1 className="md:my-1 my-1">Right Technique</h1>
-            <h1 className="text-red-500">For Best</h1>
+            <h1 data-aos="fade-up">Train with the</h1>
+            <h1 className="md:my-1 my-1" data-aos="fade-up">Right Technique</h1>
+            <h1 className="text-red-500" data-aos="fade-up">For Best</h1>
           </div>
-          <p className="my-5">
+          <p className="my-5" data-aos="fade-up">
             Meet Our Top Trainee Doctors: Exceptional Talent, Exceptional Care.{" "}
           </p>
-          <p>
+          <p data-aos="fade-up">
             Learn more about the dedicated individuals shaping the future of healthcare with their passion, expertise, and commitment to excellence.{" "}
           </p>
         </div>

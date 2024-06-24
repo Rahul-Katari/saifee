@@ -1,26 +1,13 @@
-import BannerCard from "./BannerCard";
 import Logo from "../../assets/images/logo.png";
 import blogsBg from "../../assets/images/home/blogs-bg.png";
 import testBg1 from "../../assets/images/home/testi-bg.png";
 import testBg2 from "../../assets/images/home/test-bg-quote.png";
-
-import card1 from "../../assets/images/home/book-doctor-appointment.png";
-import card2 from "../../assets/images/home/find-your-doctors.png";
-import card3 from "../../assets/images/home/health-package.png";
-import card4 from "../../assets/images/home/online-consultancy.png";
-import card5 from "../../assets/images/home/book-lab-test.png";
-
-import SpecialitiesCard from "./SpecialitiesCard";
 import cure from "../../assets/images/home/comm-to-cure.png";
 import CommittedCureTabs from "./CommittedCureTabs";
 import Welcome from "../Welcome";
 import AppointmentSchedule from "../AppointmentSchedule";
 import HomeBannerSlider from "../HomeBannerSlider";
 import BannerCardsSliderHome from "./BannerCardsSliderHome";
-
-import blog1 from "../../assets/images/home/blog1.png";
-import blog2 from "../../assets/images/home/blog2.png";
-import blog3 from "../../assets/images/home/blog3.png";
 import TestimonialSlide from "../TestimonialSlide";
 import BlogsSlider from "../BlogsSliderHome";
 import MoreBtn from "../common/MoreBtn";
@@ -32,7 +19,7 @@ import { useEffect, useState } from "react";
 import { useBlogData } from "../../controller/blogDataContext";
 import DoctorServices from "../DoctorServices";
 import { useServicesData } from "../../controller/servicesDataContext";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const blogs = useBlogData()?.allblogs.filter((blog) => blog.type === 0);
@@ -59,15 +46,23 @@ const Home = () => {
         }
       }
     }
-    setMainVideoSrc(firstVideo?.videosrc);
   }, [services, firstVideo]);
+  useEffect(() => {
+    setMainVideoSrc(firstVideo?.videosrc);
+  }, [firstVideo]);
   return (
     <>
-    <Helmet>
-<title>Best Endocrinologist in Hyderabad | Dr. Manasa Mynepally </title>
-<meta name='description' content='Dr Manasa Mynepally is the ideal of excellence in endocrinology, dedicated to transforming lives with unparalleled expertise and compassionate care in Hyderabad.' />
-<meta name='keywords' content='Best endocrinologists, Top endocrinologists in Hyderabad, Endocrinology specialists in Hyderabad, Diabetes specialists Hyderabad, Thyroid specialists in Hyderabad, Hormone disorder experts Hyderabad, Best endocrinology centers in Hyderabad' />
-</Helmet>
+      <Helmet>
+        <title>Best Endocrinologist in Hyderabad | Dr. Manasa Mynepally </title>
+        <meta
+          name="description"
+          content="Dr Manasa Mynepally is the ideal of excellence in endocrinology, dedicated to transforming lives with unparalleled expertise and compassionate care in Hyderabad."
+        />
+        <meta
+          name="keywords"
+          content="Best endocrinologists, Top endocrinologists in Hyderabad, Endocrinology specialists in Hyderabad, Diabetes specialists Hyderabad, Thyroid specialists in Hyderabad, Hormone disorder experts Hyderabad, Best endocrinology centers in Hyderabad"
+        />
+      </Helmet>
       <div>
         <div className="home-main-banner">
           <HomeBannerSlider />
@@ -78,13 +73,11 @@ const Home = () => {
           </div>
         </section>
         {/* committed to cure starts  */}
-        {window.innerWidth > 768 ? (
+        {window.innerWidth > 768 && (
           <section>
             <Welcome img={cure} title={"Committed to cure"} />
             {/* committed to cure ends  */}
           </section>
-        ) : (
-          ""
         )}
         {/* specialities start  */}
         <section>
@@ -136,14 +129,17 @@ const Home = () => {
               center={true}
               aos={"down"}
             />
-            <div className="md:grid md:grid-cols-12 md:mx-0">
+            <div className="lg:grid grid-cols-12 md:mx-0">
               <div className="col-span-3 md:pe-6 md:ps-10 mx-4 md:mx-0 max-sm:hidden">
                 <img src={Logo} className="m-auto w-24" />
                 <h3 className="md:text-2xl text-xl font-semibold py-3">
                   Connect with Manasa Mynepally
                 </h3>
                 <p className="mb-2">
-                  Connect with Manasa Mynepally for insightful discussions, valuable insights, and engaging videos! Explore the Dr. Manasa Manepally  channel for detailed information on a variety of topics.
+                  Connect with Manasa Mynepally for insightful discussions,
+                  valuable insights, and engaging videos! Explore the Dr. Manasa
+                  Manepally channel for detailed information on a variety of
+                  topics.
                 </p>
               </div>
               <div className="col-span-6 m-4 mb-0">

@@ -7,7 +7,7 @@ import AppointmentModal from "../pages/AppointmentModal";
 import AppointmentModalOpener from "../AppointmentModalOpener";
 
 const NewAppointments = () => {
-  return window.innerWidth < 578 ? (
+  return window.innerWidth <= 1024 ? (
     <AppointmentModalOpener img={"true"} />
   ) : (
     //   <button className="btn-theme">Get An Appointment</button>
