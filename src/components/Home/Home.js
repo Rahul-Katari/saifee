@@ -32,21 +32,21 @@ const Home = () => {
   const updateMainVideoSrc = (videosrc) => {
     setMainVideoSrc(videosrc);
   };
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const targetElement = document.querySelector(hash);
-      if (targetElement) {
-        const previousSection = targetElement.previousElementSibling;
-        if (previousSection) {
-          window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: "smooth",
-          });
-        }
-      }
-    }
-  }, [services, firstVideo]);
+  // useEffect(() => {
+  //   const hash = window.location.hash;
+  //   if (hash) {
+  //     const targetElement = document.querySelector(hash);
+  //     if (targetElement) {
+  //       const previousSection = targetElement.previousElementSibling;
+  //       if (previousSection) {
+  //         window.scrollTo({
+  //           top: targetElement.offsetTop,
+  //           behavior: "smooth",
+  //         });
+  //       }
+  //     }
+  //   }
+  // }, [services, firstVideo]);
   useEffect(() => {
     setMainVideoSrc(firstVideo?.videosrc);
   }, [firstVideo]);

@@ -33,7 +33,7 @@ const BlogListCard = ({ blogData }) => {
         </div>
       </div>
       <div className="flex items-center mt-4 justify-between">
-        {/* <div className="flex items-center"> */}
+        <div className="flex items-center">
         <img
           src={doctorData?.imgsrc ? ASSET_URL + doctorData?.imgsrc : avatar}
           alt="blog creator"
@@ -42,7 +42,7 @@ const BlogListCard = ({ blogData }) => {
         <p className="text-gray-600 truncate">
           {(doctorData?.firstName || 'Admin') + " " + (doctorData?.lastName || '')}
         </p>
-        {/* </div> */}
+        </div>
         <p className="text-gray-600 ml-2 text-xs text-nowrap">
           <DateFormat date={blogData?.createdAt} />
         </p>

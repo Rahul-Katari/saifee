@@ -83,12 +83,12 @@ const Footer = () => {
                 src={footerLogo}
                 alt="logo"
                 className="m-auto my-5 w-24 h-24 md:w-auto"
-                data-aos="zoom-out"
+                // data-aos="zoom-out"
               />
             </div>
             <div
               className="justify-center lg:flex items-center border py-3 border-cyan-500 border-x-0"
-              data-aos="fade-right"
+              // data-aos="fade-right"
             >
               <div className="text-nav-highlight  text-base">Quick Links :</div>
               <PageLinks

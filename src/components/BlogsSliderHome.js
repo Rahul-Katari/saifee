@@ -21,7 +21,7 @@ function BlogsSlider({ slides }) {
     infinite: true,
     slidesToShow: 3,
     speed: 500,
-    rtl: true,
+    // rtl: true,
     beforeChange: (current, next) => {
       setOldSlide(current);
       setActiveSlide(next);

@@ -19,7 +19,7 @@ const SidebarButtons = () => {
           </Link>
         </div>
         <div className="bg-highlight text-white text-center py-1 rounded-l-md">
-          <Link>
+          <Link to={"/contact"}>
             <IconAmbulance className="m-auto" size={30} />
             <div className="leading-4">
               Emergency <br></br> Medical Care

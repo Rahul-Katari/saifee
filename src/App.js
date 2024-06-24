@@ -31,7 +31,7 @@ function App() {
       easing: "ease",
       once: true,
       anchorPlacement: "center-bottom",
-      delay: 200,
+      delay: 100,
     });
   }, []);
   return (
