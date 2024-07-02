@@ -22,9 +22,7 @@ const OurTopDoctors = () => {
               <h2>and Get Treatment</h2>
             </div>
             <p className="col-span-2">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown
+            Experience unparalleled healthcare excellence tailored to your well-being. Trust us to provide the highest standard of medical care.
             </p>
           </div>
           <div className="absolute lg:top-[180px] md:top-[240px] top-[210px] md:mx-16 mx-6">

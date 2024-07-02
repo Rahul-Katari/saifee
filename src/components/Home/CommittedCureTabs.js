@@ -30,7 +30,7 @@ const LaboratoryTestsTabScreen = () => (
         <div className="md:col-span-3 md:px-10 mt-4 col-span-5">
           <h1 className="text-theme text-xl font-medium">Laboratory Tests</h1>
           <p className="my-3">
-            At Dr. Manasa Mynepally's Hospital, we understand the importance of
+            At Dr Manasa Mynepally-Diabetes, Thyroid & Endocrine Centre, we understand the importance of
             accurate and reliable laboratory testing in diagnosing and
             monitoring your health. Our state-of-the-art laboratory is equipped
             with advanced technology and staffed by experienced professionals
@@ -51,7 +51,7 @@ const LaboratoryTestsTabScreen = () => (
             throughout.
           </p>
           <p>
-            At Dr. Manasa Mynepally's Hospital, you can trust that your
+            At Dr Manasa Mynepally-Diabetes, Thyroid & Endocrine Centre, you can trust that your
             laboratory tests are conducted with the highest standards of quality
             and accuracy. Your health is our top priority, and we are committed
             to providing you with the reliable information you need to make
@@ -182,7 +182,7 @@ const EducationTabScreen = () => (
             Empowering Education at Dr Manasa Mynepally's Center
           </h1>
           <p>
-            At Dr. Manasa Mynepally's Hospital, we believe in the power of
+            At Dr Manasa Mynepally-Diabetes, Thyroid & Endocrine Centre, we believe in the power of
             education to transform lives. That's why we're committed to
             contributing to education and empowering our community through
             knowledge and learning.
@@ -262,7 +262,7 @@ const DietAndNutritionCounsellingTabScreen = () => (
           </h1>
           <p>
             Are you looking to improve your health and well-being through better
-            nutrition? At Dr. Manasa Mynepally's Hospital, we offer expert Diet
+            nutrition? At Dr Manasa Mynepally-Diabetes, Thyroid & Endocrine Centre, we offer expert Diet
             and Nutrition Counselling to help you achieve your wellness goals.
           </p>
           <h2 className="font-semibold">

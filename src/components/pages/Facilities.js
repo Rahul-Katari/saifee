@@ -35,7 +35,7 @@ const Facilities = () => {
             <div>
             <div className="my-5 text-content space-y-2">
               <h1 className="text-2xl font-bold mb-4">
-                Welcome to Dr. Manasa Mynepally's Hospital
+              Welcome to Dr. Manasa Mynepally-Diabetes, Thyroid & Endocrine Centre
               </h1>
               <p>
                 We strive to ensure that your visit to our facility is as

@@ -22,7 +22,7 @@ const Welcome = ({ img, title }) => {
                 {title}
               </p>
               <p className="md:mt-6 text-gray-600">
-                At Dr. Manasa Hospital, our promise is simple: to walk beside
+                At Dr Manasa Mynepally-Diabetes, Thyroid & Endocrine Centre, our promise is simple: to walk beside
                 you every step of your healing journey with unwavering
                 dedication and compassion.
               </p>

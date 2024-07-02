@@ -24,16 +24,16 @@ function App() {
       endocrinologist?.classList.remove("hidden");
     }
   }, [history]);
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      offset: 50,
-      easing: "ease",
-      once: true,
-      anchorPlacement: "center-bottom",
-      delay: 100,
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 800,
+  //     offset: 50,
+  //     easing: "ease",
+  //     once: true,
+  //     anchorPlacement: "center-bottom",
+  //     delay: 100,
+  //   });
+  // }, []);
   return (
     <>
       <HelmetProvider>

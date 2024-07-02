@@ -92,7 +92,7 @@ Best Endocrinologist Doctors in Hyderabad | Dr. Manasa Mynepally</title>
               </div>
               <h3 className="text-theme text-2xl font-medium" data-aos="fade-up">Our Mission</h3>
               <p className="py-3" data-aos="fade-up">
-                At Dr. Manasa Mynepally's Hospital, our mission is to lead the
+                At Dr Manasa Mynepally-Diabetes, Thyroid & Endocrine Centre, our mission is to lead the
                 way in Endocrine health. We're dedicated to finding better
                 treatments and therapies by teaming up with different healthcare
                 experts like your family doctor, dentist, and others. Our goal

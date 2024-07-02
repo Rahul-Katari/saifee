@@ -30,7 +30,7 @@ const PatientsVisitors = () => {
             <div>
               <div className="my-5 text-content space-y-2">
                 <h1 className="text-2xl font-bold mb-4">
-                  Welcome to Dr. Manasa Mynepally's Hospital
+                Welcome to Dr. Manasa Mynepally-Diabetes, Thyroid & Endocrine Centre
                 </h1>
                 <p>
                   We strive to ensure that your visit to our facility is as
@@ -136,7 +136,7 @@ const PatientsVisitors = () => {
                 Patients’ Rights & Responsibilities:
               </h1>
               <p>
-                <strong>At Dr. Manasa Mynepally's Hospital,</strong> we are
+                <strong>At Dr Manasa Mynepally-Diabetes, Thyroid & Endocrine Centre,</strong> we are
                 committed to upholding the rights and responsibilities of our
                 patients and visitors. Understanding your rights and
                 responsibilities ensures a positive healthcare experience and
@@ -303,7 +303,7 @@ const PatientsVisitors = () => {
 
               <h2 className="font-semibold">Billing and Payment Options:</h2>
               <p>
-                At Dr. Manasa Mynepally's Hospital, we offer flexible billing
+                At Dr Manasa Mynepally-Diabetes, Thyroid & Endocrine Centre, we offer flexible billing
                 and payment options to accommodate your financial needs. We
                 accept various payment methods, including cash, credit/debit
                 cards, and online payment portals. Our billing team is available
@@ -344,7 +344,7 @@ const PatientsVisitors = () => {
               <h1 className="text-2xl font-bold mb-4">Discharge Guide:</h1>
 
               <p>
-                Welcome to Dr. Manasa Mynepally's Hospital. Our Discharge Guide
+                Welcome to Dr. Manasa Mynepally-Diabetes, Thyroid & Endocrine Centre. Our Discharge Guide
                 is designed to provide patients and visitors with important
                 information and instructions to ensure a smooth transition from
                 hospital care to home or follow-up care.
@@ -466,7 +466,7 @@ const PatientsVisitors = () => {
               <h1 className="text-2xl font-bold mb-4">Surgery Booking:</h1>
 
               <p>
-                Welcome to Dr. Manasa Mynepally's Hospital Surgery Booking page.
+                Welcome to Dr. Manasa Mynepally-Diabetes, Thyroid & Endocrine Centre Surgery Booking page.
                 We understand that undergoing surgery can be a significant
                 decision, and we are committed to providing you with
                 comprehensive information and support throughout the booking
