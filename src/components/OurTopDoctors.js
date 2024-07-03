@@ -25,7 +25,7 @@ const OurTopDoctors = () => {
             Experience unparalleled healthcare excellence tailored to your well-being. Trust us to provide the highest standard of medical care.
             </p>
           </div>
-          <div className="absolute lg:top-[180px] md:top-[240px] top-[210px] md:mx-16 mx-6">
+          <div className="absolute lg:top-[180px] md:top-[240px] top-[210px] md:mx-16 mx-6 max-w-4xl">
             <div className="grid md:grid-cols-2 gap-10">
               {doctorDetails?.slice(0, 2)?.map((doctor, index) => {
                 return (

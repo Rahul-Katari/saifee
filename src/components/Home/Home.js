@@ -169,12 +169,12 @@ const Home = () => {
               center={true}
             />
             <div
-              className="bg-right max-sm:bg-cover md:bg-contain bg-no-repeat md:h-[400px] h-[300px] flex flex-col justify-center relative"
+              className="bg-right max-sm:bg-cover lg:bg-contain bg-no-repeat md:h-[400px] h-[300px] flex flex-col justify-center relative"
               style={{
                 backgroundImage: `url(${testBg1})`,
               }}
             >
-              <div className="absolute top-0 left-[20%] max-sm:hidden md:d-block">
+              <div className="absolute top-0 left-[20%] max-lg:hidden lg:d-block">
                 <img src={testBg2} className="w-5/12" />
               </div>
               <div className="absolute left-[8%] md:bottom-[35%] bottom-[10%] font-medium">
