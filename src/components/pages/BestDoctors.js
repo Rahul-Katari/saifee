@@ -6,7 +6,7 @@ import hexagon from "../../assets/images/landing/areas-general.png";
 const BestDoctors = () => {
   return (
     <div>
-      <div className="relative lg:mb-[650px] md:mb-[800px] mb-[1250px]">
+      <div className="relative sm:mb-[680px] max-sm:mb-[250%]">
         <img src={banner} className="w-full" />
         <div className="absolute top-[75%]">
           <OurTopDoctors />
@@ -16,7 +16,7 @@ const BestDoctors = () => {
         <div className="flex items-center justify-center">
           <img src={hexagon} className="h-[200px] md:h-[300px]" />
         </div>
-        <div className="lg:pe-40">
+        <div className="xl:pe-40">
           <div className="text-2xl font-semibold">
             <h1 data-aos="fade-up">Train with the</h1>
             <h1 className="md:my-1 my-1" data-aos="fade-up">Right Technique</h1>

@@ -13,7 +13,7 @@ const Facilities = () => {
       <div>
         <img src={banner} className="w-full" />
       </div>
-      <div className="max-w-7xl md:m-auto md:mt-10 m-4">
+      <div className="max-w-7xl xl:m-auto md:mt-10 m-4">
         <Tabs
           className="flex justify-center"
           activeTab={activeTab}

@@ -179,7 +179,7 @@ switch (doctorId) {
 
             </div>
           </div>
-          <div className="col-span-7 md:pe-24">
+          <div className="col-span-7 lg:pe-24">
             <h2 className="text-[#025CAF] text-3xl font-semibold">
               {doctor?.department === 1 ? 'Best Endocrinology' : 'Best General Surgeon'}
             </h2>
@@ -214,7 +214,7 @@ switch (doctorId) {
       </section>
       <section>
         <div className="md:grid grid-cols-12 m-4">
-          <div className="col-span-7 md:ps-24">
+          <div className="col-span-7 lg:ps-24">
             <h2 className="text-[#025CAF] text-3xl font-semibold">
               Areas of Treatments{" "}
             </h2>
@@ -355,7 +355,7 @@ switch (doctorId) {
           <h2 className="text-3xl font-semibold text-[#025CAF] text-center mb-16">
             We Guarantee
           </h2>
-          <div className="grid md:grid-cols-5 grid-cols-2 md:space-x-6 gap-6 justify-center max-w-7xl m-auto">
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:space-x-6 gap-6 justify-center max-w-7xl m-auto max-xl:m-4">
             {guarantee.map((guar, index) => {
               return (
                 <SpecialitiesCard

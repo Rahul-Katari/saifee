@@ -122,15 +122,15 @@ const Home = () => {
         {/* committed to cure 2 ends  */}
         {/* Health talks section starts */}
         <section>
-          <div className="bg-banner md:p-16 max-sm:py-8">
+          <div className="bg-banner xl:p-16 py-16 max-sm:py-8">
             <Heading
               text={"health talks"}
               uppercase={true}
               center={true}
               aos={"down"}
             />
-            <div className="lg:grid grid-cols-12 md:mx-0">
-              <div className="col-span-3 md:pe-6 md:ps-10 mx-4 md:mx-0 max-sm:hidden">
+            <div className="lg:grid grid-cols-12 max-lg:mx-4 gap-4">
+              <div className="col-span-3 xl:pe-6 xl:ps-10 lg:ps-4 mx-4 md:mx-0 max-sm:hidden">
                 <img src={Logo} className="m-auto w-24" />
                 <h3 className="md:text-2xl text-xl font-semibold py-3">
                   Connect with Manasa Mynepally
@@ -142,7 +142,7 @@ const Home = () => {
                   topics.
                 </p>
               </div>
-              <div className="col-span-6 m-4 mb-0">
+              <div className="col-span-6">
                 <iframe
                   className="w-full max-sm:h-[200px] rounded"
                   height="400"
@@ -153,7 +153,7 @@ const Home = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-              <div className="col-span-3 md:ps-10">
+              <div className="col-span-3 xl:ps-10">
                 <HealthTalksTabs onSelectVideo={updateMainVideoSrc} />
               </div>
             </div>
@@ -186,16 +186,16 @@ const Home = () => {
         </section>
         {/* blogs section  */}
         <div
-          className="pb-4 blogs bg-cover bg-center bg-no-repeat md:h-[500px]  h-[500px] flex flex-col justify-center"
+          className="pb-4 blogs bg-cover bg-center bg-no-repeat lg:h-[500px]  h-[600px] flex flex-col justify-center"
           style={{
             backgroundImage: `url(${blogsBg})`,
           }}
         >
           <div>
             <Heading text={"blogs"} uppercase={true} center={true} />
-            <div className="md:grid grid-cols-10 justify-end items-center">
-              <div className="col-span-4"></div>
-              <div className="col-span-6 ">
+            <div className="lg:grid grid-cols-10 justify-end items-center">
+              <div className="xl:col-span-4 lg:col-span-2"></div>
+              <div className="xl:col-span-6 lg:col-span-8">
                 <BlogsSlider slides={blogs} />
               </div>
             </div>

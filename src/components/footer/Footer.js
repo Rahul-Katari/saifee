@@ -87,7 +87,7 @@ const Footer = () => {
               />
             </div>
             <div
-              className="justify-center lg:flex items-center border py-3 border-cyan-500 border-x-0"
+              className="justify-center xl:flex items-center border py-3 border-cyan-500 border-x-0"
               // data-aos="fade-right"
             >
               <div className="text-nav-highlight  text-base">Quick Links :</div>
@@ -112,7 +112,7 @@ const Footer = () => {
                 ></div>
               </div>
             </div>
-            <div className="lg:grid-cols-3 sm:grid-cols-2 grid">
+            <div className="xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid">
               {cards.map((card, index) => (
                 <FooterCard
                   key={index}
@@ -135,7 +135,7 @@ const Footer = () => {
                 <SocialIcons space={4} />
               </div>
               <div className="flex items-center">
-                <div className="lg:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
+                <div className="lg:border-b-2 border-dashed pr-4 xl:w-[100px] border-highlight"></div>
               </div>
               <div className="telephone-footer-link">
                 <a
@@ -150,7 +150,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center">
-                <div className="lg:border-b-2 border-dashed pr-4 w-[100px] border-highlight"></div>
+                <div className="lg:border-b-2 border-dashed pr-4 xl:w-[100px] border-highlight"></div>
               </div>
               <div>
                 <a

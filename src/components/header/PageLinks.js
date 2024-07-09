@@ -5,7 +5,7 @@ const PageLinks = ({ links, size, weight, space }) => {
     <div
       className={`flex lg:flex-row flex-col md:space-x-${
         space ? space : "4"
-      } lg:items-center md:text-${size} font-${weight}`}
+      } xl:items-center md:text-${size} font-${weight}`}
     >
       {links.map((link) => (
         <Link

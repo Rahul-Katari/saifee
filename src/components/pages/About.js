@@ -37,7 +37,7 @@ Best Endocrinologist Doctors in Hyderabad | Dr. Manasa Mynepally</title>
       <div>
         <img src={aboutBanner} className="w-full" />
         <section>
-          <div className="card shadow-xl grid grid-cols-3 items-center md:justify-around font-semibold text-center gap-y-8 max-w-7xl m-auto">
+          <div className="card shadow-xl grid grid-cols-3 items-center md:justify-around font-semibold text-center gap-y-8 max-w-7xl xl:m-auto mx-4">
             {iconsbanner.map((icon, index) => {
               return (
                 <div>
@@ -108,7 +108,8 @@ Best Endocrinologist Doctors in Hyderabad | Dr. Manasa Mynepally</title>
         </section>
         {/* meet our doctors end */}
         <section>
-          <div className="bg-banner p-12 md:px-48 grid md:grid-cols-4 grid-cols-2 items-center justify-around font-medium text-center mt-96 gap-y-12">
+          <div className="bg-banner font-medium text-center mt-96 ">
+            <div className="max-w-6xl grid md:grid-cols-4 grid-cols-2 items-center gap-y-12 container py-12">
             {bottomBanner.map((banner, index) => {
               return (
                 <IconText
@@ -119,6 +120,7 @@ Best Endocrinologist Doctors in Hyderabad | Dr. Manasa Mynepally</title>
                 />
               );
             })}
+            </div>
           </div>
         </section>
       </div>

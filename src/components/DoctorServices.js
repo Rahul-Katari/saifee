@@ -3,7 +3,7 @@ import { ASSET_URL } from "../controller/config";
 
 const DoctorServices = ({ speciality, services, fromDetails }) => {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-10 gap-5 max-sm:mx-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-10 gap-5 mx-4 xl:mx-0">
       {services?.map((spec, index) => (
         <SpecialitiesCard
           serviceId={fromDetails ? spec.service_displayurl : spec.service_displayurl}

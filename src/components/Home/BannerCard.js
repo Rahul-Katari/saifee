@@ -13,7 +13,7 @@ const BannerCard = ({ imgSrc, title1, title2, href }) => {
             <h3 className=" font-medium max-sm:text-xs">{title1}</h3>
             <h3 className=" font-medium max-sm:text-xs">{title2}</h3>
           </div>
-          <div className=" w-28 md:min-h-[115px] max-sm:w-20 max-sm:h-16 flex justify-center m-auto">
+          <div className=" w-28 min-h-[115px] max-sm:w-20 max-sm:h-16 flex justify-center m-auto">
             <img
               src={imgSrc}
               alt="Card Image"

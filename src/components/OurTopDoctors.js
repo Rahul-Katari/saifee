@@ -14,8 +14,8 @@ const OurTopDoctors = () => {
   }, [doctorDetails]);
   return (
     <div>
-      <div className="md:mb-[350px] mb-[700px]">
-        <div className="bg-theme md:m-12  m-4 lg:mx-60 rounded-[50px] md:px-20 md:pt-16 p-6 pb-60 relative flex flex-col items-center">
+      <div className="sm:mb-[350px] mb-[190%]">
+        <div className="bg-theme md:m-12 m-4 rounded-[50px] md:px-20 md:pt-16 p-6 pb-60 relative flex flex-col items-center">
           <div className="grid md:grid-cols-5 text-white">
             <div className="md:text-4xl text-2xl mb-2  font-medium col-span-3">
               <h2>Meet Our Top Doctors</h2>
@@ -26,7 +26,7 @@ const OurTopDoctors = () => {
             </p>
           </div>
           <div className="absolute lg:top-[180px] md:top-[240px] top-[210px] md:mx-16 mx-6 max-w-4xl">
-            <div className="grid md:grid-cols-2 gap-10">
+            <div className="grid sm:grid-cols-2 gap-10">
               {doctorDetails?.slice(0, 2)?.map((doctor, index) => {
                 return (
                   <div

@@ -4,12 +4,12 @@ import mail from "../../assets/images/landing/smsedit.png"
 const NeedHelp = () => {
   return (
     <div
-      className="md:grid grid-cols-12 justify-end bg-center bg-cover bg-no-repeat"
+      className="grid grid-cols-12 justify-end bg-center bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${needHelp})` }}
     >
-      <div className="col-span-4"></div>
-      <div className="md:flex md:p-8 p-2 max-sm:py-10 col-span-8 justify-between text-white">
-        <div className="flex flex-col justify-center p-3 max-sm:items-center">
+      <div className="xl:col-span-4 lg:col-span-2"></div>
+      <div className="md:flex lg:p-8 md:p-4 p-2 max-sm:py-10 xl:col-span-8 lg:col-span-10 col-span-12 justify-between text-white">
+        <div className="flex flex-col justify-center p-3 max-md:items-center">
           <h3 className="font-semibold">You can also reach us at</h3>
           <div className="flex items-center">
             <img src={mail} />

@@ -6,8 +6,8 @@ const Welcome = ({ img, title }) => {
   return (
     <div className="overflow-hidden bg-stone-100">
       <section className="lg:px-8 px-4">
-        <div className="mx-auto md:grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5 items-center">
-          <div className="lg:col-span-2 pb-4 md:pb-0  md:ps-8 welcome-image-slider max-w-[470px] ">
+        <div className="mx-auto lg:grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5 items-center ">
+          <div className="lg:col-span-2 pb-4 md:pb-0  md:ps-8 welcome-image-slider ">
             <ImageSlider slidesToShow={1} images={images} />
           </div>
           <div className="lg:pr-8 lg:col-span-3">

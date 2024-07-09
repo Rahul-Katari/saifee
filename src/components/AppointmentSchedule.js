@@ -45,11 +45,11 @@ const AppointmentSchedule = () => {
   return (
     <div>
       <div className="lg:grid md:grid-cols-7 gap-y-2">
-        <div className="flex items-center justify-center col-span-4">
+        <div className="flex items-center justify-center xl:col-span-4 col-span-3">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.8363515090577!2d78.37237347501086!3d17.41963948347306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb953286d08c2d%3A0x3cc02567dc6ed2c8!2sDr%20Manasa%20Mynepally%20%7C%20Best%20Endocrinologist%20in%20Hyderabad%20%7C%20Diabetologist%20%26%20Thyroid%20Specialist!5e0!3m2!1sen!2sin!4v1714135746116!5m2!1sen!2sin" 
-          style={{ border: "0" }} allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="md:m-4 w-full h-full md:py-4 max-sm:h-[400px]"></iframe>
+          style={{ border: "0" }} allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="lg:m-4 w-full h-full lg:py-4 max-lg:h-[400px]"></iframe>
         </div>
-        <div className="bg-gradient-to-b from-theme to-[#035DAF] md:p-10 p-4 col-span-3">
+        <div className="bg-gradient-to-b from-theme to-[#035DAF] md:p-10 p-4 xl:col-span-3 col-span-4">
           <div className="text-white">
             <h1 className="uppercase text-2xl md:text-3xl">
               schedule an appointment
@@ -60,7 +60,7 @@ const AppointmentSchedule = () => {
             </p>
           </div>
           <form onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
               <AppointmentInput
                 name={"firstname"}
                 placeholder={"First Name"}

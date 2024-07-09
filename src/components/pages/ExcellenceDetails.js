@@ -339,7 +339,7 @@ switch (servicesDetails?._id) {
       </div>
       <BreadCrumb linkData={breadcrumb} />
       <section className="mb-0">
-        <div className="grid md:grid-cols-8 max-w-7xl m-auto max-sm:m-4 max-sm:flex-col">
+        <div className="grid md:grid-cols-8 max-w-7xl lg:m-auto max-lg:m-4 max-sm:flex-col">
           <div className="md:col-span-2 max-sm:order-last">
             <div
               className={`flex flex-col md:sticky top-[144px] ${

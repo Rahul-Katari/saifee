@@ -59,8 +59,8 @@ const Navbar = () => {
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto lg:py-4 lg:px-8">
-            <div className="text-white lg:hidden">
+          <div className="mx-auto xl:py-4 xl:px-6">
+            <div className="text-white xl:hidden">
               <div className="py-2 bg-[#046AA9] text-center text-sm">
                 Contact Number: <a href="tel:+917340040097">+91 73400 40097 </a>
               </div>
@@ -97,9 +97,9 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="flex flex-1 justify-end items-center max-xl:hidden">
+              <div className="flex flex-1 justify-end items-center max-lg:hidden">
                 <div className="flex items-center">
-                  <div className="hidden sm:block mr-10">
+                  <div className="hidden sm:block me-8">
                     <div className="flex">
                       {navigation.map((item) => {
                         return (
@@ -115,7 +115,7 @@ const Navbar = () => {
                                     item.href !== "/")
                                   ? "text-nav-highlight underline"
                                   : "hover:text-nav-highlight hover:underline",
-                                "rounded-md px-3 py-2  font-medium whitespace-nowrap"
+                                "rounded-md lg:px-2 xl:px-3 py-2  font-medium whitespace-nowrap"
                               )}
                               aria-current={item.current ? "page" : undefined}
                             >
@@ -127,7 +127,7 @@ const Navbar = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center max-xl:hidden">
                   <div className="me-3 w-12 md:w-16">
                     <img src={navHelp} alt="help" />
                   </div>
