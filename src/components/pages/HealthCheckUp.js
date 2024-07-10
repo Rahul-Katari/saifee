@@ -30,8 +30,8 @@ const HealthCheckup = () => {
       </div>
       <BreadCrumb linkData={breadCrumb} />
       <section>
-        <div className="max-w-5xl m-auto">
-          <div className="md:grid grid-cols-2 gap-4">
+        <div className="max-w-5xl m-auto max-lg:m-4">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
             {packageData?.map((healthpackage) => {
               return <HealthCheckCard healthPackage={healthpackage} />;
             })}

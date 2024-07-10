@@ -22,7 +22,7 @@ const Blogs = () => {
       </div>
       <BreadCrumb linkData={breadCrumb} />
       <section>
-        <div className="max-w-7xl m-auto max-sm:m-4">
+        <div className="max-w-7xl m-auto max-xl:m-4">
           <h2 className="text-theme text-2xl font-semibold highlight-border highlight-border-left">
             Blogs
           </h2>
@@ -38,7 +38,7 @@ const Blogs = () => {
             </Tabs>
             <TabScreen>
               {activeTab === 0 && (
-                <div className="grid md:grid-cols-4 grid-cols-1 gap-6">
+                <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
                   {blogsData
                     ?.filter((blog) => blog.servicecategory === 1)
                     ?.map((blog) => (
@@ -47,7 +47,7 @@ const Blogs = () => {
                 </div>
               )}
               {activeTab === 1 && (
-                <div className="grid md:grid-cols-4 grid-cols-1 gap-6">
+                <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
                   {blogsData
                     ?.filter((blog) => blog.servicecategory === 2)
                     ?.map((blog) => (

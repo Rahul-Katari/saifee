@@ -99,7 +99,7 @@ const Videos = () => {
       </section>
       <section>
         <div className="max-w-7xl m-auto">
-          <div className="grid md:grid-cols-4 grid-cols-2 gap-4 m-4">
+          <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 m-4">
             {videosData
               .filter((vid) => vid.doctorid === selectedVideos)
               .map((video) => {

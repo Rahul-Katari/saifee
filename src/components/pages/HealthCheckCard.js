@@ -5,7 +5,7 @@ import React from "react";
 const HealthCheckCard = ({ healthPackage }) => {
   return (
     <div className="bg-banner p-4">
-      <div className="mx-auto  md:flex  space-4">
+      <div className="mx-auto flex  space-4">
         <div className="flex-shrink-0">
           <img
             src={ASSET_URL+healthPackage.package_imgSrc}

@@ -25,7 +25,7 @@ const PatientsVisitors = () => {
           <Tab>Dischargeguide</Tab>
           <Tab>Surgery Booking</Tab>
         </Tabs>
-        <TabScreen className="max-w-7xl m-auto max-sm:m-4">
+        <TabScreen className="max-w-7xl m-auto max-xl:m-4">
           {activeTab === 0 && (
             <div>
               <div className="my-5 text-content space-y-2">
