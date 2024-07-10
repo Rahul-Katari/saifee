@@ -170,7 +170,7 @@ const DoctorDetails = () => {
             src={ASSET_URL + doctorDetails?.doctorbanner}
             className="w-full"
           />
-          <div className="md:absolute right-[15%] top-[50%] md:transform md:-translate-y-1/2">
+          <div className="lg:absolute xl:right-[15%] lg:right-[10%] top-[50%] lg:transform lg:-translate-y-1/2">
             <AppointmentFormDetail details={doctorDetails} />
           </div>
         </div>
@@ -205,7 +205,7 @@ const DoctorDetails = () => {
           </button>
         </div>
       </div>
-      <div className="max-w-6xl max-3xl:ms-auto m-auto max-3xl:me-24 max-sm:mx-4">
+      <div className="max-w-6xl max-3xl:ms-auto m-auto max-3xl:me-24 max-xl:mx-4">
         {/* about us section  */}
         <div id="about" ref={(el) => (sectionsRef.current[0] = el)}>
           <section>
@@ -233,7 +233,7 @@ const DoctorDetails = () => {
       </div>
       <NewAppointments />
 
-      <div className="max-w-6xl max-3xl:ms-auto m-auto max-3xl:me-24 max-sm:mx-4">
+      <div className="max-w-6xl max-3xl:ms-auto m-auto max-3xl:me-24 max-xl:mx-4">
         {/* qualification section  */}
         <div id="qualification" ref={(el) => (sectionsRef.current[1] = el)}>
           <section data-aos="fade-up">
@@ -261,7 +261,7 @@ const DoctorDetails = () => {
       <div>
         <section id="detailsTestimonials">
           <div className="bg-banner py-12">
-            <div className="max-w-6xl max-3xl:ms-auto m-auto max-3xl:me-24 max-sm:mx-4">
+            <div className="max-w-6xl max-3xl:ms-auto m-auto max-3xl:me-24 max-xl:mx-4">
               <Heading text={"Patient Testimonials"} left={true} />
               <BlogsSliderDetail
                 card="testimonial"
@@ -271,7 +271,7 @@ const DoctorDetails = () => {
           </div>
         </section>
       </div>
-      <div className="max-w-6xl max-3xl:ms-auto m-auto max-3xl:me-24 max-sm:mx-4">
+      <div className="max-w-6xl max-3xl:ms-auto m-auto max-3xl:me-24 max-xl:mx-4">
         {/* blogs section  */}
         <div id="blogs" ref={(el) => (sectionsRef.current[3] = el)}>
           <section>

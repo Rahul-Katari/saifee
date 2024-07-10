@@ -7,7 +7,7 @@ import AppointmentModal from "../pages/AppointmentModal";
 import AppointmentModalOpener from "../AppointmentModalOpener";
 
 const NewAppointments = () => {
-  return window.innerWidth <= 1024 ? (
+  return window.innerWidth <= 768 ? (
     <AppointmentModalOpener img={"true"} />
   ) : (
     //   <button className="btn-theme">Get An Appointment</button>
@@ -19,8 +19,8 @@ const NewAppointments = () => {
       className="md:grid grid-cols-12 justify-end bg-center bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${appointments})` }}
     >
-      <div className="col-span-4"></div>
-      <div className="flex flex-col justify-center md:p-10 p-4 max-sm:py-10 col-span-8">
+      <div className="xl:col-span-4 lg:col-span-2 "></div>
+      <div className="flex flex-col justify-center md:p-10 p-4 max-sm:py-10 xl:col-span-8 lg:col-span-10 md:col-span-12">
         <h3 className="md:text-2xl text-xl mb-2 text-nav-highlight">
           New Patient Appointments
         </h3>
